@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Components &ndash; Styleguide</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="build/stylesheets/site.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            Home
+          </a>
+
+          
+          <a href="components.html"
+             class="hgt-pagehead-nav-item selected">
+            Components
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">Styleguide</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#Featured tab" class="hgt-menu-item">Featured Tab</a>
+                
+              
+                
+                  <a href="#tabs" class="hgt-menu-item">Tab</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<p class="styleguide">[Featured tab]: components.html#Featured tab</p>
+<h1 id="Featured tab" class="styleguide">Featured Tab</h1>
+<p class="styleguide">Style for tabs</p><div class="codeExample">
+  <div class="exampleOutput">
+      <div class="container">
+  <div class="feature-tab-container">
+    <ul class="feature-tab">
+      <li class="feature-tab_item active-tab" data-attr="c">C#</li>
+      <li class="feature-tab_item" data-attr="js">Javascript</li>
+      <li class="feature-tab_item" data-attr="js">Python</li>
+      <li class="feature-tab_item" data-attr="js">Java</li>
+      <li class="feature-tab_item" data-attr="js">Ruby</li>
+    </ul>
+
+    <div class="content-container">
+      <div class="tab-content active" id="mac">
+        <div class="terminal">
+          <div class="terminal_head">
+            <span class="dot"></span>
+          </div>
+          <div class="terminal_content">
+            <div class="highlight">
+              <pre>
+             <span></span><span class="k"># Search specification</span>
+            <span class="nt">Tags: search, admin</span>
+
+            <span class="nv">The admin user must be able to search for available products on the search page</span>
+
+            <span class="nf">* User must be logged in as </span><span class="l">"admin"</span><span class="nf"></span>
+            <span class="nf">* Open the product search page</span>
+
+            <span class="nf">## Successful search</span>
+            <span class="nf">Tags: successful</span>
+
+            <span class="nf">For an existing product name, the search result will contain the product name</span>
+
+            <span class="nf">* Search for product </span><span class="l">"Die Hard"</span><span class="nf"></span>
+            <span class="nf">* </span><span class="l">"Die hard"</span><span class="nf"> should ahow up in the search results</span>
+
+            <span class="nf">## Unsuccessfull search</span>
+
+            <span class="nf">On an unknown product name search the search results will be empty</span>
+
+            <span class="nf">* Search for product </span><span class="l">"unknown"</span><span class="nf"></span>
+            <span class="nf">* The search results will be empty</span>
+
+                </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"feature-tab-container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"feature-tab"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"feature-tab_item active-tab"</span> <span class="na">data-attr=</span><span class="s">"c"</span><span class="nt">&gt;</span>C#<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"feature-tab_item"</span> <span class="na">data-attr=</span><span class="s">"js"</span><span class="nt">&gt;</span>Javascript<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"feature-tab_item"</span> <span class="na">data-attr=</span><span class="s">"js"</span><span class="nt">&gt;</span>Python<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"feature-tab_item"</span> <span class="na">data-attr=</span><span class="s">"js"</span><span class="nt">&gt;</span>Java<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"feature-tab_item"</span> <span class="na">data-attr=</span><span class="s">"js"</span><span class="nt">&gt;</span>Ruby<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content active"</span> <span class="na">id=</span><span class="s">"mac"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"terminal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"terminal_head"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dot"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"terminal_content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;pre&gt;</span>
+             <span class="nt">&lt;span&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"k"</span><span class="nt">&gt;</span># Search specification<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span>Tags: search, admin<span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nv"</span><span class="nt">&gt;</span>The admin user must be able to search for available products on the search page<span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>* User must be logged in as <span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"l"</span><span class="nt">&gt;</span>"admin"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>* Open the product search page<span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>## Successful search<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>Tags: successful<span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>For an existing product name, the search result will contain the product name<span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>* Search for product <span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"l"</span><span class="nt">&gt;</span>"Die Hard"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>* <span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"l"</span><span class="nt">&gt;</span>"Die hard"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span> should ahow up in the search results<span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>## Unsuccessfull search<span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>On an unknown product name search the search results will be empty<span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>* Search for product <span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"l"</span><span class="nt">&gt;</span>"unknown"<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nf"</span><span class="nt">&gt;</span>* The search results will be empty<span class="nt">&lt;/span&gt;</span>
+
+                <span class="nt">&lt;/pre&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="tabs" class="styleguide">Tab</h1>
+<p class="styleguide">Style for tabs</p><div class="codeExample">
+  <div class="exampleOutput">
+      <div class="container">
+  <aside class="sidebar-menu">
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav_item active-tab" data-attr="mac"><i class="fa fa-apple"></i> Mac OS</li>
+      <li class="sidebar-nav_item " data-attr="windows"><i class="fa fa-windows"></i> Windows</li>
+      <li class="sidebar-nav_item " data-attr="debian"><i class="fa fa-linux"></i> Debian/AFT</li>
+      <li class="sidebar-nav_item " data-attr="yum"><i class="fa fa-linux"></i> YUM/DNF </li>
+      <li class="sidebar-nav_item " data-attr="zip"><i class="fa fa-linux"></i> ZIP</li>
+      <li class="sidebar-nav_item " data-attr="curl"><i class="fa fa-linux"></i> Curl</li>
+    </ul>
+  </aside>
+
+  <div class="content-container">
+    <h2 class="mobile-heading open" data-attr="mac"><i class="fa fa-apple"></i> Mac OS <span class="expander"><i class="fa fa-chevron-down"></i></span></h2>
+    <div class="tab-content active" id="mac">
+      <h4>Mac</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
+    </div>
+    <h2 class="mobile-heading" data-attr="windows"><i class="fa fa-windows"></i> Windows <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
+    <div class="tab-content" id="windows">
+      <h4>windows</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
+    </div>
+    <h2 class="mobile-heading" data-attr="debian"><i class="fa fa-linux"></i> Debian <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
+    <div class="tab-content" id="debian">
+      <h4>Deb ian</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
+    </div>
+    <h2 class="mobile-heading" data-attr="yum"><i class="fa fa-linux"></i> YUM/DNF <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
+    <div class="tab-content" id="yum">
+      <h4> YUM/DNF</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
+    </div>
+
+    <h2 class="mobile-heading" data-attr="zip"><i class="fa fa-linux"></i> YUM/DNF <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
+    <div class="tab-content" id="zip">
+      <h4> ZIP</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
+    </div>
+
+    <h2 class="mobile-heading" data-attr="curl"><i class="fa fa-linux"></i> YUM/DNF <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
+    <div class="tab-content" id="curl">
+      <h4> Curl</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"sidebar-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"sidebar-nav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"sidebar-nav_item active-tab"</span> <span class="na">data-attr=</span><span class="s">"mac"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-apple"</span><span class="nt">&gt;&lt;/i&gt;</span> Mac OS<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"sidebar-nav_item "</span> <span class="na">data-attr=</span><span class="s">"windows"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-windows"</span><span class="nt">&gt;&lt;/i&gt;</span> Windows<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"sidebar-nav_item "</span> <span class="na">data-attr=</span><span class="s">"debian"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linux"</span><span class="nt">&gt;&lt;/i&gt;</span> Debian/AFT<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"sidebar-nav_item "</span> <span class="na">data-attr=</span><span class="s">"yum"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linux"</span><span class="nt">&gt;&lt;/i&gt;</span> YUM/DNF <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"sidebar-nav_item "</span> <span class="na">data-attr=</span><span class="s">"zip"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linux"</span><span class="nt">&gt;&lt;/i&gt;</span> ZIP<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"sidebar-nav_item "</span> <span class="na">data-attr=</span><span class="s">"curl"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linux"</span><span class="nt">&gt;&lt;/i&gt;</span> Curl<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/aside&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content-container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading open"</span> <span class="na">data-attr=</span><span class="s">"mac"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-apple"</span><span class="nt">&gt;&lt;/i&gt;</span> Mac OS <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-chevron-down"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content active"</span> <span class="na">id=</span><span class="s">"mac"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Mac<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"windows"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-windows"</span><span class="nt">&gt;&lt;/i&gt;</span> Windows <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-chevron-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>windows<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"debian"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linux"</span><span class="nt">&gt;&lt;/i&gt;</span> Debian <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-chevron-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"debian"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Deb ian<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"yum"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linux"</span><span class="nt">&gt;&lt;/i&gt;</span> YUM/DNF <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-chevron-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"yum"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span> YUM/DNF<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"zip"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linux"</span><span class="nt">&gt;&lt;/i&gt;</span> YUM/DNF <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-chevron-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"zip"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span> ZIP<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"curl"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-linux"</span><span class="nt">&gt;&lt;/i&gt;</span> YUM/DNF <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-chevron-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"curl"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span> Curl<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+    
+      <script type="text/javascript" src="build/javascripts/site.js"></script>
+    
+  
+
+  
+</body>
+</html>

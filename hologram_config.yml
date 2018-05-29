@@ -1,22 +1,25 @@
-source: ./source/stylesheets
+# Relative path(s) to your source files
+source: ./source/stylesheets/
 
-# The directory that hologram will build to
-destination: ./docs
+# Relative path where you want the documentation to be built
+destination: ./source/styleguide/
 
-# The assets needed to build the docs (includes header.html, footer.html, etc)
-documentation_assets: ./doc_assets
+# The path that contains supporting assets for the documentation page
+documentation_assets: node_modules/hologram-github-theme
 
-# This is a custom markdown renderer (see Redcarpet documentation for
-# how to do this)
-# custom_markdown: trulia_markdown_renderer.rb
+# Category that will be used as the index.html (optional)
+index: styleguide
 
-# Any other asset folders that need to be copied to the destination folder
-# This where you should include your full stylesheets, component javascript,
-# libraries and any other dependencies your style guide will have
+# A list of relative paths to folders containing any dependencies to copy
 dependencies:
-  - ./build
+  - 'build'
+# The CSS files to be included in the styleguide
+css_include:
+  - 'build/stylesheets/site.css'
 
-# To additionally output navigation for top level sections, set the value to
-# 'section'. To output navigation for sub-sections,
-# set the value to `all`
-nav_level: all
+# The JavaScript files to included in the styleguide
+js_include:
+  - 'build/javascripts/site.js'
+
+# The global title that is displayed at the top of the pages
+global_title: Styleguide
