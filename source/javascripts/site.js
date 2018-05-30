@@ -45,6 +45,23 @@ $(document).ready(function(){
 
       $(id).toggleClass('active');
     });
-    
+
+
+// mobile nav button
+
+  $('.navbtn').on('click', function () {
+    $('.bar').toggleClass('animate');
+    // $('.nav').slideToggle();
+    $('.nav').toggleClass('open');
+  });
+
+    //sticky header
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $('.top').addClass('sticky');
+    } else {
+      $('.top').removeClass('sticky');
+    }
+  });
 
 });
