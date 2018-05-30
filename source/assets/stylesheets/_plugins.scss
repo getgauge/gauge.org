@@ -9,9 +9,10 @@
   flex-wrap: wrap;
   padding: 10px 0px;
   border-bottom: 1px solid $border-color;
+  
   div{
     width: 100%;
-    padding: 0px;
+    padding: 10px;
     font-size: 14px;
 
     @media (min-width: $screen-md){
@@ -19,8 +20,7 @@
     }
     @media (min-width: $screen-lg){
       font-size: 16px;
-      padding: 10px 10px 10px 0px;
-      
+      padding: 10px 10px 10px 0px; 
     }
   }
 }
@@ -34,14 +34,16 @@
   }
 }
 
+.flex-container__item:last-child{
+  border-bottom: none;
+}
+
 .icon{
   width: 45px;
   height: auto;
   vertical-align: middle;
   margin: 5px 15px 15px 0px;
-
   @media (min-width: $screen-lg){
     margin: 0px 15px 0px 0px;
   }
-
 }
