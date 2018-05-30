@@ -13,6 +13,15 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :js_dir, "assets/javascripts"
+set :css_dir, "assets/stylesheets"
+set :images_dir, "assets/images"
+
+configure :development do
+  # Reload the browser automatically whenever files change
+  activate :livereload
+end
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 

@@ -1,27 +1,19 @@
 // Responsive variables
-
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
-
 $screen-sm-min: 575.98px;
 $screen-md-min: 767.98px;
 $screen-lg-min: 991.98px;
 $screen-xl-min: 1199.98px;
-
 // grid 
 $gutter: 15px;
-
-
 // colors
-
 $primary-color:#ffcc00;
 $border-color: #ccc;
 $active-border-color: $primary-color;
 $border-radius:3px;
-
-
 $active-nav-bg: #f2f2f2;
 $active-tab-header-bg: transparent;
 $feature-tab-bg: #f8db4d;
