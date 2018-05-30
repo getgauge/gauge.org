@@ -1,5 +1,5 @@
 # Relative path(s) to your source files
-source: ./source/stylesheets/
+source: ./source/assets/stylesheets/
 
 # Relative path where you want the documentation to be built
 destination: ./source/styleguide/
@@ -15,11 +15,11 @@ dependencies:
   - 'build'
 # The CSS files to be included in the styleguide
 css_include:
-  - 'build/stylesheets/site.css'
+  - 'build/assets/stylesheets/site.css'
 
 # The JavaScript files to included in the styleguide
 js_include:
-  - 'build/javascripts/site.js'
+  - 'build/assets/javascripts/site.js'
 
 # The global title that is displayed at the top of the pages
 global_title: Styleguide
