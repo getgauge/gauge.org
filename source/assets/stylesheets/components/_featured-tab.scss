@@ -68,32 +68,6 @@ Style for tabs
   display: block;
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  @include grid-container;
-  @media (min-width: $screen-sm) {
-    max-width: 540px;
-  }
-  @media (min-width: $screen-md) {
-    max-width: 720px;
-  }
-  @media (min-width: $screen-lg) {
-    max-width: 960px;
-  }
-  @media (min-width: $screen-xl) {
-    max-width: 1140px;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 50px;
-  background: $primary-color;
-}
 
 // --------component styles
 
