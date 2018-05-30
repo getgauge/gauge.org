@@ -1,12 +1,6 @@
-/styles $border:#ccc;
-$border-radius:3px;
 $header-bg: #1a1c19;
 $header-nav-color: #fff;
 $mobile-nav-bg: #292c27;
-body {
-    margin-top: 65px;
-}
-
 header.top {
     @include clearfix;
     background: $header-bg;
@@ -25,9 +19,9 @@ header.top {
 
 .logo {
     text-decoration: none;
-    width: 70px;
+    width: 95px;
     display: inline-block;
-    margin: 10px;
+    margin: 16px 0 0 16px;
     @media (min-width: $screen-md) {
         float: left;
         width: 100px;
@@ -93,14 +87,13 @@ header.top {
 .link_getstarted {
     a {
         @media (min-width: $screen-md) {
-            border:1px solid $border;
+            border:1px solid $border-color;
             border-radius: 20px;
         }
     }
 }
 
 //hamburger animation
-
 .navbtn {
     border: 0;
     background: $header-bg;
@@ -108,4 +101,3 @@ header.top {
         display: none;
     }
 }
-
