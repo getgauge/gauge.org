@@ -1,0 +1,31 @@
+footer{
+  background: $footer-background;
+}
+
+img {
+  max-width: 100%;
+}
+
+.foolinks{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  a{
+    text-decoration: none;
+    color: $active-feature-tab-bg;
+  }
+}
+.footer_items h5{
+  color: $footer-header;
+}
+
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer_items{
+  width: 50%;
+  @media (min-width: $screen-sm){
+    width: 22%;
+  }
+}
