@@ -1,3 +1,6 @@
+.sub-title{
+
+} 
 .page-block {
     margin: 0 0 50px 0;
     font-size: 13px;
@@ -9,13 +12,7 @@
         margin: 0 0px 50px 50px;
         font-size: 16px;
     }
-    
-    a {
-        color: #333;
-        display: inline-block;
-        border-bottom: 1px dotted #333;
-        text-decoration: none;
-    }
+
 }
 
 .tab-content {
@@ -25,7 +22,6 @@
         @media (max-width: $screen-sm-min) {
             margin-left: 40px;
         }
-
     }
     h3::before {
         counter-increment: section;
@@ -45,9 +41,8 @@
         line-height: 32px;
         background: $primary-color;
         @media (min-width: $screen-md) {
-          left: -48px;
-        }
-        // @media (min-width: $screen-lg) {
+            left: -48px;
+        } // @media (min-width: $screen-lg) {
         // font-size: 26px;
         //     top: -10px;
         //     left: -80px;
