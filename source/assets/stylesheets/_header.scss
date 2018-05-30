@@ -17,6 +17,27 @@ header.top {
     }
 }
 
+.header-container {
+    margin: 0 auto;
+    width: 100%;
+ 
+    @include grid-container;
+    @media (min-width: $screen-sm) {
+        max-width: 540px;
+ 
+    }
+    @media (min-width: $screen-md) {
+        max-width: 720px;
+ 
+    }
+    @media (min-width: $screen-lg) {
+        max-width: 960px;
+    }
+    @media (min-width: $screen-xl) {
+        max-width: 1140px;
+    }
+}
+
 .logo {
     text-decoration: none;
     width: 95px;
@@ -25,6 +46,7 @@ header.top {
     @media (min-width: $screen-md) {
         float: left;
         width: 100px;
+        margin-left: 0;
     }
     @media (min-width: $screen-xl) {
         width: 160px;
@@ -44,9 +66,7 @@ header.top {
         overflow: hidden; // opacity: 0;
         &.open {
             transition: all 0.3s ease-in-out;
-            transform: translatex(0%);
-            
-            // opacity: 1;
+            transform: translatex(0%); // opacity: 1;
         }
     }
     @media (min-width: $screen-md) {

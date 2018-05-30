@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C1C1C0;}
+	.st1{fill:url(#SVGID_3_);}
+	.st2{fill:url(#SVGID_4_);}
+</style>
+<g>
+	<path class="st0" d="M42,1c1.1,0,2,0.9,2,2v39c0,1.1-0.9,2-2,2H3c-1.1,0-2-0.9-2-2V3c0-1.1,0.9-2,2-2H42 M42,0H3C1.3,0,0,1.3,0,3
+		v39c0,1.7,1.3,3,3,3h39c1.7,0,3-1.3,3-3V3C45,1.3,43.7,0,42,0L42,0z"/>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M21.6,36.3c0,0.6-1.6,1.2-4.1,1.5s-5.6,0.3-8.1,0c-2.5-0.3-4.1-0.9-4.1-1.5c0-0.6,1.6-1.2,4.1-1.5
+			c2.5-0.3,5.6-0.3,8.1,0C20,35.1,21.6,35.7,21.6,36.3z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+</g>
+<g>
+	
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-576.8405" y1="622.7982" x2="-576.8337" y2="622.7916" gradientTransform="matrix(1849.2675 0 0 -1853.392 1066744.625 1154301.5)">
+		<stop  offset="0" style="stop-color:#387EB8"/>
+		<stop  offset="1" style="stop-color:#366994"/>
+	</linearGradient>
+	<path class="st1" d="M22.4,10.1c-6.3,0-6,2.8-6,2.8l0,2.9h6.1v0.9h-8.5c0,0-4.1-0.5-4.1,5.9c0,6.4,3.5,6.2,3.5,6.2h2.1v-3
+		c0,0-0.1-3.5,3.5-3.5h6c0,0,3.4,0.1,3.4-3.3v-5.5C28.5,13.4,29,10.1,22.4,10.1z M19.1,12c0.6,0,1.1,0.5,1.1,1.1c0,0,0,0,0,0
+		c0,0.6-0.5,1.1-1.1,1.1c0,0,0,0,0,0c-0.6,0-1.1-0.5-1.1-1.1c0,0,0,0,0,0C18,12.5,18.5,12,19.1,12C19.1,12,19.1,12,19.1,12z"/>
+	
+		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-577.1851" y1="623.1272" x2="-577.1779" y2="623.1204" gradientTransform="matrix(1849.2671 0 0 -1853.3917 1067389.375 1154919)">
+		<stop  offset="0" style="stop-color:#FFE052"/>
+		<stop  offset="1" style="stop-color:#FFC331"/>
+	</linearGradient>
+	<path class="st2" d="M22.6,34.9c6.3,0,6-2.8,6-2.8l0-2.9h-6.1v-0.9h8.5c0,0,4.1,0.5,4.1-5.9c0-6.4-3.5-6.2-3.5-6.2h-2.1v3
+		c0,0,0.1,3.5-3.5,3.5h-6c0,0-3.4-0.1-3.4,3.3v5.5C16.5,31.6,16,34.9,22.6,34.9L22.6,34.9z M25.9,33c-0.6,0-1.1-0.5-1.1-1.1
+		c0,0,0,0,0,0c0-0.6,0.5-1.1,1.1-1.1c0,0,0,0,0,0c0.6,0,1.1,0.5,1.1,1.1c0,0,0,0,0,0C27,32.5,26.5,33,25.9,33
+		C25.9,33,25.9,33,25.9,33L25.9,33z"/>
+</g>
+</svg>

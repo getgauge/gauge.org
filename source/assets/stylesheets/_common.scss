@@ -7,9 +7,10 @@ img {
 }
 
 body {
-    font-family: 'URWGeometric-Medium';
+    font-family: 'Open Sans';
     font-size: 16px;
     margin-top: 65px;
+    font-weight: 300;
     @media (min-width: $screen-md) {
         margin-top: 120px;
     }
@@ -19,15 +20,19 @@ body {
 .container {
     margin: 0 auto;
     width: 100%;
+    padding: 0 20px;
     @include grid-container;
     @media (min-width: $screen-sm) {
         max-width: 540px;
+        padding: 0 40px;
     }
     @media (min-width: $screen-md) {
         max-width: 720px;
+        padding: 0 60px;
     }
     @media (min-width: $screen-lg) {
         max-width: 960px;
+        padding: 0;
     }
     @media (min-width: $screen-xl) {
         max-width: 1140px;
@@ -35,17 +40,27 @@ body {
 }
 
 .page-header {
-    margin: 105px 20px 40px;
-    border-bottom: 1px solid $border-color;
+    margin: 105px 0 40px;
     @media (min-width: $screen-md) {
-        margin: 145px 20px 40px;
+        margin: 145px 0 40px;
+    }
+    @media (min-width: $screen-xl) {
+        margin: 145px auto 40px;
     }
     h1 {
+        font-family: 'URWGeometric-Regular';
         font-size: 20px;
         margin-bottom: 0;
+        border-bottom: 1px solid $border-color;
         @media (min-width: $screen-md) {
             font-size:36px;
         }
-
     }
+}
+
+a {
+    color: #333;
+    display: inline-block;
+    border-bottom: 1px dotted #333;
+    text-decoration: none;
 }

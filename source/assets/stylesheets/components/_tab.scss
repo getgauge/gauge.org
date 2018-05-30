@@ -100,8 +100,7 @@ Style for tabs
 
 // tab content
 .content-container {
-    @include grid-container;
-    margin: 20px;
+
     @media (max-width: $screen-lg-min) {
         border:1px solid $border-color;
         border-radius: $border-radius;
