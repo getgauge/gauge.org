@@ -1,0 +1,29 @@
+.flex-container{
+  list-style: none;
+}
+
+.flex-container__item{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 5px;
+
+  div{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid;
+
+    @media (min-width: $screen-md){
+      width: 30%;
+    }
+  }
+}
+
+.flex-container__item:first-child{
+  display: none;
+  div{
+    width: 30%;
+  }
+  @media (min-width: $screen-md){
+    display: flex;
+  }
+}

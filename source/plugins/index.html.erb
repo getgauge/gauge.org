@@ -9,62 +9,131 @@
 <div class="container">
   <aside class="sidebar-menu">
     <ul class="tab-nav">
-      <li class="tab-nav_item active-tab" data-attr="mac">IDE Plugins</li>
-      <li class="tab-nav_item " data-attr="windows">Reports</li>
-      <li class="tab-nav_item " data-attr="debian">Others</li>
+    <li class="tab-nav_item active-tab" data-attr="language">Language Runners</li>
+      <li class="tab-nav_item" data-attr="plugins">IDE Plugins</li>
+      <li class="tab-nav_item " data-attr="reports">Reports</li>
+      <li class="tab-nav_item " data-attr="others">Others</li>
     </ul>
   </aside>
 
   <div class="content-container">
-    <h2 class="mobile-heading open" data-attr="mac"><i class="fa fa-apple"></i> Mac OS <span class="expander"><i class="fa fa-chevron-down"></i></span></h2>
-    <div class="tab-content active" id="mac">
-      <table>
-        <tr>
-          <th>Plugin</th>
-          <th>Description</th>
-          <th>Owner</th>
-        </tr>
-        <tr>
-          <td>Java Runner</td>
-          <td>Plugin that lets you write your tests in Java. <a href="#">Read more</a></td>
-          <td><a href="#">ThoughtWorks Inc.</a></td>
-        </tr>
-        <tr>
-          <td>C# runner</td>
-          <td>Plugin that lets you write your tests in C#.<a href="#">Read more</a></td>
-          <td><a href="#">ThoughtWorks Inc.</a></td>
-        </tr>
-        <tr>
-          <td>Ruby runner</td>
-          <td>Plugin that lets you write your tests in Ruby.<a href="#">Read more</a></td>
-          <td><a href="#">ThoughtWorks Inc.</a></td>
-        </tr>
-        <tr>
-          <td>Javascript runner</td>
-          <td>Plugin that lets you write your tests in Javascript.<a href="#">Read more</a></td>
-          <td><a href="#">ThoughtWorks Inc.</a></td>
-        </tr>
-        <tr>
-          <td>Golang runner</td>
-          <td>Plugin that lets you write your tests in Golang.<a href="#">Read more</a></td>
-          <td><a href="#">ThoughtWorks Inc.</a></td>
-        </tr>
-        <tr>
-          <td>Python runner</td>
-          <td>Plugin that lets you write your tests in Python.<a href="#">Read more</a></td>
-          <td><a href="#">ThoughtWorks Inc.</a></td>
-        </tr>
-      </table>
+    <h2 class="mobile-heading open" data-attr="language">Language Runners<span class="expander"><i class="fa fa-chevron-down"></i></span></h2>
+    <div class="tab-content active" id="language">
+      <ul class="flex-container">
+        <li class="flex-container__item">
+          <div>Plugin</div>
+          <div>Description</div>
+          <div>Owner</div>
+        </li>
+        <li class="flex-container__item">
+          <div>Java Runner</div>
+          <div>Plugin that lets you write your tests in Java. <a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>C# runner</div>
+          <div>Plugin that lets you write your tests in C#.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>Ruby runner</div>
+          <div>Plugin that lets you write your tests in Ruby.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>Javascript runner</div>
+          <div>Plugin that lets you write your tests in Javascript.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>Golang runner</div>
+          <div>Plugin that lets you write your tests in Golang.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>Python runner</div>
+          <div>Plugin that lets you write your tests in Python.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+      </ul>
     </div>
 
-    <h2 class="mobile-heading" data-attr="windows"><i class="fa fa-windows"></i> Windows <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
-    <div class="tab-content" id="windows">
-      
+    <h2 class="mobile-heading" data-attr="plugins"><i class="fa fa-windows"></i> IDE Plugins <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
+    <div class="tab-content" id="plugins">
+      <ul class="flex-container">
+        <li class="flex-container__item">
+          <div>Plugin</div>
+          <div>Description</div>
+          <div>Owner</div>
+        </li>
+        <li class="flex-container__item">
+          <div>Visual Studio Code</div>
+          <div>Lets you use VS Code to write tests in Javascript. <a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>IntelliJ</div>
+          <div>Lets you use IntelliJ to write tests in Java.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>Visual Studio</div>
+          <div>Lets you use Visual Studio to write tests in C#.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+      </ul>
+    </div>
+  
+    <h2 class="mobile-heading" data-attr="reports"> Reports <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
+    <div class="tab-content" id="reports">
+       <ul class="flex-container">
+        <li class="flex-container__item">
+          <div>Plugin</div>
+          <div>Description</div>
+          <div>Owner</div>
+        </li>
+        <li class="flex-container__item">
+          <div>HTML report</div>
+          <div>Generate an HTML report for test execution.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>XML report</div>
+          <div>Generate an XML report for test execution.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>Spectacle</div>
+          <div>Export specifications to HTML.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>Flash</div>
+          <div>Real-time execution reporting plugin.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+      </ul>
     </div>
 
-    <h2 class="mobile-heading" data-attr="debian"><i class="fa fa-linux"></i> Debian <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
-    <div class="tab-content" id="debian">
-      
+    <h2 class="mobile-heading" data-attr="others"> Others <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
+    <div class="tab-content" id="others">
+      <ul class="flex-container">
+        <li class="flex-container__item">
+          <div>Plugin</div>
+          <div>Description</div>
+          <div>Owner</div>
+        </li>
+        <li class="flex-container__item">
+          <div>Maven</div>
+          <div>To build and manage project dependencies.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+        <li class="flex-container__item">
+          <div>Gradle</div>
+          <div>To build and manage project dependencies.<a href="#">Read more</a></div>
+          <div><a href="#">ThoughtWorks Inc.</a></div>
+        </li>
+      </ul>    
     </div>
 
 </div>
