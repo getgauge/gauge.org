@@ -11,6 +11,8 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
+    <%= partial 'partials/header' %>
+       <%= yield %>
+    <%= partial 'partials/footer' %>
   </body>
 </html>

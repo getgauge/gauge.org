@@ -18,7 +18,8 @@ $(document).ready(function(){
   });
   
 
-  
+    // get started
+    
     $('.tab-nav_item').click(function(){
       var id = $(this).attr('data-attr');
       id = ('#'+ id);
