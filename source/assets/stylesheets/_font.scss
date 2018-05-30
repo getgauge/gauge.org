@@ -1,3 +1,4 @@
+// URWGeometric font import
 @font-face {
     font-family: 'URWGeometric-Medium';
     src: url('/assets/vendor/fonts/urw-geometric/354267_0_0.eot');
@@ -42,27 +43,48 @@
     src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.otf') format('opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.ttf') format('truetype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.svg#URWGeometric-ExtraLight') format('svg');
 }
 
+// Open sans font import
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(/assets/vendor/fonts/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTYnF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('/assets/vendor/fonts/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTYnF5uFdDttMLvmWuJdhhgs.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(/assets/vendor/fonts/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+  src: local('Open Sans'), local('OpenSans'), url('/assets/vendor/fonts/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(/assets/vendor/fonts/opensans/v13/MTP_ySUJH_bn48VBG8sNSonF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('/assets/vendor/fonts/opensans/v13/MTP_ySUJH_bn48VBG8sNSonF5uFdDttMLvmWuJdhhgs.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(/assets/vendor/fonts/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('/assets/vendor/fonts/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf') format('truetype');
+}
+
+// SourceCode Pro font import
+@font-face {
+  font-family: 'SourceCodePro-Bold';
+  src: url('SourceCodePro-Bold.eot?#iefix') format('embedded-opentype'),  url('/assets/vendor/fonts/source-code/SourceCodePro-Bold.otf')  format('opentype'),
+	     url('/assets/vendor/fonts/source-code/SourceCodePro-Bold.woff') format('woff'), url('/assets/vendor/fonts/source-code/SourceCodePro-Bold.ttf')  format('truetype'), url('/assets/vendor/fonts/source-code/SourceCodePro-Bold.svg#SourceCodePro-Bold') format('svg');
+}
+
+@font-face {
+  font-family: 'SourceCodePro-Regular';
+  src: url('/assets/vendor/fonts/source-code/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),  url('/assets/vendor/fonts/source-code/SourceCodePro-Regular.otf')  format('opentype'),
+	     url('/assets/vendor/fonts/source-code/SourceCodePro-Regular.woff') format('woff'), url('/assets/vendor/fonts/source-code/SourceCodePro-Regular.ttf')  format('truetype'), url('/assets/vendor/fonts/source-code/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg');
+}
+
+
+@font-face {
+  font-family: 'SourceCodePro-Medium';
+  src: url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.eot?#iefix') format('embedded-opentype'),  url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.otf')  format('opentype'),
+	     url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.woff') format('woff'), url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.ttf')  format('truetype'), url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.svg#SourceCodePro-Medium') format('svg');
 }
