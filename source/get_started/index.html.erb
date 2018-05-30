@@ -1,6 +1,15 @@
-<header class='page-header'>
+<header class='page-header container'>
 <h1>Get Started</h1>
 </header>
+
+<div class="container">
+<h2 class="sub-title">Choose your OS &amp; download</h2>
+<p class="disclaimer">
+Gauge collects anonymous <a href="#">    usage statistics</a>, to improve the product. You can <a href="#"> opt out</a> if this easily.
+
+</p>
+
+</div>
 
 <div class="container">
   <aside class="sidebar-menu">
@@ -17,7 +26,7 @@
   <div class="content-container">
     <h2 class="mobile-heading open" data-attr="mac"><i class="fa fa-apple"></i> Mac OS <span class="expander"><i class="fa fa-chevron-down"></i></span></h2>
     <div class="tab-content active" id="mac">
-     <div class="page-block">
+      <section class="page-block">
         <h3>Install Gauge</h3>
         <p class="instruction">
         Install Gauge using
@@ -36,7 +45,27 @@
         <p class="instruction">
         <a href="https://docs.gauge.org/installing.html#alternate-methods">Other installers</a>
         </p>
+      </section>
+      <section class="page-block">
+        <h3>See Gauge working</h3>
+        <p class="instruction">
+        Initialize a new Gauge project in the language of your choice. You can read more about initialization
+        <a href="https://docs.gauge.org/quickstart.html#creating-a-project" target="_blank">here.</a>
+        This creates a template with a sample test specification and installs the required language runner. The example below shows how to execute test specifications in Java, but the same applies to all supported languages.
+        </p>
+        <div class="code-box">
+        <code>$ gauge init java</code>
         </div>
+        <p class="instruction">Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.</p>
+        <div class="code-box">
+        <code>$ gauge run specs</code>
+        <pre>Specifications:	1 executed	1 passed	0 failed	0 skipped
+        Scenarios:    	2 executed	2 passed	0 failed	0 skipped
+
+        Total time taken: 80ms</pre>
+        </div>
+        <p class="instruction">You're all set. Start testing!</p>
+      </section>
     </div>
     <h2 class="mobile-heading" data-attr="windows"><i class="fa fa-windows"></i> Windows <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
     <div class="tab-content" id="windows">
