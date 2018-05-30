@@ -1,49 +1,43 @@
 @font-face {
-  font-family: 'URWGeometric-Medium';
-  src: url('/assets/vendor/fonts/urw-geometric/354267_0_0.eot');
-  src: url('/assets/vendor/fonts/urw-geometric/354267_0_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.ttf') format('truetype');
+    font-family: 'URWGeometric-Medium';
+    src: url('/assets/vendor/fonts/urw-geometric/354267_0_0.eot');
+    src: url('/assets/vendor/fonts/urw-geometric/354267_0_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'URWGeometric-SemiBold';
-  src: url('/assets/vendor/fonts/urw-geometric/354267_1_0.eot');
-  src: url('/assets/vendor/fonts/urw-geometric/354267_1_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.ttf') format('truetype');
+    font-family: 'URWGeometric-SemiBold';
+    src: url('/assets/vendor/fonts/urw-geometric/354267_1_0.eot');
+    src: url('/assets/vendor/fonts/urw-geometric/354267_1_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'URWGeometric-ExtraBold';
-  src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot');
-  src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.ttf') format('truetype');
+    font-family: 'URWGeometric-ExtraBold';
+    src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot');
+    src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'URWGeometric-Heavy';
-  src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot');
-  src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.ttf') format('truetype');
+    font-family: 'URWGeometric-Heavy';
+    src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot');
+    src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'URWGeometric-Regular';
-  src: url('URWGeometric-Regular.eot?#iefix') format('embedded-opentype'),  url('URWGeometric-Regular.otf')  format('opentype'),
-         url('URWGeometric-Regular.woff') format('woff'), url('URWGeometric-Regular.ttf')  format('truetype'), url('URWGeometric-Regular.svg#URWGeometric-Regular') format('svg');
+    font-family: 'URWGeometric-Regular';
+    src: url('/assets/vendor/fonts/URWGeometric-Regular.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/URWGeometric-Regular.otf') format('opentype'), url('URWGeometric-Regular.woff') format('woff'), url('URWGeometric-Regular.ttf') format('truetype'), url('URWGeometric-Regular.svg#URWGeometric-Regular') format('svg');
 }
 
 @font-face {
-  font-family: 'URWGeometric-Medium';
-  src: url('URWGeometric-Medium.eot?#iefix') format('embedded-opentype'),  url('URWGeometric-Medium.otf')  format('opentype'),
-          url('URWGeometric-Medium.woff') format('woff'), url('URWGeometric-Medium.ttf')  format('truetype'), url('URWGeometric-Medium.svg#URWGeometric-Medium') format('svg');
-}
-
-
-@font-face {
-  font-family: 'URWGeometric-Light';
-  src: url('URWGeometric-Light.eot?#iefix') format('embedded-opentype'),  url('URWGeometric-Light.otf')  format('opentype'),
-         url('URWGeometric-Light.woff') format('woff'), url('URWGeometric-Light.ttf')  format('truetype'), url('URWGeometric-Light.svg#URWGeometric-Light') format('svg');
+    font-family: 'URWGeometric-Medium';
+    src: url('/assets/vendor/fonts/URWGeometric-Medium.eot?#iefix') format('embedded-opentype'), url('URWGeometric-Medium.otf') format('opentype'), url('URWGeometric-Medium.woff') format('woff'), url('URWGeometric-Medium.ttf') format('truetype'), url('URWGeometric-Medium.svg#URWGeometric-Medium') format('svg');
 }
 
 @font-face {
-  font-family: 'URWGeometric-ExtraLight';
-  src: url('URWGeometric-ExtraLight.eot?#iefix') format('embedded-opentype'),  url('URWGeometric-ExtraLight.otf')  format('opentype'),
-         url('URWGeometric-ExtraLight.woff') format('woff'), url('URWGeometric-ExtraLight.ttf')  format('truetype'), url('URWGeometric-ExtraLight.svg#URWGeometric-ExtraLight') format('svg');
+    font-family: 'URWGeometric-Light';
+    src: url('/assets/vendor/fonts/URWGeometric-Light.eot?#iefix') format('embedded-opentype'), url('URWGeometric-Light.otf') format('opentype'), url('URWGeometric-Light.woff') format('woff'), url('URWGeometric-Light.ttf') format('truetype'), url('URWGeometric-Light.svg#URWGeometric-Light') format('svg');
 }
-  
+
+@font-face {
+    font-family: 'URWGeometric-ExtraLight';
+    src: url('/assets/vendor/fonts/URWGeometric-ExtraLight.eot?#iefix') format('embedded-opentype'), url('URWGeometric-ExtraLight.otf') format('opentype'), url('URWGeometric-ExtraLight.woff') format('woff'), url('URWGeometric-ExtraLight.ttf') format('truetype'), url('URWGeometric-ExtraLight.svg#URWGeometric-ExtraLight') format('svg');
+}

@@ -8,7 +8,11 @@ img {
 
 body {
     font-family: 'URWGeometric-Medium';
-    font-size:16px;
+    font-size: 16px;
+    margin-top: 65px;
+    @media (min-width: $screen-md) {
+        margin-top: 120px;
+    }
 }
 
 // grid styls
@@ -27,5 +31,21 @@ body {
     }
     @media (min-width: $screen-xl) {
         max-width: 1140px;
+    }
+}
+
+.page-header {
+    margin: 105px 20px 40px;
+    border-bottom: 1px solid $border-color;
+    @media (min-width: $screen-md) {
+        margin: 145px 20px 40px;
+    }
+    h1 {
+        font-size: 20px;
+        margin-bottom: 0;
+        @media (min-width: $screen-md) {
+            font-size:36px;
+        }
+
     }
 }

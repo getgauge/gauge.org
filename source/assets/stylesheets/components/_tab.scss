@@ -8,15 +8,15 @@ category: Components
 Style for tabs
 
 ```html_example
-  <div class="container">
+<div class="container">
   <aside class="sidebar-menu">
-    <ul class="sidebar-nav">
-      <li class="sidebar-nav_item active-tab" data-attr="mac"><i class="fa fa-apple"></i> Mac OS</li>
-      <li class="sidebar-nav_item " data-attr="windows"><i class="fa fa-windows"></i> Windows</li>
-      <li class="sidebar-nav_item " data-attr="debian"><i class="fa fa-linux"></i> Debian/AFT</li>
-      <li class="sidebar-nav_item " data-attr="yum"><i class="fa fa-linux"></i> YUM/DNF </li>
-      <li class="sidebar-nav_item " data-attr="zip"><i class="fa fa-linux"></i> ZIP</li>
-      <li class="sidebar-nav_item " data-attr="curl"><i class="fa fa-linux"></i> Curl</li>
+    <ul class="tab-nav">
+      <li class="tab-nav_item active-tab" data-attr="mac"><i class="fa fa-apple"></i> Mac OS</li>
+      <li class="tab-nav_item " data-attr="windows"><i class="fa fa-windows"></i> Windows</li>
+      <li class="tab-nav_item " data-attr="debian"><i class="fa fa-linux"></i> Debian/AFT</li>
+      <li class="tab-nav_item " data-attr="yum"><i class="fa fa-linux"></i> YUM/DNF </li>
+      <li class="tab-nav_item " data-attr="zip"><i class="fa fa-linux"></i> ZIP</li>
+      <li class="tab-nav_item " data-attr="curl"><i class="fa fa-linux"></i> Curl</li>
     </ul>
   </aside>
 
@@ -57,97 +57,80 @@ Style for tabs
   </div>
 </div>
 ```
-*/ 
+*/
 
-
-%active-border{
-  border-bottom:3px solid $active-border-color;
+%active-border {
+    background: #EEE;
+    border-bottom: 6px solid $active-border-color;
 }
-
 
 // --------component styles
-
 .sidebar-menu {
-  display: none;
-  height: auto;
-  @media (min-width: $screen-md) {
-    @include grid-column(4);
-    display: block;
-    margin: 0 $gutter;
-  }
-  @media (min-width: $screen-lg) {
-    @include grid-column(3);
-    margin: 0 $gutter;
-  }
+    display: none;
+    height: auto;
+    @media (min-width: $screen-lg) {
+        @include grid-column(3);
+        display: block;
+        margin: 0 $gutter;
+    }
 }
 
-.sidebar-nav {
-  color: #33374f;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  list-style: none;
-  margin: $gutter 0;
-  padding: 0;
-  border:1px solid $border-color;
-  border:1px solid $border-color;
-  border:1px solid $border-color;
-  border:1px solid $border-color;
-  border-radius:$border-radius; 
+.tab-nav {
+    color: #33374f;
+    list-style: none;
+    margin: $gutter 0;
+    padding: 0;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
 }
 
-.sidebar-nav_item {
-  border-bottom: 1px solid $border-color;
-  cursor: pointer;
-  padding: 20px;
-  transition: all 0.25s;
-  &.active-tab {
-    background: $active-nav-bg;
-     @extend %active-border;
-  }
-}
-
-.sidebar-nav_item:hover {
-  background: #f2f2f2;
+.tab-nav_item {
+    border-bottom: 1px solid $border-color;
+    cursor: pointer;
+    padding: 20px;
+    transition: all 0.25s;
+    &.active-tab {
+        background: $active-nav-bg;
+        @extend %active-border;
+    }
+    &:hover {
+        background: #f2f2f2;
+    }
 }
 
 // tab content
-
 .content-container {
-  @include grid-container;
-  @include grid-column(12);
-  @media (max-width: $screen-md-min) {
-    border:1px solid $border-color;
-    border-radius:$border-radius;
-  }
-
-  @media (min-width: $screen-md) {
-    @include grid-column(8);
-    margin: 0 $gutter;
-  }
-  @media (min-width: $screen-lg) {
-    @include grid-column(9);
-    margin: 0 $gutter;
-  }
+    @include grid-container;
+    margin: 20px;
+    @media (max-width: $screen-lg-min) {
+        border:1px solid $border-color;
+        border-radius: $border-radius;
+    }
+    @media (min-width: $screen-lg) {
+        @include grid-column(9);
+        margin: 0 $gutter;
+    }
 }
 
 .tab-content {
-  border: 1px solid $border-color;
-  border-top: 0;
-  padding: 20px;
-  display: none;
-  @media (min-width: $screen-md) {
-    border: none;
-    padding:0;
-  }
-  &.active {
-    display: block;
-    @media (min-width: $screen-md) {
-      display: block;
+    border: 1px solid $border-color;
+    border-width: 0 0 1px 0;
+    border-top: 0;
+    padding: 20px;
+    display: none;
+    @media (min-width: $screen-lg) {
+        border: none;
+        padding: 0;
     }
-  }
+    &.active {
+        display: block;
+        @media (min-width: $screen-lg) {
+            display: block;
+        }
+    }
 }
 
-  .mobile-heading {
+.mobile-heading {
     color: #33374f;
     font-size: 16px;
     font-weight: 400;
@@ -155,22 +138,21 @@ Style for tabs
     margin: 0;
     border-bottom: 1px solid $border-color;
     position: relative;
-    @media (min-width: $screen-md) {
-      display: none;
+    @media (min-width: $screen-lg) {
+        display: none;
     }
     &.open {
-     @extend %active-border;
+        @extend %active-border;
     }
-    > .fa{
-      margin-right: 10px;
+    >.fa {
+        margin-right: 10px;
     }
-  }
+}
 
-  .expander {
+.expander {
     font-size: 16px;
     font-weight: bold;
     position: absolute;
     right: 15px;
     top: 17px;
-  }
-
+}
