@@ -1,5 +1,116 @@
+$banner-bg: #1a1c19;
+$banner-secondary: #292C27;
+$color-light: #fff;
+
 .main-highlight {
     background: $primary-color;
+}
+// Banner Style
+
+.banner-container{
+    background: $banner-bg;
+    height: 90vh;
+    margin-top: -3%;
+    position: relative;
+    width: auto;
+}
+
+.banner-container__top{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding: 100px 0px;
+
+    h1{
+        color: $primary-color;
+        text-align: center;
+        font-size: 24px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        margin-bottom: 30px;
+        line-height: 1.2;
+        @media(min-width: $screen-sm) and(max-width: $screen-lg-min){
+            font-size: 32px;
+        }
+        @media(min-width: $screen-lg){
+            font-size: 48px;
+        }
+    }
+    p{
+        text-align: center;
+        font-size: 14px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        color: $color-light;
+        @media(min-width: $screen-sm) and(max-width: $screen-lg-min){
+            font-size: 18px;
+        }
+        @media(min-width: $screen-lg){
+            font-size: 24px;
+        }
+    }
+    .banner-action{
+        margin: 50px auto;
+    }
+}
+
+%button{
+    width: 131px;
+    height: 30px;
+    border-radius: 30px;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    line-height: calc(30px * 1);
+    font-size: 14px;
+    @media (min-width: $screen-md){
+        width: 200px;
+        height: 50px; 
+        line-height: calc(50px * 1);
+        font-size: 19px;
+    }
+}
+
+.cta-primary{
+    @extend %button;
+    background: $color-light;
+    border: 1px solid $color-light;
+    color: $banner-bg;
+}
+
+.cta-secondary{
+    @extend %button;
+    border: 1px solid $primary-color;
+    color:  $primary-color;
+}
+
+.banner-container__bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $banner-secondary;
+
+    h2{
+        font-size: 16px;
+        font-family: "Lato", sans-serif;
+        color: $color-light;
+        text-align: center;
+        font-weight: 400;
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.2;
+        
+        @media(min-width: $screen-sm) and(max-width: $screen-lg-min){
+            font-size: 22px;
+        }
+
+        @media(min-width: $screen-lg){
+            font-size: 36px;
+            padding: 50px;
+        }
+    }
 }
 
 //terminal styles
