@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Final-design---desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FINAL---home-option2b-Copy-2" transform="translate(-758.000000, -2943.000000)">
+            <g id="plugin-feature" transform="translate(697.000000, 2894.000000)">
+                <g id="Group-7" transform="translate(61.000000, 49.000000)">
+                    <circle id="Oval-4" fill="#FFCC00" cx="30" cy="30" r="30"></circle>
+                    <path d="M30,40 C30,40.6169814 30,41.376747 30,42.2792969 C30,43.774797 30,45.181698 30,46.5 C30,47.5736423 30,52.5 32.1062673,53.5267806 C34.2125346,54.5535612 35.8410944,54.3513132 37.1288648,53.9688789 C39.2908974,53.3268114 41.3305123,52.4001901 43.2042974,51.2324269 C50.2867018,46.8185957 55,38.9597227 55,30 C55,16.1928813 43.8071187,5 30,5 C16.1928813,5 5,16.1928813 5,30 C5,39.2047458 9.33333333,46.7047458 18,52.5" id="Oval-4" stroke="#1A1C19" stroke-width="2" stroke-linecap="round" transform="translate(30.000000, 29.640099) scale(-1, 1) translate(-30.000000, -29.640099) "></path>
+                    <path d="M27,36 L27,39 C27,39.5522847 27.4477153,40 28,40 L32,40 C32.5522847,40 33,39.5522847 33,39 L33,36 L27,36 Z" id="Rectangle-3" stroke="#1A1C19" stroke-width="2"></path>
+                    <path d="M23,26 L23,33 C23,34.6568542 24.3431458,36 26,36 L34,36 C35.6568542,36 37,34.6568542 37,33 L37,26 L23,26 Z" id="Rectangle-3" stroke="#1A1C19" stroke-width="2" fill="#FFFFFF"></path>
+                    <path d="M28.5,29.5 L31.5,29.5" id="Line-5" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M28.5,32.5 L31.5,32.5" id="Line-5" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M25.5,21.5 L25.5,16.5" id="Line-3" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M35,21.5 L35,16.5" id="Line-3-Copy" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M30.25,18.5 L30.25,13.5" id="Line-4" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

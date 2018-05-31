@@ -1,0 +1,101 @@
+/*doc
+---
+title: Featured Tab
+name: Featured tab
+category: Components
+---
+
+Style for tabs
+
+```html_example
+<section class="feature">
+  <div class="container">
+<ul class="small-thumbnails">
+    <li class="thumbnail-small">
+      <div class="thumbnail-small_graphics">
+        <img src="http://via.placeholder.com/100x100" alt="">
+      </div>
+      <div class="thumbnail-small_details">
+        <h3>Create specifications anyone can read</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+      </div>
+    </li>
+      <li class="thumbnail-small">
+      <div class="thumbnail-small_graphics">
+        <img src="http://via.placeholder.com/100x100" alt="">
+      </div>
+      <div class="thumbnail-small_details">
+        <h3>Create specifications anyone can read</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+      </div>
+    </li>
+
+</ul>
+    
+    <ul class="small-thumbnails">
+            <li class="thumbnail-small">
+      <div class="thumbnail-small_graphics">
+        <img src="http://via.placeholder.com/100x100" alt="">
+      </div>
+      <div class="thumbnail-small_details">
+        <h3>Create specifications anyone can read</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+      </div>
+    </li>
+      <li class="thumbnail-small">
+      <div class="thumbnail-small_graphics">
+        <img src="http://via.placeholder.com/100x100" alt="">
+      </div>
+      <div class="thumbnail-small_details">
+        <h3>Create specifications anyone can read</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+      </div>
+    </li>
+    </ul>
+  </div>
+
+</section>  
+
+```
+*/
+
+.feature {
+    padding: 70px 0;
+}
+
+.small-thumbnails {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @media (min-width: $screen-lg) {
+        display:flex;
+    }
+}
+
+.thumbnail-small {
+    display: flex;
+    margin-bottom:50px;
+    @media (min-width: $screen-md) {
+        margin: 0 15px 30px;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        padding: 45px;
+    }
+    @media (min-width: $screen-lg) {
+        width: 50%;
+    }
+}
+
+.thumbnail-small_details {
+    width: 85%;
+    margin: 0 0 0 $gutter;
+
+}
+
+.thumbnail-small_graphics {
+    width: 15%;
+    margin: 0 $gutter 0 0;
+    @media (min-width: $screen-md) {
+        text-align: right;
+    }
+}

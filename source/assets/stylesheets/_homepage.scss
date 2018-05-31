@@ -1,0 +1,304 @@
+.main-highlight {
+    background: $primary-color;
+}
+
+//terminal styles
+%broser-dot {
+    width: $browser-dot-size;
+    height: $browser-dot-size;
+    border-radius: 50%;
+    display: block;
+}
+
+
+.terminal {
+    background: #292c27;
+    border-radius: 5px;
+    min-height: 500px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+}
+
+.terminal_head {
+    background: #1a1c19;
+    border-radius: 5px 5px 0 0;
+    height: 45px;
+    .dot {
+        position: relative;
+        @extend %broser-dot;
+        background: #f5bc40;
+        top: 15px;
+        left: 40px;
+        &:before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            @extend %broser-dot;
+            background: #ee5e5c;
+        }
+        &:after {
+            content: "";
+            @extend %broser-dot;
+            background: #53c748;
+            position: absolute;
+            left: 20px;
+        }
+    }
+}
+
+.terminal_content {
+    padding: 20px 30px;
+}
+
+// code highlight styles
+.highlight-console .highlight pre span.go:before {
+    content: "> ";
+    color: #aaa;
+}
+
+.highlight-console .highlight pre span.go,
+.highlight-md .highlight pre,
+.highlight-md .highlight pre span.gh,
+.highlight-text .highlight pre,
+.highlight-xml .highlight pre {
+    color: #f8f8f2 !important;
+}
+
+.highlight {
+    font-family: "Source Code Pro", monospace;
+}
+
+.highlight .hll {
+    // background-color: #49483e
+}
+
+.highlight {
+    // background: #272822;
+    color: #f8f8f2;
+}
+
+#search,
+.sphinx-tabs a.item .container {
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+}
+
+.highlight .c {
+    color: #75715e;
+}
+
+.highlight .err {
+    color: #960050;
+    background-color: #1e0010;
+}
+
+.highlight .k {
+    color: #66d9ef;
+}
+
+.highlight .l {
+    color: #ae81ff;
+}
+
+.highlight .n {
+    color: #f8f8f2;
+}
+
+.highlight .o {
+    color: #f92672;
+}
+
+.highlight .p {
+    color: #f8f8f2;
+}
+
+.highlight .c1,
+.highlight .ch,
+.highlight .cm,
+.highlight .cp,
+.highlight .cpf,
+.highlight .cs {
+    color: #75715e;
+}
+
+.highlight .gd {
+    color: #f92672;
+}
+
+.highlight .gi {
+    color: #a6e22e;
+}
+
+.highlight .gs {
+    font-weight: 400;
+}
+
+.highlight .gu {
+    color: #75715e;
+}
+
+.highlight .kc,
+.highlight .kd {
+    color: #66d9ef;
+}
+
+.highlight .kn {
+    color: #f92672;
+}
+
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+    color: #66d9ef;
+}
+
+.highlight .ld {
+    color: #e6db74;
+}
+
+.highlight .m {
+    color: #ae81ff;
+}
+
+.highlight .s {
+    color: #e6db74;
+}
+
+.highlight .na {
+    color: #a6e22e;
+}
+
+.highlight .nb {
+    color: #f8f8f2;
+}
+
+.highlight .nc {
+    color: #a6e22e;
+}
+
+.highlight .no {
+    color: #66d9ef;
+}
+
+.highlight .nd {
+    color: #a6e22e;
+}
+
+.highlight .ni {
+    color: #f8f8f2;
+}
+
+.highlight .ne,
+.highlight .nf {
+    color: #a6e22e;
+}
+
+.highlight .nl,
+.highlight .nn {
+    color: #f8f8f2;
+}
+
+.highlight .nx {
+    color: #a6e22e;
+}
+
+.highlight .py {
+    color: #f8f8f2;
+}
+
+.highlight .nt {
+    color: #f92672;
+}
+
+.highlight .nv {
+    color: #f8f8f2;
+}
+
+.highlight .ow {
+    color: #f92672;
+}
+
+.highlight .w {
+    color: #f8f8f2;
+}
+
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+    color: #ae81ff;
+}
+
+.highlight .dl,
+.highlight .s2,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd {
+    color: #e6db74;
+}
+
+.highlight .se {
+    color: #ae81ff;
+}
+
+.highlight .s1,
+.highlight .sh,
+.highlight .si,
+.highlight .sr,
+.highlight .ss,
+.highlight .sx {
+    color: #e6db74;
+}
+
+.highlight .bp {
+    color: #f8f8f2;
+}
+
+.highlight .fm {
+    color: #a6e22e;
+}
+
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .vm {
+    color: #f8f8f2;
+}
+
+.highlight .il {
+    color: #ae81ff;
+}
+
+.highlight {
+    span {
+        line-height: 1.6em;
+        font-weight: 300;
+        font-family: "Source Code Pro", monospace;
+        font-size: 12px;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+
+
+.tool{
+  display:flex;
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  align-items:stretch;
+  flex-wrap:wrap;
+
+  li{
+    width:140px;
+    border:1px solid $border-color;
+    align-self:center;
+  }
+}
