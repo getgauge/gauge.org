@@ -14,9 +14,11 @@ img {
   padding:0;
   a{
     text-decoration: none;
-    color: $active-feature-tab-bg;
+    color: $footer-link;
     padding: 10px 0px;
     font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     img{
       margin: 0px 10px 0px 0px;
     }
@@ -28,7 +30,6 @@ img {
 }
 
 .footer_items {
-  // border: 1px solid #fff;
   h5{
     color: $footer-header;
   }
@@ -40,7 +41,7 @@ img {
 }
 .footer_items{
   width: 50%;
-  @media (min-width: $screen-sm){
+  @media (min-width: $screen-md){
     width: 22%;
   }
 }
