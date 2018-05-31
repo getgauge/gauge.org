@@ -1,16 +1,186 @@
 ---
 title: Gauge.org
 ---
+<main class="main-container">
+  <div class="main-features">
+    <div class="container">
+    <!-- feature 1 -->
+      <div class="feature"> 
+        <div class="feature-content">
+          <h2 class="feature-heading feature-heading-main">Create specifications anyone can read</h2>
+          <p>Gauge tests are in markdown which makes writing tests easy and quick. Create specifications as ‘blocks’ and reuse them across other specifications keeping your test suite as DRY as your production code. Gauge’s robust refactoring propagates changes throughout the test suite, reducing duplication and evolving your tests with your application. Less code means less time spent on maintaining it. No new syntax is needed so you can spend less time “engineering” tests and more time testing! </p>
+        </div>
+        <div class="feature-graphics">
+          <ul class="f-tab">
+            <li class="f-tab_item f-active-tab" data-attr="markdown">C#</li>
+            <li class="f-tab_item" data-attr="implementation">Javascript</li>
+          </ul>
+          <div class="f-tab-content-container">
+            <div class="f-tab-content f-active" id="markdown"> 
+            
+            <!-- terminal -->
+              <div class="terminal">
+                <div class="terminal_head">
+                  <span class="dot"></span>
+                </div>
+                <div class="terminal_content">
+                  <div class="highlight">
+<pre>
+<span class="k"># Search specification</span>
+<span class="nt">Tags: search, admin</span>
 
+<span class="nv">The admin user must be able to search for available products on the search page</span>
 
-<header>
+<span class="nf">* User must be logged in as </span><span class="l">"admin"</span><span class="nf"></span>
+<span class="nf">* Open the product search page</span>
 
-</header>
+<span class="nf">## Successful search</span>
+<span class="nf">Tags: successful</span>
 
-<main>
-  <section>
-    
-  </section>
-</main>
+<span class="nf">For an existing product name, the search result will contain the product name</span>
 
+<span class="nf">* Search for product </span><span class="l">"Die Hard"</span><span class="nf"></span>
+<span class="nf">* </span><span class="l">"Die hard"</span><span class="nf"> should ahow up in the search results</span>
+
+<span class="nf">## Unsuccessfull search</span>
+
+<span class="nf">On an unknown product name search the search results will be empty</span>
+
+<span class="nf">* Search for product </span><span class="l">"unknown"</span><span class="nf"></span>
+<span class="nf">* The search results will be empty</span>
+</pre>
+                  </div>
+                </div>
+              </div>
+
+            
+             </div>        
+            <div class="f-tab-content " id="implementation"> aaaaa </div>        
+          </div>        
+        </div>
+      </div>
+    </div> 
+    <!-- feature 2 --> 
+        <div class="main-highlight">
+      <div class="container feature-tab-container">
+        <div class="feature">
+          <div class="feature-content ">
+            <h2 class="feature-heading feature-heading-main">Work with languages and tools of your choice</h2>
+            <p>With language support for Javascript, C#, Java, Python and Ruby and IDE support for Visual Studio Code, Intellij IDEA and Visual Studio, you can write tests in the languages and tools of your choice. It’s lightweight architecture allows you
+              to use Gauge with Docker containers too. Gauge works with your existing automation drivers be it Selenium, Puppeteer, Appium or Sahi. You don't have to learn a new language or tool to get your test automation tool to work for you. </p>
+          </div>
+          <div class="feature-graphics">
+            <ul class="f-tab f-tab-main">
+              <li class="f-tab_item f-active-tab" data-attr="one">C#</li>
+              <li class="f-tab_item" data-attr="two">Javascript</li>
+              <li class="f-tab_item" data-attr="three">Python</li>
+              <li class="f-tab_item" data-attr="four">Java</li>
+              <li class="f-tab_item" data-attr="five">Ruby</li>
+            </ul>
+            <div class="f-tab-content-container">
+              <div class="f-tab-content f-active" id="one">
+                <div class="terminal">
+                  <div class="terminal_head">
+                    <span class="dot"></span>
+                  </div>
+                  <div class="terminal_content">
+                    <div class="highlight">
+  <pre>
+  <span></span><span class="k"># Search specification</span>
+  <span class="nt">Tags: search, admin</span>
+
+  <span class="nv">The admin user must be able to search for available products on the search page</span>
+
+  <span class="nf">* User must be logged in as </span><span class="l">"admin"</span><span class="nf"></span>
+  <span class="nf">* Open the product search page</span>
+
+  <span class="nf">## Successful search</span>
+  <span class="nf">Tags: successful</span>
+
+  <span class="nf">For an existing product name, the search result will contain the product name</span>
+
+  <span class="nf">* Search for product </span><span class="l">"Die Hard"</span><span class="nf"></span>
+  <span class="nf">* </span><span class="l">"Die hard"</span><span class="nf"> should ahow up in the search results</span>
+
+  <span class="nf">## Unsuccessfull search</span>
+
+  <span class="nf">On an unknown product name search the search results will be empty</span>
+
+  <span class="nf">* Search for product </span><span class="l">"unknown"</span><span class="nf"></span>
+  <span class="nf">* The search results will be empty</span>
+  </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="f-tab-content" id="two">
+              two
+              </div>
+              <div class="f-tab-content" id="three">
+              three
+              </div>
+              <div class="f-tab-content" id="four">
+              four
+              </div>
+              <div class="f-tab-content" id="five">
+              five
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="tools">
+        <ul class="tool">
+        <li>
+          <figure> 
+            <img src="assets/images/icons/icon_visual_studio_code.svg" alt="">
+            <figcaption>Visual Studio Code</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure> 
+            <img src="assets/images/icons/icon_intellij.svg" alt="">
+            <figcaption>Intellij IDEA</figcaption>
+          </figure>
+        </li>        
+        <li>
+          <figure> 
+            <img src="assets/images/icons/icon_visual_studio.svg" alt="">
+            <figcaption>Visual Studio </figcaption>
+          </figure>
+        </li>        
+        <li>
+          <figure> 
+            <img src="assets/images/icons/icon_sahi.svg" alt="">
+            <figcaption>Sahi</figcaption>
+          </figure>
+        </li>        
+        <li>
+          <figure> 
+            <img src="assets/images/icons/icon_selenium.svg" alt="">
+            <figcaption>Selenium</figcaption>
+          </figure>
+        </li>        
+        <li>
+          <figure> 
+            <img src="assets/images/icons/icon_appium.svg" alt="">
+            <figcaption>Appium</figcaption>
+          </figure>
+        </li>        
+        <li>
+          <figure> 
+            <img src="assets/images/icons/icon_puppeteer.png" alt="">
+            <figcaption>Puppeteer</figcaption>
+          </figure>
+        </li>        
+        </ul>
+
+        </div>
+      </div>  
+    </div>
+    <!-- endfeature 2 --> 
+
+  </div>
+</main>  
 

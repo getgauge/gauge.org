@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="62px" height="61px" viewBox="0 0 62 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon- speed up your test</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Final-design---desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FINAL---home-option2b-Copy-2" transform="translate(-757.000000, -2615.000000)">
+            <g id="OTHER-FEATURE_3" transform="translate(697.000000, 2566.000000)">
+                <g id="icon--speed-up-your-test" transform="translate(61.000000, 50.000000)">
+                    <path d="M44.4827586,59.8194842 C44.8270314,59.5577283 45.0832181,59.3583856 45.2513187,59.221456 C50.3670938,55.0543017 53.7931034,48.4313936 53.7931034,41.5 C53.7931034,29.0735931 43.372145,19 30.5172414,19 C17.6623377,19 7.24137931,29.0735931 7.24137931,41.5 C7.24137931,48.7692818 10.8075287,55.2334088 16.3409243,59.3467743 C16.4389469,59.4196415 16.5715732,59.5155364 16.7388032,59.634459 L16.7388191,59.6344366 C16.9080862,59.7548078 17.1106351,59.8194842 17.3183382,59.8194842 Z" id="Oval-2" fill="#FFCC00"></path>
+                    <ellipse id="Oval-3" stroke="#1A1C19" stroke-width="2" cx="31.0344828" cy="44" rx="3.10344828" ry="3"></ellipse>
+                    <path d="M40.9879119,55.3194842 C41.2520614,55.1186473 41.4486253,54.965698 41.5776035,54.8606363 C45.502774,51.6633121 48.1314416,46.5817666 48.1314416,41.2635301 C48.1314416,31.7291457 40.1357736,24 30.2726173,24 C20.4094611,24 12.4137931,31.7291457 12.4137931,41.2635301 C12.4137931,46.8410175 15.1499855,51.8007353 19.3955828,54.956789 C19.5065123,55.0392508 19.6752004,55.1601492 19.9016472,55.3194842" id="Oval-2" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M34.137931,41 L41.1821776,34.1905616" id="Path-2" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <polyline id="Path-3" stroke="#1A1C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="5.17241379 31.5 5.17241379 17.4910743 0.517232222 17.4910743 8.79310345 7 16.5517241 17.4910743 11.8610869 17.4910743 11.8610869 20.5470671"></polyline>
+                    <polyline id="Path-3-Copy-2" stroke="#1A1C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="26.3793195 14.5 26.3793195 10.4910743 21.7241379 10.4910743 30.0000092 -4.54747351e-13 37.7586298 10.4910743 33.0679926 10.4910743 33.0679926 14.5470671"></polyline>
+                    <polyline id="Path-3-Copy" stroke="#1A1C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(51.465522, 19.250000) scale(-1, 1) translate(-51.465522, -19.250000) " points="48.1034574 31.5 48.1034574 17.4910743 43.4482759 17.4910743 51.7241471 7 59.4827678 17.4910743 54.7921305 17.4910743 54.7921305 20.5470671"></polyline>
+                    <path d="M11.3793103,24 L11.3793103,25" id="Path-4" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M48.6206897,24 L48.6206897,25" id="Path-4-Copy" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M24.3103448,52.5 L36.7241379,52.5" id="Line-2" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M27.4137931,56.5 L33.6206897,56.5" id="Line-2" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M37.7586207,56.5 L36.7241379,56.5" id="Line-2" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M24.3103448,56.5 L23.2758621,56.5" id="Line-2" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M54.8275862,35 L54.8275862,36" id="Path-5" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M5.17241379,35 L5.17241379,36" id="Path-6" stroke="#1A1C19" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

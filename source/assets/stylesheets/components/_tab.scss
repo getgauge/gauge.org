@@ -88,7 +88,6 @@ Style for tabs
     border-bottom: 1px solid $border-color;
     cursor: pointer;
     padding: 20px;
-    transition: all 0.25s;
     &.active-tab {
         background: $active-nav-bg;
         @extend %active-border;
@@ -115,8 +114,11 @@ Style for tabs
     border: 1px solid $border-color;
     border-width: 0 0 1px 0;
     border-top: 0;
-    padding: 20px;
     display: none;
+    @media (min-width: $screen-md) {
+        border: none;
+        padding: 0;
+    }
     @media (min-width: $screen-lg) {
         border: none;
         padding: 0;
