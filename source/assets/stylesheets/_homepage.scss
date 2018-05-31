@@ -1,11 +1,31 @@
 $banner-bg: #1a1c19;
 $banner-secondary: #292C27;
 $color-light: #fff;
+$get-started-background: #E8E8E8;
+$get-started-title: #1A1C19;
 
 .main-highlight {
     background: $primary-color;
 }
+
 // Banner Style
+%button{
+    width: 131px;
+    height: 30px;
+    border-radius: 30px;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    line-height: calc(30px * 1);
+    font-size: 14px;
+
+    @media (min-width: $screen-md){
+        width: 200px;
+        height: 50px; 
+        line-height: calc(50px * 1);
+        font-size: 19px;
+    }
+}
 
 .banner-container{
     background: $banner-bg;
@@ -49,40 +69,28 @@ $color-light: #fff;
             font-size: 24px;
         }
     }
-    .banner-action{
-        margin: 50px auto;
+}
+
+.banner-action{
+    margin: 50px auto;
+
+    .cta-primary{
+        @extend %button;
+        background: $color-light;
+        border: 1px solid $color-light;
+        color: $banner-bg;
+    }
+    
+    .cta-secondary{
+        @extend %button;
+        border: 1px solid $primary-color;
+        color:  $primary-color;
     }
 }
 
-%button{
-    width: 131px;
-    height: 30px;
-    border-radius: 30px;
-    display: block;
-    margin: 25px auto;
-    text-align: center;
-    line-height: calc(30px * 1);
-    font-size: 14px;
-    @media (min-width: $screen-md){
-        width: 200px;
-        height: 50px; 
-        line-height: calc(50px * 1);
-        font-size: 19px;
-    }
-}
 
-.cta-primary{
-    @extend %button;
-    background: $color-light;
-    border: 1px solid $color-light;
-    color: $banner-bg;
-}
 
-.cta-secondary{
-    @extend %button;
-    border: 1px solid $primary-color;
-    color:  $primary-color;
-}
+
 
 .banner-container__bottom{
     position: absolute;
@@ -451,5 +459,53 @@ $color-light: #fff;
         bottom: 25px;
         width: 100%;
         text-align: center;
+    }
+}
+
+// Get Started Section
+
+.get-started{
+    position: relative;
+    background: $get-started-background;
+    height: 281px;
+
+    @media (min-width: $screen-lg){
+        height: 400px;
+    }
+
+    h3{
+        font-size: 20px;
+        text-align: center;
+        color: $get-started-title;
+        padding: 30px 0;
+        @media (min-width: $screen-lg){
+            font-size: 36px;
+            padding: 50px 0;
+        }
+    }
+
+    .launch-icon{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 181px;
+        height: 91px;
+
+        @media(min-width: $screen-lg){
+            width: 277px;
+            height: 140px;
+        }
+    }
+
+    .get-started-cta{
+        @extend %button;
+        background: $primary-color;
+        border: 1px solid $primary-color;
+        color: $banner-bg;
+        font-weight: 600;
+        @media(min-width: $screen-lg){
+            font-size: 24px;
+        }
     }
 }
