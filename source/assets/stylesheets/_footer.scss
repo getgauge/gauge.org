@@ -1,5 +1,7 @@
 footer{
   background: $footer-background;
+  padding: 50px 0px;
+  border:1px solid blue;
 }
 
 img {
@@ -13,11 +15,24 @@ img {
   a{
     text-decoration: none;
     color: $active-feature-tab-bg;
+    padding: 10px 0px;
+    font-size: 14px;
+    img{
+      margin: 0px 10px 0px 0px;
+    }
+  }
+  .fab{
+    font-size: 23px;
+    padding: 0px 20px 0px 0px;
   }
 }
-.footer_items h5{
-  color: $footer-header;
-}
+
+.footer_items {
+  // border: 1px solid #fff;
+  h5{
+    color: $footer-header;
+  }
+} 
 
 .footer{
   display: flex;
@@ -28,4 +43,9 @@ img {
   @media (min-width: $screen-sm){
     width: 22%;
   }
+}
+
+.icon-sm{
+  width: 17px;
+  height: auto;
 }
