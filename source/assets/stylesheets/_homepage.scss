@@ -10,7 +10,6 @@
     display: block;
 }
 
-
 .terminal {
     background: #292c27;
     border-radius: 5px;
@@ -287,18 +286,59 @@
     }
 }
 
+.tools {
+    padding: 20px 0 50px;
+}
 
-.tool{
-  display:flex;
-  list-style-type: none;
-  margin:0;
-  padding:0;
-  align-items:stretch;
-  flex-wrap:wrap;
-
-  li{
-    width:140px;
-    border:1px solid $border-color;
-    align-self:center;
-  }
+.tool {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    li {
+        width: 120px;
+        border: 1px solid #DAAE00;
+        align-items: center;
+        justify-content: center;
+        border-radius: $border-radius;
+        position: relative;
+        margin:10px;
+        @media (min-width:$screen-md){
+          margin:15px;
+          width:115px;
+        }
+        @media (min-width:$screen-lg){
+          margin:5px;
+          width:120px;
+        }
+        @media (min-width:$screen-xl){
+          margin:15px;
+          width:130px;
+        }
+    }
+    figure {
+        width: 100%;
+        margin: 25px 0 50px;
+        text-align: center;
+        height: 50px;
+        img {
+            width: 30%;
+            display: inline-block;
+        }
+    }
+    .sahi,
+    .puppeteer {
+        width: 80px;
+    }
+    figcaption {
+        font-size: 13px;
+        position: absolute;
+        left: 0;
+        bottom: 25px;
+        width: 100%;
+        text-align: center;
+    }
 }
