@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  setGithubStar();
   $('.f-tab_item').click(function () {
     var id = $(this).attr('data-attr');
     id = ('#' + id);
@@ -56,4 +56,21 @@ $(document).ready(function(){
     }
   });
 
+  // Github star count
+  function gitHubStars(){
+    $.ajax({
+      url: "https://api.github.com/repos/getgauge/gauge",
+      success: function(data){
+        if(data['stargazers_count'] != undefined){
+          window.localStorage.setItem('star',data['stargazers_count'])
+        }
+      }
+    })
+  }
+
+  function setGithubStar(){
+    gitHubStars();
+    var star = window.localStorage.getItem('star')
+    $('.github_star').text(star);
+  }
 });
