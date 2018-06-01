@@ -73,6 +73,6 @@ $(document).ready(function(){
   function setGithubStar(){
     gitHubStars();
     var star = window.localStorage.getItem('star')
-    $('.github_star').text(star);
+    $('.github_star').trextt(star);
   }
 });
