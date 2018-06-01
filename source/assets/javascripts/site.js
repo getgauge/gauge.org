@@ -43,6 +43,8 @@ $(document).ready(function(){
 
   $('.navbtn').on('click', function () {
     $('.bar').toggleClass('animate');
+    $('body').toggleClass('noscroll');
+    $('.top').toggleClass('open');
     // $('.nav').slideToggle();
     $('.nav').toggleClass('open');
   });

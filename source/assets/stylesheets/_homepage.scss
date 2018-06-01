@@ -1,104 +1,120 @@
 $banner-bg: #1a1c19;
+$banner-heading: #1a1c19;
 $banner-secondary: #292C27;
 $color-light: #fff;
 $get-started-background: #E8E8E8;
 $get-started-title: #1A1C19;
-
 .main-highlight {
     background: $primary-color;
 }
 
 // Banner Style
-%button{
-    width: 131px;
-    height: 30px;
-    border-radius: 30px;
+%button {
+    width: 135px;
+    padding: 5px;
+    border-radius: 40px;
     display: block;
-    margin: 25px auto;
+    margin: 10px auto;
     text-align: center;
-    line-height: calc(30px * 1);
-    font-size: 14px;
-
-    @media (min-width: $screen-md){
+    font-size: 13px;
+    @media (min-width: $screen-md) {
+        padding: 10px;
         width: 200px;
-        height: 50px; 
-        line-height: calc(50px * 1);
         font-size: 19px;
+        display: inline-block;
     }
 }
 
-.banner-container{
-    background: $banner-bg;
-    height: 90vh;
-    margin-top: -3%;
+.banner-container {
+    background: #1a1c19 url('/assets/images/banner_mobile.jpg') no-repeat center bottom;
+    height: 70vh;
     position: relative;
     width: auto;
+    @media(min-width: $screen-md) {
+        background: #1a1c19 url('/assets/images/banner_tablet.jpg') no-repeat center bottom;
+        height: 50vh;
+    }
+    @media(min-width: $screen-lg) {
+        background: #1a1c19 url('/assets/images/banner_desktop.jpg') no-repeat center bottom;
+        height: 80vh;
+        background-size: cover;
+    }
 }
 
-.banner-container__top{
-    width: 80%;
-    display: block;
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 90%;
+}
+
+.banner-heading {
+    color: $banner-heading;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    margin: 0 10% 30px;
+    line-height: 1.2;
+    @media(min-width: $screen-md) {
+        font-size: 36px;
+    }
+    @media(min-width: $screen-lg) {
+        font-size: 44px;
+    }
+    @media(min-width: $screen-xl) {
+        font-size: 65px;
+    }
+}
+
+.banner-description {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: $banner-heading;
+    width: 85%;
     margin: 0 auto;
-    padding: 100px 0px;
-
-    h1{
-        color: $primary-color;
-        text-align: center;
-        font-size: 24px;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        margin-bottom: 30px;
-        line-height: 1.2;
-        @media(min-width: $screen-sm) and(max-width: $screen-lg-min){
-            font-size: 32px;
-        }
-        @media(min-width: $screen-lg){
-            font-size: 48px;
-        }
+    @media(min-width: $screen-md) {
+        width: 60%;
+        font-size: 20px;
+        line-height: 26px;
     }
-    p{
-        text-align: center;
-        font-size: 14px;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        color: $color-light;
-        @media(min-width: $screen-sm) and(max-width: $screen-lg-min){
-            font-size: 18px;
-        }
-        @media(min-width: $screen-lg){
-            font-size: 24px;
-        }
+    @media(min-width: $screen-lg) {
+        line-height: 28px;
+        font-size: 24px;
     }
 }
 
-.banner-action{
-    margin: 50px auto;
-
-    .cta-primary{
+$cta-primary-bg:#fff;
+$cta-secondary-border:#333;
+$cta-secondary-color:#333;
+.banner-action {
+    margin-top: 25px;
+    text-align: center;
+    .cta-primary {
         @extend %button;
-        background: $color-light;
+        background: $cta-primary-bg;
         border: 1px solid $color-light;
         color: $banner-bg;
+        @media (min-width: $screen-md) {
+            margin-right: 10px;
+        }
     }
-    
-    .cta-secondary{
+    .cta-secondary {
         @extend %button;
-        border: 1px solid $primary-color;
-        color:  $primary-color;
+        border: 1px solid $cta-secondary-border;
+        color: $cta-secondary-color;
     }
 }
 
-
-
-
-
-.banner-container__bottom{
+.banner-container_bottom {
     position: absolute;
     bottom: 0;
     width: 100%;
     background-color: $banner-secondary;
-
-    h2{
+    h2 {
         font-size: 16px;
         font-family: "Lato", sans-serif;
         color: $color-light;
@@ -109,12 +125,10 @@ $get-started-title: #1A1C19;
         margin: 0 auto;
         padding: 20px;
         line-height: 1.2;
-        
-        @media(min-width: $screen-sm) and(max-width: $screen-lg-min){
+        @media(min-width: $screen-sm) and(max-width: $screen-lg-min) {
             font-size: 22px;
         }
-
-        @media(min-width: $screen-lg){
+        @media(min-width: $screen-lg) {
             font-size: 36px;
             padding: 50px;
         }
@@ -424,18 +438,18 @@ $get-started-title: #1A1C19;
         justify-content: center;
         border-radius: $border-radius;
         position: relative;
-        margin:10px;
-        @media (min-width:$screen-md){
-          margin:15px;
-          width:115px;
+        margin: 10px;
+        @media (min-width: $screen-md) {
+            margin:15px;
+            width: 115px;
         }
-        @media (min-width:$screen-lg){
-          margin:5px;
-          width:120px;
+        @media (min-width:$screen-lg) {
+            margin: 5px;
+            width: 120px;
         }
-        @media (min-width:$screen-xl){
-          margin:15px;
-          width:130px;
+        @media (min-width:$screen-xl) {
+            margin: 15px;
+            width: 130px;
         }
     }
     figure {
@@ -463,49 +477,43 @@ $get-started-title: #1A1C19;
 }
 
 // Get Started Section
-
-.get-started{
+.get-started {
     position: relative;
     background: $get-started-background;
     height: 281px;
-
-    @media (min-width: $screen-lg){
+    @media (min-width: $screen-lg) {
         height: 400px;
     }
-
-    h3{
+    h3 {
         font-size: 20px;
         text-align: center;
         color: $get-started-title;
         padding: 30px 0 0 0;
         margin: 0;
-        @media (min-width: $screen-lg){
+        @media (min-width: $screen-lg) {
             font-size: 36px;
             padding: 50px 0;
         }
     }
-
-    .launch-icon{
+    .launch-icon {
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 0);
         width: 181px;
         height: 91px;
-
-        @media(min-width: $screen-lg){
+        @media(min-width: $screen-lg) {
             width: 277px;
             height: 140px;
         }
     }
-
-    .get-started-cta{
+    .get-started-cta {
         @extend %button;
         background: $primary-color;
         border: 1px solid $primary-color;
         color: $banner-bg;
         font-weight: 600;
-        @media(min-width: $screen-lg){
+        @media(min-width: $screen-lg) {
             font-size: 24px;
         }
     }

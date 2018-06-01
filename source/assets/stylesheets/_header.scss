@@ -1,9 +1,9 @@
 $header-bg: #1a1c19;
-$header-nav-color: #fff;
-$mobile-nav-bg: #292c27;
+$header-nav-color: #333;
+// $mobile-nav-bg: #292c27;
+$mobile-nav-bg: #fff;
 header.top {
     @include clearfix;
-    background: $header-bg;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,8 +11,14 @@ header.top {
     z-index: 10;
     height: 65px;
     transition: all 0.3s ease-in-out;
+    ;
     @media (min-width: $screen-md) {
         height: 100px;
+        transition: all 0.3s ease-in-out;
+    }
+    &.sticky,
+    &.open {
+        background: $header-bg;
         transition: all 0.3s ease-in-out;
     }
 }
@@ -20,15 +26,12 @@ header.top {
 .header-container {
     margin: 0 auto;
     width: 100%;
- 
     @include grid-container;
     @media (min-width: $screen-sm) {
         max-width: 540px;
- 
     }
     @media (min-width: $screen-md) {
         max-width: 720px;
- 
     }
     @media (min-width: $screen-lg) {
         max-width: 960px;
@@ -40,9 +43,13 @@ header.top {
 
 .logo {
     text-decoration: none;
-    width: 95px;
+    width: 100px;
+    height: 60px;
     display: inline-block;
-    margin: 16px 0 0 16px;
+    margin: 20px 0 0 16px;
+    background: url('/assets/images/gauge-logo_black.svg') no-repeat 0 0;
+    text-indent: -100em;
+    overflow: hidden;
     @media (min-width: $screen-md) {
         float: left;
         width: 100px;
@@ -52,21 +59,53 @@ header.top {
         width: 160px;
         margin: 0;
     }
+    .sticky &,
+    .open & {
+        background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
+    }
 }
 
 .nav {
     @media (max-width: $screen-md-min) {
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         top: 65px;
         z-index: -1;
+        height: 100%;
+        overflow: hidden;
         transition: all 0.3s ease-in-out;
         transform: translatex(-100%);
-        overflow: hidden; // opacity: 0;
+        ul {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            padding: 30px;
+        }
+        li {
+            border-bottom: 1px dotted $border-color;
+            &.githubstar {
+                @media (max-width: $screen-md-min) {
+                    position:absolute;
+                    padding: 20px 0 20px 0px;
+                    border:0;
+                    top:275px;
+                }
+            }
+        }
         &.open {
             transition: all 0.3s ease-in-out;
-            transform: translatex(0%); // opacity: 1;
+            transform: translatex(0%);
+            &:after {
+                content: "";
+                background: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+            }
         }
     }
     @media (min-width: $screen-md) {
@@ -100,7 +139,7 @@ header.top {
         color: $header-nav-color;
         display: block;
         @media (max-width: $screen-md-min) {
-            padding: 20px 0 20px 20px;
+            padding: 20px 0 20px 0px;
         }
         @media (min-width: $screen-md) {
             display: inline-block;
@@ -118,11 +157,38 @@ header.top {
     }
 }
 
+.link_home {
+    a {
+        @media (min-width: $screen-md) {
+            display: none;
+        }
+    }
+}
+
+.github-button {
+    @media (max-width: $screen-md) {
+        display: none;
+    }
+}
+
 //hamburger animation
 .navbtn {
     border: 0;
-    background: $header-bg;
     @media (min-width: $screen-md) {
         display: none;
+    }
+}
+
+.open,
+.sticky {
+    .bar {
+        background: #fff;
+        &:before,
+        &:after {
+            background: #fff;
+        }
+        &.animate {
+            background: rgba(0, 0, 0, 0)
+        }
     }
 }
