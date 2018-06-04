@@ -1,7 +1,7 @@
 $banner-bg: #1a1c19;
 $banner-heading: #1a1c19;
-$banner-secondary: #292C27;
-$color-light: #fff;
+$caption-bg: #292C27;
+$white: #fff;
 $get-started-background: #E8E8E8;
 $get-started-title: #1A1C19;
 .main-highlight {
@@ -27,6 +27,7 @@ $get-started-title: #1A1C19;
 
 .banner-container {
     background: #1a1c19 url('/assets/images/banner_mobile.jpg') no-repeat center bottom;
+    background-size: cover;
     height: 70vh;
     position: relative;
     width: auto;
@@ -96,7 +97,7 @@ $cta-secondary-color:#333;
     .cta-primary {
         @extend %button;
         background: $cta-primary-bg;
-        border: 1px solid $color-light;
+        border: 1px solid $white;
         color: $banner-bg;
         @media (min-width: $screen-md) {
             margin-right: 10px;
@@ -109,33 +110,37 @@ $cta-secondary-color:#333;
     }
 }
 
-.banner-container_bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: $banner-secondary;
-    h2 {
-        font-size: 16px;
-        font-family: "Lato", sans-serif;
-        color: $color-light;
-        text-align: center;
-        font-weight: 400;
-        width: 80%;
-        display: block;
-        margin: 0 auto;
-        padding: 20px;
-        line-height: 1.2;
-        @media(min-width: $screen-sm) and(max-width: $screen-lg-min) {
-            font-size: 22px;
-        }
-        @media(min-width: $screen-lg) {
-            font-size: 36px;
-            padding: 50px;
-        }
+.caption-container {
+    background-color: $caption-bg;
+    padding: 40px;
+    @media(min-width: $screen-xl) {
+        padding: 60px;
     }
 }
 
-//terminal styles
+.caption {
+    font-size: 18px;
+    color: $white;
+    text-align: center;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 -26px;
+    @media(min-width: $screen-md) {
+        font-size: 22px;
+        line-height: 30px;
+        width: 85%;
+        margin: 0 auto;
+    }
+    @media(min-width: $screen-lg) {
+        width: 60%;
+    }
+    @media(min-width: $screen-xl) {
+        width: 61%;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 300;
+    }
+} //terminal styles
 %broser-dot {
     width: $browser-dot-size;
     height: $browser-dot-size;
@@ -179,9 +184,7 @@ $cta-secondary-color:#333;
 
 .terminal_content {
     padding: 20px 30px;
-}
-
-// code highlight styles
+} // code highlight styles
 .highlight-console .highlight pre span.go:before {
     content: "> ";
     color: #aaa;
@@ -474,47 +477,53 @@ $cta-secondary-color:#333;
         width: 100%;
         text-align: center;
     }
-}
-
+} 
 // Get Started Section
+
 .get-started {
     position: relative;
     background: $get-started-background;
-    height: 281px;
+    padding: 40px 0 0;
     @media (min-width: $screen-lg) {
-        height: 400px;
+
     }
     h3 {
         font-size: 20px;
         text-align: center;
-        color: $get-started-title;
-        padding: 30px 0 0 0;
-        margin: 0;
+        color: #1A1C19;
+        font-weight: 400;
+        margin: 0 22px 30px;
+        line-height: 28px;
         @media (min-width: $screen-lg) {
             font-size: 36px;
             padding: 50px 0;
         }
     }
-    .launch-icon {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 181px;
-        height: 91px;
-        @media(min-width: $screen-lg) {
-            width: 277px;
-            height: 140px;
-        }
+}
+
+.launch-icon {
+    position: relative;
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 181px;
+    height: 91px;
+    @media(min-width: $screen-lg) {
+        width: 277px;
+        height: 140px;
     }
-    .get-started-cta {
-        @extend %button;
-        background: $primary-color;
-        border: 1px solid $primary-color;
-        color: $banner-bg;
-        font-weight: 600;
-        @media(min-width: $screen-lg) {
-            font-size: 24px;
-        }
+}
+
+.get-started-cta {
+    @extend %button;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    color: $banner-bg;
+    font-weight: 600;
+    text-decoration: none;
+    display:block;
+    margin:30px auto;
+    @media(min-width: $screen-lg) {
+        font-size: 24px;
     }
 }
