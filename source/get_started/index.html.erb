@@ -1,207 +1,187 @@
-<main class="container">
-<header class='page-header'>
-<h1>Get Started</h1>
-</header>
+<main class="main-container container">
+  <header class='page-header'>
+    <h1>Get Started</h1>
+  </header>
+  <h2 class="sub-title">Choose your OS &amp; download</h2>
+  <p class="disclaimer">
+    Gauge collects anonymous <a href="#">    usage statistics</a>, to improve the product. You can <a href="#"> opt out</a> if this easily.
+  </p>
+  <div class="tab-container">
+    <aside class="sidebar-menu">
+      <ul class="tab-nav tab-nav-get_started">
+        <li class="tab-nav_item active-tab" data-attr="mac"><span class="icon_macos"></span> Mac OS</li>
+        <li class="tab-nav_item " data-attr="windows"><span class="icon_windows"></span> Windows</li>
+        <li class="tab-nav_item " data-attr="debian"><span class="icon_debian"></span> Debian/AFT</li>
+        <li class="tab-nav_item " data-attr="yum"><span class="icon_yum"></span> YUM/DNF </li>
+        <li class="tab-nav_item " data-attr="zip"><span class="icon_zip"></span> ZIP</li>
+        <li class="tab-nav_item " data-attr="curl"><span class="icon_curl"></span> Curl</li>
+      </ul>
+    </aside>
 
-
-<h2 class="sub-title">Choose your OS &amp; download</h2>
-<p class="disclaimer">
-Gauge collects anonymous <a href="#">    usage statistics</a>, to improve the product. You can <a href="#"> opt out</a> if this easily.
-
-</p>
-
-
-
-
-  <aside class="sidebar-menu">
-    <ul class="tab-nav">
-      <li class="tab-nav_item active-tab" data-attr="mac"><i class="fa fa-apple"></i> Mac OS</li>
-      <li class="tab-nav_item " data-attr="windows"><i class="fa fa-windows"></i> Windows</li>
-      <li class="tab-nav_item " data-attr="debian"><i class="fa fa-linux"></i> Debian/AFT</li>
-      <li class="tab-nav_item " data-attr="yum"><i class="fa fa-linux"></i> YUM/DNF </li>
-      <li class="tab-nav_item " data-attr="zip"><i class="fa fa-linux"></i> ZIP</li>
-      <li class="tab-nav_item " data-attr="curl"><i class="fa fa-linux"></i> Curl</li>
-    </ul>
-  </aside>
-
-  <div class="content-container">
-    <h2 class="mobile-heading open" data-attr="mac"><i class="fa fa-apple"></i> Mac OS <span class="expander"><i class="fa fa-chevron-down"></i></span></h2>
-    
-    <div class="tab-content active" id="mac">
-      <section class="page-block">
-        <h3>Install Gauge</h3>
-        <p class="instruction">
-        Install Gauge using
-        <a href="https://brew.sh/" target="_blank">Homebrew.</a>
-        </p>
-        <div class="code-box">
-          <code>$ brew update</code>
-          <code>$ brew install gauge</code>
-        </div>
-        <p class="instruction">  For <b>signed</b> binaries download the <a href="https://github.com/getgauge/gauge/releases/download/v0.9.9/gauge-0.9.9-darwin.x86_64.zip">zip</a> 
-        installer and the run following command
-        </p>
-        <div class="code-box">
-        <code>$ unzip -o gauge-0.9.9-darwin.x86_64.zip -d /usr/local/bin</code>
-        </div>
-        <p class="instruction">
-        <a href="https://docs.gauge.org/installing.html#alternate-methods">Other installers</a>
-        </p>
-      </section>
-      <section class="page-block">
-        <h3>See Gauge working</h3>
-        <p class="instruction">
-        Initialize a new Gauge project in the language of your choice. You can read more about initialization
-        <a href="https://docs.gauge.org/quickstart.html#creating-a-project" target="_blank">here.</a>
-        This creates a template with a sample test specification and installs the required language runner. The example below shows how to execute test specifications in Java, but the same applies to all supported languages.
-        </p>
-        <div class="code-box">
-        <code>$ gauge init java</code>
-        </div>
-        <p class="instruction">Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.</p>
-        <div class="code-box">
-        <code>$ gauge run specs</code>
-        <pre>Specifications:	1 executed	1 passed	0 failed	0 skipped
+    <div class="content-container">
+      <h2 class="mobile-heading open" data-attr="mac"><span class="icon_macos"></span> Mac OS <span class="expander"></span></h2>
+      <div class="tab-content active" id="mac">
+        <section class="page-block">
+          <h3>Install Gauge</h3>
+          <p class="instruction">
+            Install Gauge using
+            <a href="https://brew.sh/" target="_blank">Homebrew.</a>
+          </p>
+          <div class="code-box">
+            <code>$ brew update</code>
+            <code>$ brew install gauge</code>
+          </div>
+          <p class="instruction"> For <b>signed</b> binaries download the <a href="https://github.com/getgauge/gauge/releases/download/v0.9.9/gauge-0.9.9-darwin.x86_64.zip">zip</a> installer and the run following command
+          </p>
+          <div class="code-box">
+            <code>$ unzip -o gauge-0.9.9-darwin.x86_64.zip -d /usr/local/bin</code>
+          </div>
+          <p class="instruction">
+            <a href="https://docs.gauge.org/installing.html#alternate-methods">Other installers</a>
+          </p>
+        </section>
+        <section class="page-block">
+          <h3>See Gauge working</h3>
+          <p class="instruction">
+            Initialize a new Gauge project in the language of your choice. You can read more about initialization
+            <a href="https://docs.gauge.org/quickstart.html#creating-a-project" target="_blank">here.</a> This creates a template with a sample test specification and installs the required language runner. The example below shows how to execute test specifications
+            in Java, but the same applies to all supported languages.
+          </p>
+          <div class="code-box">
+            <code>$ gauge init java</code>
+          </div>
+          <p class="instruction">Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.</p>
+          <div class="code-box">
+            <code>$ gauge run specs</code>
+            <pre>Specifications:	1 executed	1 passed	0 failed	0 skipped
         Scenarios:    	2 executed	2 passed	0 failed	0 skipped
 
         Total time taken: 80ms</pre>
-        </div>
-        <p class="instruction">You're all set. Start testing!</p>
-      </section>
-    </div>
-    <h2 class="mobile-heading" data-attr="windows"><i class="fa fa-windows"></i> Windows <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
-    
-    <div class="tab-content" id="windows">
-      
-    <section class="page-block">
-    <h3>Install Gauge</h3>
-    <p class="instruction">
-    Install Gauge using
-    <a href="https://chocolatey.org">Chocolatey</a>
-    </p>
-    <div class="code-box">
-    <code>&gt; choco install gauge</code>
-    </div>
-    <p class="instruction">
-    or download the
-    <a href="https://github.com/getgauge/gauge/releases/download/v0.9.9/gauge-0.9.9-windows.x86_64.zip">zip</a>
-    installer and the run following command in powershell
-    </p>
-    <div class="code-box">
-    <code>PS&gt; Expand-Archive -Path gauge-0.9.9-windows.x86_64.zip -DestinationPath custom_path</code>
-    </div>
-    <p class="instruction">
-    <a href="https://docs.gauge.org/installing.html#alternate-methods">Other installers</a>
-    </p>
-    </section>
-    <section class="page-block">
-    <h3>See Gauge working</h3>
-    <p class="instruction">
-    Initialize a new Gauge project in the language of your choice. This will also install the required language runner. You can read more about initialization
-    <a href="https://docs.gauge.org/quickstart.html#creating-a-project" target="_blank">here.</a>
-    This creates a template with a sample test specification. The example below shows how to execute test specifications in C#, but the same applies to all supported languages.
-    </p>
-    <div class="code-box">
-    <code>&gt; gauge init csharp</code>
-    </div>
-    <p class="instruction">Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.</p>
-    <div class="code-box">
-    <code>&gt; gauge run specs</code>
-    <pre>Specifications:	1 executed	1 passed	0 failed	0 skipped
+          </div>
+          <p class="instruction">You're all set. Start testing!</p>
+        </section>
+      </div>
+      <h2 class="mobile-heading" data-attr="windows"><span class="icon_windows"></span> Windows <span class="expander"></span></h2>
+
+      <div class="tab-content" id="windows">
+
+        <section class="page-block">
+          <h3>Install Gauge</h3>
+          <p class="instruction">
+            Install Gauge using
+            <a href="https://chocolatey.org">Chocolatey</a>
+          </p>
+          <div class="code-box">
+            <code>&gt; choco install gauge</code>
+          </div>
+          <p class="instruction">
+            or download the
+            <a href="https://github.com/getgauge/gauge/releases/download/v0.9.9/gauge-0.9.9-windows.x86_64.zip">zip</a> installer and the run following command in powershell
+          </p>
+          <div class="code-box">
+            <code>PS&gt; Expand-Archive -Path gauge-0.9.9-windows.x86_64.zip -DestinationPath custom_path</code>
+          </div>
+          <p class="instruction">
+            <a href="https://docs.gauge.org/installing.html#alternate-methods">Other installers</a>
+          </p>
+        </section>
+        <section class="page-block">
+          <h3>See Gauge working</h3>
+          <p class="instruction">
+            Initialize a new Gauge project in the language of your choice. This will also install the required language runner. You can read more about initialization
+            <a href="https://docs.gauge.org/quickstart.html#creating-a-project" target="_blank">here.</a> This creates a template with a sample test specification. The example below shows how to execute test specifications in C#, but the same applies
+            to all supported languages.
+          </p>
+          <div class="code-box">
+            <code>&gt; gauge init csharp</code>
+          </div>
+          <p class="instruction">Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.</p>
+          <div class="code-box">
+            <code>&gt; gauge run specs</code>
+            <pre>Specifications:	1 executed	1 passed	0 failed	0 skipped
     Scenarios:    	2 executed	2 passed	0 failed	0 skipped
 
     Total time taken: 80ms</pre>
-    </div>
-    <p class="instruction">You're all set. Start testing!</p>
-    </section>
+          </div>
+          <p class="instruction">You're all set. Start testing!</p>
+        </section>
 
+      </div>
 
-
-
-    </div>
-    
-    
-    <h2 class="mobile-heading" data-attr="debian"><i class="fa fa-linux"></i> Debian <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
-    <div class="tab-content" id="debian">
-    <p class="instruction">Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.</p>  
-    <section class="page-block">
-<h3>Install Gauge</h3>
-<p class="instruction">
-Install Gauge using apt-get
-</p>
-<div class="code-box">
-<pre>$ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
+      <h2 class="mobile-heading" data-attr="debian"><span class="icon_debian"></span>  Debian/AFT <span class="expander"></span></h2>
+      <div class="tab-content" id="debian">
+        <p class="instruction">Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.</p>
+        <section class="page-block">
+          <h3>Install Gauge</h3>
+          <p class="instruction">
+            Install Gauge using apt-get
+          </p>
+          <div class="code-box">
+            <pre>$ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
 $ echo deb https://dl.bintray.com/gauge/gauge-deb stable main | sudo tee -a /etc/apt/sources.list
 $ sudo apt-get update
 $ sudo apt-get install gauge</pre>
-</div>
-<p class="instruction">
-Install Gauge using dnf
-</p>
-<div class="code-box">
-<pre>$ echo -e "[gauge-stable]\nname=gauge-stable\nbaseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable\ngpgcheck=0\nenabled=1" | sudo tee /etc/yum.repos.d/gauge-stable.repo
+          </div>
+          <p class="instruction">
+            Install Gauge using dnf
+          </p>
+          <div class="code-box">
+            <pre>$ echo -e "[gauge-stable]\nname=gauge-stable\nbaseurl=http://dl.bintray.com/gauge/gauge-rpm/gauge-stable\ngpgcheck=0\nenabled=1" | sudo tee /etc/yum.repos.d/gauge-stable.repo
 $ sudo dnf install gauge</pre>
-</div>
-<p class="instruction">
-or download the
-<a href="https://github.com/getgauge/gauge/releases/download/v0.9.9/gauge-0.9.9-linux.x86_64.zip">zip</a>
-installer and the run following command
-</p>
-<div class="code-box">
-<code>$ unzip -o gauge-0.9.9-linux.x86_64.zip -d /usr/local/bin</code>
-</div>
-<p class="instruction">
-<a href="https://docs.gauge.org/installing.html#alternate-methods">Other installers</a>
-</p>
-</section>
+          </div>
+          <p class="instruction">
+            or download the
+            <a href="https://github.com/getgauge/gauge/releases/download/v0.9.9/gauge-0.9.9-linux.x86_64.zip">zip</a> installer and the run following command
+          </p>
+          <div class="code-box">
+            <code>$ unzip -o gauge-0.9.9-linux.x86_64.zip -d /usr/local/bin</code>
+          </div>
+          <p class="instruction">
+            <a href="https://docs.gauge.org/installing.html#alternate-methods">Other installers</a>
+          </p>
+        </section>
 
-<section class="page-block">
-<h3>See Gauge working</h3>
-<div class="instruction">
-Initialize a new Gauge project in the language of your choice. You can read more about initialization
-<a href="https://docs.gauge.org/quickstart.html#creating-a-project" target="_blank">here.</a>
-This creates a template with a sample test specification. The example below shows how to execute test specifications in Java, but the same applies to all supported languages.
-</div>
-<div class="code-box">
-<code>$ gauge init java</code>
-</div>
-<p class="instruction">Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.</p>
-<div class="code-box">
-<code>$ gauge run specs</code>
-<pre>Specifications:	1 executed	1 passed	0 failed	0 skipped
+        <section class="page-block">
+          <h3>See Gauge working</h3>
+          <div class="instruction">
+            Initialize a new Gauge project in the language of your choice. You can read more about initialization
+            <a href="https://docs.gauge.org/quickstart.html#creating-a-project" target="_blank">here.</a> This creates a template with a sample test specification. The example below shows how to execute test specifications in Java, but the same applies
+            to all supported languages.
+          </div>
+          <div class="code-box">
+            <code>$ gauge init java</code>
+          </div>
+          <p class="instruction">Now run the sample specification. This will install any missing plugins mentioned in project manifest and run the tests.</p>
+          <div class="code-box">
+            <code>$ gauge run specs</code>
+            <pre>Specifications:	1 executed	1 passed	0 failed	0 skipped
 Scenarios:    	2 executed	2 passed	0 failed	0 skipped
 
 Total time taken: 80ms</pre>
-</div>
-<p class="instruction">You're all set. Start testing!</p>
-</section>
+          </div>
+          <p class="instruction">You're all set. Start testing!</p>
+        </section>
 
+      </div>
 
-    </div>
+      <h2 class="mobile-heading" data-attr="yum"><span class="icon_yum"></span> YUM/DNF <span class="expander"></span></h2>
+      <div class="tab-content" id="yum">
 
+      </div>
 
+      <h2 class="mobile-heading" data-attr="zip"><span class="icon_zip"></span> Zip <span class="expander"></span></h2>
+      <div class="tab-content" id="zip">
+        <h4> ZIP</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
+      </div>
 
-    <h2 class="mobile-heading" data-attr="yum"><i class="fa fa-linux"></i> YUM/DNF <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
-    <div class="tab-content" id="yum">
-     
+      <h2 class="mobile-heading" data-attr="curl"><span class="icon_curl"></span> Curl <span class="expander"></span></h2>
+      <div class="tab-content" id="curl">
+        <h4> Curl</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
+      </div>
 
-
-     
-    </div>
-
-    <h2 class="mobile-heading" data-attr="zip"><i class="fa fa-linux"></i> YUM/DNF <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
-    <div class="tab-content" id="zip">
-      <h4> ZIP</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
-    </div>
-
-    <h2 class="mobile-heading" data-attr="curl"><i class="fa fa-linux"></i> YUM/DNF <span class="expander"><i class="fa fa-chevron-right"></i></span></h2>
-    <div class="tab-content" id="curl">
-      <h4> Curl</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto id iste autem facere labore sint amet! Libero repudiandae esse architecto rerum veniam. In autem odit rem nulla commodi recusandae iusto!</p>
     </div>
 
   </div>
-
-
 </main>

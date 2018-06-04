@@ -1,49 +1,48 @@
-.flex-container{
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+.flex-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.flex-container__item{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px 0px;
-  border-bottom: 1px solid $border-color;
-  
-  div{
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-
-    @media (min-width: $screen-md){
-      width: 33%;
-    }
-    @media (min-width: $screen-lg){
-      font-size: 16px;
-      padding: 10px 10px 10px 0px; 
-    }
-  }
-}
-
-.flex-container__item:first-child{
-  display: none;
-  border-bottom: none;
-  @media (min-width: $screen-md){
+.flex-container__item {
     display: flex;
-    font-weight: bold;
-  }
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    border-bottom: 1px solid $border-color;
+    div {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        @media (min-width: $screen-md) {
+            width: 33%;
+        }
+        @media (min-width: $screen-lg) {
+            font-size: 16px;
+            padding: 10px 10px 10px 0px;
+        }
+    }
 }
 
-.flex-container__item:last-child{
-  border-bottom: none;
+.flex-container__item:first-child {
+    display: none;
+    border-bottom: none;
+    @media (min-width: $screen-md) {
+        display: flex;
+        font-weight: bold;
+    }
 }
 
-.icon-md{
-  width: 45px;
-  height: auto;
-  vertical-align: middle;
-  margin: 5px 15px 15px 0px;
-  @media (min-width: $screen-lg){
-    margin: 0px 15px 0px 0px;
-  }
+.flex-container__item:last-child {
+    border-bottom: none;
+}
+
+.icon-md {
+    width: 45px;
+    height: auto;
+    vertical-align: middle;
+    margin: 5px 15px 15px 0px;
+    @media (min-width: $screen-lg) {
+        margin: 0px 15px 0px 0px;
+    }
 }
