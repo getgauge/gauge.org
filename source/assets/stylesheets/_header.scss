@@ -11,14 +11,8 @@ header.top {
     z-index: 10;
     height: 65px;
     transition: all 0.3s ease-in-out;
-    ;
     @media (min-width: $screen-md) {
         height: 100px;
-        transition: all 0.3s ease-in-out;
-    }
-    &.sticky,
-    &.open {
-        background: $header-bg;
         transition: all 0.3s ease-in-out;
     }
 }
@@ -44,24 +38,22 @@ header.top {
 .logo {
     text-decoration: none;
     width: 100px;
-    height: 60px;
+    height: 32px;
     display: inline-block;
-    margin: 20px 0 0 16px;
+    margin: 14px 0 0 16px;
     background: url('/assets/images/gauge-logo_black.svg') no-repeat 0 0;
     text-indent: -100em;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
     @media (min-width: $screen-md) {
         float: left;
         width: 100px;
         margin-left: 0;
     }
     @media (min-width: $screen-xl) {
-        width: 160px;
-        margin: 0;
-    }
-    .sticky &,
-    .open & {
-        background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
+        width: 180px;
+        margin: 20px 0 0 0;
+        height: 40px;
     }
 }
 
@@ -88,8 +80,8 @@ header.top {
                 @media (max-width: $screen-md-min) {
                     position:absolute;
                     padding: 20px 0 20px 0px;
-                    border:0;
-                    top:275px;
+                    border: 0;
+                    top: 275px;
                 }
             }
         }
@@ -119,6 +111,7 @@ header.top {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease-in-out;
     @media (max-width: $screen-md-min) {
         width: 100%;
         padding: 30px 10px;
@@ -127,6 +120,9 @@ header.top {
     @media (min-width: $screen-md) {
         margin: 10px 0 0;
         float: right;
+    }
+    @media (min-width: $screen-xl) {
+        margin: 22px 0 0;
     }
     li {
         display: block;
@@ -138,21 +134,16 @@ header.top {
         text-decoration: none;
         color: $header-nav-color;
         display: block;
+        transition: all 0.3s ease-in-out;
         @media (max-width: $screen-md-min) {
             padding: 20px 0 20px 0px;
         }
         @media (min-width: $screen-md) {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 5px 10px;
         }
-    }
-}
-
-.link_getstarted {
-    a {
-        @media (min-width: $screen-md) {
-            border:1px solid $border-color;
-            border-radius: 20px;
+        @media (min-width: $screen-xl) {
+            // font-size:14px;
         }
     }
 }
@@ -171,7 +162,11 @@ header.top {
     }
 }
 
-//hamburger animation
+.githubstar {
+    @media (max-width: $screen-md) {
+        padding: 5px 10px;
+    }
+} //hamburger animation
 .navbtn {
     border: 0;
     @media (min-width: $screen-md) {
@@ -179,8 +174,13 @@ header.top {
     }
 }
 
-.open,
-.sticky {
+.sticky,
+.open {
+    &.top {
+        background: $header-bg;
+        transition: all 0.3s ease-in-out;
+        height: 60px;
+    }
     .bar {
         background: #fff;
         &:before,
@@ -191,4 +191,32 @@ header.top {
             background: rgba(0, 0, 0, 0)
         }
     }
-}
+    .logo {
+        background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
+        @media (min-width: $screen-md) {
+            margin-top: -2px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    .link_getstarted {
+        a {
+            @media (min-width: $screen-md) {
+                border:1px solid $primary-color;
+                border-radius: 20px;
+                padding: 3px 10px;
+                
+            }
+        }
+    }
+    .main-nav {
+        margin: -7px 0 0;
+        transition: all 0.3s ease-in-out;
+        a {
+            transition: all 0.3s ease-in-out;
+            @media (min-width: $screen-md) {
+                color: #fff;
+
+            }
+        }
+    }
+    }
