@@ -53,3 +53,15 @@ end
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+
+helpers do
+  def page_name
+    if current_page.url == '/'
+      return 'home'
+    else
+      return current_page.url.split('/')[1]
+    end
+  end
+  
+end
