@@ -2,14 +2,11 @@
 
 .page-block {
     margin: 0 0 50px 0;
-    font-size: 13px;
     @media (min-width: $screen-md) {
         margin: 0 50px 50px;
-        font-size: 16px;
     }
     @media (min-width: $screen-lg) {
         margin: 0 0px 50px 50px;
-        font-size: 16px;
     }
 }
 
@@ -25,7 +22,7 @@
         counter-increment: section;
         content: counter(section);
         font-size: 13px;
-        top: -3px;
+        top: 0px;
         left: -33px;
         margin-right: 10px;
         background: #EFD332;
@@ -40,10 +37,11 @@
         background: $primary-color;
         @media (min-width: $screen-md) {
             top: 0px;
-            left: -47px;
+            left: -36px;
         }
         @media (min-width: $screen-lg) {
             top: 1px;
+            left: -50px;
         }
     }
 }
@@ -52,68 +50,6 @@
     margin-bottom: 20px;
 }
 
-// .download-title {
-//     background: #ccc;
-//     display: inline-block;
-//     margin-bottom: 0;
-//     border-top-right-radius: 5px;
-//     padding: 5px 10px;
-//     border-top-left-radius: 5px;
-//     font-size: 12px;
-//     strong {
-//         font-size: 14px;
-//     }
-// }
-// .download-section {
-//     border: 1px solid $border-color;
-//     padding: 20px;
-//     border-radius: 0 $border-radius $border-radius;
-//     margin-bottom: 20px;
-//     @include clearfix;
-//     overflow-x: auto;
-//     @media (min-width: $screen-md) {}
-//     .download-bit {
-//         @media (max-width:$screen-md-min) {
-//             &:first-child {
-//                 margin-bottom: 15px;
-//                 border-bottom: 1px solid $border-color;
-//                 padding-bottom: 10px;
-//             }
-//         }
-//         @media (min-width:$screen-md) {
-//             float: left;
-//             width: 50%;
-//             padding: 0 10px;
-//         }
-//     }
-//     .download {
-//         display: inline-block;
-//         font-size: 15px;
-//         color: #eee;
-//         margin-right: 10px;
-//         height: 39px;
-//         background-color: #ccc;
-//         font-weight: bold;
-//         background-image: url("../images/svg/get_started/icon_button_download.svg");
-//         background-position: 0 -4px;
-//         background-repeat: no-repeat;
-//         border-radius: 3px;
-//         line-height: 39px;
-//         padding: 0px 20px 0px 70px;
-//         transition: all 0.3s ease-in-out;
-//         margin-bottom: 10px;
-//         &:hover {
-//             background-color: #333;
-//             transition: all 0.3s ease-in-out;
-//             color: #fff;
-//         }
-//     }
-//     .sha {
-//         display: block;
-//         font-size: 13px;
-//         word-break: break-all;
-//     }
-// }
 .code-box {
     padding: 20px 20px 10px 20px;
     background: #071322;
@@ -139,4 +75,51 @@
             font-size: 12px;
         }
     }
+}
+
+// extending sidebar
+.tab-nav-get_started {
+    .tab-nav_item {
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+    }
+}
+
+// icons
+%icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.icon_macos {
+    @extend %icon;
+    background: url(/assets/images/get_started-icons/macos.svg)
+}
+
+.icon_windows {
+    @extend %icon;
+    background: url(/assets/images/get_started-icons/windows.svg)
+}
+
+.icon_debian {
+    @extend %icon;
+    background: url(/assets/images/get_started-icons/debian.svg)
+}
+
+.icon_yum {
+    @extend %icon;
+    background: url(/assets/images/get_started-icons/yum_redhat.svg)
+}
+
+.icon_zip {
+    @extend %icon;
+    background: url(/assets/images/get_started-icons/zip_java.svg)
+}
+
+.icon_curl {
+    @extend %icon;
+    background: url(/assets/images/get_started-icons/curl.svg)
 }

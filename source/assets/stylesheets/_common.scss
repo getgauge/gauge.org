@@ -8,23 +8,22 @@ img {
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    margin-top: 65px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 24px;
     margin: 0;
     padding: 0;
-    color:#333;
+    color: #333;
     @media (min-width: $screen-md) {
-        margin-top: 120px;
-        font-size: 15px;
         font-weight: 400;
-        line-height: 22px;
     }
     @media (min-width: $screen-xl) {
-        margin-top: 120px;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 400;
+        line-height: 26px;
+    }
+    &.noscroll {
+        overflow: hidden;
     }
 }
 
@@ -70,18 +69,27 @@ p {
         border-bottom: 1px solid $border-color;
         @media (min-width: $screen-md) {
             font-size:36px;
+            line-height: 42px;
         }
     }
 }
-.main-container{
-a {
-    color: #333;
-    display: inline-block;
-    border-bottom: 1px dotted #333;
-    text-decoration: none;
+
+.main-container {
+    a {
+        color: #333;
+        display: inline-block;
+        border-bottom: 1px dotted #333;
+        text-decoration: none;
+    }
 }
-}
-.bold-text{
+
+.bold-text {
     font-weight: bold;
     text-decoration: underline;
+}
+
+.tab-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include clearfix();
 }
