@@ -12,7 +12,7 @@
     <%= javascript_include_tag "site" %>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   </head>
-  <body>
+  <body class= <%= page_name %> >
     <%= partial 'partials/header' %>
        <%= yield %>
     <%= partial 'partials/footer' %>

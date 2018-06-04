@@ -126,3 +126,16 @@ header.top {
         display: none;
     }
 }
+
+.github-star{
+    .github-icon{
+        width: 40px;
+        height: auto;
+        vertical-align: sub;
+    }
+    span{
+        color: $header-nav-color;
+        padding: 5px;
+    }
+}
+
