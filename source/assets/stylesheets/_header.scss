@@ -1,5 +1,5 @@
 $header-bg: #1a1c19;
-$header-nav-color: #333;
+$header-nav-color: #fff;
 // $mobile-nav-bg: #292c27;
 $mobile-nav-bg: #fff;
 header.top {
@@ -41,7 +41,7 @@ header.top {
     height: 32px;
     display: inline-block;
     margin: 14px 0 0 16px;
-    background: url('/assets/images/gauge-logo_black.svg') no-repeat 0 0;
+    background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
     text-indent: -100em;
     overflow: hidden;
     transition: all 0.3s ease-in-out;

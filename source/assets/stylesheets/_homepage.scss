@@ -1,5 +1,5 @@
 $banner-bg: #1a1c19;
-$banner-heading: #1a1c19;
+$banner-heading: #FFCC00;
 $caption-bg: #292C27;
 $white: #fff;
 $get-started-background: #E8E8E8;
@@ -75,7 +75,7 @@ $get-started-title: #1A1C19;
     font-size: 14px;
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    color: $banner-heading;
+    color: $white;
     width: 85%;
     margin: 0 auto;
     @media(min-width: $screen-md) {
@@ -90,8 +90,8 @@ $get-started-title: #1A1C19;
 }
 
 $cta-primary-bg:#fff;
-$cta-secondary-border:#333;
-$cta-secondary-color:#333;
+$cta-secondary-border:#FFCC00;
+$cta-secondary-color:#FFCC00;
 .banner-action {
     margin-top: 25px;
     text-align: center;
