@@ -8,7 +8,13 @@
     <title><%= current_page.data.title || "Gauge" %></title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "jquery-3.3.1.min" %>
+    <%= javascript_include_tag "three_js/three.min" %>
+    <%= javascript_include_tag "three_js/projector" %>
+    <%= javascript_include_tag "three_js/canvas" %>
+    <%= javascript_include_tag "three_js/stats.min" %>
+    <%= javascript_include_tag "background_animation" %>
     <%= javascript_include_tag "site" %>
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   </head>
   <body class= <%= page_name %> >
