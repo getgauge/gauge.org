@@ -60,7 +60,7 @@ helpers do
     if current_page.url == '/'
       return "home"
     else
-      return current_page.url.split('/')[1], "inner"
+      return current_page.url.split('/')[1]
     end
   end
   
