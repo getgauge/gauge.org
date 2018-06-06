@@ -108,26 +108,7 @@ $f-tab-main-bg-active: #E8E8E8;
     }
 }
 
-.feature-heading {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
-    @media (min-width: $screen-md) {
-        font-size: 20px;
-    }
-    @media (min-width: $screen-xl) {
-        font-size: 22px;
-        font-weight: 400;
-        margin-bottom: 15px;
-    }
-    &.feature-heading-main {
-        @media (min-width: $screen-lg) {
-            margin: 45px 80px 15px 0;
-        }
-    }
-}
+
 
 //highlighted tab style
 .f-tab-main {
