@@ -152,6 +152,9 @@ $cta-secondary-color:$primary-color;
     @media (min-width: $screen-md) {
         padding: 40px 0;
     }
+    @media (min-width: $screen-lg) {
+        padding: 60px 0;
+    }
 }
 
 .feature-tools {
@@ -221,7 +224,7 @@ $cta-secondary-color:$primary-color;
 }
 
 .tools {
-    padding: 20px 0 50px;
+    padding: 20px 0;
     background: $light-primary-color;
 }
 
@@ -234,33 +237,37 @@ $cta-secondary-color:$primary-color;
     width: 100%;
     justify-content: center;
     li {
-        width: 120px;
+        width: 45px;
         align-items: center;
+        align-self: center;
         justify-content: center;
         border-radius: $border-radius;
         position: relative;
-        margin: 10px;
+        margin: 20px 12px;
         @media (min-width: $screen-md) {
-            margin:15px;
-            width: 115px;
+            margin: 25px 12px;
+            width: 75px;
         }
         @media (min-width:$screen-lg) {
             margin: 5px;
-            width: 120px;
+            width: 75px;
         }
         @media (min-width:$screen-xl) {
-            margin: 15px;
-            width: 130px;
+            margin: 10px;
         }
     }
     figure {
         width: 100%;
-        margin: 25px 0 50px;
+        margin: 0px 0px;
         text-align: center;
-        height: 50px;
         img {
-            width: 30%;
+            width: 60%;
             display: inline-block;
+            @media (min-width: $screen-md) {
+                width: 40%;
+            }
+            @media (min-width:$screen-lg) {}
+            @media (min-width:$screen-xl) {}
         }
     }
     .sahi,

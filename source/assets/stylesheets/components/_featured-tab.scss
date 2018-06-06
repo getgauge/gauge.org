@@ -48,14 +48,10 @@ $f-tab-main-bg-active: #ffffff;
 
 .feature-content {
     margin-bottom: 40px;
-    align-self: center;
-    @media (min-width: $screen-md) {
-        text-align: center;
-    }
+    align-self:center;
     @media (min-width: $screen-lg) {
         width: 40%;
         margin-right: $gutter;
-        text-align: left;
     }
 }
 
