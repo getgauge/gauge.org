@@ -17,6 +17,10 @@ header.top {
         height: 100px;
         transition: $transition;
     }
+
+    .inner &{
+        background: $header-bg;
+    }
 }
 
 .header-container {
@@ -54,7 +58,7 @@ header.top {
     }
     @media (min-width: $screen-xl) {
         width: 180px;
-        margin: 8px 0 0 0;
+        margin: 12px 0 0 0;
         height: 40px;
     }
 }
@@ -231,6 +235,10 @@ header.top {
         // background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
         @media (min-width: $screen-md) {
             margin-top: -2px;
+            transition: $transition;
+        }
+        @media (min-width: $screen-xl) {
+            margin-top: -5px;
             transition: $transition;
         }
     }
