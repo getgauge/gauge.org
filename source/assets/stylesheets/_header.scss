@@ -1,7 +1,9 @@
-$header-bg: #1a1c19;
+$header-bg: #1e1e1e;
 $header-nav-color: #fff;
+$header-nav-color_mobile: #333;
 // $mobile-nav-bg: #292c27;
 $mobile-nav-bg: #fff;
+$transition:all 0.2s ease-in-out;
 header.top {
     @include clearfix;
     position: fixed;
@@ -10,10 +12,10 @@ header.top {
     width: 100%;
     z-index: 10;
     height: 65px;
-    transition: all 0.3s ease-in-out;
+    transition: $transition;
     @media (min-width: $screen-md) {
         height: 100px;
-        transition: all 0.3s ease-in-out;
+        transition: $transition;
     }
 }
 
@@ -44,7 +46,7 @@ header.top {
     background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
     text-indent: -100em;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: $transition;
     @media (min-width: $screen-md) {
         float: left;
         width: 100px;
@@ -52,12 +54,13 @@ header.top {
     }
     @media (min-width: $screen-xl) {
         width: 180px;
-        margin: 20px 0 0 0;
+        margin: 8px 0 0 0;
         height: 40px;
     }
 }
 
 .nav {
+    @include clearfix();
     @media (max-width: $screen-md-min) {
         position: fixed;
         left: 0;
@@ -66,7 +69,7 @@ header.top {
         z-index: -1;
         height: 100%;
         overflow: hidden;
-        transition: all 0.3s ease-in-out;
+        transition: $transition;
         transform: translatex(-100%);
         ul {
             position: relative;
@@ -86,7 +89,7 @@ header.top {
             }
         }
         &.open {
-            transition: all 0.3s ease-in-out;
+            transition: $transition;
             transform: translatex(0%);
             &:after {
                 content: "";
@@ -102,8 +105,8 @@ header.top {
     }
     @media (min-width: $screen-md) {
         display: block;
-        margin-top: 20px;
-        transition: all 0.3s ease-in-out;
+        margin-top: 17px;
+        transition: $transition;
     }
 }
 
@@ -111,7 +114,7 @@ header.top {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    transition: all 0.3s ease-in-out;
+    transition: $transition;
     @media (max-width: $screen-md-min) {
         width: 100%;
         padding: 30px 10px;
@@ -122,7 +125,7 @@ header.top {
         float: right;
     }
     @media (min-width: $screen-xl) {
-        margin: 22px 0 0;
+        margin: 10px 0 0;
     }
     li {
         display: block;
@@ -134,8 +137,9 @@ header.top {
         text-decoration: none;
         color: $header-nav-color_mobile;
         display: block;
-        transition: all 0.3s ease-in-out;
+        transition: $transition;
         @media (max-width: $screen-md-min) {
+            font-size:18px;
             padding: 20px 0 20px 0px;
         }
         @media (min-width: $screen-md) {
@@ -144,7 +148,12 @@ header.top {
             padding: 5px 10px;
         }
         @media (min-width: $screen-xl) {
-            // font-size:14px;
+            font-size:16px;
+            font-weight:300;
+        }
+        &:hover {
+            color: $primary-color;
+            transition: $transition;
         }
     }
 }
@@ -187,13 +196,11 @@ header.top {
         height: 20px;
         @media (min-width: $screen-md) {
             background: url("/assets/images/github_star.svg") no-repeat 0 0;
-
-         
         }
     }
     span {
         color: $header-nav-color;
-        padding: 5px;
+        padding: 4px;
     }
     .github_star {
         color: #333;
@@ -207,7 +214,7 @@ header.top {
 .open {
     &.top {
         background: $header-bg;
-        transition: all 0.3s ease-in-out;
+        transition: $transition;
         height: 60px;
     }
     .bar {
@@ -224,7 +231,7 @@ header.top {
         // background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
         @media (min-width: $screen-md) {
             margin-top: -2px;
-            transition: all 0.3s ease-in-out;
+            transition: $transition;
         }
     }
     .link_getstarted {
@@ -238,11 +245,15 @@ header.top {
     }
     .main-nav {
         margin: -7px 0 0;
-        transition: all 0.3s ease-in-out;
+        transition: $transition;
         a {
-            transition: all 0.3s ease-in-out;
+            transition: $transition;
             @media (min-width: $screen-md) {
                 color: #fff;
+            }
+            &:hover {
+                color: $primary-color;
+                transition: $transition;
             }
         }
     }

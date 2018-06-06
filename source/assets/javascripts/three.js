@@ -22,7 +22,7 @@
 				camera.position.z = 10000;
 
 				scene = new THREE.Scene();
-          scene.background = new THREE.Color( 0xff0000 );
+        scene.background = new THREE.Color( 0xff0000 );
 				particles = new Array();
 
 				var PI2 = Math.PI * 2;

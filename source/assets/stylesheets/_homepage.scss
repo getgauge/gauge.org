@@ -1,9 +1,9 @@
 $banner-bg: #071323;
 $banner-heading:$primary-color;
-$caption-bg: #292C27;
 $white: #fff;
 $get-started-background: #E8E8E8;
 $get-started-title: #1A1C19;
+$light-primary-color:#f8db4d;
 .main-highlight {
     background: $primary-color;
 }
@@ -28,7 +28,7 @@ $get-started-title: #1A1C19;
 .banner-container {
     background: $banner-bg;
     background-size: cover;
-    height: 70vh;
+    height: 90vh;
     position: relative;
     width: auto;
     overflow: hidden;
@@ -46,6 +46,9 @@ $get-started-title: #1A1C19;
     left: 50%;
     transform: translate(-50%, -40%);
     width: 90%;
+    @media(min-width: $screen-xl) {
+        transform: translate(-50%, -80%);
+    }
 }
 
 .banner-heading {
@@ -64,6 +67,7 @@ $get-started-title: #1A1C19;
     }
     @media(min-width: $screen-xl) {
         font-size: 48px;
+        margin: 0 20px 20px;
     }
 }
 
@@ -76,15 +80,17 @@ $get-started-title: #1A1C19;
     width: 85%;
     margin: 0 auto 30px;
     @media(min-width: $screen-md) {
-        width: 60%;
+        width: 65%;
         font-size: 17px;
         line-height: 25px;
     }
     @media(min-width: $screen-lg) {
-        width: 40%;
-        line-height: 28px;
-        font-size: 24px;
+        line-height: 27px;
+        font-size: 19px;
         font-weight: 300;
+    }
+    @media(min-width: $screen-xl) {
+        width: 40%;
     }
 }
 
@@ -111,19 +117,18 @@ $cta-secondary-color:$primary-color;
 }
 
 .caption-container {
-    background-color: $caption-bg;
     padding: 40px;
+    background: #f5f5f5;
     @media(min-width: $screen-xl) {
         padding: 60px;
     }
 }
 
 .caption {
-    font-size: 18px;
-    color: $white;
+    font-size: 20px;
     text-align: center;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 28px;
     margin: 0 -26px;
     @media(min-width: $screen-md) {
         font-size: 22px;
@@ -135,25 +140,45 @@ $cta-secondary-color:$primary-color;
         width: 60%;
     }
     @media(min-width: $screen-xl) {
-        width: 50%;
+        width: 55%;
         font-size: 30px;
         line-height: 36px;
         font-weight: 300;
     }
 }
 
+.feature {
+    padding: 40px 0;
+    @media (min-width: $screen-md) {
+        padding: 40px 0;
+    }
+}
+
+.feature-tools {
+    .feature-content {
+        @media (min-width: $screen-xl) {
+            margin-left: $gutter;
+        }
+    }
+    .feature-graphics {
+        @media (min-width: $screen-xl) {
+            order: -1;
+            margin-right: $gutter;
+        }
+    }
+}
+
 .feature-heading {
     margin-top: 0;
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     line-height: 26px;
     @media (min-width: $screen-md) {
         font-size: 20px;
     }
     @media (min-width: $screen-xl) {
-        font-size: 24px;
-        font-weight: 400;
+        font-weight: 600;
         margin-bottom: 15px;
     }
     &.feature-heading-main {
@@ -163,15 +188,41 @@ $cta-secondary-color:$primary-color;
     }
 }
 
+.list {
+    list-style-type: none;
+    li {
+        position: relative;
+        margin-bottom: 7px;
+        &:before {
+            content: "";
+            display: block;
+            background: url("/assets/images/icons/icon_list.png") no-repeat 0 0;
+            position: absolute;
+            left: -26px;
+            width: 12px;
+            background-size: contain;
+            height: 12px;
+            top: 7px;
+        }
+    }
+}
+
 .markdown {
     display: inline-block;
-    background: url(/assets/images/icons/icon_markdown.svg) no-repeat 0 8px;
-    padding-left: 19px;
-    margin-left: 3px;
+    background: url(/assets/images/icons/icon_markdown.png) no-repeat 0 0px;
+    width: 21px;
+    margin-left: 2px;
+    height: 12px;
+}
+
+.tools_screenshots {
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
 }
 
 .tools {
     padding: 20px 0 50px;
+    background: $light-primary-color;
 }
 
 .tool {
@@ -184,7 +235,6 @@ $cta-secondary-color:$primary-color;
     justify-content: center;
     li {
         width: 120px;
-        border: 1px solid #DAAE00;
         align-items: center;
         justify-content: center;
         border-radius: $border-radius;
@@ -275,10 +325,9 @@ $cta-secondary-color:$primary-color;
 }
 
 // background animation style
-
 .background-anim {
-    div{
-        canvas{
+    div {
+        canvas {
             display: none !important;
         }
     }

@@ -31,7 +31,7 @@ Style for tabs
 $feature-tab-bg: #E8E8E8;
 $active-feature-tab-bg: #f8db4d;
 $f-tab-main-bg: rgba(255, 255, 255, 0.3);
-$f-tab-main-bg-active: #E8E8E8;
+$f-tab-main-bg-active: #ffffff;
 // --------component styles
 .feature {
     @media (min-width: $screen-lg) {
@@ -48,6 +48,7 @@ $f-tab-main-bg-active: #E8E8E8;
 
 .feature-content {
     margin-bottom: 40px;
+    align-self: center;
     @media (min-width: $screen-md) {
         text-align: center;
     }
@@ -107,8 +108,6 @@ $f-tab-main-bg-active: #E8E8E8;
         padding: 5px 30px;
     }
 }
-
-
 
 //highlighted tab style
 .f-tab-main {
