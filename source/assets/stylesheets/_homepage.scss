@@ -49,6 +49,7 @@ $get-started-title: #1A1C19;
     left: 50%;
     transform: translate(-50%, -40%);
     width: 90%;
+    z-index: 10;
 }
 
 .banner-heading {
@@ -532,9 +533,10 @@ $cta-secondary-color:#FFCC00;
 // background animation style
 
 .background-anim {
-    div{
-        canvas{
-            display: none !important;
-        }
-    }
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    transform: translate(0, -50%);
 }

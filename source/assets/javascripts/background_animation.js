@@ -101,7 +101,6 @@ function animate() {
 
 function render() {
 
-
   camera.position.set(0,800,340);
 
   var i = 0;
@@ -123,7 +122,7 @@ function render() {
   renderer.render( scene, camera );
 
   count += 0.1;
-  scene.background = new THREE.Color( 0x071322
+  scene.background = new THREE.Color(  0x1e1e1e
                                   );	
 
 }
