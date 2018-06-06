@@ -31,7 +31,7 @@ Style for tabs
 $feature-tab-bg: #E8E8E8;
 $active-feature-tab-bg: #f8db4d;
 $f-tab-main-bg: rgba(255, 255, 255, 0.3);
-$f-tab-main-bg-active: #E8E8E8;
+$f-tab-main-bg-active: #ffffff;
 // --------component styles
 .feature {
     @media (min-width: $screen-lg) {
@@ -48,13 +48,10 @@ $f-tab-main-bg-active: #E8E8E8;
 
 .feature-content {
     margin-bottom: 40px;
-    @media (min-width: $screen-md) {
-        text-align: center;
-    }
+    align-self:center;
     @media (min-width: $screen-lg) {
         width: 40%;
         margin-right: $gutter;
-        text-align: left;
     }
 }
 
@@ -105,27 +102,6 @@ $f-tab-main-bg-active: #E8E8E8;
     @media (min-width: $screen-md) {
         margin: 0 10px 20px 0;
         padding: 5px 30px;
-    }
-}
-
-.feature-heading {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
-    @media (min-width: $screen-md) {
-        font-size: 20px;
-    }
-    @media (min-width: $screen-xl) {
-        font-size: 22px;
-        font-weight: 400;
-        margin-bottom: 15px;
-    }
-    &.feature-heading-main {
-        @media (min-width: $screen-lg) {
-            margin: 45px 80px 15px 0;
-        }
     }
 }
 

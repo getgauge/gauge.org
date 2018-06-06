@@ -58,9 +58,9 @@ end
 helpers do
   def page_name
     if current_page.url == '/'
-      return 'home'
+      return "home"
     else
-      return current_page.url.split('/')[1]
+      return current_page.url.split('/')[1], "inner"
     end
   end
   

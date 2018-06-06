@@ -6,8 +6,8 @@ title: Gauge.org
   <div class="banner-container">
     <div class="container">
     <div class="banner-content">
-      <h1 class="banner-heading">Low maintenance test automation</h1>
-      <p class="banner-description">Gauge is a free and open source test automation framework that takes the pain out of test suite maintenance</p>
+      <h1 class="banner-heading">Low Maintenance Test Automation</h1>
+      <p class="banner-description">Gauge is a free and open source test automation framework that takes the pain out of acceptance testing</p>
       <div class="banner-action">
         <a href="#" class="cta-primary">Get Started </a>
         <a href="#" class="cta-secondary"> Learn More </a>
@@ -23,7 +23,7 @@ title: Gauge.org
   <div class="caption-container">
   <div class="container">
       <h2 class="caption">
-        Make automation of acceptance tests a seamless and natural part of your development cycle
+        Make test automation a seamless and natural part of your development cycle
       </h2>
       </div>
   </div>
@@ -31,201 +31,152 @@ title: Gauge.org
   <div class="main-features">
     <div class="container">
     <!-- feature 1 -->
-      <div class="feature"> 
+      <div class="feature feature-markdown"> 
         <div class="feature-content">
-          <h2 class="feature-heading feature-heading-main">Create specifications anyone can read</h2>
-          <p>Gauge tests are in markdown which makes writing tests easy and quick. Create specifications as ‘blocks’ and reuse them across other specifications keeping your test suite as DRY as your production code. Gauge’s robust refactoring propagates changes throughout the test suite, reducing duplication and evolving your tests with your application. Less code means less time spent on maintaining it. No new syntax is needed so you can spend less time “engineering” tests and more time testing! </p>
+          <h2 class="feature-heading">Focus on testing, let Gauge’s readable and reusable specifications handle the rest</h2>
+          <p>Gauge tests are in <span class="markdown"></span>markdown which makes writing tests easy and quick. Reuse specifications keeping your test suite as DRY as your production code. Gauge’s robust refactoring reduces duplication  and evolves your tests with your application. Less code means less time spent on maintaining the test suite. </p>
         </div>
         <div class="feature-graphics">
-          <ul class="f-tab">
-            <li class="f-tab_item f-active-tab" data-attr="markdown">C#</li>
-            <li class="f-tab_item" data-attr="implementation">Javascript</li>
-          </ul>
-          <div class="f-tab-content-container">
-            <div class="f-tab-content f-active" id="markdown"> 
-            
-            <!-- terminal -->
-              <div class="terminal">
-                <div class="terminal_head">
-                  <span class="dot"></span>
-                </div>
-                <div class="terminal_content">
-                  <div class="highlight">
-<pre>
-<span class="k"># Search specification</span>
-<span class="nt">Tags: search, admin</span>
-
-<span class="nv">The admin user must be able to search for available products on the search page</span>
-
-<span class="nf">* User must be logged in as </span><span class="l">"admin"</span><span class="nf"></span>
-<span class="nf">* Open the product search page</span>
-
-<span class="nf">## Successful search</span>
-<span class="nf">Tags: successful</span>
-
-<span class="nf">For an existing product name, the search result will contain the product name</span>
-
-<span class="nf">* Search for product </span><span class="l">"Die Hard"</span><span class="nf"></span>
-<span class="nf">* </span><span class="l">"Die hard"</span><span class="nf"> should ahow up in the search results</span>
-
-<span class="nf">## Unsuccessfull search</span>
-
-<span class="nf">On an unknown product name search the search results will be empty</span>
-
-<span class="nf">* Search for product </span><span class="l">"unknown"</span><span class="nf"></span>
-<span class="nf">* The search results will be empty</span>
-</pre>
-                  </div>
-                </div>
-              </div>
-
-            
-             </div>        
-            <div class="f-tab-content " id="implementation"> aaaaa </div>        
-          </div>        
-        </div>
+        <img src="/assets/images/homepage/gauge_feature-markdown-specs.svg" alt="">
+          
       </div>
+    </div> 
     </div> 
     <!-- feature 2 --> 
         <div class="main-highlight">
       <div class="container feature-tab-container">
-        <div class="feature">
+        <div class="feature feature-tools">
           <div class="feature-content ">
-            <h2 class="feature-heading feature-heading-main">Work with languages and tools of your choice</h2>
-            <p>With language support for Javascript, C#, Java, Python and Ruby and IDE support for Visual Studio Code, Intellij IDEA and Visual Studio, you can write tests in the languages and tools of your choice. It’s lightweight architecture allows you
-              to use Gauge with Docker containers too. Gauge works with your existing automation drivers be it Selenium, Puppeteer, Appium or Sahi. You don't have to learn a new language or tool to get your test automation tool to work for you. </p>
+            <h2 class="feature-heading">Work with languages and tools of  your choice</h2>
+            <p>You don't have to learn a new language or tool to get your test automation tool to work for you. Gauge works with:</p>
+            <ul class="list">
+            <li>Javascript, C#, Java, Python & Ruby</li>
+            <li>IDEs like Visual Studio Code, IntelliJ IDEA, Visual Studio</li>
+            <li>CI/CD tools like GoCD, Jenkins, TravisCI, Teamcity etc</li>
+            <li>Automation drivers like Selenium, Puppeteer, Appium, Sahi</li>
+            </ul>
           </div>
           <div class="feature-graphics">
             <ul class="f-tab f-tab-main">
-              <li class="f-tab_item f-active-tab" data-attr="one">C#</li>
-              <li class="f-tab_item" data-attr="two">Javascript</li>
-              <li class="f-tab_item" data-attr="three">Python</li>
-              <li class="f-tab_item" data-attr="four">Java</li>
+              <li class="f-tab_item  f-active-tab" data-attr="one">Javascript</li>
+              <li class="f-tab_item" data-attr="two">C#</li>
+              <li class="f-tab_item" data-attr="three">Java</li>
+              <li class="f-tab_item" data-attr="four">Python</li>
               <li class="f-tab_item" data-attr="five">Ruby</li>
             </ul>
             <div class="f-tab-content-container">
               <div class="f-tab-content f-active" id="one">
-                <div class="terminal">
-                  <div class="terminal_head">
-                    <span class="dot"></span>
-                  </div>
-                  <div class="terminal_content">
-                    <div class="highlight">
-  <pre>
-  <span></span><span class="k"># Search specification</span>
-  <span class="nt">Tags: search, admin</span>
-
-  <span class="nv">The admin user must be able to search for available products on the search page</span>
-
-  <span class="nf">* User must be logged in as </span><span class="l">"admin"</span><span class="nf"></span>
-  <span class="nf">* Open the product search page</span>
-
-  <span class="nf">## Successful search</span>
-  <span class="nf">Tags: successful</span>
-
-  <span class="nf">For an existing product name, the search result will contain the product name</span>
-
-  <span class="nf">* Search for product </span><span class="l">"Die Hard"</span><span class="nf"></span>
-  <span class="nf">* </span><span class="l">"Die hard"</span><span class="nf"> should ahow up in the search results</span>
-
-  <span class="nf">## Unsuccessfull search</span>
-
-  <span class="nf">On an unknown product name search the search results will be empty</span>
-
-  <span class="nf">* Search for product </span><span class="l">"unknown"</span><span class="nf"></span>
-  <span class="nf">* The search results will be empty</span>
-  </pre>
-                    </div>
-                  </div>
-                </div>
+                <img src="/assets/images/homepage/gauge_feature-javascript-vscode.jpg" class="tools_screenshots">
               </div>
               <div class="f-tab-content" id="two">
-              <img src="/assets/images/javascript_vscode.jpg">
+                <img src="/assets/images/homepage/gauge_feature-javascript-vscode.jpg" class="tools_screenshots">
               </div>
               <div class="f-tab-content" id="three">
-              <img src="/assets/images/python_vscode.jpg">
+                <img src="/assets/images/homepage/gauge_feature-java-intellij.jpg" class="tools_screenshots">
               </div>
               <div class="f-tab-content" id="four">
-              four
+                <img src="/assets/images/homepage/gauge_feature-python-vscode.jpg" class="tools_screenshots">
               </div>
               <div class="f-tab-content" id="five">
-              five
+                <img src="/assets/images/homepage/gauge_feature--ruby-vscode.jpg" class="tools_screenshots">
               </div>
 
             </div>
           </div>
         </div>
-
-        <div class="tools">
-        <ul class="tool">
-        <li>
-          <figure> 
-            <img src="assets/images/icons/icon_visual_studio_code.svg" alt="">
-            <figcaption>Visual Studio Code</figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure> 
-            <img src="assets/images/icons/icon_intellij.svg" alt="">
-            <figcaption>Intellij IDEA</figcaption>
-          </figure>
-        </li>        
-        <li>
-          <figure> 
-            <img src="assets/images/icons/icon_visual_studio.svg" alt="">
-            <figcaption>Visual Studio </figcaption>
-          </figure>
-        </li>        
-        <li>
-          <figure> 
-            <img src="assets/images/icons/icon_sahi.svg" alt="" class="sahi">
-            <figcaption>Sahi</figcaption>
-          </figure>
-        </li>        
-        <li>
-          <figure> 
-            <img src="assets/images/icons/icon_selenium.svg" alt="">
-            <figcaption>Selenium</figcaption>
-          </figure>
-        </li>        
-        <li>
-          <figure> 
-            <img src="assets/images/icons/icon_appium.svg" alt="">
-            <figcaption>Appium</figcaption>
-          </figure>
-        </li>        
-        <li>
-          <figure> 
-            <img src="assets/images/icons/icon_puppeteer.png" alt="" class="puppeteer">
-            <figcaption>Puppeteer</figcaption>
-          </figure>
-        </li>        
-        </ul>
-
-        </div>
       </div>  
     </div>
     <!-- endfeature 2 --> 
+    
+    <!-- tools --> 
+
+    <div class="tools">
+      <div class="container">
+        <ul class="tool">
+          <li>
+            <figure> 
+              <img src="assets/images/icons/visual_studio_code.svg" alt="">
+              
+            </figure>
+          </li>
+          <li>
+            <figure> 
+              <img src="assets/images/icons/intellij.svg" alt="">
+              
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/visual_studio.svg" alt="">
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/sahi.svg" alt="" class="sahi">
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/selenium.svg" alt="">
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/appium.svg" alt="">
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/puppeteer.png" alt="" class="puppeteer">
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/gocd.svg" alt="" class="sahi">
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/jenkins.svg" alt="">
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/travis.svg" alt="">
+            </figure>
+          </li>        
+          <li>
+            <figure> 
+              <img src="assets/images/icons/teamcity.svg" alt="">
+            </figure>
+          </li>        
+        
+        </ul>
+      </div>
+    </div>
+    <!-- endtools --> 
+
+
     <!-- feature 3 --> 
     <div class="feature">
       <div class="container">
         <ul class="small-thumbnails">
           <li class="thumbnail-small">
             <div class="thumbnail-small_graphics">
-              <img src="assets/images/icons/icon_reports.svg" alt="">
+              <img src="assets/images/icons/icon_plugins.svg" alt="">
             </div>
             <div class="thumbnail-small_details">
-              <h3 class="feature-heading">Reports</h3>
-              <p>Placeholder text - Keep your test suite Keep your test suite Keep your test suite Keep your test suite Keep your test suite Keep your test suite Keep your test suite Keep your test suite Keep your test suite Keep your test suite </p>
+              <h3 class="feature-heading">Extend with plugins</h3>
+              <p>Gauge has a robust plugin architecture and plugin ecosystem. Gauge was built from the ground up with extensibility via plugins as a guiding principle. You can easily extend Gauge to add support for IDEs, drivers, datasources, text execution events or your favourite language.</p>
             </div>
           </li>
           <li class="thumbnail-small">
             <div class="thumbnail-small_graphics">
-              <img src="assets/images/icons/icon_speed.svg" alt="">
+              <img src="assets/images/icons/icon_detect.svg" alt="">
             </div>
             <div class="thumbnail-small_details">
-              <h3 class="feature-heading">Speed up your tests</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+              <h3 class="feature-heading">Quickly detect issues</h3>
+              <p>Don’t waste time going through stacktraces. Gauge’s readable and meaningful reports allow you to detect what went wrong as quickly as possible. It takes a screenshot on failure allowing you to get a visible picture of what went wrong. Reports are available across multiple formats (XML, JSON, HTML).</p>
             </div>
           </li>
 
@@ -234,20 +185,20 @@ title: Gauge.org
         <ul class="small-thumbnails">
           <li class="thumbnail-small">
             <div class="thumbnail-small_graphics">
-              <img src="assets/images/icons/icon_data-driven.svg" alt="">
+              <img src="assets/images/icons/icon_scale.svg" alt="">
             </div>
             <div class="thumbnail-small_details">
-              <h3 class="feature-heading">Data Driven Execution</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+              <h3 class="feature-heading">Scale your tests </h3>
+              <p>Gauge has out of the box support for running tests in parallel so you don’t have to spend time in tedious setup for parallelisation on your CI/CD pipelines. Shorten the time that it takes to run your tests while optimally utilizing the capacity of your infrastructure. </p>
             </div>
           </li>
           <li class="thumbnail-small">
             <div class="thumbnail-small_graphics">
-              <img src="assets/images/icons/icon_plugins.svg" alt="">
+              <img src="assets/images/icons/icon_data-sets.svg" alt="">
             </div>
             <div class="thumbnail-small_details">
-              <h3 class="feature-heading">Plugins</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+              <h3 class="feature-heading">Manage your data sets better </h3>
+              <p>Gauge supports data-driven testing. Keep your data sets out of your test scripts and have the flexibility of repeatedly running your tests against different data sets. Easily test with large data sets, while keeping specifications highly readable. </p>
             </div>
           </li>
         </ul>
@@ -256,6 +207,7 @@ title: Gauge.org
   </div>
 
     <!-- endfeature 3 --> 
+</main>  
     <!-- get started --> 
       <div class="get-started">
         <div class="container">
@@ -265,5 +217,3 @@ title: Gauge.org
         </div>
       </div>
     <!-- end get started --> 
-</main>  
-
