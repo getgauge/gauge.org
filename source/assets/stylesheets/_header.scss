@@ -7,6 +7,7 @@ $transition:all 0.2s ease-in-out;
 header.top {
     @include clearfix;
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,9 +18,9 @@ header.top {
         height: 100px;
         transition: $transition;
     }
-
-    .inner &{
+    .inner & {
         background: $header-bg;
+        border-bottom: 5px solid $primary-color;
     }
 }
 
@@ -152,12 +153,22 @@ header.top {
             padding: 5px 10px;
         }
         @media (min-width: $screen-xl) {
-            font-size:16px;
-            font-weight:300;
+            font-size: 16px;
+            font-weight: 300;
         }
         &:hover {
             color: $primary-color;
             transition: $transition;
+        }
+    }
+}
+
+.link_getstarted {
+    a {
+        @media (min-width: $screen-md) {
+            border:1px solid $header-bg;
+            border-radius: 20px;
+            padding: 3px 10px;
         }
     }
 }
@@ -219,7 +230,7 @@ header.top {
     &.top {
         background: $header-bg;
         transition: $transition;
-        height: 60px;
+        height: 65px;
     }
     .bar {
         background: #fff;

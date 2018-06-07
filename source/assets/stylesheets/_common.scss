@@ -68,18 +68,21 @@ p {
         margin-bottom: 0;
         border-bottom: 1px solid $border-color;
         @media (min-width: $screen-md) {
-            font-size:36px;
-            line-height: 42px;
+            font-size:24px;
+            line-height: 32px;
         }
     }
 }
 
 .main-container {
     a {
-        color: #333;
+        color: #0446b3;
         display: inline-block;
-        border-bottom: 1px dotted #333;
         text-decoration: none;
+        &:hover{
+            background : $primary-color;
+            color:#333;
+        }
     }
 }
 
@@ -93,3 +96,4 @@ p {
     margin-bottom: 40px;
     @include clearfix();
 }
+
