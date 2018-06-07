@@ -16,7 +16,7 @@
     <%= javascript_include_tag "site" %>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   </head>
-  <body class= <%= page_name == 'home' ? "no-clas" : 'inner' %> id= <%= page_name %>>
+  <body class= <%= page_name == 'home' ? "homepage" : 'inner' %> id= <%= page_name %>>
     <%= partial 'partials/header' %>
        <%= yield %>
     <%= partial 'partials/footer' %>
