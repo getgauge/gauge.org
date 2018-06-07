@@ -51,7 +51,7 @@ $(document).ready(function(){
 
     //sticky header
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
+    if ($(this).scrollTop() > 20) {
       $('.top').addClass('sticky');
     } else {
       $('.top').removeClass('sticky');
@@ -73,6 +73,6 @@ $(document).ready(function(){
   function setGithubStar(){
     gitHubStars();
     var star = window.localStorage.getItem('star')
-    $('.github_star').trextt(star);
+    $('.github_star').text(star);
   }
 });
