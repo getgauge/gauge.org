@@ -53,6 +53,18 @@ end
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+activate :blog do |blog|
+  blog.sources           = "posts/{year}-{month}-{day}-{title}.html"
+  blog.layout            = "post"
+  blog.tag_template      = "posts/tag.html"
+  blog.calendar_template = "posts/calendar.html"
+  blog.paginate          = true
+  Time.zone = "Kolkata"
+end
+activate :directory_indexes
+
+
+page "/feed.xml", layout: false
 
 
 helpers do
@@ -63,5 +75,4 @@ helpers do
       return current_page.url.split('/')[1]
     end
   end
-  
 end
