@@ -10,16 +10,16 @@ Style for tabs
 ```html_example
   <div class="container">
   <div class="feature">
-    <ul class="f-tab">
-      <li class="f-tab_item active-tab" data-attr="c">C#</li>
-      <li class="f-tab_item" data-attr="js">Javascript</li>
-      <li class="f-tab_item" data-attr="js">Python</li>
-      <li class="f-tab_item" data-attr="js">Java</li>
-      <li class="f-tab_item" data-attr="js">Ruby</li>
+    <ul class="tab f-tab-main">
+      <li class="tab_item active-tab" data-attr="c">C#</li>
+      <li class="tab_item" data-attr="js">Javascript</li>
+      <li class="tab_item" data-attr="js">Python</li>
+      <li class="tab_item" data-attr="js">Java</li>
+      <li class="tab_item" data-attr="js">Ruby</li>
     </ul>
 
     <div class="content-container">
-      <div class="f-tab-content active" id="mac">
+      <div class="tab-content active" id="mac">
 
       </div>
     </div>
@@ -28,34 +28,59 @@ Style for tabs
 ```
 */
 
+$active-tab :$primary-color;
 $feature-tab-bg: #E8E8E8;
 $active-feature-tab-bg: #f8db4d;
 $f-tab-main-bg: rgba(255, 255, 255, 0.3);
 $f-tab-main-bg-active: #ffffff;
 // --------component styles
-.feature {
+.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     @media (min-width: $screen-lg) {
-        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid $border-color;
+        margin-bottom: 30px;
     }
 }
 
-.feature-graphics {
-    @media (min-width: $screen-lg) {
-        margin-left: $gutter;
-        width: 80%;
+.tab_item {
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    &.active-tab {
+        border-bottom: 3px solid $active-tab;
+        display: block;
+    }
+    @media (min-width: $screen-md) {
+        padding: 5px 30px;
     }
 }
 
-.feature-content {
-    margin-bottom: 40px;
-    align-self:center;
-    @media (min-width: $screen-lg) {
-        width: 40%;
-        margin-right: $gutter;
-    }
-}
+// .f-tab_item {
+//     background: $feature-tab-bg;
+//     margin: 0 10px 20px 0;
+//     padding: 5px 15px;
+//     border-radius: 35px;
+//     cursor: pointer;
+//     font-size: 13px;
+//     &.f-active-tab {
+//         background: $active-feature-tab-bg;
+//         display: block;
+//     }
+//     @media (min-width: $screen-md) {
+//         margin: 0 10px 20px 0;
+//         padding: 5px 30px;
+//     }
+// }
 
-.f-tab-content {
+//highlighted tab style
+
+.tab-content {
     border: 1px solid $border-color;
     border-width: 0 0 1px 0;
     border-top: 0;
@@ -68,7 +93,7 @@ $f-tab-main-bg-active: #ffffff;
         border: none;
         padding: 0;
     }
-    &.f-active {
+    &.active {
         display: block;
         @media (min-width: $screen-lg) {
             display: block;
@@ -76,41 +101,69 @@ $f-tab-main-bg-active: #ffffff;
     }
 }
 
-.f-tab {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+//featured tab in homepage styles
+
+.tab-main {
+    border: 0;
     @media (min-width: $screen-lg) {
-        justify-content: flex-start;
+        margin-bottom: 0px;
     }
-}
-
-.f-tab_item {
-    background: $feature-tab-bg;
-    margin: 0 10px 20px 0;
-    padding: 5px 15px;
-    border-radius: 35px;
-    cursor: pointer;
-    font-size: 13px;
-    &.f-active-tab {
-        background: $active-feature-tab-bg;
-        display: block;
-    }
-    @media (min-width: $screen-md) {
-        margin: 0 10px 20px 0;
-        padding: 5px 30px;
-    }
-}
-
-//highlighted tab style
-.f-tab-main {
-    .f-tab_item {
+    .tab_item {
         background: $f-tab-main-bg;
-        &.f-active-tab {
+        margin: 0 10px 20px 0;
+        padding: 5px 15px;
+        border-radius: 35px;
+        &.active-tab {
             background: $f-tab-main-bg-active;
+        }
+    }
+}
+
+
+//getting started installation tabs
+
+.tab-getting_started{
+    .tab-content{
+        padding:30px 50px;
+        @media (min-width: $screen-lg) {
+            padding:0px 50px;
+        }
+    }
+}
+
+.tab-install {
+    .tab {
+        border-bottom   : 1px solid #ccc;
+        justify-content : flex-start;
+        margin-bottom : 30px;
+        display:none;
+        @media (min-width: $screen-md) {
+         display:flex;
+        }
+    }
+    .tab_item{
+        padding:5px 20px;
+    }
+    .tab-content{
+        border:0;
+        padding:0;
+        display:block;
+        @media (max-width:$screen-sm-min){
+            margin-bottom : 45px;
+        }
+        @media (min-width: $screen-md) {
+            display:none;
+            &.active{
+                display:block;
+            }
+        }
+    }
+    .mobile-title{
+        border-bottom:1px dotted $border-color;
+        font-weight:600;
+        margin:10px 0;
+        @media (min-width: $screen-md) {
+            display:none;
         }
     }
 }
