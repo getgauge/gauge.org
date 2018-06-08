@@ -1,9 +1,11 @@
-$banner-bg: #071323;
+
+$banner-bg:$secondary-color;
 $banner-heading:$primary-color;
-$white: #fff;
 $get-started-background: #E8E8E8;
 $get-started-title: #1A1C19;
 $light-primary-color:#f8db4d;
+
+
 .main-highlight {
     background: $primary-color;
 }
@@ -266,7 +268,7 @@ $cta-secondary-color:$primary-color;
         margin: 20px 12px;
         @media (min-width: $screen-md) {
             margin: 25px 12px;
-            width: 75px;
+            width: 77px;
         }
         @media (min-width:$screen-lg) {
             margin: 5px;
@@ -281,10 +283,9 @@ $cta-secondary-color:$primary-color;
         margin: 0px 0px;
         text-align: center;
         img {
-            width: 60%;
             display: inline-block;
             @media (min-width: $screen-md) {
-                width: 40%;
+                width: 80%;
             }
             @media (min-width:$screen-lg) {}
             @media (min-width:$screen-xl) {}
