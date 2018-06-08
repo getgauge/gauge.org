@@ -2,6 +2,9 @@ footer {
     background: $footer-background;
     padding: 50px 0px 150px;
     position: relative;
+    @media (min-width: $screen-md) {
+        padding: 50px 0px;
+    }
 }
 
 img {
@@ -26,7 +29,6 @@ img {
         }
         @media (min-width: $screen-xl) {
             padding: 5 px 0px;
-            
         }
         img {
             margin: 0px 10px 0px 0px;
@@ -40,6 +42,9 @@ img {
 
 .footer_items {
     margin-bottom: 30px;
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
     h5 {
         color: $footer-header;
         font-size: 14px;
@@ -110,4 +115,14 @@ img {
         color: #C1C1C0;
         text-decoration: none;
     }
+}
+
+.love {
+    display: inline-block;
+    background: url('/assets/images/icons/icon_love.svg') no-repeat 0 0;
+    width: 13px;
+    height: 11px;
+    text-indent: -200em;
+    margin: 0 2px;
+    overflow: hidden;
 }
