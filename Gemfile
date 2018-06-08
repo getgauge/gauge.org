@@ -7,7 +7,7 @@ gem "middleman-blog"
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem "builder", "~> 3.0"
-
+gem 'nokogiri'
 # View Gems
 gem 'bourbon'
 gem 'neat'

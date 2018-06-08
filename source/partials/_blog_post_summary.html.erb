@@ -1,0 +1,19 @@
+<div class="post-summary">
+  <% link_to article, :class => 'post-link' do %>
+    
+  <% end %>
+  <div class="blog-details">
+    <% link_to article, :class => 'post-link' do %>
+      <span class="post-date"><%= article.date.strftime('%b %e, %Y') %></span>
+      <h2 class="post-title"><%= (article.title) %></h2>
+      <p class="excerpt"><%= article.data["excerpt"] || article.summary(250) %> </p>
+    <% end %>
+    <p class='tags'>
+      <% article.tags.each do |tag, articles| %>
+      <% link_to tag_path(tag), :class => 'tag' do %>
+      <%= tag %>
+      <% end %>
+      <% end %>
+    </p>
+  </div>
+</div>

@@ -1,5 +1,7 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
+deploy_environment = (ENV['DEPLOY_ENVIRONMENT'] || 'preview')
+set :deploy_environment, deploy_environment
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -75,4 +77,17 @@ helpers do
       return current_page.url.split('/')[1]
     end
   end
+
+  def should_show_drafts?
+    not config.deploy_environment.eql?("live")
+  end
+
+  def is_draft?(article)
+    article.data["draft"] == true
+  end
+
+  def selected_articles_for_display_in(articles)
+    articles.reject do |article| !should_show_drafts? && is_draft?(article) end
+  end
+
 end
