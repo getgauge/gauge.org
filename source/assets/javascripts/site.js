@@ -1,18 +1,17 @@
 $(document).ready(function(){
   setGithubStar();
+  
   $('.tab_item').click(function () {
     var id = $(this).attr('data-attr');
     id = ('#' + id);
-    // $('.f-tab_item').removeClass('f-active-tab');
-    $(this).closest('.tab-component').find('.tab_item').removeClass('active-tab');
-    $(this).closest('.tab-component').find(".tab-content-container").children('.tab-content').removeClass('active')
+    $(this).parent().find('.active-tab').removeClass('active-tab');
+    $(this).parent().parent().find('.tab-content-container').find('.tab-content').removeClass('active')
     $(this).addClass('active-tab');
-    $(id).addClass('active');
+    $(this).parent().parent().find('.tab-content-container').find(id).addClass('active');
   });
   
 
     // get started
-    
     $('.tab-nav_item').click(function(){
       var id = $(this).attr('data-attr');
       id = ('#'+ id);
