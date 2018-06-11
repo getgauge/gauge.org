@@ -1,0 +1,114 @@
+---
+
+title: Headless Acceptance Tests
+date: 2017-10-04
+tags: 
+summary_image: "/assets/images/blog/headless-acceptance-test.jpeg
+---
+
+# Headless Acceptance Tests
+
+<%= image_tag "blog/headless-acceptance-test.jpeg", {:title => "Headless Acceptance Tests", :alt => "Headless Acceptance Tests"} %>
+
+
+Headless Acceptance Tests
+
+### Using Gauge, Puppeteer and Chrome to run headless tests
+
+In an earlier [article](https://blog.getgauge.io/testing-with-headless-chrome-9698cf56fdf9) we used Selenium to run a simple test using [headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome).
+
+Under the hood, Selenium talks to [ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol) (a standalone server that implements WebDriver’s [wire protocol](https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol)) which uses [DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) to control the browser.
+
+Shortly after announcing headless Chrome, Google released [Puppeteer,](https://github.com/GoogleChrome/puppeteer) a node library providing a high-level API to control headless Chrome over DevTools Protocol.
+
+We’ve updated Gauge’s [JavaScript runner](https://github.com/getgauge-contrib/gauge-js/releases/tag/v2.0.1) to work well with Puppeteer making it easy to write acceptance tests that run headless **without** Selenium or Chromedriver.
+
+## Installing
+
+Get started by installing [node.js](https://nodejs.org/en/) v7+ and Gauge
+
+    $ curl -SsL https://downloads.getgauge.io/stable | sh
+
+Initialize a project using Gauge’s Puppeteer template
+
+    $ gauge init js_puppeteer
+
+This also runs npm to install Puppeteer.
+
+## Running
+
+    $ gauge run specs
+
+Tests in the sample template load Gauge’s home page and navigates to the “Get started” page by clicking a button.
+
+If all is good, the tests pass and run headless without opening a browser window.
+
+## Specification
+
+The file specs/example.spec has the following specification.
+
+    Getting Started with Gauge
+    ==========================
+    * Navigate to Gauge homepage "http://getgauge.io"
+
+    Get Started
+    -----------
+    * Go to Get Started page
+    * Show subtitle "Choose your OS & download"
+
+## Implementation
+
+Import Puppeteer and an assertion library
+
+    const puppeteer = require('puppeteer');
+    const assert = require('assert')
+
+Use the launch method in Puppeteers API to manage browser instances. The newPage method opens a new tab on the browser instance. This test shares a page across [steps](https://docs.getgauge.io/longstart.html#steps).
+
+Use Gauge’s execution hooks to open a browser and a new tab before the running [scenarios](https://docs.getgauge.io/longstart.html#scenarios) and close the browser on completing the run.
+
+    var page;
+    var browser;
+
+    beforeSuite(async function () {
+        browser = await puppeteer.launch();
+        page = await browser.newPage();
+    });
+
+    afterSuite(async function () {
+        browser.close();
+    });
+
+Use the page instance is [steps](https://docs.getgauge.io/longstart.html#steps).
+
+    step("Navigate to Gauge homepage <query>", async function (query){
+        await page.goto(query);
+    });
+
+    step("Go to the Get Started page", async function () {
+        await page.click(".link-get-started");
+    });
+
+Puppeteer’s API calls return promises. Gauge’s JavaScript runner handles [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) making tests **look** synchronous.
+
+Assertions are done after waiting for elements on the page to load.
+
+    step("Show subtitle <title>", async function(title){
+        await page.waitFor('.sub-title');
+        const message = await page.$eval('.sub-title', 
+                                            e => e.innerText);
+        assert.equal(message, title);
+    });
+
+See the browser window and control the speed of tests execution by passing headless and slowMo (time in milliseconds) as parameters to lauch.
+
+    beforeSuite(async function () {
+        browser = await puppeteer.launch({headless:false, slowMo: 250});
+        page = await browser.newPage();
+    });
+
+## Conclusion
+
+Although Puppeteer’s API is a high level implementation, a tester has to know the DOM of the web application and how the page loads to author tests. This makes it cumbersome and flaky. To solve these issues, the Gauge team is experimenting on a new API over Puppeteer.
+
+[*Gauge](https://getgauge.io) is a tool for testers to author and maintain automated acceptance test suites. [Download](https://getgauge.io/get-started.html) it or read [documentation](http://docs.getgauge.io) to get started!*

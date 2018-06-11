@@ -1,0 +1,130 @@
+---
+
+title: Gauge updates for July
+date: 2017-07-21
+tags: 
+summary_image: "/assets/images/blog/gauge-updates-july.gif"
+---
+
+# Gauge updates for July
+
+<%= image_tag "blog/gauge-updates-july.gif", {:title => "Gauge updates for July", :alt => "Gauge updates for July"} %>
+
+What’s new in release 0.9.0 and more
+
+## Cleaner Command Line Interface
+
+Before 0.9.0, Gauge used a flat list of options for running commands. For example,
+
+    # Initializing a project
+    $ gauge --init java
+
+    # Installing a plugin
+    $ gauge --install
+
+    # Running a spec with tags 
+    $ gauge specs --tags="smoke"
+
+    # Ignores that don't work together
+    $ gauge --install java --tags="smoke"
+
+As Gauge is a test runner, plug-in/template manager and refactoring tool rolled into one executable, we've removed clutter by grouping these features.
+
+With sub-commands it’s easier to discover features and use the right options (flags). For example,
+
+    # Install a plug-in
+    $ gauge install ruby
+
+    # Use templates to create a project
+    $ gauge init java
+
+    # Running tests
+    $ gauge run specs 
+
+    # Context specific options
+    $ gauge run specs --tags smoke
+
+    # Show option as invalid.
+    $ gauge install java --tags smoke
+    Error: unknown flag: --tags
+
+Here’s a list of all the sub commands.
+
+    > gauge
+    Usage:
+      gauge <command> [flags] [args]
+
+    Examples:
+      gauge run specs/
+      gauge run --parallel specs/
+
+    Commands:
+      config      Change global configurations
+      daemon      Run as a daemon
+      docs        Generate documentation using specified plugin
+      format      Formats the specified spec files
+      help        Help about any command
+      init        Initialize project structure in the current directory
+      install     Download and install plugin(s)
+      refactor    Refactor steps
+      run         Run specs
+      telemetry   Configure options for sending anonymous usage stats
+      uninstall   Uninstalls a plugin
+      update      Updates a plugin
+      validate    Check for validation and parse errors
+      version     Print Gauge and plugin versions
+
+There’s help for each command,
+
+    > gauge help init
+    Initialize project structure in the current directory.
+
+    Usage:
+      gauge init [flags] <template>
+
+    Examples:
+      gauge init java
+
+    Flags:
+      -h, --help        Help for init
+      -t, --templates   Lists all available templates
+
+Plus, man pages offline and [online](https://manpage.getgauge.io)!
+
+## Telemetry
+
+This release of gauge uses telemetry to collect anonymous usage data. More about why, [here](https://blog.getgauge.io/why-we-collect-data-b19df366b677).
+
+If you don’t want to help improve gauge, easily opt out by running,
+
+    > gauge telemetry off
+
+## Language Server Protocol
+
+Gauge is betting on [LSP](https://github.com/Microsoft/language-server-protocol) to make it Bring Your Own Editor platform.
+
+Release 0.9.0 implements a language server for Gauge that can be wired up to editors to auto-suggest steps, concepts, etc. while authoring scenarios.
+
+Here’s a [plug-in](https://github.com/getgauge/gauge-vscode) using the Gauge language server to auto-suggest in [Visual Studio Code](https://code.visualstudio.com),
+
+![](https://cdn-images-1.medium.com/max/2092/1*xqdFQplaVimm6b8PaL-LQQ.gif)
+
+## Easier builds
+
+Build Gauge, from the master branch, with a single command
+
+    > go get github.com/getgauge/gauge
+
+There’s no build script, configuration or need to clone the git repository. It just works.
+
+The gaugebinary compiles to $GOPATH/bin. Use it run on bleeding edge to test new features and fixes.
+
+These changes make Gauge single binary (from 0.9.0). Drop it anywhere in $PATH and run it like you normally do.
+
+## There’s more!
+
+For a full list of changes visit our [release page](https://github.com/getgauge/gauge/releases/tag/v0.9.0).
+
+## Thanks
+
+A big thanks to [Mikhail Dolinin](https://github.com/mdolinin) and [Rabih Halage](https://github.com/RabihHallage) for their valuable pull requests!

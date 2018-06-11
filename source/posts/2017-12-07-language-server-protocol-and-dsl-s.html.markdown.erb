@@ -1,0 +1,90 @@
+---
+
+title: Language server protocol and DSL’s
+date: 2017-12-07
+tags: 
+summary_image: "/assets/images/blog/langauge-server-protocol.gif
+---
+# Language server protocol and DSL’s
+
+<%= image_tag "blog/langauge-server-protocol.gif", {:title => "Language server protocol and DSL’s", :alt => "Language server protocol and DSL’s"} %>
+
+Gauge is a external DSL to express test behavior and data outside code. Unlike other external DSL’s for testing, Gauge is non-prescriptive because it uses Markdown. We’ve talked about this earlier.
+
+Despite benefits of an external DSL like lesser code, readability, re-usability, etc., teams prefer building [internal DSL’s](https://martinfowler.com/bliki/InternalDslStyle.html) with a programming language along with their IDE’s because it’s easier to manage code with code completions, refactoring, executions etc.
+
+But it’s hard to write acceptance tests using internal DSL’s. As requirements change and test suites grow the need for uniformity and re-usability force teams to build custom frameworks that are tough to read or maintain.
+
+Gauge wants to solve this problem, by bringing all the features you expect from an IDE to external DSL’s but without vendor lock-in. So we’ve designed Gauge to run for all popular [languages](https://github.com/getgauge/gauge/wiki/Language-Runners), provided hooks to extend for a new language, created plug-ins for [Visual Studio](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1071478.GaugepluginforVisualStudio) and [Intellij IDEA](https://plugins.jetbrains.com/plugin/7535-gauge).
+
+But developing plug-ins for these IDE’s or working with their plug-in development SDK’s is, to put it mildly, a pain in the bum. We’ve duplicated features across IDE’s. It’s like re-writing something as complex as a compiler for every IDE. There’s got to be a better way.
+
+Turns out there is. The team behind [VS Code](https://code.visualstudio.com/) solved this by creating the [Language Server Protocol](https://langserver.org/). We can implement IDE features like code completion, jump to definition, references, diagnostics etc. outside VS Code. The protocol is an open standard that’s actively developed and adopted by other [IDE’s](https://github.com/Microsoft/language-server-protocol/wiki/Tools-supporting-the-Language-Server-Protocol) and [languages](https://github.com/Microsoft/language-server-protocol/wiki/Tools-supporting-the-Language-Server-Protocol). With the latest Gauge [release](https://github.com/getgauge/gauge/releases/tag/v0.9.5) all IDE features are now built into Gauge instead of separate IDE plug-ins!
+
+## A new breed of plug-ins
+
+With first class support for LSP, we also announce our new [VS Code plug-in](https://github.com/getgauge/gauge-vscode) and official support for Gauge JavaScript plug-in. The new plug-in talks to Gauge as an LSP client delivering a great experience for authoring and maintaining tests.
+
+To get started, install [VS code](https://code.visualstudio.com/), [Gauge](https://getgauge.io/get-started.html) and run the following.
+
+    $ gauge init js
+    $ code --install-extension getgauge.gauge
+    $ code .
+
+Let’s explore these LSP features!
+
+## Code lens
+
+A [code lens](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#code-lens-request) displays actionable info on Gauge specifications and implementations.
+
+For e.g. opening example.spec in the sample project shows “Run Spec” and “Run Scenario” as a link above specifications and scenario headings. Clicking on it runs the specification or scenario and displays the result on the output pane. It’s a runnable (or executable) document!
+
+![Run specifications and scenarios](https://cdn-images-1.medium.com/max/2562/1*zrvIxmE8CEF6P5NATuzzpg.gif)*Run specifications and scenarios*
+
+We’ve also added a code lens see all references of a step implementation across spec files. Use this to see how the step is used and quickly jump to specifications to modify or understand usage.
+
+![](https://cdn-images-1.medium.com/max/2560/1*L0xLpAfFt9uoNSkV2I6Lxw.gif)
+
+## Diagnostics
+
+The [LSP diagnostic](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#textDocument_publishDiagnostics)s end point shows errors and warnings against a specification for quick feedback on parse or validation errors, unimplemented steps etc.
+
+![](https://cdn-images-1.medium.com/max/2560/1*lnV5aFYAN-we1vww_1Gysw.gif)
+
+## Code action
+
+Fix errors using [code actions](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#code-action-request), e.g. generating stubs for steps that are not implemented yet.
+
+![](https://cdn-images-1.medium.com/max/2560/1*mk1WGwsVnsYczkvH2hoEXA.gif)
+
+## Code completion
+
+Get suggestions via [code completion](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#completion-request) while editing specs. The language server auto completes, steps, concepts, parameters (step, table and file) etc.
+
+![](https://cdn-images-1.medium.com/max/2560/1*Xa2OxWsRXD5BLwt1BtDWTA.gif)
+
+## Goto to definition
+
+The [goto to definition](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#goto-definition-request) LSP end point, associates a step to it’s implementation for quick navigation or peek into the code behind a step.
+
+![](https://cdn-images-1.medium.com/max/2560/1*GrZ4De8Ijyg9YOLELx4iAg.gif)
+
+## Formatting
+
+Tidy up specs and concepts using the [format](https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#textDocument_formatting) end point.
+
+![](https://cdn-images-1.medium.com/max/2560/1*KlVRlz2ihmBHrPnx4OJ2vg.gif)
+
+## Other editors
+
+It’s easy to hook up your favorite editor with Gauge. The community are writing clients and tools for all popular editor. The Visual Studio team (not to be confused with VS Code) just released a [preview](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview) for version 2017.
+
+We tested these features on [vim/neovim](https://neovim.io/) using a [language client](https://github.com/autozimu/LanguageClient-neovim) plug-in and it worked out of the box!
+
+![](https://cdn-images-1.medium.com/max/2560/1*0hdsEddRIjldQjIj-Sh8Qw.gif)
+
+## The future
+
+Over the coming months, we are adding a bunch of useful features to Gauge and expose them via LSP. We appreciate your [feedback](https://github.com/getgauge/gauge-vscode), please log issues or suggestions!
+
+Happy testing.

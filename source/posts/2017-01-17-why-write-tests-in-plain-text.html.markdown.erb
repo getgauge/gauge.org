@@ -1,0 +1,72 @@
+---
+
+title: Why write tests in plain-text?
+date: 2017-01-17
+tags: 
+summary_image: "/assets/images/blog/why-write-tests-in-plain-text.jpeg
+---
+
+# Why write tests in plain-text?
+
+<%= image_tag "blog/why-write-tests-in-plain-text.jpeg", {:title => "Why we test in plain text", :alt => "Why we Test in plain text"} %>
+
+Writing scenarios to test a functionality involves a lot of thinking. Over time test cases and scenarios become complex even for trivial applications.
+
+*Writing tests in plain text helps to keep it **clear and simple.***
+
+As a team, both technical and non-technical members interact to gather feedback. Specifications written like a [story](https://en.wikipedia.org/wiki/Narrative_structure) enables all stakeholders to easily understand and verify intent.
+
+*I work on Gauge **— ***an open source automation tool with the ability to author test scenarios and cases in business language.
+
+While building Gauge, we looked at a lot of options to make it easy to author the test scenarios. Structured formats like [fixture](https://en.wikipedia.org/wiki/Test_fixture), [HTML](https://en.wikipedia.org/wiki/HTML), [XML](https://en.wikipedia.org/wiki/XML), [JSON](https://en.wikipedia.org/wiki/JSON) and [Gherkin](https://en.wikipedia.org/wiki/Cucumber_(software)#Gherkin_.28Language.29) didn’t suit our requirement. While [Asciidoc](https://en.wikipedia.org/wiki/AsciiDoc), [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) came close to expressing natural language we chose [Markdown](https://en.wikipedia.org/wiki/Markdown), as it was simpler and suited our needs.
+
+The specifications can be authored using any [simple text editor](https://www.google.co.in/search?q=markdown%20editors&rct=j) across platforms or Operating Systems. It’s great for **productivity.** It is **intuitive** and it gets to the core of what matters: **ease of use**.
+
+In this post, I’d like to show you, how to get the most of Markdown with Gauge using a few examples.
+
+***Natural Language:** to create common understanding.** ***Specifications in Gauge inherit Markdown’s readability.
+
+For e.g.
+
+![](https://cdn-images-1.medium.com/max/2196/1*2IYZ8VRvC23Nu7hIr6RtEQ.png)
+
+***Separation of concerns: **of data and scenarios.* Test data sets and scenarios can be easily separated and maintained using tables!
+
+For e.g.
+
+![](https://cdn-images-1.medium.com/max/2192/1*zS_RyjRPWzkdVjgrZTLneQ.png)
+
+With the test data and scenario steps separated, there’s flexibility to manage the test cases.
+
+***Flexibility: **to express intent. *We can word the same functionality differently to set a context or express intent better.
+
+For e.g.
+
+![](https://cdn-images-1.medium.com/max/2196/1*aDQZpWsJ-22sn_cV2Re7Qg.png)
+
+The following steps have the same underlying functionality.
+
+![](https://cdn-images-1.medium.com/max/2196/1*xoUgrlPbaOs5qFmtUPXxKw.png)
+
+They check for the system generated email. Gauge allows wording them differently without having to repeat the code block giving the user the flexibility to express.
+
+***Convey more**: with images.* Visually enrich the test case reports by associating images.
+
+For e.g.
+
+![](https://cdn-images-1.medium.com/max/2196/1*qoawyJoy-XWP6xD5ch6tQQ.png)
+
+The generated html report will show the specified image after executing the specification above.
+
+***Abstraction**: code behind the steps.* Markdown allows Gauge to abstract text from executable code blocks.
+
+For e.g.
+
+The Gauge step to code journey can be iterative. The steps can be authored without code blocks. Gauge skips such scenario(s) until all its steps have an association to a code block. This makes building the test cases fast and easy.
+
+***Language Choice*: **with [UTF-8](https://en.wikipedia.org/wiki/UTF-8) character support. The Markdown’s UTF-8 character support enables you to write Gauge’s specifications in the language you actually like!
+
+For e.g.
+
+![](https://cdn-images-1.medium.com/max/2188/1*pvIrhtKvU23cFmo0xo8NoA.png)
+> To explore more, Get started on [Gauge](http://getgauge.io/get-started/index.html)!

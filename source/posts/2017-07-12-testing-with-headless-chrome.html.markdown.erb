@@ -1,0 +1,111 @@
+---
+
+title: Testing with headless chrome
+date: 2017-07-12
+tags: 
+summary_image: "/assets/images/blog/testing-with-headless-chrome.png
+---
+# Testing with headless chrome
+
+<%= image_tag "blog/testing-with-headless-chrome.png", {:title => "Testing with headless chrome", :alt => "Testing with headless chrome"} %>
+
+The new [headless](https://developers.google.com/web/updates/2017/04/headless-chrome) feature in Chrome 59, makes it easy to run gauge with selenium on a CI/CD setup or Docker instances without having to use [xfvb](https://en.wikipedia.org/wiki/Xvfb).
+
+## Java
+
+For [Maven](https://maven.apache.org) add the following dependencies to pom.xml.
+
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.4.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+        <version>1.7.1</version>
+    </dependency>
+
+For [Gradle](https://gradle.org) add dependencies to build.gradle
+
+    dependencies {
+       compile 'org.seleniumhq.selenium:selenium-java:3.4.0'
+        compile 'io.github.bonigarcia:webdrivermanager:1.7.1'
+    }
+
+webdrivermanager is a library that [automatically](https://github.com/bonigarcia/webdrivermanager) downloads and manages chromedriver.
+
+Initialize WebDriver with arguments for headless mode and run tests.
+
+    public class DriverFactory {
+       public static WebDriver getDriver() {
+            ChromeDriverManager.getInstance().setup();
+
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu");
+
+            return new ChromeDriver(options);
+        }
+    }
+
+## Ruby
+
+If you are using [bundler](http://bundler.io) add this to your Gemfile
+
+    source 'https://rubygems.org'
+
+    group :test do
+        gem 'selenium-webdriver'
+        gem 'test-unit'
+        gem 'chromedriver-helper'
+    end
+
+And initialize a driver
+
+    require 'selenium-webdriver'
+
+    module Driver
+        def driver
+            options = Selenium::WebDriver::Chrome::Options.new
+
+            options.add_argument('--headless')
+            options.add_argument('--disable-gpu')
+
+            Selenium::WebDriver.for :chrome, options: options    
+        end
+
+    end
+
+## Gauge
+
+Gauge sets all of this via [project templates](https://docs.getgauge.io/using.html?highlight=template#gauge-project-templates)!
+
+For a maven selenium project run
+
+    $ gauge init java_maven_selenium
+    $ cd <projectdirectory>
+    $ headless=Y gauge run specs
+
+Or for setting up a ruby project
+
+    $ gauge init ruby_selenium
+    $ headless=Y bundle exec gauge run specs
+
+## Screenshot on failure
+
+By default, Gauge captures the screen display. In headless mode, the browser is not launched into a display, use getScreenShotAs method in WebDriver to capture the browser’s screenshot instead.
+
+For Gauge, implement a [custom screenshot](https://docs.getgauge.io/language.html#taking-custom-screenshots) handler.
+
+    CustomScreenGrabber implements ICustomScreenshotGrabber {
+        public byte[] takeScreenshot() {
+            // DriverFactory is a custom class to manage WebDriver instances
+            // and may vary between projects.
+            WebDriver driver = DriverFactory.getDriver();
+            return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        }
+    }
+
+Have fun setting up tests in headless mode!

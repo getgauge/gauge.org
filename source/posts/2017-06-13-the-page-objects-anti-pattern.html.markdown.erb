@@ -1,0 +1,318 @@
+---
+layout: post
+title: The Page Objects anti pattern
+date: 2017-06-13
+tags: 
+summary_image: "/assets/images/blog/the-objects-of-anti-pattern.jpeg
+---
+
+# The Page Objects anti pattern
+
+<%= image_tag "blog/the-objects-of-anti-pattern.jpeg", {:title => "The Page Objects anti pattern", :alt => "The Page Objects anti pattern"} %>
+
+Writing automated tests that are easy to maintain require skill, practice, discipline and **good design**. There are several design patterns that structure tests for re-use and maintainability. [Page Objects](https://martinfowler.com/bliki/PageObject.html) is a popular pattern that comes built-in with [Selenium](https://github.com/SeleniumHQ/selenium/wiki/PageFactory).
+
+Yet**, as a tester who has been a developer before, I find Page Object Model (POM) counterproductive.**
+
+POM makes change hard to manage as it violates good design principles. This article talks about the violations with examples and shows a better solution.
+
+For this, we will use the test cases written for the sample web application [Active admin store](http://demo.activeadmin.info/).
+
+## Selenium’s recommendations
+
+Here is a code snippet modeled on recommendations at [SeleniumHQ](https://github.com/SeleniumHQ).
+
+    // Uses recommendations from https://github.com/SeleniumHQ/selenium/wiki/PageObjects
+    public class HomePage {
+        private final WebDriver webDriver;
+        @FindBy(how = How.LINK_TEXT, linkText = "Sign up")
+        private WebElement signup;
+
+        @FindBy(how = How.LINK_TEXT, linkText = "Log out")
+        private WebElement logout;
+
+        @FindBy(how = How.LINK_TEXT, linkText = "Log in")
+        private WebElement login;
+        
+        //other fields and components
+        
+        public HomePage(WebDriver webDriver) {
+            this.webDriver = webDriver;
+            PageFactory.initElements(webDriver, this);
+        }
+
+        public SignUpPage signUp() {
+            signup.click();
+            return new SignUpPage(webDriver);
+        }
+
+        public void logOut() {
+            logout.click();
+        }
+
+        public LoginPage logIn() {
+            login.click();
+            return new LoginPage(webDriver);
+        }
+        
+        public ProductPage selectProduct(String product){
+            webDriver.findElement(By.linkText(product)).click();
+            return new ProductPage(webDriver);
+        }
+
+        //other actions
+    }
+
+Here, we use Selenium’s [page factory](https://github.com/SeleniumHQ/selenium/wiki/PageFactory). The UI elements are fields, annotated with locator details. But, when you look at usages, the method logIn() is used in many test cases. However the fields e.g. There is only one usage of the field login (line 30).
+
+Also, elements on a webpage are usually linked to one action. e.g. Entering text in a Textbox or clicking a Button.
+
+**This pattern, prematurely designs UI elements for reuse violating the [YAGNI principle](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it).**
+> **“You aren’t gonna need it**” (acronym: **YAGNI**) states that a programmer should not add functionality until deemed necessary.
+
+Let’s fix this by removing all that upfront design by using locators from webDriver. Here’s the same example modified to do that.
+
+    public class HomePageRefactored {
+        private final WebDriver webDriver;
+
+        public HomePageRefactored(WebDriver webDriver) {
+            this.webDriver = webDriver;
+        }
+
+        public SignUpPage signUp() {
+            webDriver.findElement(By.linkText("Sign up")).click();
+            return new SignUpPage(webDriver);
+        }
+
+        public void logOut() {
+            webDriver.findElement(By.linkText("Log out")).click();
+        }
+
+        public LoginPage logIn() {
+            webDriver.findElement(By.linkText("Log in")).click();
+            return new LoginPage(webDriver);
+        }
+        
+        public ProductPage selectProduct(String product){
+            webDriver.findElement(By.linkText(product)).click();
+            return new ProductPage(webDriver);
+        }
+        
+        //other actions
+    }
+
+Looks much better, but there’s more work.
+
+## Everything in its right place?
+
+Page Objects get huge and difficult to maintain. One reason is because it has actions, locators and groups of unrelated functionality. For e.g. a product search on a page is unrelated to login or logout action. Thus breaking [Single Responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) (SRP).
+> The **SRP** states that every [module](https://en.wikipedia.org/wiki/Modular_programming) or [class](https://en.wikipedia.org/wiki/Class_(computer_programming)) should have responsibility over a single part of the [functionality](https://en.wikipedia.org/wiki/Software_feature) provided by the [software](https://en.wikipedia.org/wiki/Software), and that responsibility should be entirely [encapsulated](https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)) by the class.
+
+**Breaking Page objects to smaller page objects still violates [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle).**
+
+Consider tasks spanning pages/components. For e.g the login functionality.
+
+The login task has 2 steps navigateToLoginPage in HomePage and loginCustomerWith in LoginPage.
+
+    **LoginPage **loginPage** **= new** HomePage**(*driver*).navigateToLoginPage();
+    loginPage.loginCustomerWith(customer, password);
+
+As the actions belong to 2 different pages, this code will repeat in all test cases that use login. The responsibility is not entirely encapsulated. This is true even after extracting Header as a component.
+
+### Use the right abstractions!
+
+Group by intent **not** page(s).
+
+The modified LogIn code snippet below has only one reason to change. A change in the Log in functionality.
+
+    public class LogIn {
+    //Show the log in status for user
+        public void showTheLogInStatusForUser(String customer) {
+            WebDriver webDriver = Driver.webDriver;
+            WebElement authenticatedInfo = webDriver.findElement(By.id("auth"));
+            assertTrue(authenticatedInfo.isDisplayed());
+            assertTrue(authenticatedInfo.getText().contains("Welcome " + customer + "! Not you?"));
+        }
+
+        //Login as with user name and password
+        public void LoginAsCustomerDetails(String name, String password) {
+            WebDriver webDriver = Driver.webDriver;
+            webDriver.findElement(By.linkText("Log in")).click();
+            webDriver.findElement(By.name("login")).sendKeys(name);
+            webDriver.findElement(By.name("password")).sendKeys(password);
+            webDriver.findElement(By.name("commit")).click();
+        }
+    }
+
+**And this is why we built [Gauge](https://getgauge.io/), to reuse intent.**
+
+We can reuse [steps](https://docs.getgauge.io/longstart.html?#steps) and [concepts](https://docs.getgauge.io/longstart.html?#concepts) with parameters. These can span pages.
+
+    //the tasks have a @Step annotation with the text for reference.
+    public class LogIn {
+        @Step("Show the log in status for user <customer>")
+        public void showTheLogInStatusForUser(String customer) {
+            WebDriver webDriver = Driver.webDriver;
+            WebElement authenticatedInfo = webDriver.findElement(By.id("auth"));
+            assertTrue(authenticatedInfo.isDisplayed());
+            assertTrue(authenticatedInfo.getText().contains("Welcome " + customer + "! Not you?"));
+        }
+
+        @Step("Login with customer name <name> and <password>")
+        public void LoginAsCustomerDetails(String name, String password) {
+            WebDriver webDriver = Driver.webDriver;
+            webDriver.findElement(By.linkText("Log in")).click();
+            webDriver.findElement(By.name("login")).sendKeys(name);
+            webDriver.findElement(By.name("password")).sendKeys(password);
+            webDriver.findElement(By.name("commit")).click();
+        }
+    }
+
+## Responding to change
+
+**User flows != order of Pages.**
+
+![**Flow 1:** Continue shopping with simple search. Created using [websequencediagrams.com](https://www.websequencediagrams.com/)](https://cdn-images-1.medium.com/max/2000/1*8sbO2zHOqH-0ub3faF-K2A.png)***Flow 1:** Continue shopping with simple search. Created using [websequencediagrams.com](https://www.websequencediagrams.com/)*
+
+Here is a user flow, where the user is taken to the Homepage on deciding to shop further.
+
+When there’s a new flow for e.g shop after Advanced Search. The same action continue shopping ends with another page.
+
+![**Flow 2: **Continue shopping with advanced search. Created using [websequencediagrams.com](https://www.websequencediagrams.com/)](https://cdn-images-1.medium.com/max/2000/1*O93VuDs_YwT7ABSbXRNMEA.png)***Flow 2: **Continue shopping with advanced search. Created using [websequencediagrams.com](https://www.websequencediagrams.com/)*
+
+A knee jerk reaction to this is using an interface e.g: **SearchPage.**
+
+    public class CartPage{
+        ...    
+        SearchPage continueShopping();
+        ...
+    }
+
+But then, what method(s) should SearchPage have?
+
+    public interface SearchPage{
+        SearchPage search(???);
+    }
+
+And because they use different parameters use a SearchCriteria.
+
+    public interface SearchPage{
+        SearchPage search(SearchCriteria criteria);
+    }
+
+    // More logic
+    public class CartPage{       
+        SearchPage continueShopping(){
+         if(state) {
+           return new AdvancedSearchPage();
+         }
+         else {
+           return new HomePage();
+         }    
+    }
+
+And there’s more code and complex logic to automate a new user flow and modifications to CartPage. This violates the [Open/Closed principle](https://en.wikipedia.org/wiki/Open/closed_principle) (OCP).
+> The **open/closed principle(OCP)** states “*software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification*”
+
+## Let’s keep it simple.
+> Note: The following examples use Gauge. In my other blog, I have discussed the [top 5 reasons why I use Gauge](https://blog.getgauge.io/5-reasons-to-use-gauge-24749734b9b0).
+
+[Gauge tests are written in markdown](https://blog.getgauge.io/why-write-tests-in-plain-text-d9a54ccdc41b). The steps define order of execution.
+
+    Continue Shopping
+    ================
+
+    Use simple search to add products
+    ----------------------------------
+    * Go to the store website
+    * Log in with customer name "ScroogeMcduck" and "password"
+    * See items available for purchase.
+    * Place order for "Beginning Ruby: From Novice to Professional". The cart should now contain "1" items
+    * continue shopping
+    * Place order for "Ruby Cookbook". The cart should now contain "2" items
+
+    Use advanced search to add products
+    -------------------------------
+    * Go to the store website
+    * Log in with customer name "ScroogeMcduck" and "password"
+    * Filter items by publication "O'reilly"
+    * Place Order for "Ruby Cookbook" by publication "O'reilly". The cart should now contain "1" items
+    * continue shopping
+    * Place Order for "The Ruby Programming Language" by publication "O'reilly". The cart should now contain "2" items
+
+**Loosely coupled steps makes creating a flow just a matter of choosing the right order of steps.**
+
+Steps See items available for purchase,Filter items by publication <publication> and **continue shopping** in the specification do not know about the previous step(s) nor the next step(s).
+
+Here also we will have 2 classes, one for Simple Search and the other for the Advanced Search. But, the CartPage where the OCP violation occurs is not needed.
+
+*And yes, you **can** share information using [DataStores](https://docs.getgauge.io/language.html?#data-store).*
+
+## Method chaining
+
+Selenium recommends [Page Objects returning other page objects](https://github.com/SeleniumHQ/selenium/wiki/PageObjects).
+
+Let’s discuss this with a simple [Business Rule](https://en.wikipedia.org/wiki/Business_rule)(BR) - login only with valid credentials.
+
+![**Login Flow: [**https://www.websequencediagrams.com/](https://www.websequencediagrams.com/)](https://cdn-images-1.medium.com/max/2000/1*yOg7FYCCuNs_EHNse8Xe6w.png)***Login Flow: [**https://www.websequencediagrams.com/](https://www.websequencediagrams.com/)*
+
+Based on the BR, the user is either taken to LoginPage or the HomePage. Since both the pages are not similar, we cannot have a common return type. One way this to handle this is to have many methods for the same action.
+
+    public class LoginPage{
+        HomePage validLogin(String userName,String password){...}
+        LoginPage invalidLogin(String userName,String password){...}
+    }
+
+The number of methods increase with more BRs e.g: role based login.
+
+    public class LoginPage{
+        HomePage validLogin(String userName,String password){...}
+        LoginPage invalidLogin(String userName,String password){...}
+        AdminDashboardPage adminValidLogin(String user,String pwd){...}
+    }
+
+All this is because there is tight coupling between pages, the return type and actions.
+
+## Loosely coupled steps
+
+Here the step Log in with customer name <name> and password <password> is not aware of the next step(s).
+
+    Login flow
+    ==========
+
+    Admin should be able to see recent orders
+    -----------------------------------------
+    * Go to the store website
+    * Log in with customer name "admin" and "password"
+    * See the recently placed orders on the dashboard
+
+    User should be able to see items available for purchase
+    -------------------------------------------------------
+    * Go to the store website
+    * Log in with customer name "user" and "password"
+    * See the items available for purchase
+
+    User credentials must be verified for login
+    -------------------------------------------
+    * Go to the store website
+    * Log in with customer name "invalidUser" and "password"
+    * See the reason for the login failure
+    view raw
+
+We have different test cases for positive and negative scenarios.
+
+**Test cases are the place to define order of steps and the required data.**
+
+Each step implementation, has code only to handle its task. Thus keeping the implementation loosely coupled.
+
+**Loosely coupled steps give users more flexibility and lesser code to maintain.**
+
+## Less is better
+
+Not using page objects in our tests **reduced source code by 40%.**
+
+**Surprised? Check it yourself.**
+
+Here are 2 test suites with the same set of test cases [with](https://github.com/sguptatw/active-admin-example-page-object) and [without Page Objects](https://github.com/getgauge-examples/java-maven-selenium) for the Active admin store web application.
+
+From our experience using Page Object Model (POM) makes it increasingly difficult to manage a growing test suite. [Gauge](https://getgauge.io/) understands the building blocks of test cases, using it reduces the overhead of ongoing automated test suite maintenance.

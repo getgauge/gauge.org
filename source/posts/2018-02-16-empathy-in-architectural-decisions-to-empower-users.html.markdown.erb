@@ -1,0 +1,133 @@
+---
+
+title: Empathy in architectural decisions to empower users
+date: 2018-02-16
+tags: 
+summary_image: "/assets/images/blog/5-reasons-to-use-gauge.jpeg"
+---
+
+# Empathy in architectural decisions to empower users
+
+<%= image_tag "blog/5-reasons-to-use-gauge.jpeg", {:title => "Empathy in architectural decisions to empower users", :alt => "Empathy in architectural decisions to empower users"} %>
+
+Empathy in architectural decisions to empower users
+
+Over the past year and a half, I’ve been part of the team developing [Gauge](https://github.com/getgauge/gauge) — an open source, acceptance test automation tool. Working on a product made me think about “What’s essential to build a good product?”
+> # When we think of empathising with our users, we end up wanting to build things to empower them.
+
+In this post, I’ll talk about how we made crucial software architecture decisions based on what would *empower* our users.
+
+We knew that Gauge has to be lightweight and highly customisable. Plug-in architectures are an attractive solution for teams seeking to build applications that are modular, customizable, and easily extensible.
+
+## Yes, Plugin architecture helps a product be extensible, but..
+
+Engaging with the user community and recognising the right **direction** for an extensible design is crucial.
+> # So, we engage with our user community to understand how to **empower** them better!
+
+As expected, distribution of responsibility in executing tests of a suite has been the most important architectural decision of Gauge. To do this, we identified the key components of the product and their responsibilities.
+
+## Getting to the core of things
+
+So, it all came down to —
+
+* The **Gauge Core**
+
+* **Language plugin**
+
+* **Reporting plugin**
+
+* **IDE plugin and others.**
+
+![Gauge architecture](https://cdn-images-1.medium.com/max/2000/1*clIajUDVUD3Rq3AjXetWGw.png)*Gauge architecture*
+
+The **responsibilities of Gauge core** became:
+
+* run tests for configured environment(s)
+
+* validate [specifications](https://docs.gauge.org/longstart.html?#specifications-spec) and provide diagnostics
+
+* **orchestrate **the test execution
+
+* and broadcasts messages that the plugins use to perform custom actions.
+
+The **language plugin’s responsibilities** were to
+
+* author implementation in the given language
+
+* responds to the request Gauge sends (validate, execute…).
+
+The **reporting plugin** is required to
+
+* generate execution reports
+
+The **IDE plugins** are responsible for
+
+* giving a user interface to use Gauge features
+
+## Can I use user empathy to validate Architecture?
+
+Sure, we had a nice design in place. And, we wanted to provide a way to help change the mindset of any team using Gauge from “Can I..” to “How can I..” ?
+
+But it would not be valuable to share it if it didn’t actually work. One of the ways we tried validating it is by answering the most common **How Can I?** questions form our users. Here are a few examples —
+
+*Note: the answer to most of these questions to the one posing it is “by writing a plugin” but for this post, I’ll highlight how the architecture sets out to answer these questions.*
+
+### Q 1— How can I create or choose my preferred reporting format?
+
+We know that Gauge core is orchestrating and broadcasting messages. We built **reporting** as an independent plugin. So this way, it performs the required reporting-related actions by listening to these messages.
+
+![independent processes talking to each other over TCP](https://cdn-images-1.medium.com/max/2000/1*XLQrTuG4rr6u2FG56GmqDA.png)*independent processes talking to each other over TCP*
+
+So, the report format is independent of how the tests are executed (parallel, sequential). And any [**customisation](https://github.com/getgauge/html-report/issues/131)** is reusable for tests run in any supported language.
+
+The reporting plugins we built usually listen to the event *SuiteExecutionResult*, that is broadcast almost at the end. So you can have the default reports generated in [HTML-reports](https://docs.gauge.org/reports.html#html-reports), [XML-reports](https://docs.gauge.org/reports.html#xml-report) or write a custom reporting plugin. Here is how you can get a quick start to **author a custom reporting plugin** — [**Report-seed](https://github.com/getgauge-contrib/report-seed)**. This is in Java, a similar approach can be followed to write custom reporting plugins in other languages also.
+
+### Q2 — How can I run tests in the language of my choice?
+
+We designed Gauge core to broadcast [Protobuf](https://developers.google.com/protocol-buffers/) messages to the plugins mentioned in a project’s** [manifest](https://docs.gauge.org/using.html#manifest-file) **file.
+> [Protobuf](https://developers.google.com/protocol-buffers/) is a language and platform neutral mechanism for structuring data.
+
+![independent processes talking to each other over TCP on port **GAUGE_INTERNAL_PORT** (env variable)](https://cdn-images-1.medium.com/max/2000/1*b2kgDdndrzMu5ZlxU4zAyA.png)*independent processes talking to each other over TCP on port **GAUGE_INTERNAL_PORT** (env variable)*
+
+This not only enabled the registered plugins to execute tests in the language of choice but the runner was authored in the same too. So, we have [**Gauge-js](https://github.com/getgauge/gauge-js)** authored in JavaScript** **to run tests written in JavaScript. Similarly [**Gauge-python](https://github.com/getgauge/gauge-python)** is for Python**.**
+
+All this, with [Gauge-core](https://github.com/getgauge/gauge) authored in [Golang](https://golang.org/)! *Read this if you’re interested in a[uthoring a new language runner for Gauge](https://blog.getgauge.io/authoring-a-language-runner-for-gauge-1332b7bca8d8).*
+
+**Q3 — How can I use it with an IDE of my choice?**
+
+We designed Gauge to have a [**language server protocol](https://microsoft.github.io/language-server-protocol/)** implementation. This helps different IDEs ([**LSP](https://microsoft.github.io/language-server-protocol/)** clients) take advantage of it.
+
+![LSP independent client server processes interacting with each other](https://cdn-images-1.medium.com/max/2000/1*AMRadFVMLy-xiyhBYjZX1A.png)*LSP independent client server processes interacting with each other*
+
+So, we have [gauge-vscode](https://github.com/getgauge/gauge-vscode) which is a plugin to Visual Studio Code. [*This article ](https://blog.getgauge.io/gauge-and-the-language-server-protocol-c56fbcfba177)will not only help you understand the offered Gauge IDE features but also gives pointers on adding a new IDE support for Gauge.*
+
+### Q4: — Should I write a custom plugin for something like parallel execution?
+
+Consider a product design that requires the users to write a plugin to run tests in parallel. This means, the tool (the execution and reporting) handles only sequential execution by default.
+
+**What if the user has to write a plugin to add parallel run support?**
+
+The user will have to now worry about
+
+* Consolidation of parallel run result
+
+* Parallel run report generation in default/customised formats
+
+* On CI, parallel and sequential options have to be explicitly handled on separate tasks of execution and reporting.
+
+Would this be as effective as it should have been in empowering its users?
+> # **We think not. In Gauge, such features are built in core.**
+
+All related tasks are handled by default. So, such architectural decision makes a feature (e.g:parallel run) readily and easily available to any user running tests in any language of choice!
+
+What I’ve tried to say is that **empathy** is not just the prerogative of the Business Analysts, User Researchers, UI folks or the front-end. Having users at the heart of everything also means putting their interests forward while making architectural decisions. Empathy needs to seep into our very (forgive the pun) **core**! and that’s what is essential to build a good product.
+
+If you still have any queries/suggestions for Gauge do reach out to the community
+
+* Discussions on the [Gauge Google groups](https://groups.google.com/forum/#!forum/getgauge)
+
+* Chat at [Gauge gitter chat](https://gitter.im/getgauge/chat)
+
+* Watch changes and Report issues at [Gauge github pages](https://github.com/getgauge)
+
+* Reach a larger audience on [Gauge twitter](https://twitter.com/getgauge)
