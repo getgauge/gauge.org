@@ -15,7 +15,6 @@ header.top {
     height: 65px;
     transition: $transition;
     @media (min-width: $screen-md) {
-        height: 100px;
         transition: $transition;
     }
     .inner & {
@@ -47,7 +46,7 @@ header.top {
     width: 100px;
     height: 32px;
     display: inline-block;
-    margin: 14px 0 0 16px;
+    margin: 18px 0 0 16px;
     background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
     text-indent: -100em;
     overflow: hidden;
@@ -55,7 +54,7 @@ header.top {
     @media (min-width: $screen-md) {
         float: left;
         width: 100px;
-        margin-left: 0;
+        margin: 17px 0 0 0;
     }
     @media (min-width: $screen-xl) {
         width: 180px;
@@ -112,6 +111,10 @@ header.top {
         display: block;
         margin-top: 17px;
         transition: $transition;
+        float: right;
+    }
+    @media (min-width: $screen-lg) {
+        margin-top: 12px;
     }
 }
 
@@ -126,12 +129,9 @@ header.top {
         background: $mobile-nav-bg;
     }
     @media (min-width: $screen-md) {
-        margin: 6px 0 0;
         float: right;
     }
-    @media (min-width: $screen-xl) {
-        margin: 10px 0 0;
-    }
+    @media (min-width: $screen-xl) {}
     li {
         display: block;
         @media (min-width: $screen-md) {
@@ -153,7 +153,7 @@ header.top {
             padding: 5px 10px;
         }
         @media (min-width: $screen-xl) {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 300;
         }
         &:hover {
@@ -245,11 +245,11 @@ header.top {
     .logo {
         // background: url('/assets/images/gauge-logo_white.svg') no-repeat 0 0;
         @media (min-width: $screen-md) {
-            margin-top: -2px;
+            // margin-top: -2px;
             transition: $transition;
         }
         @media (min-width: $screen-xl) {
-            margin-top: -5px;
+            // margin-top: -5px;
             transition: $transition;
         }
     }
@@ -263,7 +263,7 @@ header.top {
         }
     }
     .main-nav {
-        margin: -7px 0 0;
+        // margin: -7px 0 0;
         transition: $transition;
         a {
             transition: $transition;
@@ -274,6 +274,43 @@ header.top {
                 color: $primary-color;
                 transition: $transition;
             }
+        }
+    }
+}
+
+.inner {
+    .link_getstarted {
+        a {
+            @media (min-width: $screen-md) {
+                border:0;
+                border-radius: 0px;
+            }
+        }
+    }
+    .sticky {
+        .link_getstarted {
+            a {
+                @media (min-width: $screen-md) {
+                    border:0;
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+}
+
+#plugins {
+    .link_plugins {
+        a {
+            color: $primary-color;
+        }
+    }
+}
+
+#get_started {
+    .link_getstarted {
+        a {
+            color: $primary-color;
         }
     }
 }

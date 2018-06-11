@@ -57,14 +57,11 @@ p {
 .page-header {
     margin: 105px 0 40px;
     @media (min-width: $screen-md) {
-        margin: 145px 0 40px;
-    }
-    @media (min-width: $screen-xl) {
-        margin: 145px auto 40px;
+        margin: 120px 0 40px;
     }
     h1 {
-        font-family: 'Lato';
         font-size: 20px;
+        font-weight:600;
         margin-bottom: 0;
         border-bottom: 1px solid $border-color;
         @media (min-width: $screen-md) {
@@ -76,7 +73,7 @@ p {
 
 .main-container {
     a {
-        color: #0446b3;
+        color:$link-color;
         display: inline-block;
         text-decoration: none;
         &:hover{
@@ -85,11 +82,6 @@ p {
         }
     }
 }
-
-.bold-text {
-    font-weight: bold;
-}
-
 .tab-container {
     margin-top: 40px;
     margin-bottom: 40px;
