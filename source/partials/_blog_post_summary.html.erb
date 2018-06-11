@@ -12,9 +12,9 @@
     <% end %>
     <p class='tags'>
       <% article.tags.each do |tag, articles| %>
-      <% link_to tag_path(tag), :class => 'tag' do %>
-      <%= tag %>
-      <% end %>
+        <% link_to tag_path(tag), :class => 'tag' do %>
+          <%= tag %>
+        <% end %>
       <% end %>
     </p>
   </div>
