@@ -58,20 +58,17 @@ $blog-description-color: #474747;
   margin: 0 0 10px 0;
   color: $blog-heading-color;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700 !important;
   line-height: 22px;
-  // @include ellipsis-txt(460px, 16px, 1.4, 2);
+  
 
   .latest-blog & {
-    // @include ellipsis-txt(460px, 16px, 1.4, 2);
     font-size: 16px;
     @media (min-width:$screen-md) {
-      // @include ellipsis-txt(680px, 16px, 1.4, 2);
       font-size: 16px;
     }
 
     @media (min-width:$screen-lg) {
-      // @include ellipsis-txt(720px, 17px, 1.4, 2);
       font-size: 17px;
     }
 
@@ -80,24 +77,7 @@ $blog-description-color: #474747;
 }
 
 .excerpt {
-  // @include ellipsis-txt(460px, 14px, 1.4, 3);
   color: $blog-description-color;
-
-  .latest-blog & {
-    @media (min-width:$screen-md) {
-      // @include ellipsis-txt(680px, 14px, 1.4, 2);
-    }
-
-    @media (min-width:$screen-lg) {
-      // @include ellipsis-txt(720px, 16px, 1.4, 2);
-    }
-
-    @media (min-width:$screen-xl) {
-      // @include ellipsis-txt(1140px, 16px, 1.4, 2);
-    }
-
-  }
-
 }
 
 .posts {
@@ -212,7 +192,6 @@ $blog-description-color: #474747;
 
     a {
       font-size: 10px;
-      // color: $gray-light;
     }
 
   }
@@ -261,12 +240,10 @@ $blog-description-color: #474747;
 .post-author {
   font-weight: 400;
   font-size: 13px;
-  // color: $gray;
 }
 
 .recent-ariticles {
   li {
-    // border-top: 1px solid $border;
     padding: 10px 0;
 
     &:first-child {
@@ -320,11 +297,9 @@ $blog-description-color: #474747;
 //style expiriments
 
 .post-summary {
-  // border-bottom: 1px solid $border;
   overflow: hidden;
 
   @media (min-width:$screen-md) {
-    // border: 1px solid $border;
     border-radius: 5px;
   }
 
@@ -336,6 +311,7 @@ $blog-description-color: #474747;
       transform: scale(1);
       transition: all 0.3s ease-in-out;
     }
+
 
   }
 
@@ -377,6 +353,11 @@ $blog-description-color: #474747;
 
       @media (min-width:$screen-xl) {
         width: 34%
+      }
+
+      .post-title{
+        font-size: 24px;
+        font-weight: 700;
       }
 
     }
@@ -536,4 +517,10 @@ $blog-description-color: #474747;
   @media (min-width:$screen-md) {
     padding:15px 0;
   }
+}
+
+.line-primary-color{
+  background: $primary-color;
+  border: none;
+  height: 1px;
 }
