@@ -1,20 +1,43 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<% wrap_layout :layout do %>
+<div class="container blog-post blog-container">
+  <div class="row">
+    <div class="col-md-9">
 
-    
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
-  </head>
-  <body class="inner">
-    <%= partial 'partials/header' %>
-    <div id="main" role="main" class="blog-container container">
-      <%= yield %>
+      <% if content_for?(:banner) %>
+    <div class="post-banner">
+      <%= yield_content :banner %>
     </div>
-  </body>
-  <%= partial 'partials/footer' %>
-</html>
+  <% end %>
+
+      <main id="main" role="main" class="blog-post-main-container">
+      <%= yield %>
+      </main>
+    </div>
+    <div class="col-md-3">
+      <aside class="post-sidebar">
+        <section  class="recent-ariticles">
+          <h2 class="section-title">Recent Articles</h2>
+          <ol>
+            <% selected_articles_for_display_in(blog.articles)[0...5].each do |article| %>
+            <li>
+              <span class="post-date"><%= article.date.strftime('%b %e') %></span>
+              <span class="post-author"><%= article.data["author"] %></span>
+              <%= link_to article.title, article %>
+            </li>
+            <% end %>
+          </ol>
+        </section>
+        <section>
+          <h2 class="section-title">By Year</h2>
+          <ol>
+            <% selected_articles_for_display_in(blog.articles).group_by {|a| a.date.year }.each do |year, articles| %>
+            <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year).sub(/\.html$/, '/index.html') %></li>
+            <% end %>
+          </ol>
+        </section>
+
+      </aside>
+    </div>
+  </div>
+</div>
+<% end %>

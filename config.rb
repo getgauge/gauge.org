@@ -89,5 +89,4 @@ helpers do
   def selected_articles_for_display_in(articles)
     articles.reject do |article| !should_show_drafts? && is_draft?(article) end
   end
-
 end
