@@ -4,15 +4,6 @@ pageable: true
 per_page: 10
 ---
 
-<div class="inner-banner blog-banner">
-  <div class="container">
-    <div class="banner-content">
-      <h1 class="caption"><span><span class="go">Go</span>CD Blog</span></h1>
-    </div>
-    <%= link_to 'RSS feed', '/feed.xml' , { :class=>"rss-feed" }  %>
-  </div>
-</div>
-
 <% articles_to_show = selected_articles_for_display_in page_articles %>
 <% latest_post      = articles_to_show.first %>
 <% second_post      = articles_to_show[1] %>

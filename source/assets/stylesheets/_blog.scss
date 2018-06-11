@@ -1,6 +1,7 @@
-.blog-container{
-  margin-top: 100px;
-}
+$blog-date-color: #3C3C3C;
+$blog-heading-color: #1A1C19;
+$blog-description-color: #474747;
+
 
 .blog-list {
   margin-top: 100px;
@@ -34,14 +35,11 @@
 
 .blog-details {
   // background: $gray-lighter;
-  border-top: 5px solid #fff;
   position: relative;
   padding: 10px 20px 20px;
   position: relative;
   transition: all 0.3s ease-in-out;
   top: 0;
-  box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.75);
-
     @media (min-width:$screen-md) {
     height: 239px;
   }
@@ -57,11 +55,10 @@
 }
 
 .post-title {
-  font-weight: 400;
-  text-transform: uppercase;
   margin: 0 0 10px 0;
-  color: #333;
-  font-size: 15px;
+  color: $blog-heading-color;
+  font-size: 20px;
+  font-weight: bold;
   line-height: 22px;
   // @include ellipsis-txt(460px, 16px, 1.4, 2);
 
@@ -84,7 +81,7 @@
 
 .excerpt {
   // @include ellipsis-txt(460px, 14px, 1.4, 3);
-  color: #333;
+  color: $blog-description-color;
 
   .latest-blog & {
     @media (min-width:$screen-md) {
@@ -256,8 +253,8 @@
 }
 
 .post-date {
-  font-size: 12px;
-  // color: $gray-light;
+  color: $blog-date-color;
+  font-size: 13px;
   display: block;
 }
 
@@ -344,6 +341,9 @@
 
   .blog-details {
     background: #fff;
+    a{
+      text-decoration: none;
+    }
   }
 
   .latest-blog & {
