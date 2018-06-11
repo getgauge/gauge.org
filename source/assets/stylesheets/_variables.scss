@@ -11,17 +11,16 @@ $screen-xl-min: 1199.98px;
 $gutter: 15px;
 // colors
 $primary-color:#ffcc00;
+$secondary-color:#1e1e1e;
+$white:#ffffff;
 $border-color: #ccc;
 $active-border-color: $primary-color;
 $border-radius:3px;
+$link-color: #0446b3 ;
 $active-nav-bg: #f2f2f2;
 $active-tab-header-bg: transparent;
 $feature-tab-bg: #f8db4d;
 $active-feature-tab-bg: #fff;
-$browser-dot-size: 13px;
-
 $footer-background: #1A1C19;
-$footer-header: #FFCC00;
-$footer-link: #fff;
-
-$browser-dot-size: 13px;
+$footer-header: $primary-color;
+$footer-link: $white;

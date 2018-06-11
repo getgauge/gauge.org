@@ -57,39 +57,34 @@ p {
 .page-header {
     margin: 105px 0 40px;
     @media (min-width: $screen-md) {
-        margin: 145px 0 40px;
-    }
-    @media (min-width: $screen-xl) {
-        margin: 145px auto 40px;
+        margin: 120px 0 40px;
     }
     h1 {
-        font-family: 'Lato';
         font-size: 20px;
+        font-weight:600;
         margin-bottom: 0;
         border-bottom: 1px solid $border-color;
         @media (min-width: $screen-md) {
-            font-size:36px;
-            line-height: 42px;
+            font-size:24px;
+            line-height: 32px;
         }
     }
 }
 
 .main-container {
     a {
-        color: #333;
+        color:$link-color;
         display: inline-block;
-        border-bottom: 1px dotted #333;
         text-decoration: none;
+        &:hover{
+            background : $primary-color;
+            color:#333;
+        }
     }
 }
-
-.bold-text {
-    font-weight: bold;
-    text-decoration: underline;
-}
-
 .tab-container {
     margin-top: 40px;
     margin-bottom: 40px;
     @include clearfix();
 }
+

@@ -1,9 +1,11 @@
-$banner-bg: #071323;
+
+$banner-bg:$secondary-color;
 $banner-heading:$primary-color;
-$white: #fff;
 $get-started-background: #E8E8E8;
 $get-started-title: #1A1C19;
 $light-primary-color:#f8db4d;
+
+
 .main-highlight {
     background: $primary-color;
 }
@@ -46,7 +48,7 @@ $light-primary-color:#f8db4d;
     left: 50%;
     transform: translate(-50%, -40%);
     width: 90%;
-    z-index: 10;
+    z-index: 6;
     @media(min-width: $screen-xl) {
         transform: translate(-50%, -80%);
     }
@@ -155,17 +157,36 @@ $cta-secondary-color:$primary-color;
     }
     @media (min-width: $screen-lg) {
         padding: 60px 0;
+        display: flex;
+    }
+}
+
+.feature-graphics {
+    @media (min-width: $screen-lg) {
+        margin-left: $gutter;
+        width: 80%;
+    }
+}
+
+.feature-content {
+    margin-bottom: 40px;
+    align-self: center;
+    @media (min-width: $screen-lg) {
+        width: 40%;
+        margin-right: $gutter;
     }
 }
 
 .feature-tools {
     .feature-content {
-        @media (min-width: $screen-xl) {
+        align-self: flex-start;
+        @media (min-width: $screen-lg) {
+            margin-top: 55px;
             margin-left: $gutter;
         }
     }
     .feature-graphics {
-        @media (min-width: $screen-xl) {
+        @media (min-width: $screen-lg) {
             order: -1;
             margin-right: $gutter;
         }
@@ -219,7 +240,7 @@ $cta-secondary-color:$primary-color;
     height: 12px;
 }
 
-.tools_screenshots {
+.screenshots {
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
 }
@@ -247,7 +268,7 @@ $cta-secondary-color:$primary-color;
         margin: 20px 12px;
         @media (min-width: $screen-md) {
             margin: 25px 12px;
-            width: 75px;
+            width: 77px;
         }
         @media (min-width:$screen-lg) {
             margin: 5px;
@@ -262,10 +283,9 @@ $cta-secondary-color:$primary-color;
         margin: 0px 0px;
         text-align: center;
         img {
-            width: 60%;
             display: inline-block;
             @media (min-width: $screen-md) {
-                width: 40%;
+                width: 80%;
             }
             @media (min-width:$screen-lg) {}
             @media (min-width:$screen-xl) {}
