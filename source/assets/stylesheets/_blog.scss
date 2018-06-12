@@ -2,6 +2,9 @@ $blog-date-color: #3C3C3C;
 $blog-heading-color: #1A1C19;
 $blog-description-color: #474747;
 
+.blog-container{
+  padding: 100px 0px;
+}
 
 .blog-list {
   margin-top: 100px;
@@ -516,6 +519,17 @@ $blog-description-color: #474747;
   padding:5px 0;
   @media (min-width:$screen-md) {
     padding:15px 0;
+  }
+  a{
+    color: #000;
+  }
+
+  pre{
+    code{
+      font-family: "Source Code Pro";
+      font-size: 14px;
+    }
+    
   }
 }
 
