@@ -27,8 +27,8 @@ $light-primary-color:#f8db4d;
 .banner-container {
     background: $banner-bg;
     background-size: cover;
-    height: 90vh;
-    min-height: 500px;
+    height: 100vh;
+    min-height: 400px;
     position: relative;
     width: auto;
     overflow: hidden;
@@ -106,10 +106,15 @@ $cta-secondary-color:$primary-color;
     .cta-primary {
         @extend %button;
         background: $cta-primary-bg;
-        border: 1px solid $white;
         color: $banner-bg;
+        text-decoration: none;
+        transition: $transition;
         @media (min-width: $screen-md) {
             margin-right: 10px;
+        }
+        &:hover {
+            background-color: $primary-color;
+            transition: $transition;
         }
     }
     .cta-secondary {
@@ -294,7 +299,6 @@ $arrowsize:40px;
         @media (min-width: $screen-md) {
             left: 51%;
         }
-        
     }
     h3 {
         font-size: 20px;

@@ -3,22 +3,22 @@
     <h1>Get Started</h1>
   </header>
   <h2 class="sub-title">Choose your OS &amp; download</h2>
-  <p class="disclaimer">
-    Gauge collects anonymous <a href="#"> usage statistics</a>, to improve the product. You can <a href="#"> opt out</a>
-    if this easily.
-  </p>
+
   <div class="tab-container tab-getting_started">
     <aside class="sidebar-menu">
       <ul class="tab-nav tab-nav-get_started">
         <li class="tab-nav_item active-tab" data-attr="mac"><span class="icon_macos"></span> Mac OS</li>
         <li class="tab-nav_item " data-attr="windows"><span class="icon_windows"></span> Windows</li>
-        <li class="tab-nav_item " data-attr="debian"><span class="icon_debian"></span> Debian/AFT</li>
+        <li class="tab-nav_item " data-attr="debian"><span class="icon_debian"></span> Debian/APT</li>
         <li class="tab-nav_item " data-attr="yum"><span class="icon_yum"></span> YUM/DNF</li>
         <li class="tab-nav_item " data-attr="curl"><span class="icon_curl"></span> Curl</li>
       </ul>
     </aside>
 
     <div class="content-container">
+      <p class="disclaimer">
+    Gauge automatically sends telemetry data to help us improve the product. If you would prefer not to have this data sent you can choose to opt out.
+  </p>
       <h2 class="mobile-heading open" data-attr="mac"><span class="icon_macos"></span> Mac OS <span class="expander"></span></h2>
       <div class="tab-content active" id="mac">
         <section class="page-block">
@@ -53,7 +53,8 @@
               </div>
             </div>
             <p class="instruction">
-              <a href="https://docs.gauge.org/installing.html#alternate-methods">Other installers</a>
+            For alternate methods of installation and our nightly releases, check out our  
+              <a href="https://docs.gauge.org/latest/installation.html#installation">documentation.</a>
             </p>
 
           </div>
@@ -111,8 +112,8 @@
                 <h4 class="mobile-title">apt-get</h4>
                 <p class="instruction"> Install Gauge using apt-get </p>
                 <div class="code-box">
-            <pre>$ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
-$ echo deb https://dl.bintray.com/gauge/gauge-deb stable main | sudo tee -a /etc/apt/sources.list
+            <pre>$ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B  
+$ echo deb https://dl.bintray.com/gauge/gauge-deb stable main | sudo tee -a /etc/apt/sources.list  
 $ sudo apt-get update
 $ sudo apt-get install gauge</pre>
                 </div>

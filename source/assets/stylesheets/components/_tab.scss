@@ -103,14 +103,16 @@ Style for tabs
     margin:0 -20px;
     border-radius:0;
     }
-    @media (max-width: $screen-lg-min) {
+    @media (min-width: $screen-md) {
         border: 1px solid $border-color;
         border-radius: $border-radius;
     }
     @media (min-width: $screen-lg) {
         @include grid-column(9);
         margin: 0 $gutter;
+        border:0;
     }
+
 }
 
 .tab-content {
@@ -145,9 +147,9 @@ Style for tabs
     position: relative;
     display: flex;
     align-items: center;
+    border-top: 1px solid $border-color;
+    margin: -1px 0;
     @media (min-width: $screen-md) {
-        border-top: 1px solid $border-color;
-        margin: -1px 0;
     }
     @media (min-width: $screen-lg) {
         display: none;
