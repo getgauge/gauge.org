@@ -1,9 +1,11 @@
 $blog-date-color: #3C3C3C;
 $blog-heading-color: #1A1C19;
 $blog-description-color: #474747;
-
 .blog-container {
-    padding: 100px 0px;
+    padding: 100px 20px;
+    @media (min-width: $screen-xl) {
+        max-width:992px;
+    }
 }
 
 .blog-list {
@@ -68,10 +70,7 @@ $blog-description-color: #474747;
 
 .excerpt {
     color: $blog-description-color;
-}
-
-
-// blog post
+} // blog post
 .blog-post {
     p,
     li,
@@ -82,10 +81,15 @@ $blog-description-color: #474747;
     h6 {
         font-weight: 400;
     }
+    h1 {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 600;
+    }
     h2 {
         font-size: 20px;
         line-height: 26px;
-        font-weight:600;
+        font-weight: 600;
     }
     figure {
         position: relative;
@@ -185,10 +189,7 @@ $blog-description-color: #474747;
             color: #4a90e2;
         }
     }
-}
-
-//style expiriments
-
+} //style expiriments
 .post-summary {
     overflow: hidden;
     @media (min-width: $screen-md) {
@@ -246,15 +247,15 @@ $blog-description-color: #474747;
     list-style-type: none;
     margin: 30px 0;
     padding: 0;
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
     .item {
         padding: 0 15px;
         width: 100%;
         border-bottom: 1px dotted #ddd;
         @media (min-width: $screen-md) {
             width: calc(50% - 3px);
-            border:0;
+            border: 0;
         }
         @media (min-width:$screen-lg) {
             width: calc(33.3% - 3px);
@@ -380,39 +381,41 @@ $blog-description-color: #474747;
             font-size: 14px;
         }
     }
-    
-  }
-  img{
+}
+
+img {
     width: 100%;
     height: auto;
-  }
+}
 
-.line-primary-color{
-  background: $primary-color;
-  border: none;
-  height: 1px;
+.line-primary-color {
+    background: $primary-color;
+    border: none;
+    height: 1px;
 }
-.blog-user-details{
-  position: relative;
-  h3{
-    font-size: 14px;
-    font-weight: 700;
-    position: absolute;
-    bottom: -14px;
-    left: 0;
-    padding: 10px 20px;
-    background: linear-gradient(to bottom right, transparent , rgba(0,0,0,0.8));
-    width: 100%;
-    color: #fff;
-  }
-  .profile-image{
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin: 0 10px 0 0;
-  }
+
+.blog-user-details {
+    position: relative;
+    h3 {
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        bottom: -14px;
+        left: 0;
+        padding: 10px 20px;
+        background: linear-gradient(to bottom right, transparent, rgba(0, 0, 0, 0.8));
+        width: 100%;
+        color: #fff;
+    }
+    .profile-image {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin: 0 10px 0 0;
+    }
 }
+
 .line-primary-color {
     background: $primary-color;
     border: none;
