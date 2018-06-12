@@ -543,3 +543,26 @@ $blog-description-color: #474747;
   border: none;
   height: 1px;
 }
+.blog-user-details{
+  position: relative;
+
+  h3{
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom right, transparent , #000);
+    width: 100%;
+    color: #fff;
+  }
+  .profile-image{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+  }
+}
+
