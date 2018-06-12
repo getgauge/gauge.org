@@ -3,6 +3,16 @@
     font-weight: 400;
 }
 
+.disclaimer {
+    margin: 20px;
+    font-size: 13px;
+    line-height: 19px;
+    font-style: italic;
+    @media (min-width: $screen-lg) {
+        margin: 20px 0 20px 70px;
+    }
+}
+
 .page-block {
     clear: both;
     margin-bottom: 100px;
@@ -172,4 +182,23 @@
     @extend %installation_icons;
     background: url(/assets/images/icons/intellij.png) no-repeat 0 0;
     background-size: contain;
+}
+
+.download_plugin {
+    border: 1px solid #979797;
+    padding: 5px 40px 5px 20px;
+    margin: 20px 0 0;
+    border-radius: 30px;
+    color: #333;
+    background: url(/assets/images/icons/icon_download.svg) no-repeat 90% 10px;
+    font-size: 14px;
+    transition: $transition;
+    &:hover {
+        background: url(/assets/images/icons/icon_download.svg) no-repeat 90% 10px;
+        transition: $transition;
+        border:1px solid $primary-color;
+    }
+    @media (min-width: $screen-md) {
+        margin: 0px 0;
+    }
 }

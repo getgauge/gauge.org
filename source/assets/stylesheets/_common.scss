@@ -77,8 +77,14 @@ p {
         display: inline-block;
         text-decoration: none;
         &:hover{
-            background : $primary-color;
+            background-color : $primary-color;
             color:#333;
+        }
+    }
+    a.download_plugin{
+        color:#333;
+        &:hover{
+
         }
     }
 }
