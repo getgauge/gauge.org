@@ -1,11 +1,8 @@
-
 $banner-bg:$secondary-color;
 $banner-heading:$primary-color;
-$get-started-background: #E8E8E8;
+$get-started-background: #262726;
 $get-started-title: #1A1C19;
 $light-primary-color:#f8db4d;
-
-
 .main-highlight {
     background: $primary-color;
 }
@@ -31,14 +28,17 @@ $light-primary-color:#f8db4d;
     background: $banner-bg;
     background-size: cover;
     height: 90vh;
+    min-height: 500px;
     position: relative;
     width: auto;
     overflow: hidden;
     @media(min-width: $screen-md) {
         height: 50vh;
+        min-height: 500px
     }
     @media(min-width: $screen-lg) {
         height: 80vh;
+        min-height: 700px;
     }
 }
 
@@ -50,7 +50,7 @@ $light-primary-color:#f8db4d;
     width: 90%;
     z-index: 6;
     @media(min-width: $screen-xl) {
-        transform: translate(-50%, -80%);
+        transform: translate(-50%, -40%);
     }
 }
 
@@ -113,40 +113,9 @@ $cta-secondary-color:$primary-color;
         }
     }
     .cta-secondary {
-        @extend %button;
-        border: 1px solid $cta-secondary-border;
         color: $cta-secondary-color;
-    }
-}
-
-.caption-container {
-    padding: 40px;
-    background: #f5f5f5;
-    @media(min-width: $screen-xl) {
-        padding: 60px;
-    }
-}
-
-.caption {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0 -26px;
-    @media(min-width: $screen-md) {
-        font-size: 22px;
-        line-height: 30px;
-        width: 85%;
-        margin: 0 auto;
-    }
-    @media(min-width: $screen-lg) {
-        width: 60%;
-    }
-    @media(min-width: $screen-xl) {
-        width: 55%;
-        font-size: 30px;
-        line-height: 36px;
-        font-weight: 300;
+        text-decoration: underline;
+        display: block;
     }
 }
 
@@ -158,6 +127,9 @@ $cta-secondary-color:$primary-color;
     @media (min-width: $screen-lg) {
         padding: 60px 0;
         display: flex;
+    }
+    @media (min-width: $screen-lg) {
+        padding: 80px 0;
     }
 }
 
@@ -306,11 +278,24 @@ $cta-secondary-color:$primary-color;
 }
 
 // Get Started Section
+$arrowsize:40px;
 .get-started {
     position: relative;
     background: $get-started-background;
     padding: 40px 0 0;
-    @media (min-width: $screen-lg) {}
+    &:before {
+        position: absolute;
+        content: "";
+        width: $arrowsize;
+        height: $arrowsize;
+        transform: rotate(135deg) translate(-50%, 162%);
+        left: 52%;
+        background: #fff;
+        @media (min-width: $screen-md) {
+            left: 51%;
+        }
+        
+    }
     h3 {
         font-size: 20px;
         text-align: center;
@@ -334,7 +319,7 @@ $cta-secondary-color:$primary-color;
     height: 91px;
     @media(min-width: $screen-lg) {
         width: 277px;
-        height: 140px;
+        height: 100px;
     }
 }
 

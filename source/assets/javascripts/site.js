@@ -74,4 +74,7 @@ $(document).ready(function(){
     var star = window.localStorage.getItem('star')
     $('.github_star').text(star);
   }
+
+
+
 });
