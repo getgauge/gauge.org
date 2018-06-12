@@ -37,18 +37,14 @@ $blog-description-color: #474747;
 }
 
 .blog-details {
-  // background: $gray-lighter;
   position: relative;
-  padding: 10px 20px 20px;
   position: relative;
   transition: all 0.3s ease-in-out;
   top: 0;
-    @media (min-width:$screen-md) {
-    height: 239px;
-  }
   .latest-blog & {
+      padding: 0 20px;
       @media (min-width:$screen-md) {
-    height: 197px;
+      height: 197px;
   }
      @media (min-width:$screen-lg) {
         height: 258px;
@@ -307,10 +303,12 @@ $blog-description-color: #474747;
   }
 
   .post-summary-image {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 5px;
 
     img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
       transform: scale(1);
       transition: all 0.3s ease-in-out;
     }
@@ -371,13 +369,13 @@ $blog-description-color: #474747;
 
 .blogs {
   list-style-type: none;
-  margin: 0 -10px;
+  margin: 30px 0;
   padding: 0;
 
   .item {
     display: inline-block;
     vertical-align: top;
-    padding: 0 10px;
+    padding: 0 20px 0  0;
     width: 100%;
 
     @media (min-width:$screen-sm) {
@@ -403,7 +401,9 @@ $blog-description-color: #474747;
     height: 114px;
     position: relative;
     overflow: hidden;
-    background: #fff;
+    background: #000;
+    width: 100%;
+    margin: 10px 30px 30px 0;
     display: none;
 
     @media (min-width:$screen-md) {
@@ -412,11 +412,11 @@ $blog-description-color: #474747;
     }
 
     @media (min-width:$screen-lg) {
-      height: 114px;
+      height: 200px;
     }
 
     @media (min-width:$screen-xl) {
-      height: 153px;
+      height: 200px;
     }
 
     img {
@@ -440,7 +440,7 @@ $blog-description-color: #474747;
       }
 
       @media (min-width:$screen-xl) {
-        height: 375px;
+        height: 310px;
       }
 
     }
