@@ -1,18 +1,14 @@
 <% wrap_layout :layout do %>
 <div class="container blog-post blog-container">
-  <div class="row">
     <div class="post-container">
-
       <% if content_for?(:banner) %>
-    <div class="post-banner">
-      <%= yield_content :banner %>
-    </div>
-  <% end %>
-
+      <div class="post-banner">
+        <%= yield_content :banner %>
+      </div>
+     <% end %>
       <main id="main" role="main" class="blog-post-main-container">
       <%= yield %>
       </main>
     </div>
-  </div>
 </div>
 <% end %>
