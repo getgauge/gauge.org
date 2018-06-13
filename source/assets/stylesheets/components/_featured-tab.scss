@@ -130,7 +130,7 @@ $f-tab-main-bg-active: #ffffff;
     .tab-content{
         padding:30px 50px;
         @media (min-width: $screen-lg) {
-            padding:0px 50px;
+            padding:0px 0 0 50px;
         }
     }
 }
