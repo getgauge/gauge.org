@@ -75,6 +75,9 @@ $(document).ready(function(){
     $('.github_star').text(star);
   }
 
+  $(".gdpr-cookie-banner .close").click(function () {
+    $(".gdpr-cookie-banner").hide();
+  });
 
 
 });
