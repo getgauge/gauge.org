@@ -1,4 +1,4 @@
-<link rel="canonical" href="<%= "https://gauge.org" + current_page.url %>">
+<link rel="canonical" href="<%= canonical_link_for(current_article || current_page) %>" />
 <% wrap_layout :layout do %>
 <div class="container blog-container p">
     <div class="post-container">
