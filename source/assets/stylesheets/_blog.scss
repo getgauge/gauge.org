@@ -115,8 +115,8 @@ $blog-description-color: #474747;
         padding-left: 30px;
         margin: 30px;
     }
-    p{
-      line-height: 25px;
+    p {
+        line-height: 25px;
     }
     .attribution {
         position: absolute;
@@ -230,15 +230,13 @@ $blog-description-color: #474747;
         >.post-link {
             float: left;
             @media (min-width: $screen-md) {
-                width: 55%;
+                width: 48%;
             }
             @media (min-width:$screen-xl) {
                 width: 66%
             }
         }
-        .post-summary-image {
-            border-top-right-radius: 0;
-        }
+        .post-summary-image {}
         >a {
             display: block;
             overflow: hidden;
@@ -264,16 +262,16 @@ $blog-description-color: #474747;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     .item {
-        padding: 0 15px;
         width: 100%;
         border-bottom: 1px dotted #ddd;
         @media (min-width: $screen-md) {
-            width: calc(50% - 3px);
+            width: 48%;
             border: 0;
         }
         @media (min-width:$screen-lg) {
-            width: calc(33.3% - 3px);
+            width: 32%;
         }
     }
 }
@@ -418,10 +416,17 @@ img {
         bottom: -14px;
         left: 0;
         padding: 10px 20px;
-        background: linear-gradient(to bottom right, transparent, rgba(0, 0, 0, 0.8));
         width: 100%;
         color: #fff;
         border-radius: 5px;
+        background: rgba(8, 8, 8, 0);
+        background: -moz-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(8, 8, 8, 0)), color-stop(100%, rgba(0, 0, 0, 1)));
+        background: -webkit-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -o-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: linear-gradient(to bottom, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#080808', endColorstr='#000000', GradientType=0);
     }
     .profile-image {
         width: 38px;
