@@ -69,8 +69,8 @@ $light-primary-color:#f8db4d;
     color: $banner-heading;
     text-align: center;
     font-size: 30px;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: 'URWGeometric-SemiBold';
+     font-weight: 400;
     margin: 0 20px 10px;
     line-height: 36px;
     @media(min-width: $screen-md) {
@@ -149,7 +149,7 @@ $cta-secondary-color:$primary-color;
 .feature-graphics {
     @media (min-width: $screen-lg) {
         margin-left: $gutter;
-        width: 80%;
+        width: 57%;
     }
 }
 
@@ -157,7 +157,7 @@ $cta-secondary-color:$primary-color;
     margin-bottom: 40px;
     align-self: center;
     @media (min-width: $screen-lg) {
-        width: 40%;
+        width: 43%;
         margin-right: $gutter;
     }
 }
@@ -168,12 +168,14 @@ $cta-secondary-color:$primary-color;
         @media (min-width: $screen-lg) {
             margin-top: 55px;
             margin-left: $gutter;
+            width:35%;
         }
     }
     .feature-graphics {
         @media (min-width: $screen-lg) {
             order: -1;
             margin-right: $gutter;
+            width:65%;
         }
     }
 }
@@ -206,7 +208,7 @@ $cta-secondary-color:$primary-color;
         &:before {
             content: "";
             display: block;
-            background: url("/assets/images/icons/icon_list.png") no-repeat 0 0;
+            background: url("/assets/images/icons/icon_list.svg") no-repeat 0 0;
             position: absolute;
             left: -26px;
             width: 12px;
@@ -219,7 +221,7 @@ $cta-secondary-color:$primary-color;
 
 .markdown {
     display: inline-block;
-    background: url(/assets/images/icons/icon_markdown.png) no-repeat 0 0px;
+    background: url(/assets/images/icons/icon_markdown.svg) no-repeat 0 0px;
     width: 21px;
     margin-left: 2px;
     height: 12px;

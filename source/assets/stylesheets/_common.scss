@@ -71,19 +71,16 @@ p {
     }
 }
 
-.main-container {
-    a {
-        color: $link-color;
-        display: inline-block;
-        text-decoration: none;
-        &:hover {
-            background-color: $primary-color;
-            color: #333;
-        }
-    }
-    a.download_plugin {
+.main-container a {
+    color: $link-color;
+    display: inline-block;
+    text-decoration: underline;
+    &:hover {
+        background-color: $primary-color;
         color: #333;
-        &:hover {}
+    }
+    &.download_plugin{
+        text-decoration: none;
     }
 }
 

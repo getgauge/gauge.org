@@ -43,7 +43,7 @@ img {
 .footer_items {
     margin-bottom: 30px;
     @media (min-width: $screen-md) {
-      margin-bottom: 0;
+        margin-bottom: 0;
     }
     h5 {
         color: $footer-header;
@@ -76,7 +76,6 @@ img {
             width: 17%;
         }
     }
-
     &.explore {
         width: 40%;
         @media (min-width: $screen-md) {
@@ -92,9 +91,57 @@ img {
     }
 }
 
-.icon-sm {
-    width: 17px;
-    height: auto;
+%footer-icons {
+    padding: 5px 0 5px 25px;
+    display: block;
+}
+
+.foolinks {
+    .icon_gitter {
+        @extend %footer-icons;
+        background: url('/assets/images/footer-icons/icon_gitter.svg') no-repeat 0 7px;
+        background-size: auto 20px;
+        transition: $transition;
+        &:hover {
+            transition: $transition;
+            background: url('/assets/images/footer-icons/icon_gitter_hover.svg') no-repeat 0 7px;
+            background-size: auto 20px;
+        }
+    }
+    .icon_google {
+        @extend %footer-icons;
+        background: url('/assets/images/footer-icons/icon_google-group.svg') no-repeat 0 8px;
+        background-size: auto 18px;
+        transition: $transition;
+        &:hover {
+            transition: $transition;
+            background: url('/assets/images/footer-icons/icon_google-group_hover.svg') no-repeat 0 8px;
+            background-size: auto 18px;
+        }
+    }
+    .icon_stack {
+        @extend %footer-icons;
+        background: url('/assets/images/footer-icons/icon_stack_overflow.svg') no-repeat 0 7px;
+        transition: $transition;
+        background-size: auto 18px;
+        &:hover {
+            transition: $transition;
+            background: url('/assets/images/footer-icons/icon_stack_overflow_hover.svg') no-repeat 0 7px;
+            background-size: auto 18px;
+        }
+    }
+    
+    .icon_contribute {
+        @extend %footer-icons;
+        background: url('/assets/images/footer-icons/icon_contribute.svg') no-repeat 0 7px;
+        background-size: auto 18px;
+        transition: $transition;
+        &:hover {
+            transition: $transition;
+            background: url('/assets/images/footer-icons/icon_contribute_hover.svg') no-repeat 0 7px;
+            background-size: auto 18px;
+        }
+    }
 }
 
 .licence {
@@ -116,14 +163,4 @@ img {
         color: #C1C1C0;
         text-decoration: none;
     }
-}
-
-.love {
-    display: inline-block;
-    background: url('/assets/images/icons/icon_love.png') no-repeat 0 0;
-    width: 13px;
-    height: 11px;
-    text-indent: -200em;
-    margin: 0 2px;
-    overflow: hidden;
 }
