@@ -43,12 +43,13 @@ $light-primary-color:#f8db4d;
 }
 
 .banner-container {
-    background: #1a1c19 url('/assets/images/banner_mobile.jpg') no-repeat center bottom;
+    background: #1a1c19 url('/assets/images/home-page_banner_mobile.png') no-repeat center bottom;
+    background-size:cover;
     @media(min-width: $screen-md) {
-        background: #1a1c19 url('/assets/images/banner_tablet.jpg') no-repeat center bottom;
+        background: #1a1c19 url('/assets/images/home-page_banner_tablet.png') no-repeat center bottom;
     }
     @media(min-width: $screen-lg) {
-        background: #1a1c19 url('/assets/images/banner_desktop.jpg') no-repeat center bottom;
+        background: #1a1c19 url('/assets/images/home-page_banner_desktop.png') no-repeat center bottom;
         background-size: cover;
     }
 }
