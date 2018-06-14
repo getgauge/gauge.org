@@ -202,20 +202,20 @@ header.top {
 .githubstar-box {
     a {
         display: flex;
-        align-items: center;
+        align-items: baseline;
     }
     .github-icon {
         background: url("/assets/images/github_star_black.svg") no-repeat 0 0;
         padding-left: 40px;
         width: 40px;
-        height: 20px;
+        height: 18px;
         @media (min-width: $screen-md) {
             background: url("/assets/images/github_star.svg") no-repeat 0 0;
         }
     }
     span {
         color: $header-nav-color;
-        padding: 4px;
+        padding:0 4px;
     }
     .github_star {
         color: #333;
