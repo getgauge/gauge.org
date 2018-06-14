@@ -118,9 +118,7 @@ $light-primary-color:#f8db4d;
             color: $banner-bg;
             text-decoration: none;
             transition: $transition;
-            @media (min-width: $screen-md) {
-                margin-right: 10px;
-            }
+            
             &:hover {
                 background-color: $primary-color;
                 transition: $transition;
