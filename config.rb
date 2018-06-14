@@ -14,6 +14,7 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+set :base_url, ENV['BASE_URL'] || 'http://localhost:4567'
 
 set :js_dir, "assets/javascripts"
 set :css_dir, "assets/stylesheets"
@@ -88,5 +89,12 @@ helpers do
 
   def selected_articles_for_display_in(articles)
     articles.reject do |article| !should_show_drafts? && is_draft?(article) end
+  end
+
+  def canonical_link_for(page_or_article)
+    overridden_canonical_url = page_or_article.data[:overridden_canonical_url]
+
+    return overridden_canonical_url unless overridden_canonical_url.nil?
+    "#{config.base_url}/#{page_or_article.destination_path.sub(%r{/index.html}, '')}"
   end
 end
