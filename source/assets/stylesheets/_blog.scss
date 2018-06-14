@@ -110,10 +110,13 @@ $blog-description-color: #474747;
     blockquote {
         font-style: italic;
         font-size: 18px;
-        line-height: 26px;
+        line-height: 25px;
         border-left: 2px solid #ccc;
         padding-left: 30px;
         margin: 30px;
+    }
+    p{
+      line-height: 25px;
     }
     .attribution {
         position: absolute;

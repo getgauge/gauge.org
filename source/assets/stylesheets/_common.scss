@@ -61,7 +61,7 @@ p {
     }
     h1 {
         font-size: 20px;
-        font-weight:600;
+        font-weight: 600;
         margin-bottom: 0;
         border-bottom: 1px solid $border-color;
         @media (min-width: $screen-md) {
@@ -73,24 +73,75 @@ p {
 
 .main-container {
     a {
-        color:$link-color;
+        color: $link-color;
         display: inline-block;
         text-decoration: none;
-        &:hover{
-            background-color : $primary-color;
-            color:#333;
+        &:hover {
+            background-color: $primary-color;
+            color: #333;
         }
     }
-    a.download_plugin{
-        color:#333;
-        &:hover{
-
-        }
+    a.download_plugin {
+        color: #333;
+        &:hover {}
     }
 }
+
 .tab-container {
     margin-top: 40px;
     margin-bottom: 40px;
     @include clearfix();
 }
 
+// marketo form style overrides
+.mktoForm {
+    width: auto !important;
+}
+
+input[type=text],
+.mktoForm input[type=url],
+.mktoForm input[type=email],
+.mktoForm input[type=tel],
+.mktoForm input[type=number],
+.mktoForm input[type=date],
+.mktoForm textarea.mktoField,
+.mktoForm select.mktoField {
+    clear: both;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    @media (min-width: $screen-lg) {
+        width: 215px !important;
+        height: 40px;
+    }
+    @media (min-width: $screen-xl) {
+        width: 260px !important;
+        height: 40px;
+    }
+}
+
+.mktoForm .mktoRequiredField label.mktoLabel {
+    font-weight: 400 !important;
+}
+
+.mktoForm .mktoRequiredField label.mktoLabel {
+    font-weight: 400;
+    width: auto !important;
+}
+
+.mktoOffset,
+.mktoGutter {
+    width: 0 !important;
+    display: none;
+}
+
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+    background: $primary-color !important;
+    border: 1px solid $primary-color !important;
+    border-radius: 35px;
+    color: #333 !important;
+    background-image: none;
+}
+
+.mktoButtonWrap.mktoSimple {
+    margin-left: 0 !important;
+}
