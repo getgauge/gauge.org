@@ -97,4 +97,28 @@ helpers do
     return overridden_canonical_url unless overridden_canonical_url.nil?
     "#{config.base_url}/#{page_or_article.destination_path.sub(%r{/index.html}, '')}"
   end
+
+  def value_or_default key, default_value = nil
+    (current_article.data[key] unless current_article.nil?) || (current_page.data[key] unless current_page.nil?) || default_value
+  end
+
+  def value_or_title_as_default property
+    default_title = (current_article.title unless current_article.nil?) || (current_page.data.title unless current_page.nil?) || "Open Source Test Automation Framework | Gauge"
+    value_or_default(property, default_title)
+  end
+
+  def twitter_card_property twitter_specific_property, fallback_property
+    value_or_default(twitter_specific_property, value_or_default(fallback_property, ""))
+  end
+
+  def twitter_card_image(image)
+    path_to_image = value_or_default(:twitter_card_image, value_or_default(:summary_image, image))
+    full_path_of_image = if build?
+      File.join(app.config[:build_dir], asset_path(:images, path_to_image, :relative => false))
+    else
+      File.join(app.config[:source], asset_path(:images, path_to_image, :relative => false))
+    end
+    raise "Image does not exist or too large to use for Twitter summary: #{full_path_of_image}" unless (File.exists?(full_path_of_image) && (File.size(full_path_of_image) < (1024 * 1024 * 1024)))
+    URI::join(config.base_url, asset_path(:images, path_to_image, :relative => false))
+  end
 end

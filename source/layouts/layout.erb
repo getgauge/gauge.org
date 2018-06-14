@@ -1,11 +1,18 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= current_page.data.title || "Gauge" %></title>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+    <meta content="<%= value_or_title_as_default(:meta_description) %>" name="description" />
+    <meta content="<%= value_or_default(:meta_keywords, 'Gauge, getgauge, test automation framework, free and open source, thoughtworks, acceptance test, functional test, regression test, automation testing, python runner, C# runner, Java runner, javascript runner, visual studio code, visual studio, intellij, ruby runner, Gauge, test automation, free and open source, download, get started, Gauge, plugins, community plugins, support plugins, extend gauge, IDE, Drivers, VS Code, IntelliJ, Ruby, C#, Visual Studio') %>" name="keywords" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@getgauge" />
+    <meta name="twitter:title" content="<%= twitter_card_property(:twitter_card_title, :title_tag_of_header) %>" />
+    <meta name="twitter:description" content="<%= twitter_card_property(:twitter_card_description, :meta_description) %>" />
+    <meta name="twitter:image" content="<%= twitter_card_image('blog/why-we-built-gauge.png') %>" />
+    <link rel="canonical" href="<%= canonical_link_for(current_article || current_page) %>" />
+    <title><%= value_or_title_as_default(:title_tag_of_header) %></title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "jquery-3.3.1.min" %>
     <%= javascript_include_tag "site" %>
