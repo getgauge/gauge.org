@@ -166,7 +166,7 @@ header.top {
 .link_getstarted {
     a {
         @media (min-width: $screen-md) {
-            border:1px solid $header-bg;
+            border:1px solid transparent;
             border-radius: 20px;
             padding: 3px 10px;
         }
