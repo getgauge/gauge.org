@@ -23,7 +23,6 @@
         &.more {
             @media (min-width: $screen-md) {
                 width: 40%;
- 
             }
         }
     }
@@ -63,14 +62,16 @@
     }
 }
 
-.arrow{
+.arrow {
     background: url('/assets/images/angle-down.svg') no-repeat;
     background-position: center;
     height: 20px;
     width: 20px;
+    transform: rotate(-90deg);
 }
-.arrow-active{
-    background: url('/assets/images/angle-up.svg') no-repeat;
+
+.arrow-active {
+    background: url('/assets/images/angle-down.svg') no-repeat;
     background-position: center;
     height: 20px;
     width: 20px;
