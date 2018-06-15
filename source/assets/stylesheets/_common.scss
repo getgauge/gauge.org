@@ -92,7 +92,18 @@ p {
 
 // marketo form style overrides
 .mktoForm {
-    width: auto !important;
+    width: 100% !important;
+    @media (min-width: $screen-md) {
+        width: 300px !important;
+    }
+    
+    @media (min-width: $screen-lg) {
+        width: 100% !important;
+    }
+}
+
+.mktoFieldWrap, .mktoFieldDescriptor{
+    width: 100% !important;
 }
 
 .mktoForm .mktoFormRow .mktoField {
@@ -100,11 +111,12 @@ p {
     border: 1px solid $border-color;
     border-radius: 3px;
     height: 40px;
+    width: 100% !important;
     @media (min-width: $screen-lg) {
-        width: 215px !important;
+        width: 100% !important;
     }
     @media (min-width: $screen-xl) {
-        width: 260px !important;
+        width: 100% !important;
         height: 40px;
     }
 }
@@ -136,6 +148,16 @@ p {
     margin-left: 0 !important;
 }
 
-.mktoFormRow:last-child{
-display:none;    
+.mktoForm .mktoFormRow:nth-child(4){
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .mktoLabel{
+        // width: 90% !important;
+        margin: 0 0 0 30px;
+    }
+    .mktoCheckboxList{
+        position: absolute;
+        left: 0;
+    }
 }
