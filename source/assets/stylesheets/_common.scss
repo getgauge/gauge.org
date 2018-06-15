@@ -79,7 +79,7 @@ p {
         background-color: $primary-color;
         color: #333;
     }
-    &.download_plugin{
+    &.download_plugin {
         text-decoration: none;
     }
 }
@@ -92,29 +92,35 @@ p {
 
 // marketo form style overrides
 .mktoForm {
-    width: auto !important;
+    width: 100% !important;
+    @media (min-width: $screen-md) {
+        width: 300px !important;
+    }
+    
+    @media (min-width: $screen-lg) {
+        width: 100% !important;
+    }
 }
 
-input[type=text],
-.mktoForm input[type=url],
-.mktoForm input[type=email],
-.mktoForm input[type=tel],
-.mktoForm input[type=number],
-.mktoForm input[type=date],
-.mktoForm textarea.mktoField,
-.mktoForm select.mktoField {
+.mktoFieldWrap, .mktoFieldDescriptor{
+    width: 100% !important;
+}
+
+.mktoForm .mktoFormRow .mktoField {
     clear: both;
     border: 1px solid $border-color;
     border-radius: 3px;
+    height: 40px;
+    width: 100% !important;
     @media (min-width: $screen-lg) {
-        width: 215px !important;
-        height: 40px;
+        width: 100% !important;
     }
     @media (min-width: $screen-xl) {
-        width: 260px !important;
+        width: 100% !important;
         height: 40px;
     }
 }
+ 
 
 .mktoForm .mktoRequiredField label.mktoLabel {
     font-weight: 400 !important;
@@ -141,4 +147,18 @@ input[type=text],
 
 .mktoButtonWrap.mktoSimple {
     margin-left: 0 !important;
+}
+
+.mktoForm .mktoFormRow:nth-child(4){
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .mktoLabel{
+        // width: 90% !important;
+        margin: 0 0 0 30px;
+    }
+    .mktoCheckboxList{
+        position: absolute;
+        left: 0;
+    }
 }

@@ -26,12 +26,12 @@ $(document).ready(function(){
     id = ('#'+ id);
     $(this).toggleClass('open');
     
-    var icon = $(this).find('span .fa')
+    var icon = $(this).find('.expander')
 
-    if(icon.hasClass('fa-chevron-down') == true){
-      icon.removeClass('fa-chevron-down').addClass('fa-chevron-right')
+    if(icon.hasClass('arrow-active') == true){
+      icon.removeClass('arrow-active').addClass('arrow')
     }else{
-      icon.removeClass('fa-chevron-right').addClass('fa-chevron-down')
+      icon.removeClass('arrow').addClass('arrow-active')
     }
 
     $(id).toggleClass('active');
@@ -106,4 +106,6 @@ $(document).ready(function(){
     var packageName = determinePackageNameBasedOnOS();
     $(".tab-nav-get_started li.tab-nav_item[data-attr='" + packageName + "']").click();
   }
+
+
 });
