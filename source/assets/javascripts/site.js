@@ -26,7 +26,7 @@ $(document).ready(function(){
     id = ('#'+ id);
     $(this).toggleClass('open');
     
-    var icon = $(this).find('span')
+    var icon = $(this).find('.expander')
 
     if(icon.hasClass('arrow-active') == true){
       icon.removeClass('arrow-active').addClass('arrow')
