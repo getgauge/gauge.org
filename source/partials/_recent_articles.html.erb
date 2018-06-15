@@ -6,7 +6,7 @@
       <li>
         <span class="post-date"><%= article.date.strftime('%b %e') %></span>
         <span class="post-author"><%= article.data["author"] %></span>
-        <%= link_to article.title, article %>
+        <%= link_to article.data.post_title, article %>
       </li>
       <% end %>
     </ol>
