@@ -43,308 +43,328 @@ $light-primary-color:#f8db4d;
 }
 
 .banner-container {
-    background: #1a1c19 url('/assets/images/banner_mobile.jpg') no-repeat center bottom;
+    background: #1a1c19 url('/assets/images/home-page_banner_mobile.png') no-repeat center bottom;
+    background-size:cover;
     @media(min-width: $screen-md) {
-        background: #1a1c19 url('/assets/images/banner_tablet.jpg') no-repeat center bottom;
+        background: #1a1c19 url('/assets/images/home-page_banner_tablet.png') no-repeat center bottom;
     }
     @media(min-width: $screen-lg) {
-        background: #1a1c19 url('/assets/images/banner_desktop.jpg') no-repeat center bottom;
+        background: #1a1c19 url('/assets/images/home-page_banner_desktop.png') no-repeat center bottom;
         background-size: cover;
     }
 }
- 
- 
-    .banner-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 90%;
+    z-index: 6;
+    @media(min-width: $screen-xl) {
         transform: translate(-50%, -40%);
-        width: 90%;
-        z-index: 6;
-        @media(min-width: $screen-xl) {
-            transform: translate(-50%, -40%);
-        }
     }
-    .banner-heading {
-        color: $banner-heading;
-        text-align: center;
-        font-size: 30px;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        margin: 0 20px 10px;
-        line-height: 36px;
-        @media(min-width: $screen-md) {
-            font-size: 36px;
-        }
-        @media(min-width: $screen-lg) {
-            font-size: 44px;
-        }
-        @media(min-width: $screen-xl) {
-            font-size: 48px;
-            margin: 0 20px 20px;
-        }
+}
+
+.banner-heading {
+    color: $banner-heading;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'URWGeometric-SemiBold';
+     font-weight: 400;
+    margin: 0 20px 10px;
+    line-height: 36px;
+    @media(min-width: $screen-md) {
+        font-size: 36px;
     }
-    .banner-description {
-        text-align: center;
-        font-size: 14px;
-        line-height: 22px;
-        font-weight: 400;
-        color: $white;
-        width: 85%;
-        margin: 0 auto 30px;
-        @media(min-width: $screen-md) {
-            width: 65%;
-            font-size: 17px;
-            line-height: 25px;
-        }
-        @media(min-width: $screen-lg) {
-            line-height: 27px;
-            font-size: 19px;
-            font-weight: 300;
-        }
-        @media(min-width: $screen-xl) {
-            width: 40%;
-        }
+    @media(min-width: $screen-lg) {
+        font-size: 44px;
     }
-    $cta-primary-bg:$white;
-    $cta-secondary-border:$primary-color;
-    $cta-secondary-color:$primary-color;
-    .banner-action {
-        margin-top: 25px;
-        text-align: center;
-        .cta-primary {
-            @extend %button;
-            background: $cta-primary-bg;
-            color: $banner-bg;
-            text-decoration: none;
+    @media(min-width: $screen-xl) {
+        font-size: 60px;
+        margin: 0 20px 20px;
+    }
+}
+
+.banner-description {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $white;
+    width: 85%;
+    margin: 0 auto 30px;
+    @media(min-width: $screen-md) {
+        width: 65%;
+        font-size: 17px;
+        line-height: 25px;
+    }
+    @media(min-width: $screen-lg) {
+        line-height: 27px;
+        font-size: 19px;
+        font-weight: 300;
+    }
+    @media(min-width: $screen-xl) {
+        width: 40%;
+    }
+}
+
+$cta-primary-bg:$white;
+$cta-secondary-border:$primary-color;
+$cta-secondary-color:$primary-color;
+.banner-action {
+    margin-top: 25px;
+    text-align: center;
+    .cta-primary {
+        @extend %button;
+        background: $cta-primary-bg;
+        color: $banner-bg;
+        text-decoration: none;
+        transition: $transition;
+        &:hover {
+            background-color: $primary-color;
             transition: $transition;
-            
-            &:hover {
-                background-color: $primary-color;
-                transition: $transition;
-            }
-        }
-        .cta-secondary {
-            color: $cta-secondary-color;
-            text-decoration: underline;
-            display: block;
         }
     }
-    .feature {
+    .cta-secondary {
+        color: $cta-secondary-color;
+        text-decoration: underline;
+        display: block;
+    }
+}
+
+.feature {
+    padding: 40px 0;
+    @media (min-width: $screen-md) {
         padding: 40px 0;
-        @media (min-width: $screen-md) {
-            padding: 40px 0;
-        }
+    }
+    @media (min-width: $screen-lg) {
+        padding: 60px 0;
+        display: flex;
+    }
+    @media (min-width: $screen-lg) {
+        padding: 80px 0;
+    }
+}
+
+.feature-graphics {
+    @media (min-width: $screen-lg) {
+        margin-left: $gutter;
+        width: 57%;
+    }
+}
+
+.feature-content {
+    margin-bottom: 40px;
+    align-self: center;
+    @media (min-width: $screen-lg) {
+        width: 43%;
+        margin-right: $gutter;
+    }
+}
+
+.feature-tools {
+    .feature-content {
+        align-self: flex-start;
         @media (min-width: $screen-lg) {
-            padding: 60px 0;
-            display: flex;
-        }
-        @media (min-width: $screen-lg) {
-            padding: 80px 0;
+            margin-top: 55px;
+            margin-left: $gutter;
+            width:35%;
         }
     }
     .feature-graphics {
         @media (min-width: $screen-lg) {
-            margin-left: $gutter;
-            width: 80%;
-        }
-    }
-    .feature-content {
-        margin-bottom: 40px;
-        align-self: center;
-        @media (min-width: $screen-lg) {
-            width: 40%;
+            order: -1;
             margin-right: $gutter;
+            width:65%;
         }
     }
-    .feature-tools {
-        .feature-content {
-            align-self: flex-start;
-            @media (min-width: $screen-lg) {
-                margin-top: 55px;
-                margin-left: $gutter;
-            }
-        }
-        .feature-graphics {
-            @media (min-width: $screen-lg) {
-                order: -1;
-                margin-right: $gutter;
-            }
-        }
+}
+
+.feature-heading {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    @media (min-width: $screen-md) {
+        font-size: 20px;
     }
-    .feature-heading {
-        margin-top: 0;
-        margin-bottom: 10px;
+    @media (min-width: $screen-xl) {
         font-weight: 600;
-        font-size: 18px;
-        line-height: 26px;
-        @media (min-width: $screen-md) {
-            font-size: 20px;
-        }
-        @media (min-width: $screen-xl) {
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        &.feature-heading-main {
-            @media (min-width: $screen-lg) {
-                margin: 45px 80px 15px 0;
-            }
+        margin-bottom: 15px;
+    }
+    &.feature-heading-main {
+        @media (min-width: $screen-lg) {
+            margin: 45px 80px 15px 0;
         }
     }
-    .list {
-        list-style-type: none;
-        li {
-            position: relative;
-            margin-bottom: 7px;
-            &:before {
-                content: "";
-                display: block;
-                background: url("/assets/images/icons/icon_list.png") no-repeat 0 0;
-                position: absolute;
-                left: -26px;
-                width: 12px;
-                background-size: contain;
-                height: 12px;
-                top: 7px;
-            }
-        }
-    }
-    .markdown {
-        display: inline-block;
-        background: url(/assets/images/icons/icon_markdown.png) no-repeat 0 0px;
-        width: 21px;
-        margin-left: 2px;
-        height: 12px;
-    }
-    .screenshots {
-        border-radius: 5px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
-    }
-    .tools {
-        padding: 20px 0;
-        background: $light-primary-color;
-    }
-    .tool {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-        li {
-            width: 45px;
-            align-items: center;
-            align-self: center;
-            justify-content: center;
-            border-radius: $border-radius;
-            position: relative;
-            margin: 20px 12px;
-            @media (min-width: $screen-md) {
-                margin: 25px 12px;
-                width: 77px;
-            }
-            @media (min-width:$screen-lg) {
-                margin: 5px;
-                width: 75px;
-            }
-            @media (min-width:$screen-xl) {
-                margin: 10px;
-            }
-        }
-        figure {
-            width: 100%;
-            margin: 0px 0px;
-            text-align: center;
-            img {
-                display: inline-block;
-                @media (min-width: $screen-md) {
-                    width: 80%;
-                }
-                @media (min-width:$screen-lg) {}
-                @media (min-width:$screen-xl) {}
-            }
-        }
-        .sahi,
-        .puppeteer {
-            width: 80px;
-        }
-        figcaption {
-            font-size: 13px;
-            position: absolute;
-            left: 0;
-            bottom: 25px;
-            width: 100%;
-            text-align: center;
-        }
-    }
-    // Get Started Section
-    $arrowsize:40px;
-    .get-started {
+}
+
+.list {
+    list-style-type: none;
+    li {
         position: relative;
-        background: $get-started-background;
-        padding: 40px 0 0;
+        margin-bottom: 7px;
         &:before {
-            position: absolute;
             content: "";
-            width: $arrowsize;
-            height: $arrowsize;
-            transform: rotate(135deg) translate(-50%, 162%);
-            left: 52%;
-            background: #fff;
-            @media (min-width: $screen-md) {
-                left: 51%;
-            }
-        }
-        h3 {
-            font-size: 20px;
-            text-align: center;
-            color: #1A1C19;
-            font-weight: 400;
-            margin: 0 22px 30px;
-            line-height: 28px;
-            @media (min-width: $screen-lg) {
-                font-size: 36px;
-                padding: 50px 0;
-            }
+            display: block;
+            background: url("/assets/images/icons/icon_list.svg") no-repeat 0 0;
+            position: absolute;
+            left: -26px;
+            width: 12px;
+            background-size: contain;
+            height: 12px;
+            top: 7px;
         }
     }
-    .launch-icon {
+}
+
+.markdown {
+    display: inline-block;
+    background: url(/assets/images/icons/icon_markdown.svg) no-repeat 0 0px;
+    width: 21px;
+    margin-left: 2px;
+    height: 12px;
+}
+
+.screenshots {
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+}
+
+.tools {
+    padding: 20px 0;
+    background: $light-primary-color;
+}
+
+.tool {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    li {
+        width: 45px;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        border-radius: $border-radius;
         position: relative;
-        bottom: -7px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 181px;
-        height: 91px;
-        @media(min-width: $screen-lg) {
-            width: 277px;
-            height: 100px;
+        margin: 20px 12px;
+        @media (min-width: $screen-md) {
+            margin: 25px 12px;
+            width: 77px;
+        }
+        @media (min-width:$screen-lg) {
+            margin: 5px;
+            width: 75px;
+        }
+        @media (min-width:$screen-xl) {
+            margin: 10px;
         }
     }
-    .get-started-cta {
-        @extend %button;
-        background: $primary-color;
-        border: 1px solid $primary-color;
-        color: $banner-bg;
-        font-weight: 600;
-        text-decoration: none;
-        display: block;
-        margin: 30px auto;
-        @media(min-width: $screen-lg) {
-            font-size: 24px;
-        }
-    }
-    // background animation style
-    .background-anim {
-        position: absolute;
-        top: 50%;
-        left: 0;
+    figure {
         width: 100%;
-        z-index: 5;
-        transform: translate(0, -50%);
-        div {
-            canvas {
-                display: none !important;
+        margin: 0px 0px;
+        text-align: center;
+        img {
+            display: inline-block;
+            @media (min-width: $screen-md) {
+                width: 80%;
             }
+            @media (min-width:$screen-lg) {}
+            @media (min-width:$screen-xl) {}
         }
     }
+    .sahi,
+    .puppeteer {
+        width: 80px;
+    }
+    figcaption {
+        font-size: 13px;
+        position: absolute;
+        left: 0;
+        bottom: 25px;
+        width: 100%;
+        text-align: center;
+    }
+} // Get Started Section
+$arrowsize:40px;
+.get-started {
+    position: relative;
+    background: $get-started-background;
+    padding: 40px 0 0;
+    &:before {
+        position: absolute;
+        content: "";
+        width: $arrowsize;
+        height: $arrowsize;
+        transform: rotate(135deg) translate(-50%, 162%);
+        left: 52%;
+        background: #fff;
+        @media (min-width: $screen-md) {
+            left: 51%;
+        }
+    }
+    h3 {
+        font-size: 20px;
+        text-align: center;
+        color: #1A1C19;
+        font-weight: 400;
+        margin: 0 22px 30px;
+        line-height: 28px;
+        @media (min-width: $screen-lg) {
+            font-size: 36px;
+            padding: 50px 0;
+        }
+    }
+}
+
+.launch-icon {
+    position: relative;
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 181px;
+    height: 91px;
+    @media(min-width: $screen-lg) {
+        width: 277px;
+        height: 100px;
+    }
+}
+
+.get-started-cta {
+    @extend %button;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    margin: 30px auto;
+    transition: $transition;
+    &:hover {
+        transition: $transition;
+        background-color: $white;
+        border: 1px solid $white;
+    }
+    @media(min-width: $screen-lg) {
+        font-size: 24px;
+    }
+} // background animation style
+.background-anim {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    transform: translate(0, -50%);
+    div {
+        canvas {
+            display: none !important;
+        }
+    }
+}

@@ -11,34 +11,34 @@ $(document).ready(function(){
   });
   
 
-    // get started
-    $('.tab-nav_item').click(function(){
-      var id = $(this).attr('data-attr');
-      id = ('#'+ id);
-      $('.tab-nav_item').removeClass('active-tab');
-      $('.content-container > .tab-content').removeClass('active')
-      $(this).addClass('active-tab');
-      $(id).addClass('active');
-    });
+  // get started
+  $('.tab-nav_item').click(function(){
+    var id = $(this).attr('data-attr');
+    id = ('#'+ id);
+    $('.tab-nav_item').removeClass('active-tab');
+    $('.content-container > .tab-content').removeClass('active')
+    $(this).addClass('active-tab');
+    $(id).addClass('active');
+  });
+
+  $('.mobile-heading').click(function(){
+    var id = $(this).attr('data-attr');
+    id = ('#'+ id);
+    $(this).toggleClass('open');
     
-    $('.mobile-heading').click(function(){
-      var id = $(this).attr('data-attr');
-      id = ('#'+ id);
-      $(this).toggleClass('open');
-      
-      var icon = $(this).find('span .fa')  
-    
-      if(icon.hasClass('fa-chevron-down') == true){
-        icon.removeClass('fa-chevron-down').addClass('fa-chevron-right')
-      }else{
-        icon.removeClass('fa-chevron-right').addClass('fa-chevron-down')
-      }
+    var icon = $(this).find('span .fa')
 
-      $(id).toggleClass('active');
-    });
+    if(icon.hasClass('fa-chevron-down') == true){
+      icon.removeClass('fa-chevron-down').addClass('fa-chevron-right')
+    }else{
+      icon.removeClass('fa-chevron-right').addClass('fa-chevron-down')
+    }
+
+    $(id).toggleClass('active');
+  });
 
 
-// mobile nav button
+  // mobile nav button
 
   $('.navbtn').on('click', function () {
     $('.bar').toggleClass('animate');
@@ -76,8 +76,34 @@ $(document).ready(function(){
   }
 
   $(".gdpr-cookie-banner .close").click(function () {
+    document.cookie = "cookie-consent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
     $(".gdpr-cookie-banner").hide();
   });
 
+  if(document.cookie.indexOf("cookie-consent=true") >= 0 ) {
+    $(".gdpr-cookie-banner").hide();
+  }
 
+  function determinePackageNameBasedOnOS() {
+    var userDefinedPackageName = window.location.hash.substr(1);
+    var validPackageNames = ['windows', 'mac', 'debian', 'yum', 'curl'];
+    if (userDefinedPackageName !== "" && validPackageNames.includes(userDefinedPackageName)) {
+      return userDefinedPackageName;
+    }
+    var userAgent = navigator.userAgent;
+    var packageName = 'windows';
+    if (userAgent.indexOf("Win") !== -1) packageName = "windows";
+    if (userAgent.indexOf("Mac") !== -1) packageName = "mac";
+    if (userAgent.indexOf("Debian") !== -1) packageName = "debian";
+    if (userAgent.indexOf("Ubuntu") !== -1) packageName = "debian";
+    if (userAgent.indexOf("RedHat") !== -1) packageName = "yum";
+    if (userAgent.indexOf("CentOS") !== -1) packageName = "yum";
+
+    return packageName
+  };
+
+  if($(".tab-nav-get_started").length) {
+    var packageName = determinePackageNameBasedOnOS();
+    $(".tab-nav-get_started li.tab-nav_item[data-attr='" + packageName + "']").click();
+  }
 });

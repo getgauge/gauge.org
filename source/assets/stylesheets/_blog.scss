@@ -3,6 +3,9 @@ $blog-heading-color: #1A1C19;
 $blog-description-color: #474747;
 .blog-container {
     padding: 100px 20px;
+    @media (min-width: $screen-md) {
+        padding: 100px 0px;
+    }
 }
 
 .blog-list {
@@ -54,6 +57,7 @@ $blog-description-color: #474747;
     font-size: 20px;
     font-weight: 600;
     line-height: 22px;
+    line-height: 28px;
     .latest-blog & {
         font-size: 16px;
         @media (min-width: $screen-md) {
@@ -79,14 +83,15 @@ $blog-description-color: #474747;
         font-weight: 400;
     }
     h1 {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 40px;
+        line-height: 46px;
         font-weight: 600;
     }
     h2 {
         font-size: 20px;
         line-height: 26px;
         font-weight: 600;
+        margin: 30px 0;
     }
     figure {
         position: relative;
@@ -94,11 +99,25 @@ $blog-description-color: #474747;
     }
     h3 {
         font-size: 17px;
+        font-weight: 600;
     }
     pre {
         overflow-x: scroll;
-        background-color: #eee;
-        padding: 10px;
+        background-color: #353535;
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 3px;
+    }
+    blockquote {
+        font-style: italic;
+        font-size: 18px;
+        line-height: 25px;
+        border-left: 2px solid #ccc;
+        padding-left: 30px;
+        margin: 30px;
+    }
+    p {
+        line-height: 25px;
     }
     .attribution {
         position: absolute;
@@ -156,24 +175,21 @@ $blog-description-color: #474747;
         }
     }
 }
-.post-container{
-    @include grid-column(12);
 
-    @media(min-width: $screen-md){
+.post-container {
+    @include grid-column(12);
+    @media(min-width: $screen-md) {
         @include grid-column(8);
     }
 }
 
 .post-sidebar {
     @include grid-column(12);
-
-    @media(min-width: $screen-md){
+    @media(min-width: $screen-md) {
         @include grid-column(4);
         padding: 50px
     }
-    @media (min-width: $screen-lg) {
-        border: 0;
-    }
+
     section {
         margin-bottom: 30px;
     }
@@ -221,15 +237,13 @@ $blog-description-color: #474747;
         >.post-link {
             float: left;
             @media (min-width: $screen-md) {
-                width: 55%;
+                width: 48%;
             }
             @media (min-width:$screen-xl) {
                 width: 66%
             }
         }
-        .post-summary-image {
-            border-top-right-radius: 0;
-        }
+        .post-summary-image {}
         >a {
             display: block;
             overflow: hidden;
@@ -255,16 +269,16 @@ $blog-description-color: #474747;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     .item {
-        padding: 0 15px;
         width: 100%;
         border-bottom: 1px dotted #ddd;
         @media (min-width: $screen-md) {
-            width: calc(50% - 3px);
+            width: 48%;
             border: 0;
         }
         @media (min-width:$screen-lg) {
-            width: calc(33.3% - 3px);
+            width: 32%;
         }
     }
 }
@@ -409,10 +423,17 @@ img {
         bottom: -14px;
         left: 0;
         padding: 10px 20px;
-        background: linear-gradient(to bottom right, transparent, rgba(0, 0, 0, 0.8));
         width: 100%;
         color: #fff;
         border-radius: 5px;
+        background: rgba(8, 8, 8, 0);
+        background: -moz-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(8, 8, 8, 0)), color-stop(100%, rgba(0, 0, 0, 1)));
+        background: -webkit-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -o-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: linear-gradient(to bottom, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#080808', endColorstr='#000000', GradientType=0);
     }
     .profile-image {
         width: 38px;

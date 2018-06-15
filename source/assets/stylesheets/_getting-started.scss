@@ -194,12 +194,20 @@
     background: url(/assets/images/icons/icon_download.svg) no-repeat 90% 10px;
     font-size: 14px;
     transition: $transition;
+    text-decoration: none;
     &:hover {
         background: url(/assets/images/icons/icon_download.svg) no-repeat 90% 10px;
         transition: $transition;
         border: 1px solid $primary-color;
+        text-decoration: none;
     }
     @media (min-width: $screen-md) {
         margin: 0px 0;
     }
+}
+
+.handy_guide {
+    background: #f5f5f5;
+    padding: 10px 20px;
+    font-size: 14px;
 }

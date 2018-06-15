@@ -10,9 +10,11 @@
     <meta name="twitter:site" content="@getgauge" />
     <meta name="twitter:title" content="<%= twitter_card_property(:twitter_card_title, :title_tag_of_header) %>" />
     <meta name="twitter:description" content="<%= twitter_card_property(:twitter_card_description, :meta_description) %>" />
-    <meta name="twitter:image" content="<%= twitter_card_image('blog/why-we-built-gauge.png') %>" />
+    <meta name="twitter:image" content="<%= twitter_card_image('gauge_release_twitter_card_2.jpg') %>" />
     <link rel="canonical" href="<%= canonical_link_for(current_article || current_page) %>" />
     <title><%= value_or_title_as_default(:title_tag_of_header) %></title>
+    <link href="assets/images/favicons/favicon.ico" rel="shortcut icon" type="image/ico" />
+    <link href="assets/images/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed" type="image/ico" />
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "jquery-3.3.1.min" %>
     <%= javascript_include_tag "site" %>
@@ -21,7 +23,11 @@
   </head>
   <body class= <%= page_name == 'home' ? "homepage" : 'inner' %> id= <%= page_name %>>
     <%= partial 'partials/header' %>
-       <%= yield %>
+    <div class="gdpr-cookie-banner">
+      <span class="close">X</span>
+      <p>Our site uses <a href="https://www.thoughtworks.com/privacy-policy#cookie-section" target="_blank" rel="noopener noreferrer">cookies</a> for analytics. If you're unsure about it, take a look at our <a href="https://www.thoughtworks.com/privacy-policy" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p>
+    </div>
+    <%= yield %>
     <%= partial 'partials/footer' %>
   </body>
 </html>

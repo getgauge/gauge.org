@@ -15,7 +15,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 set :base_url, ENV['BASE_URL'] || 'http://localhost:4567'
-set :docs_version, 'master'
+set :docs_version, ENV['DOCS_VERSION'] || 'latest'
 
 set :js_dir, "assets/javascripts"
 set :css_dir, "assets/stylesheets"
