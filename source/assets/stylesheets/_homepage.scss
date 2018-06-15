@@ -115,6 +115,9 @@ $cta-secondary-color:$primary-color;
 .banner-action {
     margin-top: 25px;
     text-align: center;
+    width: 300px;
+    margin: 0 auto;
+
     .cta-primary {
         @extend %button;
         background: $cta-primary-bg;
@@ -129,7 +132,7 @@ $cta-secondary-color:$primary-color;
     .cta-secondary {
         color: $cta-secondary-color;
         text-decoration: underline;
-        display: block;
+        display: inline-block;
     }
 }
 
