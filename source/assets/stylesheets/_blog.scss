@@ -3,9 +3,6 @@ $blog-heading-color: #1A1C19;
 $blog-description-color: #474747;
 .blog-container {
     padding: 100px 20px;
-    @media (min-width: $screen-xl) {
-        max-width:992px;
-    }
 }
 
 .blog-list {
@@ -174,14 +171,23 @@ $blog-description-color: #474747;
         }
     }
 }
+.post-container{
+    @include grid-column(12);
+
+    @media(min-width: $screen-md){
+        @include grid-column(8);
+    }
+}
 
 .post-sidebar {
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid #333;
+    @include grid-column(12);
+
+    @media(min-width: $screen-md){
+        @include grid-column(4);
+        padding: 50px
+    }
     @media (min-width: $screen-lg) {
         border: 0;
-        padding-top: 0;
     }
     section {
         margin-bottom: 30px;
