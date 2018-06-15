@@ -82,11 +82,9 @@ Style for tabs
 }
 
 .content-container {
-        margin:0 -16px;
-        // border-radius: 0;
-        border: 1px solid $border-color;
-        border-radius: $border-radius;
-
+    margin: 0 -16px; // border-radius: 0;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
     @media (min-width: $screen-md) {
         margin:0;
     }
@@ -100,7 +98,7 @@ Style for tabs
 .sidebar-menu-plugins {
     display: none;
     @media (min-width: $screen-lg) {
-          display: block;
+        display: block;
     }
     @media (min-width: $screen-xl) {
         width: 20%;
@@ -127,6 +125,8 @@ Style for tabs
     border-bottom: 1px solid $border-color;
     cursor: pointer;
     padding: 20px;
+    display: flex;
+    align-items: center;
     &.active-tab {
         background: $active-nav-bg;
         @extend %active-border;
