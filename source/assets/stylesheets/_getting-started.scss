@@ -21,7 +21,7 @@
         margin-bottom: 30px;
     }
     @media (min-width: $screen-md) {
-        margin: 0 0px 50px 30px;
+        margin: 0 50px;
     }
     @media (min-width: $screen-lg) {
         margin: 0 0px 50px 20px;
@@ -57,8 +57,12 @@
             line-height: 35px;
             background: $primary-color;
             @media (min-width: $screen-md) {
-                top: -5px;
-                left: -36px;
+                font-size: 14px;
+                line-height: 25px;
+                top: 0px;
+                left: -24px;
+                width: 25px;
+                height: 25px;
             }
             @media (min-width: $screen-lg) {
                 top: -5px;
@@ -99,12 +103,26 @@
     }
 }
 
-// extending sidebar
+.tab-container-getting_started {}
+
+.sidebar-menu-get-started {}
+
 .tab-nav-get_started {
-    .tab-nav_item {
-        display: flex;
-        align-items: center;
-        padding-left: 15px;
+    display: none;
+    @media (min-width: $screen-lg) {
+        display: block;
+    }
+}
+
+.marketo-form {
+    margin-top: 40px;
+
+}
+
+.content-container-gett_started {
+    order: -1;
+    @media (min-width: $screen-lg) {
+        order:1;
     }
 }
 

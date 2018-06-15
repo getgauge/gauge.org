@@ -106,4 +106,6 @@ $(document).ready(function(){
     var packageName = determinePackageNameBasedOnOS();
     $(".tab-nav-get_started li.tab-nav_item[data-attr='" + packageName + "']").click();
   }
+
+
 });

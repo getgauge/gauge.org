@@ -12,28 +12,63 @@ meta_keywords: "Gauge, test automation, free and open source, download, get star
       <p class="disclaimer">
     Gauge automatically sends telemetry data to help us <a href="https://blog.getgauge.io/why-we-collect-data-b19df366b677" >improve</a> the product. If you would prefer not to have this data sent you can choose to <a href="https://manpage.gauge.org/gauge_telemetry.html" > opt out</a>
   </p>
-    <div class="tab-container tab-getting_started">
-    <aside class="sidebar-menu">
+    <div class="tab-container tab-container-get_started">
+    <aside class="sidebar-menu sidebar-menu-get-started">
       <ul class="tab-nav tab-nav-get_started">
-        <li class="tab-nav_item active-tab" data-attr="mac"><span class="icon_macos"></span> Mac OS</li>
-        <li class="tab-nav_item " data-attr="windows"><span class="icon_windows"></span> Windows</li>
+        <li class="tab-nav_item  active-tab " data-attr="windows"><span class="icon_windows"></span> Windows</li>
+        <li class="tab-nav_item" data-attr="mac"><span class="icon_macos"></span> Mac OS</li>
         <li class="tab-nav_item " data-attr="debian"><span class="icon_debian"></span> Debian/APT</li>
         <li class="tab-nav_item " data-attr="yum"><span class="icon_yum"></span> YUM/DNF</li>
         <li class="tab-nav_item " data-attr="curl"><span class="icon_curl"></span> Curl</li>
       </ul>
 
-<div class="desktop">
-      <script src="//app-e.marketo.com/js/forms2/js/forms2.min.js"></script>
-<form id="mktoForm_8802"></form>
-<script>MktoForms2.loadForm("//app-e.marketo.com", "199-QDE-291", 8802);</script>
-</div>
+      <div class="marketo-form">
+            <script src="//app-e.marketo.com/js/forms2/js/forms2.min.js"></script>
+      <form id="mktoForm_8802"></form>
+      <script>MktoForms2.loadForm("//app-e.marketo.com", "199-QDE-291", 8802);</script>
+      </div>
 
     </aside>
 
-    <div class="content-container">
-  
-      <h2 class="mobile-heading open" data-attr="mac"><span class="icon_macos"></span> Mac OS <span class="expander"></span></h2>
-      <div class="tab-content active" id="mac">
+    <div class="content-container content-container-gett_started">
+    <h2 class="mobile-heading open" data-attr="windows"><span class="icon_windows"></span> Windows <span class="expander"></span></h2>
+      <div class="tab-content active" id="windows">
+        <section class="page-block">
+          <h3>Install Gauge</h3>
+          <div class="tab-component tab-install">
+            <ul class="tab">
+              <li class="tab_item active-tab" data-attr="chocolatey">Chocolatey</li>
+              <li class="tab_item" data-attr="w-zip">ZIP</li>
+            </ul>
+            <div class="tab-content-container">
+              <div class="tab-content active" id="chocolatey">
+                <h4 class="mobile-title">Chocolatey</h4>
+                <p class="instruction"> Install Gauge using <a href="https://chocolatey.org">Chocolatey</a></p>
+                <div class="code-box">
+                  <code>&gt; choco install gauge</code>
+                </div>
+              </div>
+              <div class="tab-content" id="w-zip">
+                <h4 class="mobile-title">ZIP</h4>
+                <p class="instruction"> Download the
+                  <a href="https://github.com/getgauge/gauge/releases/download/v0.9.9/gauge-0.9.9-windows.x86_64.zip">zip</a>
+                  installer and the run following command in powershell</p>
+                <div class="code-box">
+                  <code>PS&gt; Expand-Archive -Path gauge-0.9.9-windows.x86_64.zip -DestinationPath custom_path</code>
+                </div>
+              </div>
+
+              <p class="instruction">
+                For alternate methods of installation and our nightly releases, check out our
+                <a href="https://docs.gauge.org/latest/installation.html#installation">documentation</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <%= partial 'partials/installation' %>
+      </div>
+      <h2 class="mobile-heading" data-attr="mac"><span class="icon_macos"></span> Mac OS <span class="expander"></span></h2>
+      <div class="tab-content" id="mac">
         <section class="page-block">
           <h3>Install Gauge</h3>
           <div class="tab-component tab-install">
@@ -73,42 +108,7 @@ meta_keywords: "Gauge, test automation, free and open source, download, get star
         </section>
         <%= partial 'partials/installation' %>
       </div>
-      <h2 class="mobile-heading" data-attr="windows"><span class="icon_windows"></span> Windows <span class="expander"></span></h2>
-      <div class="tab-content" id="windows">
-        <section class="page-block">
-          <h3>Install Gauge</h3>
-          <div class="tab-component tab-install">
-            <ul class="tab">
-              <li class="tab_item active-tab" data-attr="chocolatey">Chocolatey</li>
-              <li class="tab_item" data-attr="w-zip">ZIP</li>
-            </ul>
-            <div class="tab-content-container">
-              <div class="tab-content active" id="chocolatey">
-                <h4 class="mobile-title">Chocolatey</h4>
-                <p class="instruction"> Install Gauge using <a href="https://chocolatey.org">Chocolatey</a></p>
-                <div class="code-box">
-                  <code>&gt; choco install gauge</code>
-                </div>
-              </div>
-              <div class="tab-content" id="w-zip">
-                <h4 class="mobile-title">ZIP</h4>
-                <p class="instruction"> Download the
-                  <a href="https://github.com/getgauge/gauge/releases/download/v0.9.9/gauge-0.9.9-windows.x86_64.zip">zip</a>
-                  installer and the run following command in powershell</p>
-                <div class="code-box">
-                  <code>PS&gt; Expand-Archive -Path gauge-0.9.9-windows.x86_64.zip -DestinationPath custom_path</code>
-                </div>
-              </div>
-
-              <p class="instruction">
-                For alternate methods of installation and our nightly releases, check out our
-                <a href="https://docs.gauge.org/latest/installation.html#installation">documentation</a>.
-              </p>
-            </div>
-          </div>
-        </section>
-        <%= partial 'partials/installation' %>
-      </div>
+      
       <h2 class="mobile-heading" data-attr="debian"><span class="icon_debian"></span> Debian/AFT <span class="expander"></span></h2>
       <div class="tab-content" id="debian">
         <p class="instruction first_p">Gauge can be installed on any flavour of Linux using the shell script. The following steps will guide you to a quick install on a linux box.</p>
@@ -218,7 +218,7 @@ $ sudo dnf install gauge
         </section>
         <%= partial 'partials/installation' %>
       </div>
-      
+    
 
     </div>
   </div>
