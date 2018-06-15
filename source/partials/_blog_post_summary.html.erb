@@ -11,7 +11,7 @@
   <div class="blog-details">
     <% link_to article, :class => 'post-link' do %>
       <span class="post-date"><%= article.date.strftime('%b %e, %Y') %></span>
-      <h2 class="post-title"><%= (article.title) %></h2>
+      <h2 class="post-title"><%= (article.data.post_title) %></h2>
       <p class="excerpt"><%= article.data["excerpt"] %> </p>
     <% end %>
   </div>
