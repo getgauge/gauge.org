@@ -1,4 +1,3 @@
-
 .flex-container {
     list-style: none;
     margin: 0;
@@ -15,11 +14,17 @@
         padding: 10px;
         font-size: 14px;
         @media (min-width: $screen-md) {
-            width: 33%;
+            width: 30%;
         }
         @media (min-width: $screen-lg) {
             font-size: 16px;
             padding: 10px 10px 10px 0px;
+        }
+        &.more {
+            @media (min-width: $screen-md) {
+                width: 40%;
+ 
+            }
         }
     }
 }
@@ -47,12 +52,12 @@
     }
 }
 
-.plugin_name{
-    a{
-        font-weight:600;
+.plugin_name {
+    a {
+        font-weight: 600;
         text-decoration: none;
-        color:#333;
-        &:hover{
+        color: #333;
+        &:hover {
             background: none;
         }
     }

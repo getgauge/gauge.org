@@ -64,17 +64,59 @@ Style for tabs
     border-bottom: 6px solid $active-border-color;
 }
 
-// --------component styles
+// grid
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-lg) {
+        flex-direction:row;
+    }
+}
+
 .sidebar-menu {
-    display: none;
     height: auto;
     @media (min-width: $screen-lg) {
-        @include grid-column(3);
-        display: block;
+        width:30%;
         margin: 0 $gutter 0 0;
     }
 }
 
+.content-container {
+
+        margin:0 -16px;
+        // border-radius: 0;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+        margin:0;
+    }
+    @media (min-width: $screen-lg) {
+        margin: 0 0 0 $gutter;
+        border: 0;
+        width: 70%;
+    }
+}
+
+.tab-container-plugins {}
+
+.sidebar-menu-plugins {
+    display: none;
+    @media (min-width: $screen-lg) {
+          display: block;
+    }
+    @media (min-width: $screen-xl) {
+        width: 20%;
+    }
+}
+
+.content-container-plugins {
+    @media (min-width: $screen-xl) {
+        width:80%;
+    }
+}
+
+// --------component styles
 .tab-nav {
     color: #33374f;
     list-style: none;
@@ -95,26 +137,7 @@ Style for tabs
     &:hover {
         background: #f2f2f2;
     }
-}
-
-// tab content
-.content-container {
-    @media (max-width: $screen-sm-min) {
-    margin:0 -20px;
-    border-radius:0;
-    }
-    @media (min-width: $screen-md) {
-        border: 1px solid $border-color;
-        border-radius: $border-radius;
-    }
-    @media (min-width: $screen-lg) {
-        @include grid-column(9);
-        margin: 0 0 0 $gutter;
-        border:0;
-    }
-
-}
-
+} // tab content
 .tab-content {
     border: 1px solid $border-color;
     border-width: 0 0 1px 0;
@@ -149,8 +172,7 @@ Style for tabs
     align-items: center;
     border-top: 1px solid $border-color;
     margin: -1px 0;
-    @media (min-width: $screen-md) {
-    }
+    @media (min-width: $screen-md) {}
     @media (min-width: $screen-lg) {
         display: none;
     }
