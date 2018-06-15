@@ -21,7 +21,7 @@
   </head>
   <body class= "inner" id= "blog">
     <%= partial 'partials/header' %>
-       <div class="container blog-container p">
+       <div class="container blog-container">
     <div class="post-container">
       <% if content_for?(:banner) %>
       <div class="post-banner">
@@ -29,7 +29,9 @@
       </div>
      <% end %>
       <main id="main" role="main" class="blog-post-main-container">
-      <%= yield %>
+      <article class="blog-post">
+        <%= yield %>
+      </article>
       </main>
     </div>
     <%= partial 'partials/recent_articles' %>

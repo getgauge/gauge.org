@@ -1,7 +1,6 @@
 <link rel="canonical" href="<%= canonical_link_for(current_article || current_page) %>" />
 <% wrap_layout :layout do %>
 <div class="container blog-container">
-    <div class="post-container">
       <% if content_for?(:banner) %>
       <div class="post-banner">
         <%= yield_content :banner %>
@@ -10,6 +9,5 @@
       <main id="main" role="main" class="blog-post-main-container">
       <%= yield %>
       </main>
-    </div>
 </div>
 <% end %>
