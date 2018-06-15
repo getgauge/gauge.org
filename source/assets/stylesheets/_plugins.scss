@@ -57,3 +57,16 @@
         }
     }
 }
+
+.arrow{
+    background: url('/assets/images/angle-down.svg') no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+}
+.arrow-active{
+    background: url('/assets/images/angle-up.svg') no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+}
