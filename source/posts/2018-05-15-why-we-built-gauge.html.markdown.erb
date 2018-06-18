@@ -28,28 +28,32 @@ At [ThoughtWorks](https://www.thoughtworks.com/) we place a high value on test a
 From our experience, test suites need significant effort to stay readable and reusable. To explain this, let’s develop a simple test for automating the browser to google “testing frameworks” using Selenium.
 
     void test() {
-    // Invoke commands
-    driver.get("google.com");
-    // Use locators/xpath
-    WebElement element = driver.findElement(By.name("q"));
-    // Provide data
-    element.sendKeys("testing frameworks");
-    element.submit();
+        // Invoke commands
+        driver.get("google.com");
+
+        // Use locators/xpath
+        WebElement element = driver.findElement(By.name("q"));
+            
+        // Provide data
+        element.sendKeys("testing frameworks");
+        element.submit();
     }
 
 A test like this is verbose and not reusable by another test. That is until we move a few lines to a method, pass the search text as a parameter and call that method. For example
 
     void google(String query) { 
-    driver.get("google.com");
-    WebElement element = driver.findElement(By.name("q"));
-    element.sendKeys(query);
-    element.submit();
+        driver.get("google.com");
+        WebElement element = driver.findElement(By.name("q"));
+        element.sendKeys(query);
+        element.submit();
     }
+
     void testOne() {
-    google("automated testing");
+        google("automated testing");
     }
+
     void testTwo() {
-    google("flying foxes");
+        google("flying foxes");
     }
 
 This test script is easier to read and avoids repetition.
@@ -59,23 +63,26 @@ This test script is easier to read and avoids repetition.
 For example, [Selenium](https://www.seleniumhq.org/docs/06_test_design_considerations.jsp) recommends the Page Object design pattern. Let’s use it to refactor the same test.
 
     class GoogleHomePage {
-    GoogleHomePage(Webdriver driver) {
-      driver.get("google.com");
-      this.driver = driver;
+        GoogleHomePage(Webdriver driver) {
+            driver.get("google.com");
+            this.driver = driver;
+        }
+
+        void searchFor(String query) {
+            WebElement element = driver.findElement(By.name("q"));
+            element.sendKeys("testing frameworks");
+            element.submit();
+        }
     }
-    void searchFor(String query) {
-      WebElement element = driver.findElement(By.name("q"));
-      element.sendKeys("testing frameworks");
-      element.submit();
-    }
-    }
+
     void testOne() {
-    GoogleHomePage page = new GoogleHomePage();
-    page.searchFor("testing frameworks")
+        GoogleHomePage page = new GoogleHomePage();
+        page.searchFor("testing frameworks")
     }
+
     void testTwo() {
-    GoogleHomePage page = new GoogleHomePage();
-    page.searchFor("flying foxes")
+        GoogleHomePage page = new GoogleHomePage();
+        page.searchFor("flying foxes")
     }
 
 
@@ -85,18 +92,18 @@ Over time, teams over-engineer test suites with design opinions making it harder
 
     // Google for testing frameworks
     void test() {
-    driver.get("google.com");
-    driver.findElement(By.name("q")).sendKeys("testing frameworks");
-    driver.findElement(By.name("q")).submit();
+        driver.get("google.com");
+        driver.findElement(By.name("q")).sendKeys("testing frameworks");
+        driver.findElement(By.name("q")).submit();
     }
 
 This reads better but it’s not reusable. What if we parse the comment for parameters and pass it to the test?
 
     // Google for <query>
     void test(String query) {
-    driver.get("google.com");
-    driver.findElement(By.name("q")).sendKeys(query);
-    driver.findElement(By.name("q")).submit();
+        driver.get("google.com");
+        driver.findElement(By.name("q")).sendKeys(query);
+        driver.findElement(By.name("q")).submit();
     }
 
 Now let’s write the comments down in a file and specify the parameters.
@@ -162,7 +169,7 @@ You can use any Markdown parser to parse or your favorite Markdown editor (and i
 After writing a specification, you can implement the step using a programming language. An implementation for example(1) in JavaScript looks like example(2)
 
     step("Say hello to the <person>", (person) => {
-    console.log(`Hello ${person}!`)
+        console.log(`Hello ${person}!`)
     })
 
 Example(1) along with example(2) is an executable Gauge specification. Notice that the step text also works like a comment describing the step. You can save the specification as specs/greeter.md, implementation as tests/greeter.js and run it using Gauge to see the results.
@@ -174,6 +181,7 @@ Gauge speaks your business language and supports internationalization by default
 Whether it’s English
 
     # Find movies playing near me
+    
     ## Search and confirm movie
     * Search for theatres playing "Star wars" in "Bangalore"
     * Check if "IMAX" is playing star wars at "7:30PM"
@@ -181,6 +189,7 @@ Whether it’s English
 or German
 
     # Suche Filme, die in meiner Nähe gespielt werden
+
     ## Suche und bestätige Filme
     * Suche nach Kinos, die "Star wars" in "Bangalore" spielen
     * Überprüfe, ob "IMAX" star wars um "19:30" spielt
@@ -203,23 +212,29 @@ and implement them after you are done. This reduces a lot of boilerplate code by
 To understand this better let’s write a Gauge specification for testing a website for booking movies. We start with a specification for searching blockbuster movies playing at a location. Example(3)
 
     # Search for movies
+    
     ## Search for blockbusters
     * Search for theaters playing "Avengers" in "Bangalore"
 
 We can reuse this step in another scenario, let’s say searching for Oscar winning movies.
 
     # Search for movies
+    
     ## Search for blockbusters
     * Search for theaters playing "Avengers" in "Bangalore"
+    
     ## Search 2017 Oscar winners
     * Search for theaters playing "The shape of water" in "Bangalore"
 
 Notice that, by changing a few parameters, we’ve re-used the same step in example(3) to search for a different movie. If you don’t want to repeat setting the location in every scenario split the step and set the location before every scenario.
 
     # Search for movies
+
     * Set location as "Bangalore"
+    
     ## Search for blockbusters
     * Search for theaters playing "Avengers"
+
     ## Search 2017 Oscar winners
     * Search for theaters playing "The shape of water"
     
@@ -234,10 +249,13 @@ You can combine steps into a concept to avoid repeating a sequence of steps or i
 and reuse it in your specification just like any other step with a single line
 
     # Search for movies
+
     * Set location as "Bangalore"
+    
     ## Search for blockbusters
     * Search for theaters playing "Avengers"
     * Book "2" tickets
+
     ## Search 2017 Oscar winners
     * Search for theaters playing "The shape of water"
 
@@ -247,15 +265,18 @@ You can even use a concept inside another concept!
     * Pick the <time> show
     * Book <number> tickets
 
-—
+--
 
-  # Search for movies
-  * Set location as "Bangalore"
-  ## Search for blockbusters
-  * Search for theaters playing "Avengers"
-  * Book "2" tickets
-  ## Search 2017 Oscar winners
-  * "2" tickets for "7:30PM" show please!
+    # Search for movies
+
+    * Set location as "Bangalore"
+
+    ## Search for blockbusters
+    * Search for theaters playing "Avengers"
+    * Book "2" tickets
+
+    ## Search 2017 Oscar winners
+    * "2" tickets for "7:30PM" show please!
 
 As we’ve mentioned earlier. Organizing your specifications first with steps and concepts greatly reduces duplicate code and repetition of your programming logic as step implementations are executed wherever they are reused.
 
@@ -263,14 +284,11 @@ As we’ve mentioned earlier. Organizing your specifications first with steps an
 
 With in-built support for refactoring, Gauge handles changes to steps and concepts seamlessly. For example changing
 
-```
-  * "2" tickets for "7:30PM" show please!
-```
+    * "2" tickets for "7:30PM" show please!
+
 to
 
-```
-  * "2" tickets for "7:30PM" show and order "popcorn"!
-```
+    * "2" tickets for "7:30PM" show and order "popcorn"!
 
 modifies scenarios, concepts and the step implementation where it’s used. This allows you to frequently refine tests when requirements change without breaking anything.
 
