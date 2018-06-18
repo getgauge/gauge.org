@@ -12,6 +12,8 @@
     <meta name="twitter:description" content="<%= twitter_card_property(:twitter_card_description, :meta_description) %>" />
     <meta name="twitter:image" content="<%= twitter_card_image('gauge_release_twitter_card_2.jpg') %>" />
     <link rel="canonical" href="<%= canonical_link_for(current_article || current_page) %>" />
+    <link href="assets/images/favicons/favicon.ico" rel="shortcut icon" type="image/ico" />
+    <link href="assets/images/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed" type="image/ico" />
     <title><%= value_or_title_as_default(:title_tag_of_header) %></title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "jquery-3.3.1.min" %>
