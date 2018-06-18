@@ -117,24 +117,5 @@ $(document).ready(function(){
     if(target && target.length) {
       target.click();
     }
-
-    $(".tab-nav li").click(function(e){
-      // window.location.hash = $(this).data('attr');
-      // // window.location.href = dest + section;
-      // e.preventDefault();
-
-      // var currentPage = window.location.pathname.replace(/\/$/, '');
-      // var section = $(this).data('section') || $.attr(this, 'href');
-      // var dest = $(this).data('dest') || currentPage;
-      // var targetIsInSamePage = $(this).data('is-local') === true;
-
-      // if (targetIsInSamePage) {
-      //   smoothScrollTo(section);
-      // } else {
-      //   window.location.href = dest + section;
-      // }
-      // window.location.pathname+= ("#"+$(this).data('attr'));
-      // evt.preventDefault();
-    });
   }
 });
