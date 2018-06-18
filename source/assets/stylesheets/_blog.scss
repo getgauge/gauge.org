@@ -2,7 +2,10 @@ $blog-date-color: #949494;
 $blog-heading-color: #1A1C19;
 $blog-description-color: #474747;
 .blog-container {
-    padding: 100px 0px;
+    padding: 100px 20px;
+    @media (min-width: $screen-md) {
+        padding:100px 0;
+    }
 }
 
 .blog-list {
@@ -15,10 +18,9 @@ $blog-description-color: #474747;
     position: relative;
     transition: all 0.3s ease-in-out;
     top: 0;
-    padding: 20px 0 0;
+    padding: 20px 0 20px;
     .latest-blog & {
-        margin-left: 30px;
-        padding: 0;
+        padding: 20px 0 0;
         @media (min-width: $screen-lg) {
             margin-left: 25px;
         }
@@ -50,6 +52,82 @@ $blog-description-color: #474747;
 
 .latest-blog {
     margin-bottom: 15px;
+}
+
+//post page grid
+.blog-post-main-container {
+    @media(min-width: $screen-lg) {
+        display: flex;
+    }
+}
+
+.blog-post {
+    @media(min-width: $screen-lg) {
+        width: 700px;
+        margin-right: 40px;
+    }
+    @media(min-width: $screen-xl) {
+        width: 800px;
+        margin-right: 40px;
+    }
+}
+
+.post-sidebar {
+    @media(min-width: $screen-lg) {
+        width:250px;
+    }
+    @media(min-width: $screen-xl) {
+        width: 300px;
+    }
+}
+
+.blog-post-main-container {
+    a {
+        color: #000;
+    }
+    pre {
+        code {
+            font-family: "Source Code Pro", monospace;
+            font-size: 14px;
+        }
+    }
+    .container {
+        @media (max-width: $screen-md-min) {
+            padding:0;
+        }
+    }
+}
+
+.post-sidebar {
+    margin-top: 50px;
+    border-top: 2px solid #ccc;
+    padding-top: 50px;
+    @media(min-width: $screen-lg) {
+        padding: 0px;
+        margin-top: 0;
+        border: 0;
+    }
+    section {
+        margin-bottom: 30px;
+    }
+    ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: 10px 0;
+        }
+    }
+    a {
+        display: block;
+        color: #333;
+        &:hover {
+            text-decoration: underline;
+        }
+        &.normal-link {
+            color: #4a90e2;
+        }
+    }
 }
 
 // blog post
@@ -92,9 +170,10 @@ $blog-description-color: #474747;
     }
     pre {
         overflow-x: scroll;
-        background: #f5f5f5;
+        background: #1e1e1e;
         padding: 20px;
         border-radius: 5px;
+        color: #fff;
     }
     blockquote {
         font-style: italic;
@@ -142,6 +221,10 @@ $blog-description-color: #474747;
 .section-title {
     font-size: 23px;
     font-weight: 600;
+    margin-top: 0;
+    @media (min-width: $screen-lg) {
+        margin: 20px 0;
+    }
 }
 
 .post-date {
@@ -163,53 +246,15 @@ $blog-description-color: #474747;
     }
 }
 
-.post-container {
-    @include grid-column(12);
-    @media(min-width: $screen-lg) {
-        @include grid-column(8);
-    }
-    @media(min-width: $screen-lg) {
-        @include grid-column(9);
-    }
-}
-
-.post-sidebar {
-    @include grid-column(12);
-    margin-top: 50px;
-    border-top: 2px solid #ccc;
-    padding-top: 50px;
-    @media(min-width: $screen-lg) {
-        @include grid-column(4);
-        padding: 0px;
-        margin-top: 0;
-        border: 0;
-    }
-    @media(min-width: $screen-lg) {
-        @include grid-column(3);
-    }
-    section {
-        margin-bottom: 30px;
-    }
-    ol {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-          padding: 10px 0;
-        }
-    }
-    a {
-        display: block;
-        color: #333;
-        &:hover {
-            text-decoration: underline;
-        }
-        &.normal-link {
-            color: #4a90e2;
-        }
-    }
-}
-
+// .post-container {
+//     @include grid-column(12);
+//     @media(min-width: $screen-lg) {
+//         @include grid-column(8);
+//     }
+//     @media(min-width: $screen-lg) {
+//         @include grid-column(9);
+//     }
+// }
 //style expiriments
 .post-summary {
     overflow: hidden;
@@ -382,23 +427,6 @@ $blog-description-color: #474747;
     display: block;
 }
 
-.blog-post-main-container {
-    a {
-        color: #000;
-    }
-    pre {
-        code {
-            font-family: "Source Code Pro", monospace;
-            font-size: 14px;
-        }
-    }
-    .container {
-        @media (max-width: $screen-md-min) {
-            padding:0;
-        }
-    }
-}
-
 img {
     width: 100%;
     height: auto;
@@ -424,12 +452,12 @@ img {
         color: #fff;
         border-radius: 5px;
         background: rgba(8, 8, 8, 0);
-        background: -moz-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
-        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(8, 8, 8, 0)), color-stop(100%, rgba(0, 0, 0, 1)));
-        background: -webkit-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
-        background: -o-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
-        background: -ms-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
-        background: linear-gradient(to bottom, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -moz-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(8, 8, 8, 0)), color-stop(100%, rgba(0, 0, 0, 0.5)));
+        background: -webkit-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        background: -o-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        background: -ms-linear-gradient(top, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        background: linear-gradient(to bottom, rgba(8, 8, 8, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#080808', endColorstr='#000000', GradientType=0);
     }
     .profile-image {
