@@ -21,8 +21,14 @@
             padding: 10px 10px 10px 0px;
         }
         &.more {
-            @media (min-width: $screen-md) {
+            margin-right: 20px;
+            @media (min-width: $screen-xl) {
                 width: 40%;
+            }
+        }
+        &.owner {
+            @media (min-width: $screen-xl) {
+                width: 25%;
             }
         }
     }
