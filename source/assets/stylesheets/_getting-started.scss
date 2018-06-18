@@ -263,4 +263,13 @@ div#marketo-success-message {
     transform: translate(-50%, -50%);
     width: 350px;
     padding: 30px;
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 9px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #000;
+        cursor: pointer;
+    }
 }
