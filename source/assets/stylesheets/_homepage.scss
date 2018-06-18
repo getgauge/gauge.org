@@ -44,7 +44,7 @@ $light-primary-color:#f8db4d;
 
 .banner-container {
     background: #1a1c19 url('/assets/images/home-page_banner_mobile.png') no-repeat center bottom;
-    background-size:cover;
+    background-size: cover;
     @media(min-width: $screen-md) {
         background: #1a1c19 url('/assets/images/home-page_banner_tablet.png') no-repeat center bottom;
     }
@@ -71,7 +71,7 @@ $light-primary-color:#f8db4d;
     text-align: center;
     font-size: 30px;
     font-family: 'URWGeometric-SemiBold';
-     font-weight: 400;
+    font-weight: 400;
     margin: 0 20px 10px;
     line-height: 36px;
     @media(min-width: $screen-md) {
@@ -117,7 +117,6 @@ $cta-secondary-color:$primary-color;
     text-align: center;
     width: 300px;
     margin: 0 auto;
-
     .cta-primary {
         @extend %button;
         background: $cta-primary-bg;
@@ -172,18 +171,18 @@ $cta-secondary-color:$primary-color;
         @media (min-width: $screen-lg) {
             margin-top: 55px;
             margin-left: $gutter;
-            width:35%;
+            width: 35%;
         }
     }
     .feature-graphics {
         @media (min-width: $screen-lg) {
             order: -1;
             margin-right: $gutter;
-            width:65%;
+            width: 65%;
         }
     }
-    .tab-content{
-        border-bottom:0;
+    .tab-content {
+        border-bottom: 0;
     }
 }
 
@@ -326,6 +325,15 @@ $arrowsize:40px;
             font-size: 36px;
             padding: 50px 0;
         }
+    }
+    background: #1a1c19 url('/assets/images/home-page_banner_mobile.png') no-repeat center bottom;
+    background-size:cover;
+    @media(min-width: $screen-md) {
+        background: #1a1c19 url('/assets/images/home-page_banner_tablet.png') no-repeat center bottom;
+    }
+    @media(min-width: $screen-lg) {
+        background: #1a1c19 url('/assets/images/home-page_banner_desktop.png') no-repeat center bottom;
+        background-size: cover;
     }
 }
 
