@@ -1,7 +1,8 @@
 $(document).ready(function(){
   setGithubStar();
   
-  $('.tab_item').click(function () {
+  $('.tab_item').click(function (e) {
+    e.preventDefault();
     var id = $(this).attr('data-attr');
     id = ('#' + id);
     $(this).parent().find('.active-tab').removeClass('active-tab');
@@ -12,16 +13,19 @@ $(document).ready(function(){
   
 
   // get started
-  $('.tab-nav_item').click(function(){
+  $('.tab-nav_item').click(function(e){
+    e.preventDefault();
     var id = $(this).attr('data-attr');
     id = ('#'+ id);
     $('.tab-nav_item').removeClass('active-tab');
     $('.content-container > .tab-content').removeClass('active')
     $(this).addClass('active-tab');
     $(id).addClass('active');
+    history.pushState({urlPath:window.location.pathname},"",id)
   });
 
-  $('.mobile-heading').click(function(){
+  $('.mobile-heading').click(function(e){
+    e.preventDefault();
     var id = $(this).attr('data-attr');
     id = ('#'+ id);
     $(this).toggleClass('open');
@@ -114,8 +118,23 @@ $(document).ready(function(){
       target.click();
     }
 
-    $(".tab-nav li").click(function(){
-      window.location.hash = $(this).data('attr');
+    $(".tab-nav li").click(function(e){
+      // window.location.hash = $(this).data('attr');
+      // // window.location.href = dest + section;
+      // e.preventDefault();
+
+      // var currentPage = window.location.pathname.replace(/\/$/, '');
+      // var section = $(this).data('section') || $.attr(this, 'href');
+      // var dest = $(this).data('dest') || currentPage;
+      // var targetIsInSamePage = $(this).data('is-local') === true;
+
+      // if (targetIsInSamePage) {
+      //   smoothScrollTo(section);
+      // } else {
+      //   window.location.href = dest + section;
+      // }
+      // window.location.pathname+= ("#"+$(this).data('attr'));
+      // evt.preventDefault();
     });
   }
 });
