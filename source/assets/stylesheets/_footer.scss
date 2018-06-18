@@ -38,6 +38,26 @@ img {
         font-size: 23px;
         padding: 0px 20px 0px 0px;
     }
+    .fa-github{
+        background: url('/assets/images/footer-icons/github.svg') no-repeat 0 7px;
+        background-size: auto 20px;
+        transition: $transition;
+        &:hover {
+            transition: $transition;
+            background: url('/assets/images/footer-icons/github_hover.svg') no-repeat 0 7px;
+            background-size: auto 20px;
+        }
+    }
+    .fa-twitter{
+        background: url('/assets/images/footer-icons/twitter.svg') no-repeat 0 10px;
+        background-size: auto 18px;
+        transition: $transition;
+        &:hover {
+            transition: $transition;
+            background: url('/assets/images/footer-icons/twitter_hover.svg') no-repeat 0 10px;
+            background-size: auto 18px;
+        }
+    }
 }
 
 .footer_items {
