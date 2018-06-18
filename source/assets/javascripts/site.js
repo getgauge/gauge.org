@@ -107,5 +107,15 @@ $(document).ready(function(){
     $(".tab-nav-get_started li.tab-nav_item[data-attr='" + packageName + "']").click();
   }
 
+  if($(".tab-nav").length) {
+    var tab = window.location.hash.substr(1);
+    var target = $(".tab-nav li[data-attr='" + tab +"'");
+    if(target && target.length) {
+      target.click();
+    }
 
+    $(".tab-nav li").click(function(){
+      window.location.hash = $(this).data('attr');
+    });
+  }
 });
