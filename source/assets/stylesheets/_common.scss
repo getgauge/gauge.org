@@ -154,12 +154,12 @@ p {
     flex-wrap: wrap;
     position: relative;
     .mktoLabel{
-        // width: 90% !important;
         margin: 0 0 0 30px;
     }
     .mktoCheckboxList{
         position: absolute;
         left: 0;
+        width: auto;
     }
 }
 .mktoButtonRow{
