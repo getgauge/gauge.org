@@ -27,8 +27,19 @@ meta_keywords: "Gauge, test automation, free and open source, download, get star
       <p>Subscribe to the Gauge Release Bulletin for monthly email updates on the latest Gauge releases.</p>
             <script src="//app-e.marketo.com/js/forms2/js/forms2.min.js"></script>
       <form id="mktoForm_8802"></form>
-      <script>MktoForms2.loadForm("//app-e.marketo.com", "199-QDE-291", 8802);</script>
+      <script>MktoForms2.loadForm("//app-e.marketo.com", "199-QDE-291", 8802, function(form) {
+          form.onSuccess(function(values, followUpUrl) {
+              $("#marketo-success-message").text(values.Email + " has been registered successfully.");;
+              form.vals({Country: "", Email: "", consent_Privacy_Policy: false});
+              form.submittable(true);
+              $(form.getFormElem()).find("button[type='submit']").text("Submit").prop("disabled", false);
+              $("#marketo-success-message").show();
+              return false;
+          });
+      });
+      </script>
       </div>
+      <div class="marketo-success" id="marketo-success-message"></div>
 
     </aside>
 
