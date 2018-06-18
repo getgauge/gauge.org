@@ -63,16 +63,19 @@
 }
 
 .arrow {
-    background: url('/assets/images/angle-down.svg') no-repeat;
+    background: url('/assets/images/icons/icon_arrow.svg') no-repeat;
     background-position: center;
     height: 20px;
     width: 20px;
+    margin-top: 3px;
+    transition: $transition;
 }
 
-.arrow-active{
-    background: url('/assets/images/angle-up.svg') no-repeat;
-    transform: rotate(-90deg);
+.arrow-active {
+    background: url('/assets/images/icons/icon_arrow.svg') no-repeat;
     height: 20px;
     width: 20px;
+    transform: rotate(90deg);
+    margin-top: 7px;
+    transition: $transition;
 }
-
