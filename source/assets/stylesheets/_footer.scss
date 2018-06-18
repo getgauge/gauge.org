@@ -42,6 +42,7 @@ img {
         background: url('/assets/images/footer-icons/github.svg') no-repeat 0 7px;
         background-size: auto 20px;
         transition: $transition;
+        margin: 0 5px 0 0;
         &:hover {
             transition: $transition;
             background: url('/assets/images/footer-icons/github_hover.svg') no-repeat 0 7px;
@@ -52,6 +53,7 @@ img {
         background: url('/assets/images/footer-icons/twitter.svg') no-repeat 0 10px;
         background-size: auto 18px;
         transition: $transition;
+        margin: 0 0 0 5px;
         &:hover {
             transition: $transition;
             background: url('/assets/images/footer-icons/twitter_hover.svg') no-repeat 0 10px;
