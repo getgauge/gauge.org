@@ -255,14 +255,17 @@
     display: none;
 }
 
-div#marketo-success-message {
+#marketo-success-message {
     background: #ffcc00;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
     padding: 30px;
+    h4 {
+        margin: 0 0 20px;
+    }
     .close {
         position: absolute;
         top: 5px;
