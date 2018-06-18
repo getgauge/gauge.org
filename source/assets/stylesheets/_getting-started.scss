@@ -225,9 +225,17 @@
             margin: 0px 0;
         }
     }
-    .handy_guide {
-        background: #f5f5f5;
-        padding: 10px 20px;
-        font-size: 14px;
-        margin-bottom: 0;
+
+.handy_guide {
+    background: #f5f5f5;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-bottom: 0;
+    @media (min-width: $screen-md) {
+        margin: 0px 0;
     }
+}
+
+.marketo-success {
+    display: none;
+}
