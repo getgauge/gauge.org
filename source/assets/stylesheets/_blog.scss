@@ -20,8 +20,13 @@ $blog-description-color: #474747;
     top: 0;
     padding: 20px 0 20px;
     .latest-blog & {
-        padding: 20px 0 0;
+        padding:20px 0 0 0px;
+        @media (min-width: $screen-md) {
+            padding:0px 0 0 20px;
+
+        }
         @media (min-width: $screen-lg) {
+            padding:0;
             margin-left: 25px;
         }
     }
