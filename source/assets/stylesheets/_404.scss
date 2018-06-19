@@ -1,0 +1,64 @@
+.error {
+    background: #333;
+    color: #fff;
+}
+
+.gauge_logo {
+    text-decoration: none;
+    width: 100px;
+    height: 32px;
+    display: inline-block;
+    margin: 18px 0 0 16px;
+    background: url(/assets/images/gauge-logo_white.svg) no-repeat 0 0;
+    background-size: 90%;
+    text-indent: -100em;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 200px;
+    height: 52px;
+    margin-bottom: 50px;
+    @media (min-width: $screen-xl) {
+        width: 400px;
+        height: 100px;
+        margin-bottom: 60px;
+    }
+}
+
+p.message {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 30px 0;
+    text-align: center;
+    font-weight: 300;
+    @media (min-width: $screen-lg) {
+        font-size: 25px;
+        line-height: 31px;
+        width: 519px;
+    }
+}
+
+.links {
+    font-size: 16px;
+    a {
+        color: $primary-color;
+    }
+}
+
+.not-found {
+    text-transform: uppercase;
+    font-size: 25px;
+    opacity: 0.2;
+    color: $primary-color;
+    @media (min-width: $screen-lg) {
+        font-size: 50px;
+    }
+}
+
+.notfound_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
