@@ -61,4 +61,10 @@ p.message {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    cursor: default;
+    a:hover{
+        background-color: transparent;
+        cursor: default;
+    }
 }
+
