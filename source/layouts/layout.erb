@@ -18,6 +18,15 @@
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "jquery-3.3.1.min" %>
     <%= javascript_include_tag "site" %>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54838477-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-54838477-1');
+</script>
   </head>
   <body class= <%= page_name == 'home' ? "homepage" : 'inner' %> id= <%= page_name %>>
     <%= partial 'partials/header' %>
