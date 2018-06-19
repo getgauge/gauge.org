@@ -20,13 +20,12 @@ $blog-description-color: #474747;
     top: 0;
     padding: 20px 0 20px;
     .latest-blog & {
-        padding:20px 0 0 0px;
+        padding: 20px 0 0 0px;
         @media (min-width: $screen-md) {
             padding:0px 0 0 20px;
-
         }
         @media (min-width: $screen-lg) {
-            padding:0;
+            padding: 0;
             margin-left: 25px;
         }
     }
@@ -321,17 +320,24 @@ $blog-description-color: #474747;
     .item {
         width: 100%;
         border-bottom: 1px dotted #ddd;
-        margin: 0 0 20px 0;
-        padding: 0 15px 0;
+        margin: 0 0 10px 0;
+        padding: 15px 15px 0;
+        border-radius: 5px;
         &:first-child {
             margin-top: 0;
         }
         @media (min-width: $screen-md) {
             width: 48%;
-            border: 0;
+            border-bottom: 5px solid $white;
         }
         @media (min-width:$screen-lg) {
             width: 33%;
+        }
+        transition:$transition;
+        &:hover {
+            border-bottom: 5px solid $primary-color;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+            transition: $transition;
         }
     }
 }
@@ -478,4 +484,8 @@ img {
     background: $primary-color;
     border: none;
     height: 1px;
+}
+
+.blog-archive {
+    margin-bottom: 100px;
 }
