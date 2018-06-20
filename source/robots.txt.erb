@@ -1,0 +1,9 @@
+<% if config.preview? %>
+User-agent: *
+Disallow: /
+<% else %>
+User-agent: *
+Allow: /
+
+Sitemap: <%= config.base_url %>/sitemap.xml
+<% end %>

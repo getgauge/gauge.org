@@ -71,6 +71,7 @@ activate :directory_indexes
 
 page "/feed.xml", layout: false
 page "/sitemap.xml", layout: false
+page "/robots.txt", layout: false
 
 helpers do
   def page_name
