@@ -72,6 +72,7 @@ activate :directory_indexes
 page "/feed.xml", layout: false
 page "/sitemap.xml", layout: false
 page "/robots.txt", layout: false
+page "/Gauge_Badge.svg", layout: false
 
 helpers do
   def page_name
