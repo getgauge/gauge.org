@@ -16,12 +16,12 @@
     <link href="assets/images/favicons/favicon.ico" rel="shortcut icon" type="image/ico" />
     <link href="assets/images/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed" type="image/ico" />
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "jquery-3.3.1.min" %>
-    <%= javascript_include_tag "site" %>
   </head>
   <body class="error">
 
     <%= yield %>
-    
+    <%= javascript_include_tag "jquery-3.3.1.min" %>
+    <%= javascript_include_tag "site" %>
+    <%= partial 'partials/ga' %>
   </body>
 </html>
