@@ -20,19 +20,19 @@ Dec 07, 2017 | Kashish Munjal
 
 <%= image_tag "blog/gauge_blog_authoring-a-language-runner-for-gauge_large.jpg", {:title => "Authoring a language runner for Gauge", :alt => "Authoring a language runner for Gauge"} %>
 
-* Note: This article was first posted on [Medium](https://blog.getgauge.io/authoring-a-language-runner-for-gauge-1332b7bca8d8). *
+_Note: This article was first posted on [Medium](https://blog.getgauge.io/authoring-a-language-runner-for-gauge-1332b7bca8d8)._
 
-[Gauage](https://gauge.org) is a light-weight cross-platform test automation tool with the ability to author test cases in the business language. It has a modular architecture with [plugins ](https://docs.getgauge.io/plugins.html)support.There are three types of plugins in Gauge
+In this blog, I will try to explain the purpose of a language plugin/runner and how to write one of your own.
+
+Gauge has a modular architecture with [plugin](https://docs.getgauge.io/plugins.html) support. There are three types of plugins in Gauge
 
   * Language
   * IDE
   * Reporting
 
-In this blog, I will try to explain the purpose of a language plugin/runner and how to write one.
-
 ## What is a Language Runner? 
 
-Language Runner is a plugin which lets you write test code implementations in a specific programming language.
+> A Language Runner is a plugin which lets you write test code implementations in a specific programming language.
 
 There are two phases in the life cycle of a language runner:
 
@@ -132,6 +132,7 @@ Put the following content to  ```step_impl/step_impl.py ```.
         assert 1 == 1
 
 ### Initializing project
+ 
 When you run this command, Gauge will ask the language runner to copy implementation specific skeleton files in the project directory. Gauge will run the command which is present in the init section in ``` mypython.json ``` file
 
 Put the following content in the  ``` start.py ```and provide execute permission to the file.
@@ -165,7 +166,7 @@ This will copy the skeleton files to the user’s project directory which is pre
 
 ### Protocol Buffers
 
- Communication between Gauge and Language Runner happens via TCP using  [Protocol Buffers.](https://developers.google.com/protocol-buffers/)
+Communication between Gauge and Language Runner happens via TCP using  [Protocol Buffers.](https://developers.google.com/protocol-buffers/)
 
 To communicate with Gauge, there are different request/response messages are configured in the gauge-proto repository. Let’s add the gauge-proto repository as a git submodule to our language runner.
 
@@ -182,7 +183,7 @@ Create ``` getgauge/messages ``` getgauge/messages   ``` directory. In this dire
 
 ### Execution
 
- Let’s define a step function which will be used as a decorator in the step implementation. Create ``` getgauge/python.py ``` with the following function definition.
+Let’s define a step function which will be used as a decorator in the step implementation. Create ``` getgauge/python.py ``` with the following function definition.
 
     from getgauge.registry import registry
 
