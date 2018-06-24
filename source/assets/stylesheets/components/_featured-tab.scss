@@ -1,30 +1,42 @@
 /*doc
 ---
-title: Featured Tab
-name: Featured tab
+title: Side Tab
+name: Side Tab
 category: Components
 ---
 
 Style for tabs
 
 ```html_example
-  <div class="container">
-  <div class="feature">
-    <ul class="tab f-tab-main">
-      <li class="tab_item active-tab" data-attr="c">C#</li>
-      <li class="tab_item" data-attr="js">Javascript</li>
-      <li class="tab_item" data-attr="js">Python</li>
-      <li class="tab_item" data-attr="js">Java</li>
-      <li class="tab_item" data-attr="js">Ruby</li>
-    </ul>
+  <div class="tab-component tab-install">
+            <ul class="tab">
+              <li class="tab_item active-tab" data-attr="chocolatey">Chocolatey</li>
+              <li class="tab_item" data-attr="w-zip">ZIP</li>
+            </ul>
+            <div class="tab-content-container">
+              <div class="tab-content active" id="chocolatey">
+                <h4 class="mobile-title">Chocolatey</h4>
+                <p class="instruction"> Install Gauge using <a href="https://chocolatey.org">Chocolatey</a></p>
+                <div class="code-box">
+                  <code>&gt; choco install gauge</code>
+                </div>
+              </div>
+              <div class="tab-content" id="w-zip">
+                <h4 class="mobile-title">ZIP</h4>
+                <p class="instruction"> Download the
+                  <a href="https://github.com/getgauge/gauge/releases/download/v<%= data.version.gauge %>/gauge-<%= data.version.gauge %>-windows.x86_64.zip">zip</a>
+                  installer and the run following command in powershell</p>
+                <div class="code-box">
+                  <code>PS&gt; Expand-Archive -Path gauge-<%= data.version.gauge %>-windows.x86_64.zip -DestinationPath custom_path</code>
+                </div>
+              </div>
 
-    <div class="content-container">
-      <div class="tab-content active" id="mac">
-
-      </div>
-    </div>
-  </div>
-</div>
+              <p class="instruction">
+                For alternate methods of installation and our nightly releases, check out our
+                <a href="https://docs.gauge.org/latest/installation.html#installation">documentation</a>.
+              </p>
+            </div>
+          </div>
 ```
 */
 
