@@ -1,11 +1,11 @@
-$banner-bg:$secondary-color;
-$banner-heading:$primary-color;
 $get-started-background: #262726;
 $get-started-title: #1A1C19;
 $light-primary-color:#f8db4d;
 .main-highlight {
     background: $primary-color;
 }
+
+
 
 // Banner Style
 %button {
@@ -24,116 +24,7 @@ $light-primary-color:#f8db4d;
     }
 }
 
-.banner-container {
-    background: $banner-bg;
-    background-size: cover;
-    height: 100vh;
-    min-height: 400px;
-    position: relative;
-    width: auto;
-    overflow: hidden;
-    @media(min-width: $screen-md) {
-        height: 50vh;
-        min-height: 500px
-    }
-    @media(min-width: $screen-lg) {
-        height: 100vh;
-        min-height: 700px;
-    }
-}
 
-.banner-container {
-    background: #1a1c19 url('/assets/images/home-page_banner_mobile.png') no-repeat center bottom;
-    background-size: cover;
-    @media(min-width: $screen-md) {
-        background: #1a1c19 url('/assets/images/home-page_banner_tablet.png') no-repeat center bottom;
-    }
-    @media(min-width: $screen-lg) {
-        background: #1a1c19 url('/assets/images/home-page_banner_desktop.png') no-repeat center bottom;
-        background-size: cover;
-    }
-}
-
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    width: 90%;
-    z-index: 6;
-    @media(min-width: $screen-xl) {
-        transform: translate(-50%, -40%);
-    }
-}
-
-.banner-heading {
-    color: $banner-heading;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'URWGeometric-SemiBold';
-    font-weight: 400;
-    margin: 0 20px 10px;
-    line-height: 36px;
-    @media(min-width: $screen-md) {
-        font-size: 36px;
-    }
-    @media(min-width: $screen-lg) {
-        font-size: 44px;
-    }
-    @media(min-width: $screen-xl) {
-        font-size: 60px;
-        margin: 0 20px 20px;
-    }
-}
-
-.banner-description {
-    text-align: center;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
-    color: $white;
-    width: 85%;
-    margin: 0 auto 30px;
-    @media(min-width: $screen-md) {
-        width: 65%;
-        font-size: 17px;
-        line-height: 25px;
-    }
-    @media(min-width: $screen-lg) {
-        line-height: 27px;
-        font-size: 19px;
-        font-weight: 300;
-    }
-    @media(min-width: $screen-xl) {
-        width: 40%;
-    }
-}
-
-$cta-primary-bg:$white;
-$cta-secondary-border:$primary-color;
-$cta-secondary-color:$primary-color;
-.banner-action {
-    margin-top: 25px;
-    text-align: center;
-    width: 300px;
-    margin: 0 auto;
-    .cta-primary {
-        @extend %button;
-        background: $cta-primary-bg;
-        color: $banner-bg;
-        text-decoration: none;
-        transition: $transition;
-        &:hover {
-            background-color: $primary-color;
-            transition: $transition;
-        }
-    }
-    .cta-secondary {
-        color: $cta-secondary-color;
-        text-decoration: underline;
-        display: inline-block;
-    }
-}
 
 .feature {
     padding: 40px 0;

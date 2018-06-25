@@ -118,4 +118,10 @@ $(document).ready(function(){
       target.click();
     }
   }
+  $('.hgt-menu-item').click(function(){
+    var sectionId = $(this).attr('href');
+    $('body,html').animate({
+      scrollTop : $(sectionId).offset().top - 100  
+  }, 500);
+  });
 });

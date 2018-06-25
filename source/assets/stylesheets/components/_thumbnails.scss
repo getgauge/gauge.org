@@ -9,25 +9,25 @@ Style for Thumbnail
 
 ```html_example
   <ul class="small-thumbnails">
-    <li class="thumbnail-small">
-      <div class="thumbnail-small_graphics">
-        <img src="http://via.placeholder.com/100x100" alt="">
-      </div>
-      <div class="thumbnail-small_details">
-        <h3>Thumbnail 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus</p>
-      </div>
-    </li>
-      <li class="thumbnail-small">
-      <div class="thumbnail-small_graphics">
-        <img src="http://via.placeholder.com/100x100" alt="">
-      </div>
-      <div class="thumbnail-small_details">
-        <h3>Thumbnail 2</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus</p>
-      </div>
-    </li>
-</ul> 
+          <li class="thumbnail-small">
+            <div class="thumbnail-small_graphics">
+              <img src="/assets/images/icons/icon_scale.svg" alt="">
+            </div>
+            <div class="thumbnail-small_details">
+              <h3 class="feature-heading">Thumbnail 1</h3>
+              <p> Sint duis labore cupidatat elit eiusmod exercitation culpa incididunt. Cillum tempor aliquip ex velit veniam ut ullamco voluptate irure duis. Magna nisi velit quis ullamco. Deserunt elit anim eiusmod do velit nulla incididunt non ipsum. </p>
+            </div>
+          </li>
+          <li class="thumbnail-small">
+            <div class="thumbnail-small_graphics">
+              <img src="/assets/images/icons/icon_scale.svg" alt="">
+            </div>
+            <div class="thumbnail-small_details">
+              <h3 class="feature-heading">Thumbnail 2</h3>
+              <p>Voluptate ipsum eiusmod velit eu ipsum duis aute incididunt. Proident nisi minim sit labore aliquip voluptate magna anim magna fugiat nulla. Anim amet proident minim ut sunt incididunt ut enim nisi et veniam. Cillum ut ut sint minim commodo exercitation est. </p>
+            </div>
+          </li>
+        </ul>
 ```
 */
 
