@@ -45,7 +45,11 @@
             <nav class="hgt-menu">
               
                 
-                  <a href="#Featured tab" class="hgt-menu-item">Featured Tab</a>
+                  <a href="#Grid-thumbnails" class="hgt-menu-item">Thumbnail</a>
+                
+              
+                
+                  <a href="#Side Tab" class="hgt-menu-item">Side Tab</a>
                 
               
                 
@@ -58,37 +62,75 @@
 
         <div class="hgt-column three-fourths">
           <div class="hgt-content">
-<p class="styleguide">[Featured tab]: components.html#Featured tab</p>
-<h1 id="Featured tab" class="styleguide">Featured Tab</h1>
+<p class="styleguide">[Side Tab]: components.html#Side Tab</p>
+<h1 id="Grid-thumbnails" class="styleguide">Thumbnail</h1>
+<p class="styleguide">Style for Thumbnail</p><div class="codeExample">
+  <div class="exampleOutput">
+      <ul class="small-thumbnails">
+    <li class="thumbnail-small">
+      <div class="thumbnail-small_graphics">
+        <img src="http://via.placeholder.com/100x100" alt="">
+      </div>
+      <div class="thumbnail-small_details">
+        <h3>Thumbnail 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus</p>
+      </div>
+    </li>
+      <li class="thumbnail-small">
+      <div class="thumbnail-small_graphics">
+        <img src="http://via.placeholder.com/100x100" alt="">
+      </div>
+      <div class="thumbnail-small_details">
+        <h3>Thumbnail 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus</p>
+      </div>
+    </li>
+</ul> 
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"small-thumbnails"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"thumbnail-small"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail-small_graphics"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/100x100"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail-small_details"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Thumbnail 1<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"thumbnail-small"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail-small_graphics"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/100x100"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail-small_details"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Thumbnail 2<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="Side Tab" class="styleguide">Side Tab</h1>
 <p class="styleguide">Style for tabs</p><div class="codeExample">
   <div class="exampleOutput">
       <div class="tab-component tab-install">
             <ul class="tab">
-              <li class="tab_item active-tab" data-attr="chocolatey">Chocolatey</li>
-              <li class="tab_item" data-attr="w-zip">ZIP</li>
+              <li class="tab_item active-tab" data-attr="tab1">Tab 1</li>
+              <li class="tab_item" data-attr="tab2">Tab 2</li>
             </ul>
             <div class="tab-content-container">
-              <div class="tab-content active" id="chocolatey">
-                <h4 class="mobile-title">Chocolatey</h4>
-                <p class="instruction"> Install Gauge using <a href="https://chocolatey.org">Chocolatey</a></p>
-                <div class="code-box">
-                  <code>&gt; choco install gauge</code>
-                </div>
+              <div class="tab-content active" id="tab1">
+                <h4 class="mobile-title">Tab1</h4>
+                <p>Consectetur proident officia ipsum incididunt aute ex qui quis fugiat. Do esse esse nisi ullamco. Duis proident nulla culpa enim reprehenderit qui in nostrud magna nulla mollit est eiusmod laboris.</p>
               </div>
-              <div class="tab-content" id="w-zip">
-                <h4 class="mobile-title">ZIP</h4>
-                <p class="instruction"> Download the
-                  <a href="https://github.com/getgauge/gauge/releases/download/v<%= data.version.gauge %>/gauge-<%= data.version.gauge %>-windows.x86_64.zip">zip</a>
-                  installer and the run following command in powershell</p>
-                <div class="code-box">
-                  <code>PS&gt; Expand-Archive -Path gauge-<%= data.version.gauge %>-windows.x86_64.zip -DestinationPath custom_path</code>
-                </div>
+              <div class="tab-content" id="tab2">
+                <h4 class="mobile-title">Tab2</h4>
+                <p>Do esse esse nisi ullamco. Duis proident nulla culpa enim reprehenderit qui in nostrud magna nulla mollit est eiusmod laboris.</p>
               </div>
-
-              <p class="instruction">
-                For alternate methods of installation and our nightly releases, check out our
-                <a href="https://docs.gauge.org/latest/installation.html#installation">documentation</a>.
-              </p>
             </div>
           </div>
 
@@ -97,31 +139,18 @@
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-component tab-install"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tab"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab_item active-tab"</span> <span class="na">data-attr=</span><span class="s">"chocolatey"</span><span class="nt">&gt;</span>Chocolatey<span class="nt">&lt;/li&gt;</span>
-              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab_item"</span> <span class="na">data-attr=</span><span class="s">"w-zip"</span><span class="nt">&gt;</span>ZIP<span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab_item active-tab"</span> <span class="na">data-attr=</span><span class="s">"tab1"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab_item"</span> <span class="na">data-attr=</span><span class="s">"tab2"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content-container"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content active"</span> <span class="na">id=</span><span class="s">"chocolatey"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"mobile-title"</span><span class="nt">&gt;</span>Chocolatey<span class="nt">&lt;/h4&gt;</span>
-                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"instruction"</span><span class="nt">&gt;</span> Install Gauge using <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://chocolatey.org"</span><span class="nt">&gt;</span>Chocolatey<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-box"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;code&gt;</span><span class="ni">&amp;gt;</span> choco install gauge<span class="nt">&lt;/code&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content active"</span> <span class="na">id=</span><span class="s">"tab1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"mobile-title"</span><span class="nt">&gt;</span>Tab1<span class="nt">&lt;/h4&gt;</span>
+                <span class="nt">&lt;p&gt;</span>Consectetur proident officia ipsum incididunt aute ex qui quis fugiat. Do esse esse nisi ullamco. Duis proident nulla culpa enim reprehenderit qui in nostrud magna nulla mollit est eiusmod laboris.<span class="nt">&lt;/p&gt;</span>
               <span class="nt">&lt;/div&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"w-zip"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"mobile-title"</span><span class="nt">&gt;</span>ZIP<span class="nt">&lt;/h4&gt;</span>
-                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"instruction"</span><span class="nt">&gt;</span> Download the
-                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge/releases/download/v&lt;%= data.version.gauge %&gt;/gauge-&lt;%= data.version.gauge %&gt;-windows.x86_64.zip"</span><span class="nt">&gt;</span>zip<span class="nt">&lt;/a&gt;</span>
-                  installer and the run following command in powershell<span class="nt">&lt;/p&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-box"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;code&gt;</span>PS<span class="ni">&amp;gt;</span> Expand-Archive -Path gauge-<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">data</span><span class="err">.</span><span class="na">version</span><span class="err">.</span><span class="na">gauge</span> <span class="err">%</span><span class="nt">&gt;</span>-windows.x86_64.zip -DestinationPath custom_path<span class="nt">&lt;/code&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"tab2"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"mobile-title"</span><span class="nt">&gt;</span>Tab2<span class="nt">&lt;/h4&gt;</span>
+                <span class="nt">&lt;p&gt;</span>Do esse esse nisi ullamco. Duis proident nulla culpa enim reprehenderit qui in nostrud magna nulla mollit est eiusmod laboris.<span class="nt">&lt;/p&gt;</span>
               <span class="nt">&lt;/div&gt;</span>
-
-              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"instruction"</span><span class="nt">&gt;</span>
-                For alternate methods of installation and our nightly releases, check out our
-                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://docs.gauge.org/latest/installation.html#installation"</span><span class="nt">&gt;</span>documentation<span class="nt">&lt;/a&gt;</span>.
-              <span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -134,170 +163,26 @@
         <div class="tab-container tab-container-plugins">
     <aside class="sidebar-menu sidebar-menu-plugins">
       <ul class="tab-nav">
-        <li class="tab-nav_item active-tab" data-attr="language">Language Runners</li>
-        <li class="tab-nav_item" data-attr="ide">IDE Plugins</li>
-        <li class="tab-nav_item " data-attr="reports">Reports</li>
-        <li class="tab-nav_item " data-attr="others">Others</li>
+        <li class="tab-nav_item active-tab" data-attr="featured-tab1">Tab 1</li>
+        <li class="tab-nav_item" data-attr="featured-tab2">Tab 2</li>
+        <li class="tab-nav_item " data-attr="featured-tab3">Tab 3</li>
       </ul>
     </aside>
 
     <div class="content-container">
-      <h2 class="mobile-heading open" data-attr="language">Language Runners<span class="expander arrow-active"></span></h2>
-      <div class="tab-content active" id="language">
-        <ul class="flex-container">
-          <li class="flex-container__item">
-            <div class="plugin_name">Plugin</div>
-            <div class="more">Description</div>
-              <div class="owner">Owner</div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/gauge-java/releases" ><img src="/assets/images/Plugin-icons/java.svg" class="icon-md">Java Runner</a>
-            </div>
-            <div class="more">Plugin that lets you write your tests in Java.  <a href="https://github.com/getgauge/gauge-java/#gauge-java" > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/gauge-csharp/releases" > <img src="/assets/images/Plugin-icons/Crunner.svg" class="icon-md">C# runner</a>
-            </div>
-            <div class="more">Plugin that lets you write your tests in C#. <a href="https://github.com/getgauge/gauge-csharp#gauge-csharp"  > Read more</a></div>
-             <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/gauge-ruby/releases" ><img src="/assets/images/Plugin-icons/Ruby-runner.svg" class="icon-md">Ruby runner</a>
-            </div>
-            <div class="more">Plugin that lets you write your tests in Ruby.  <a href="https://github.com/getgauge/gauge-ruby#gauge-ruby"> Read more</a></div>
-             <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/gauge-js/releases" ><img src="/assets/images/Plugin-icons/Javascript.svg" class="icon-md">Javascript runner</a>
-            </div>
-            <div class="more">Plugin that lets you write your tests in Javascript. <a href="https://github.com/getgauge/gauge-js"  > Read more</a></div>
-             <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge-contrib/gauge-go/releases" ><img src="/assets/images/Plugin-icons/golang.svg" class="icon-md">Golang runner</a>
-            </div>
-            <div class="more">Plugin that lets you write your tests in Golang. <a href="https://github.com/getgauge-contrib/gauge-go"  > Read more</a></div>
-             <div class="owner"> <a href="https://github.com/manuviswam">Manu Viswam</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/gauge-python/releases" ><img src="/assets/images/Plugin-icons/python.svg" class="icon-md">Python runner</a>
-            </div>
-            <div class="more">Plugin that lets you write your tests in Python. <a href="http://gauge-python.readthedocs.io/en/latest/"  > Read more</a></div>
-             <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-        </ul>
+      <h2 class="mobile-heading open" data-attr="featured-tab1">Tab 1<span class="expander arrow-active"></span></h2>
+      <div class="tab-content active" id="featured-tab1">
+        <p> Pariatur proident laborum aliqua cupidatat id nostrud aute. Consectetur cupidatat amet ullamco sit consectetur officia commodo elit minim cupidatat incididunt minim Lorem. Qui ad veniam nostrud ad ut esse anim proident cillum.</p>
       </div>
 
-      <h2 class="mobile-heading" data-attr="ide">IDE Plugins <span class="expander arrow"></span></h2>
-      <div class="tab-content" id="ide">
-        <ul class="flex-container">
-          <li class="flex-container__item">
-            <div class="plugin_name">Plugin</div>
-            <div class="more">Description</div>
-             <div class="owner">Owner</div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/gauge-vscode/releases" ><img src="/assets/images/Plugin-icons/Visual-studio-Code.svg" class="icon-md">Visual Studio Code</a>
-            </div>
-            <div class="more">Lets you use VS Code to write tests in JavaScript, Python and Ruby.  <a href="https://github.com/getgauge/gauge-vscode"  > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/Intellij-Plugin/releases" ><img src="/assets/images/Plugin-icons/intelliJ.svg" class="icon-md">IntelliJ</a>
-            </div>
-            <div class="more">Lets you use IntelliJ to write tests in Java. <a href="https://github.com/getgauge/Intellij-Plugin/blob/master/README.md"  > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-             <a href="https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92" >
-            <img src="/assets/images/Plugin-icons/Visual-studio.svg" class="icon-md">Visual Studio</a>
-            </div>
-            <div class="more">Lets you use Visual Studio to write tests in C#. <a href="https://github.com/getgauge/gauge-visualstudio/blob/master/README.md"  > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-        </ul>
+      <h2 class="mobile-heading" data-attr="featured-tab2">Tab 2 <span class="expander arrow"></span></h2>
+      <div class="tab-content" id="featured-tab2">
+        <p>Culpa ex do eu amet aliquip. Anim deserunt proident eiusmod anim aliqua Lorem do laborum irure consectetur ad commodo tempor. Ex exercitation sint Lorem eiusmod commodo. Fugiat Lorem dolore magna ipsum nostrud. Consequat in voluptate reprehenderit excepteur. Ut deserunt excepteur laborum velit.</p>
       </div>
 
-      <h2 class="mobile-heading" data-attr="reports">Reports <span class="expander arrow"></span></h2>
-      <div class="tab-content" id="reports">
-        <ul class="flex-container">
-          <li class="flex-container__item">
-            <div class="plugin_name">Plugin</div>
-            <div class="more">Description</div>
-            <div class="owner">Owner</div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/html-report/releases" ><img src="/assets/images/Plugin-icons/HTML.svg" class="icon-md">HTML report</a>
-            </div>
-            <div class="more">Generate an HTML report for test execution. <a href="https://github.com/getgauge/html-report/blob/master/README.md"  > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/xml-report/releases" ><img src="/assets/images/Plugin-icons/XML.svg" class="icon-md">XML report</a>
-            </div>
-            <div class="more">Generate an XML report for test execution. <a href="https://github.com/getgauge/xml-report/blob/master/README.md"  > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-             <a href="https://github.com/getgauge/xml-report/releases" ><img src="/assets/images/Plugin-icons/json.svg" class="icon-md">JSON report</a>
-            </div>
-            <div class="more">Generate a JSON report for test execution. <a href="https://github.com/apoorvam/json-report/blob/master/README.md"  > Read more</a></div>
-            <div class="owner"> <a href="https://github.com/apoorvam/">Apoorva M</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/spectacle/releases" ><img src="/assets/images/Plugin-icons/spectacle.svg" class="icon-md">Spectacle</a>
-            </div>
-            <div class="more">Export specifications to HTML. <a href="https://github.com/getgauge/spectacle#spectacle"  > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-             <a href="https://github.com/getgauge/flash/releases" >
-            <img src="/assets/images/Plugin-icons/flash.svg" class="icon-md">Flash</a>
-            </div>
-            <div class="more">Real-time execution reporting plugin. <a href="https://github.com/getgauge/Flash#flash" > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-        </ul>
-      </div>
-
-      <h2 class="mobile-heading" data-attr="others"> Others <span class="expander arrow"></span></h2>
-      <div class="tab-content" id="others">
-        <ul class="flex-container">
-          <li class="flex-container__item">
-             <div class="plugin_name">Plugin</div>
-            <div class="more">Description</div>
-            <div class="owner">Owner</div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/getgauge/gauge-maven-plugin/releases"  ><img src="/assets/images/Plugin-icons/maven.svg" class="icon-md">Maven</a>
-            </div>
-            <div class="more">To build and manage project dependencies. <a href="https://docs.gauge.org/latest/configuration.html#maven"  > Read more</a></div>
-            <div class="owner"> <a href="https://www.thoughtworks.com/products">ThoughtWorks Inc.</a></div>
-          </li>
-          <li class="flex-container__item">
-            <div class="plugin_name">
-               <a href="https://github.com/manupsunny/gauge-gradle-plugin/releases"  ><img src="/assets/images/Plugin-icons/gradle.svg" class="icon-md">Gradle</a>
-            </div>
-            <div class="more">To build and manage project dependencies. <a href="https://docs.gauge.org/latest/configuration.html#gradle"  > Read more</a></div>
-            <div class="owner"> <a href="https://github.com/manupsunny">Manu Sunny</a></div>
-          </li>
-        </ul>
+      <h2 class="mobile-heading" data-attr="featured-tab3">Tab 3 <span class="expander arrow"></span></h2>
+      <div class="tab-content" id="featured-tab3">
+        <p>Lorem cillum id excepteur dolore sit in. Magna est dolore quis laborum dolore laboris duis officia officia anim ipsum. Ipsum culpa labore non aliqua anim. Sit deserunt nostrud culpa sint cupidatat ea voluptate ex nisi aute dolore laboris consectetur nisi.</p>
       </div>
     </div>
   </div>
@@ -308,170 +193,26 @@
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-container tab-container-plugins"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"sidebar-menu sidebar-menu-plugins"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tab-nav"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-nav_item active-tab"</span> <span class="na">data-attr=</span><span class="s">"language"</span><span class="nt">&gt;</span>Language Runners<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-nav_item"</span> <span class="na">data-attr=</span><span class="s">"ide"</span><span class="nt">&gt;</span>IDE Plugins<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-nav_item "</span> <span class="na">data-attr=</span><span class="s">"reports"</span><span class="nt">&gt;</span>Reports<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-nav_item "</span> <span class="na">data-attr=</span><span class="s">"others"</span><span class="nt">&gt;</span>Others<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-nav_item active-tab"</span> <span class="na">data-attr=</span><span class="s">"featured-tab1"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-nav_item"</span> <span class="na">data-attr=</span><span class="s">"featured-tab2"</span><span class="nt">&gt;</span>Tab 2<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-nav_item "</span> <span class="na">data-attr=</span><span class="s">"featured-tab3"</span><span class="nt">&gt;</span>Tab 3<span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/aside&gt;</span>
 
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content-container"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading open"</span> <span class="na">data-attr=</span><span class="s">"language"</span><span class="nt">&gt;</span>Language Runners<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander arrow-active"</span><span class="nt">&gt;&lt;/span&gt;&lt;/h2&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content active"</span> <span class="na">id=</span><span class="s">"language"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"flex-container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>Plugin<span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Description<span class="nt">&lt;/div&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span>Owner<span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-java/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/java.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Java Runner<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Plugin that lets you write your tests in Java.  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-java/#gauge-java"</span> <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-csharp/releases"</span> <span class="nt">&gt;</span> <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/Crunner.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>C# runner<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Plugin that lets you write your tests in C#. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-csharp#gauge-csharp"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-ruby/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/Ruby-runner.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Ruby runner<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Plugin that lets you write your tests in Ruby.  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-ruby#gauge-ruby"</span><span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-js/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/Javascript.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Javascript runner<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Plugin that lets you write your tests in Javascript. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-js"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge-contrib/gauge-go/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/golang.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Golang runner<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Plugin that lets you write your tests in Golang. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge-contrib/gauge-go"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/manuviswam"</span><span class="nt">&gt;</span>Manu Viswam<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-python/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/python.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Python runner<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Plugin that lets you write your tests in Python. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://gauge-python.readthedocs.io/en/latest/"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading open"</span> <span class="na">data-attr=</span><span class="s">"featured-tab1"</span><span class="nt">&gt;</span>Tab 1<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander arrow-active"</span><span class="nt">&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content active"</span> <span class="na">id=</span><span class="s">"featured-tab1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span> Pariatur proident laborum aliqua cupidatat id nostrud aute. Consectetur cupidatat amet ullamco sit consectetur officia commodo elit minim cupidatat incididunt minim Lorem. Qui ad veniam nostrud ad ut esse anim proident cillum.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
 
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"ide"</span><span class="nt">&gt;</span>IDE Plugins <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander arrow"</span><span class="nt">&gt;&lt;/span&gt;&lt;/h2&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"ide"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"flex-container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>Plugin<span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Description<span class="nt">&lt;/div&gt;</span>
-             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span>Owner<span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-vscode/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/Visual-studio-Code.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Visual Studio Code<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Lets you use VS Code to write tests in JavaScript, Python and Ruby.  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-vscode"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/Intellij-Plugin/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/intelliJ.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>IntelliJ<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Lets you use IntelliJ to write tests in Java. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/Intellij-Plugin/blob/master/README.md"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-             <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://visualstudiogallery.msdn.microsoft.com/dd8ea767-aa75-4771-98f4-6c8a9055ca92"</span> <span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/Visual-studio.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Visual Studio<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Lets you use Visual Studio to write tests in C#. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-visualstudio/blob/master/README.md"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"featured-tab2"</span><span class="nt">&gt;</span>Tab 2 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander arrow"</span><span class="nt">&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"featured-tab2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Culpa ex do eu amet aliquip. Anim deserunt proident eiusmod anim aliqua Lorem do laborum irure consectetur ad commodo tempor. Ex exercitation sint Lorem eiusmod commodo. Fugiat Lorem dolore magna ipsum nostrud. Consequat in voluptate reprehenderit excepteur. Ut deserunt excepteur laborum velit.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
 
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"reports"</span><span class="nt">&gt;</span>Reports <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander arrow"</span><span class="nt">&gt;&lt;/span&gt;&lt;/h2&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"reports"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"flex-container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>Plugin<span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Description<span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span>Owner<span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/html-report/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/HTML.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>HTML report<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Generate an HTML report for test execution. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/html-report/blob/master/README.md"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/xml-report/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/XML.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>XML report<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Generate an XML report for test execution. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/xml-report/blob/master/README.md"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-             <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/xml-report/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/json.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>JSON report<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Generate a JSON report for test execution. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/apoorvam/json-report/blob/master/README.md"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/apoorvam/"</span><span class="nt">&gt;</span>Apoorva M<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/spectacle/releases"</span> <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/spectacle.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Spectacle<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Export specifications to HTML. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/spectacle#spectacle"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-             <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/flash/releases"</span> <span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/flash.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Flash<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Real-time execution reporting plugin. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/Flash#flash"</span> <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-
-      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"others"</span><span class="nt">&gt;</span> Others <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander arrow"</span><span class="nt">&gt;&lt;/span&gt;&lt;/h2&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"others"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"flex-container"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>Plugin<span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>Description<span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span>Owner<span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/getgauge/gauge-maven-plugin/releases"</span>  <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/maven.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Maven<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>To build and manage project dependencies. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://docs.gauge.org/latest/configuration.html#maven"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.thoughtworks.com/products"</span><span class="nt">&gt;</span>ThoughtWorks Inc.<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"flex-container__item"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"plugin_name"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/manupsunny/gauge-gradle-plugin/releases"</span>  <span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/Plugin-icons/gradle.svg"</span> <span class="na">class=</span><span class="s">"icon-md"</span><span class="nt">&gt;</span>Gradle<span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"more"</span><span class="nt">&gt;</span>To build and manage project dependencies. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://docs.gauge.org/latest/configuration.html#gradle"</span>  <span class="nt">&gt;</span> Read more<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"owner"</span><span class="nt">&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/manupsunny"</span><span class="nt">&gt;</span>Manu Sunny<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"mobile-heading"</span> <span class="na">data-attr=</span><span class="s">"featured-tab3"</span><span class="nt">&gt;</span>Tab 3 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"expander arrow"</span><span class="nt">&gt;&lt;/span&gt;&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content"</span> <span class="na">id=</span><span class="s">"featured-tab3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem cillum id excepteur dolore sit in. Magna est dolore quis laborum dolore laboris duis officia officia anim ipsum. Ipsum culpa labore non aliqua anim. Sit deserunt nostrud culpa sint cupidatat ea voluptate ex nisi aute dolore laboris consectetur nisi.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span></pre>

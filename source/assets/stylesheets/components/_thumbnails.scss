@@ -1,23 +1,21 @@
 /*doc
 ---
-title: Featured Tab
-name: Featured tab
+title: Thumbnail
+name: Grid-thumbnails
 category: Components
 ---
 
-Style for tabs
+Style for Thumbnail
 
 ```html_example
-<section class="feature">
-  <div class="container">
-<ul class="small-thumbnails">
+  <ul class="small-thumbnails">
     <li class="thumbnail-small">
       <div class="thumbnail-small_graphics">
         <img src="http://via.placeholder.com/100x100" alt="">
       </div>
       <div class="thumbnail-small_details">
-        <h3>Create specifications anyone can read</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+        <h3>Thumbnail 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus</p>
       </div>
     </li>
       <li class="thumbnail-small">
@@ -25,39 +23,14 @@ Style for tabs
         <img src="http://via.placeholder.com/100x100" alt="">
       </div>
       <div class="thumbnail-small_details">
-        <h3>Create specifications anyone can read</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
+        <h3>Thumbnail 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus</p>
       </div>
     </li>
-
-</ul>
-    
-    <ul class="small-thumbnails">
-            <li class="thumbnail-small">
-      <div class="thumbnail-small_graphics">
-        <img src="http://via.placeholder.com/100x100" alt="">
-      </div>
-      <div class="thumbnail-small_details">
-        <h3>Create specifications anyone can read</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
-      </div>
-    </li>
-      <li class="thumbnail-small">
-      <div class="thumbnail-small_graphics">
-        <img src="http://via.placeholder.com/100x100" alt="">
-      </div>
-      <div class="thumbnail-small_details">
-        <h3>Create specifications anyone can read</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi atque perferendis temporibus illum natus eligendi dolor corporis voluptas sunt repellat accusantium, nisi in facere numquam, vitae autem ex nobis?</p>
-      </div>
-    </li>
-    </ul>
-  </div>
-
-</section>  
-
+</ul> 
 ```
 */
+
 
 .small-thumbnails {
     list-style-type: none;

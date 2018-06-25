@@ -10,31 +10,18 @@ Style for tabs
 ```html_example
   <div class="tab-component tab-install">
             <ul class="tab">
-              <li class="tab_item active-tab" data-attr="chocolatey">Chocolatey</li>
-              <li class="tab_item" data-attr="w-zip">ZIP</li>
+              <li class="tab_item active-tab" data-attr="tab1">Tab 1</li>
+              <li class="tab_item" data-attr="tab2">Tab 2</li>
             </ul>
             <div class="tab-content-container">
-              <div class="tab-content active" id="chocolatey">
-                <h4 class="mobile-title">Chocolatey</h4>
-                <p class="instruction"> Install Gauge using <a href="https://chocolatey.org">Chocolatey</a></p>
-                <div class="code-box">
-                  <code>&gt; choco install gauge</code>
-                </div>
+              <div class="tab-content active" id="tab1">
+                <h4 class="mobile-title">Tab1</h4>
+                <p>Consectetur proident officia ipsum incididunt aute ex qui quis fugiat. Do esse esse nisi ullamco. Duis proident nulla culpa enim reprehenderit qui in nostrud magna nulla mollit est eiusmod laboris.</p>
               </div>
-              <div class="tab-content" id="w-zip">
-                <h4 class="mobile-title">ZIP</h4>
-                <p class="instruction"> Download the
-                  <a href="https://github.com/getgauge/gauge/releases/download/v<%= data.version.gauge %>/gauge-<%= data.version.gauge %>-windows.x86_64.zip">zip</a>
-                  installer and the run following command in powershell</p>
-                <div class="code-box">
-                  <code>PS&gt; Expand-Archive -Path gauge-<%= data.version.gauge %>-windows.x86_64.zip -DestinationPath custom_path</code>
-                </div>
+              <div class="tab-content" id="tab2">
+                <h4 class="mobile-title">Tab2</h4>
+                <p>Do esse esse nisi ullamco. Duis proident nulla culpa enim reprehenderit qui in nostrud magna nulla mollit est eiusmod laboris.</p>
               </div>
-
-              <p class="instruction">
-                For alternate methods of installation and our nightly releases, check out our
-                <a href="https://docs.gauge.org/latest/installation.html#installation">documentation</a>.
-              </p>
             </div>
           </div>
 ```
