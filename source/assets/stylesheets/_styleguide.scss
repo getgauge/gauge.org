@@ -1,3 +1,8 @@
+@mixin background-border($color){
+  background: $color;
+  border: 1px solid $color;
+}
+
 .hgt-pagehead {
   margin: 100px 0 0 0 !important;
 }
@@ -5,4 +10,70 @@
 .hgt-menu.hgt-sticky {
   top: 100px !important;
   width: 228px;
+}
+
+.color-box{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+.color-box__item{
+  margin: 10px 20px;
+  width: 100%;
+  @media (min-width: $screen-md) {
+    width: 48%;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 18%;
+  }
+
+  p:first-child{
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+  }
+  p{
+    text-align: center;
+  }
+}
+
+.primary-color{
+  @include background-border($primary-color);
+}
+.secondary-color{
+  @include background-border($secondary-color);
+}
+.border-color{
+  @include background-border($border-color); 
+}
+.link-color{
+  @include background-border($link-color); 
+}
+
+.tab-container-styleguide{
+  clear: both;
+}
+
+.header_links{
+  list-style: none;
+  display: inline-block;
+  float: right;
+  .header_link__item{
+    width: auto;
+    display: inline-block;
+    a{
+      border-radius: 5px;
+      text-decoration: none;
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid;
+      &:hover{
+        border-radius: 5px;
+        border: 1px transparent;
+      }
+    }
+  }
 }
