@@ -17,6 +17,20 @@
     <link href="assets/images/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed" type="image/ico" />
     <%= stylesheet_link_tag "site" %>
   </head>
+  <script type=“application/ld+json”>
+{
+ “@context” : “http://schema.org“,
+ “@type” : “Product”,
+ “name” : “Gauge”,
+ “image” : “https://gauge.org/assets/images/gauge-logo_white.svg”,
+ “description” : “Gauge is a free and open source test automation framework that takes the pain out of acceptance testing”,
+ “url” : “https://gauge.org/“,
+ “brand” : {
+   “@type” : “Brand”,
+   “name” : “ThoughtWorks Inc.”
+ }
+}
+</script>
   <body class= <%= page_name == 'home' ? "homepage" : 'inner' %> id= <%= page_name %>>
     <%= partial 'partials/header' %>
     <div class="gdpr-cookie-banner">
