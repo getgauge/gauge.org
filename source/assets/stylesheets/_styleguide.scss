@@ -52,7 +52,15 @@
 .link-color{
   @include background-border($link-color); 
 }
-
+.feature-tab-bg{
+  @include background-border($feature-tab-bg); 
+}
+.active-nav-bg{
+  @include background-border($active-nav-bg);
+}
+.active-feature-tab-bg{
+  @include background-border($active-feature-tab-bg);
+}
 .tab-container-styleguide{
   clear: both;
 }
