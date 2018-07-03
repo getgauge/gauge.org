@@ -1,0 +1,75 @@
+/*doc
+---
+title: Typography
+name: typography
+category: index
+---
+
+Style for tabs
+
+```html_example
+// Default Styles
+ <h1> Sample Text </h1>
+ <h2> Sample Text </h2>
+ <h3> Sample Text </h3>
+ <h4> Sample Text </h4>
+ <h5> Sample Text </h5>
+ <h6> Sample Text </h6>
+
+// Custom Class with typography
+
+ <h1 class="h5"> Sample Text </h1>
+ <h2 class="h6"> Sample Text </h2>
+ <h3 class="h1"> Sample Text </h3>
+ <h4 class="h2"> Sample Text </h4>
+ <h5 class="h3"> Sample Text </h5>
+ <h6 class="h4"> Sample Text </h6>
+```
+*/
+h1{
+  font-size: 24px;
+}
+
+h2{
+  font-size: 20px
+}
+
+h3{
+  font-size: 18px;
+}
+
+h4{
+  font-size: 16px;
+}
+
+h5{
+  font-size: 14px;
+}
+
+h6{
+  font-size: 12px;
+}
+
+.h1{
+  font-size: 24px;
+}
+
+.h2{
+  font-size: 20px
+}
+
+.h3{
+  font-size: 18px;
+}
+
+.h4{
+  font-size: 16px;
+}
+
+.h5{
+  font-size: 14px;
+}
+
+.h6{
+  font-size: 12px;
+}
