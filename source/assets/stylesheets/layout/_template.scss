@@ -19,10 +19,11 @@ Template Example
         </div>
         </div>
     </div>
-    <section>
+
+    <section class="section-container">
       <div class="container">
-        <h2 class="section-heading"> Section Heading</h2>
-        <ul class="imglist">
+        <h2 class="section-heading"> Section Heading </h2>
+        <ul class="card-container">
           <li>
             <img src="http://via.placeholder.com/350x150" alt="">
             <p>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do.  </p>
@@ -39,15 +40,16 @@ Template Example
         <div class="section-action">
           <a href="#" class="cta-general">Section Action</a>
         </div>
-        <hr />
       </div>
     </section>
 
-  <section>
+    <hr />
+
+  <section class="section-container">
     <div class="container">
       <h2 class="section-heading">Section Heading </h2>
-      <p>Excepteur elit adipisicing irure cupidatat. Reprehenderit exercitation cillum excepteur dolor velit enim amet cillum voluptate.</p>
-        <ul class="imglist">
+      <p class="section-desc">Excepteur elit adipisicing irure cupidatat. Reprehenderit exercitation cillum excepteur dolor velit enim amet cillum voluptate.</p>
+        <ul class="card-container">
         <li>
           <img src="http://via.placeholder.com/350x150" alt="">
         </li>
@@ -75,11 +77,12 @@ Template Example
       </ul>
     </div>
   </section>
+  <hr />
 ```
 */
 
 
-.imglist {
+.card-container {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -106,9 +109,20 @@ Template Example
   &.center{
     justify-content:center;
   }
+
+  p{
+    text-align: justify;
+  }
 }
 
-.section-action{
+.section-container{
+  margin: 60px auto;
+  .section-desc{
+    text-align: center;
+  }
+}
+
+.section-action {
   margin-top: 25px;
   text-align: center;
   width: 300px;
@@ -126,6 +140,6 @@ Template Example
   }
 }
 
-.section-heading{
+.section-heading {
   text-align: center;
 }
