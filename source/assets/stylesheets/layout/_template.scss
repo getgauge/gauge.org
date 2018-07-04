@@ -1,0 +1,145 @@
+/*doc
+---
+title: Template
+name: template
+category: index
+---
+Template Example
+
+```html_example
+    <div class="banner-container">
+      <div class="container">
+        <div class="banner-content">
+          <h1 class="banner-heading">Banner Heading</h1>
+          <p class="banner-description">Quis laborum minim id ipsum exercitation sit irure. Minim pariatur esse velit reprehenderit occaecat.</p>
+          <div class="banner-action">
+            <a href="#" class="cta-primary">Banner Action 1</a>
+            <a href="#" class="cta-secondary">Banner Action 2</a>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <section class="section-container">
+      <div class="container">
+        <h2 class="section-heading"> Section Heading </h2>
+        <ul class="card-container">
+          <li>
+            <img src="http://via.placeholder.com/350x150" alt="">
+            <p>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do.  </p>
+          </li>
+          <li>
+            <img src="http://via.placeholder.com/350x150" alt="">
+            <p>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do. </p>
+          </li>
+          <li>
+            <img src="http://via.placeholder.com/350x150" alt="">
+            <p>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do.  </p>
+          </li>
+        </ul>
+        <div class="section-action">
+          <a href="#" class="cta-general">Section Action</a>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+  <section class="section-container">
+    <div class="container">
+      <h2 class="section-heading">Section Heading </h2>
+      <p class="section-desc">Excepteur elit adipisicing irure cupidatat. Reprehenderit exercitation cillum excepteur dolor velit enim amet cillum voluptate.</p>
+        <ul class="card-container">
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+      </ul>
+    </div>
+  </section>
+  <hr />
+```
+*/
+
+
+.card-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  li {
+    width: 50%;
+    padding: 20px;
+    display:inline-block;
+    
+    @media (min-width: 768px) {
+      width: 33.3%;
+    }
+
+    @media (min-width: 992px) {
+      width: 25%;
+    }
+
+    @media (min-width: 1200px) {
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &.center{
+    justify-content:center;
+  }
+
+  p{
+    text-align: justify;
+  }
+}
+
+.section-container{
+  margin: 60px auto;
+  .section-desc{
+    text-align: center;
+  }
+}
+
+.section-action {
+  margin-top: 25px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  .cta-general {
+    @extend %button;
+    background: $primary-color;
+    color: $white;
+    text-decoration: none;
+    transition: $transition;
+    &:hover {
+        background-color: $primary-color;
+        transition: $transition;
+    }
+  }
+}
+
+.section-heading {
+  text-align: center;
+}

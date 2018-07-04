@@ -6,9 +6,9 @@
     <title>index &ndash; Styleguide</title>
 
     <!-- Styleguide CSS -->
-    <link rel="stylesheet" href="/styleguide/styles/hgt-syntax.css">
-    <link rel="stylesheet" href="/styleguide/styles/hgt.css">
-    <link rel="stylesheet" href="/styleguide/styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
     <!-- Source CSS -->
   
         <link rel="stylesheet" href="/assets/stylesheets/site.css">
@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <div class="hgt-styleguide hgt-container">
+    <div class="container">
       <div class="hgt-columns">
         
           <div class="hgt-column one-fourth">
@@ -71,6 +71,10 @@
                 
               
                 
+                  <a href="#template" class="hgt-menu-item">Template</a>
+                
+              
+                
                   <a href="#typography" class="hgt-menu-item">Typography</a>
                 
               
@@ -78,7 +82,7 @@
           </div>
         
 
-        <div class="hgt-column three-fourths">
+        <div class="container hgt-column three-fourths">
           <div class="hgt-content">
 <h1 id="banner" class="styleguide">Banner</h1>
 <p class="styleguide">Style for Banner</p><div class="codeExample">
@@ -285,6 +289,159 @@
               <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="template" class="styleguide">Template</h1>
+<p class="styleguide">Template Example</p><div class="codeExample">
+  <div class="exampleOutput">
+        <div class="banner-container">
+      <div class="container">
+        <div class="banner-content">
+          <h1 class="banner-heading">Banner Heading</h1>
+          <p class="banner-description">Quis laborum minim id ipsum exercitation sit irure. Minim pariatur esse velit reprehenderit occaecat.</p>
+          <div class="banner-action">
+            <a href="#" class="cta-primary">Banner Action 1</a>
+            <a href="#" class="cta-secondary">Banner Action 2</a>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <section class="section-container">
+      <div class="container">
+        <h2 class="section-heading"> Section Heading </h2>
+        <ul class="card-container">
+          <li>
+            <img src="http://via.placeholder.com/350x150" alt="">
+            <p>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do.  </p>
+          </li>
+          <li>
+            <img src="http://via.placeholder.com/350x150" alt="">
+            <p>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do. </p>
+          </li>
+          <li>
+            <img src="http://via.placeholder.com/350x150" alt="">
+            <p>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do.  </p>
+          </li>
+        </ul>
+        <div class="section-action">
+          <a href="#" class="cta-general">Section Action</a>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+  <section class="section-container">
+    <div class="container">
+      <h2 class="section-heading">Section Heading </h2>
+      <p class="section-desc">Excepteur elit adipisicing irure cupidatat. Reprehenderit exercitation cillum excepteur dolor velit enim amet cillum voluptate.</p>
+        <ul class="card-container">
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+        <li>
+          <img src="http://via.placeholder.com/350x150" alt="">
+        </li>
+      </ul>
+    </div>
+  </section>
+  <hr />
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"banner-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"banner-content"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"banner-heading"</span><span class="nt">&gt;</span>Banner Heading<span class="nt">&lt;/h1&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"banner-description"</span><span class="nt">&gt;</span>Quis laborum minim id ipsum exercitation sit irure. Minim pariatur esse velit reprehenderit occaecat.<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"banner-action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"cta-primary"</span><span class="nt">&gt;</span>Banner Action 1<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"cta-secondary"</span><span class="nt">&gt;</span>Banner Action 2<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"section-container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"section-heading"</span><span class="nt">&gt;</span> Section Heading <span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"card-container"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do.  <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do. <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Aliquip anim occaecat occaecat nostrud enim commodo sunt labore et tempor minim. Est sunt ipsum cupidatat do.  <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-action"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"cta-general"</span><span class="nt">&gt;</span>Section Action<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+
+    <span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"section-container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"section-heading"</span><span class="nt">&gt;</span>Section Heading <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"section-desc"</span><span class="nt">&gt;</span>Excepteur elit adipisicing irure cupidatat. Reprehenderit exercitation cillum excepteur dolor velit enim amet cillum voluptate.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"card-container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://via.placeholder.com/350x150"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;hr</span> <span class="nt">/&gt;</span></pre>
     </div>
   </div>
 </div>
