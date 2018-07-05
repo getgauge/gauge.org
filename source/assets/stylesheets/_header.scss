@@ -312,6 +312,10 @@ header.top {
 }
 
 #blog {
+    font-size: 18px;
+    ul, ol {
+        line-height: 40px;
+    }
     .link_blog {
         a {
             color: $primary-color;

@@ -68,11 +68,13 @@ $blog-description-color: #474747;
 .blog-post {
     @media(min-width: $screen-lg) {
         width: 700px;
-        margin-right: 40px;
+        margin-right: auto;
+        margin-left: auto;
     }
     @media(min-width: $screen-xl) {
-        width: 800px;
-        margin-right: 40px;
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -148,7 +150,6 @@ $blog-description-color: #474747;
     h1 {
         margin: 0 0 40px 0;
         font-weight: 600;
-        font-size: 30px;
         line-height: 36px;
         @media (min-width: $screen-md) {
             font-size: 40px;
@@ -159,25 +160,21 @@ $blog-description-color: #474747;
         margin: -30px 0 40px 0;
     }
     h2 {
-        font-size: 20px;
-        line-height: 26px;
         font-weight: 600;
         margin: 30px 0;
+        line-height: 30px;
     }
     figure {
         position: relative;
         margin-top: 30px;
     }
     h3 {
-        font-size: 17px;
         font-weight: 600;
     }
     pre {
         overflow-x: scroll;
-        background: #1e1e1e;
         padding: 20px;
-        border-radius: 5px;
-        color: #fff;
+        border: solid 0.5px gray
     }
     blockquote {
         font-style: italic;
@@ -189,7 +186,7 @@ $blog-description-color: #474747;
         overflow: hidden;
     }
     p {
-        line-height: 25px;
+        line-height: 30px;
     }
     .attribution {
         position: absolute;
@@ -242,23 +239,6 @@ $blog-description-color: #474747;
     font-size: 13px;
 }
 
-.recent-ariticles {
-    li {
-        &:first-child {
-            border: 0;
-        }
-    }
-}
-
-// .post-container {
-//     @include grid-column(12);
-//     @media(min-width: $screen-lg) {
-//         @include grid-column(8);
-//     }
-//     @media(min-width: $screen-lg) {
-//         @include grid-column(9);
-//     }
-// }
 //style expiriments
 .post-summary {
     overflow: hidden;
