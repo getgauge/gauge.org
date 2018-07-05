@@ -52,6 +52,8 @@ $blog-description-color: #474747;
 .excerpt {
     color: $blog-description-color;
     margin: 0;
+    line-height: 25px;
+    font-size: 16px;
 }
 
 .latest-blog {
