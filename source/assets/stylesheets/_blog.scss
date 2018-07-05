@@ -156,9 +156,7 @@ $blog-description-color: #474747;
             line-height: 46px;
         }
     }
-    >p:nth-of-type(1) {
-        margin: -30px 0 40px 0;
-    }
+  
     h2 {
         font-weight: 600;
         margin: 30px 0;
@@ -187,6 +185,8 @@ $blog-description-color: #474747;
     }
     p {
         line-height: 30px;
+        text-align: justify;
+        text-justify: inter-word;
     }
     .attribution {
         position: absolute;
