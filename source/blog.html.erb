@@ -19,7 +19,6 @@ per_page: 100
         <%= partial 'partials/_blog_post_summary.html.erb', :locals => { :article => latest_post } %>
      </div>
      
-    <hr class="line-primary-color"/>
     <ul class="blogs">
     <% articles.select.with_index do |article| %>
         <li class="item">

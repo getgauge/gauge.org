@@ -300,7 +300,6 @@ $blog-description-color: #474747;
     .item {
         width: 100%;
         border-bottom: 1px dotted #ddd;
-        margin: 0 0 10px 0;
         padding: 15px 15px 0;
         border-radius: 5px;
         &:first-child {
@@ -423,13 +422,6 @@ img {
     height: auto;
 }
 
-.line-primary-color {
-    background: $primary-color;
-    border: none;
-    margin: 20px 0 30px;
-    height: 3px;
-}
-
 .blog-user-details {
     position: relative;
     h3 {
@@ -458,12 +450,6 @@ img {
         vertical-align: middle;
         margin: 0 10px 0 0;
     }
-}
-
-.line-primary-color {
-    background: $primary-color;
-    border: none;
-    height: 1px;
 }
 
 .blog-archive {
