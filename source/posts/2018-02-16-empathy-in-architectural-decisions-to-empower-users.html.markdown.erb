@@ -22,8 +22,6 @@ overridden_canonical_url: "https://blog.getgauge.io/empathy-in-architectural-dec
 
 # Empathy in architectural decisions to empower users
 
-Empathy in architectural decisions to empower users
-
 Over the past year and a half, I’ve been part of the team developing [Gauge](https://github.com/getgauge/gauge) — an open source, acceptance test automation tool. Working on a product made me think about “What’s essential to build a good product?”
 
 > When we think of empathising with our users, we end up wanting to build things to empower them.
@@ -44,37 +42,40 @@ As expected, distribution of responsibility in executing tests of a suite has be
 
 So, it all came down to —
 
-* The **Gauge Core**
+* The Gauge Core
 
-* **Language plugin**
+* Language plugin
 
-* **Reporting plugin**
+* Reporting plugin
 
-* **IDE plugin and others.**
+* IDE plugin and others.
 
-![Gauge architecture](https://cdn-images-1.medium.com/max/2000/1*clIajUDVUD3Rq3AjXetWGw.png)*Gauge architecture*
+<figure>
+  <img src="https://cdn-images-1.medium.com/max/2000/1*clIajUDVUD3Rq3AjXetWGw.png" alt="Trulli" style="width:100%">
+  <figcaption><sub><sup>Figure 1: Gauge architecture</sup></sub></figcaption>
+</figure>
 
-The **responsibilities of Gauge core** became:
+### The responsibilities of Gauge core became:
 
 * run tests for configured environment(s)
 
 * validate [specifications](https://docs.gauge.org/longstart.html?#specifications-spec) and provide diagnostics
 
-* **orchestrate** the test execution
+* Orchestrate the test execution
 
 * and broadcasts messages that the plugins use to perform custom actions.
 
-The **language plugin’s responsibilities** were to
+### The language plugin’s responsibilities were to
 
 * author implementation in the given language
 
 * responds to the request Gauge sends (validate, execute…).
 
-The **reporting plugin** is required to
+### The Reporting plugin is required to
 
 * generate execution reports
 
-The **IDE plugins** are responsible for
+### The IDE plugins are responsible for
 
 * giving a user interface to use Gauge features
 
@@ -90,7 +91,10 @@ But it would not be valuable to share it if it didn’t actually work. One of th
 
 We know that Gauge core is orchestrating and broadcasting messages. We built **reporting** as an independent plugin. So this way, it performs the required reporting-related actions by listening to these messages.
 
-![independent processes talking to each other over TCP](https://cdn-images-1.medium.com/max/2000/1*XLQrTuG4rr6u2FG56GmqDA.png)*independent processes talking to each other over TCP*
+<figure>
+  <img src="https://cdn-images-1.medium.com/max/2000/1*XLQrTuG4rr6u2FG56GmqDA.png" alt="Trulli" style="width:100%">
+  <figcaption><sub><sup>Figure 2: independent processes talking to each other over TCP</sup></sub></figcaption>
+</figure>
 
 So, the report format is independent of how the tests are executed (parallel, sequential). And any **[customisation](https://github.com/getgauge/html-report/issues/131)** is reusable for tests run in any supported language.
 
@@ -102,7 +106,11 @@ We designed Gauge core to broadcast [Protobuf](https://developers.google.com/pro
 
 > [Protobuf](https://developers.google.com/protocol-buffers/) is a language and platform neutral mechanism for structuring data.
 
-![independent processes talking to each other over TCP on port **GAUGE_INTERNAL_PORT** (env variable)](https://cdn-images-1.medium.com/max/2000/1*b2kgDdndrzMu5ZlxU4zAyA.png)*independent processes talking to each other over TCP on port **GAUGE_INTERNAL_PORT** (env variable)*
+<figure>
+  <img src="https://cdn-images-1.medium.com/max/2000/1*b2kgDdndrzMu5ZlxU4zAyA.png" alt="Trulli" style="width:100%">
+  <figcaption><sub><sup>Figure 3: independent processes talking to each other over TCP 
+  on env GAUGE_INTERNAL_PORT</sup></sub></figcaption>
+</figure>
 
 This not only enabled the registered plugins to execute tests in the language of choice but the runner was authored in the same too. So, we have **[Gauge-js](https://github.com/getgauge/gauge-js)** authored in JavaScript to run tests written in JavaScript. Similarly **[Gauge-python](https://github.com/getgauge/gauge-python)** is for Python.
 
@@ -110,9 +118,12 @@ All this, with [Gauge-core](https://github.com/getgauge/gauge) authored in [Gola
 
 ### Q3 — How can I use it with an IDE of my choice?
 
-We designed Gauge to have a **[language server protocol (LSP)](https://microsoft.github.io/language-server-protocol/)** implementation. This helps different IDEs LSP clients take advantage of it.
+We designed Gauge to have a [language server protocol (**LSP**)](https://microsoft.github.io/language-server-protocol/) implementation. This helps different IDEs LSP clients take advantage of it.
 
-![LSP independent client server processes interacting with each other](https://cdn-images-1.medium.com/max/2000/1*AMRadFVMLy-xiyhBYjZX1A.png)*LSP independent client server processes interacting with each other*
+<figure>
+  <img src="https://cdn-images-1.medium.com/max/2000/1*AMRadFVMLy-xiyhBYjZX1A.png" alt="Trulli" style="width:100%">
+  <figcaption><sub><sup>Figure 4: LSP independent client server processes interacting with each other</sup></sub></figcaption>
+</figure>
 
 So, we have [gauge-vscode](https://github.com/getgauge/gauge-vscode) which is a plugin to Visual Studio Code. [This article](https://blog.getgauge.io/gauge-and-the-language-server-protocol-c56fbcfba177) will not only help you understand the offered Gauge IDE features but also gives pointers on adding a new IDE support for Gauge.
 
@@ -136,7 +147,11 @@ Would this be as effective as it should have been in empowering its users?
 
 All related tasks are handled by default. So, such architectural decision makes a feature (e.g:parallel run) readily and easily available to any user running tests in any language of choice!
 
-What I’ve tried to say is that **empathy** is not just the prerogative of the Business Analysts, User Researchers, UI folks or the front-end. Having users at the heart of everything also means putting their interests forward while making architectural decisions. Empathy needs to seep into our very (forgive the pun) **core**! and that’s what is essential to build a good product.
+What I’ve tried to say is that empathy is not just the prerogative of the Business Analysts, User Researchers, UI folks or the front-end. 
+
+> Having users at the heart of everything also means putting their interests forward while making architectural decisions. 
+
+Empathy needs to seep into our very (forgive the pun) **core**! and that’s what is essential to build a good product.
 
 If you still have any queries/suggestions for Gauge do reach out to the community
 
