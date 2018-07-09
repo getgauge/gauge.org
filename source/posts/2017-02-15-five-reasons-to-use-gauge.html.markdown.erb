@@ -28,51 +28,56 @@ overridden_canonical_url: "https://blog.getgauge.io/5-reasons-to-use-gauge-24749
 Despite having the right set of automated tests, writing and managing a growing test suite can be challenging.
 
 Here’s a few other Gauge features that can make managing tests less painful.
-> ***Reason 1: Get Started Quickly***
 
-Be it Mac, Windows, Linux OS or any of the supported Gauge’s language runners, all it takes is [5 steps](https://docs.getgauge.io/quickstart.html#) from Gauge installation to see it work. There are [*templates](https://docs.getgauge.io/using.html#gauge-project-templates) *available to bootstrap the process of initialising a Gauge project. Read about some of the [examples](https://docs.getgauge.io/examples.html) to understand more.
-> ***Reason 2: Easy to use***
+> **Reason 1: Get Started Quickly**
+
+Be it Mac, Windows, Linux OS or any of the supported Gauge’s language runners, all it takes are a [few steps](https://gauge.org/get_started/) from Gauge installation to see it work. There are *[templates](https://docs.gauge.org/latest/installation.html#discovering-project-templates)* available to bootstrap the process of initialising a Gauge project. Here are some the [examples](https://docs.gauge.org/latest/examples.html) to understand more.
+
+> **Reason 2: Easy to use**
 
 With Gauge, stop worrying about
 
-***Which* **language is used to implement a *step *— Java, C#, Ruby or community contributed [*runners](http://getgauge.io/plugins.html)*
+**Which** language is used to implement a *step* — Java, C#, Ruby or community contributed *[runners](https://gauge.org/plugins)*
 
-***When ***to execute — Trigger the tests manually or Configure to Auto trigger
+**When** to execute — Trigger the tests manually or Configure to Auto trigger
 
-***Where ***to execute it from — CI/locally on Windows, Mac or Linux, Virtual Machine, Docker Container.
+**Where** to execute it from — CI/locally on Windows, Mac or Linux, Virtual Machine, Docker Container.
 
-***What ***are the types of test data used for the test cases — external/internal, inline/[*special](https://docs.getgauge.io/longstart.html#special-parameters)* and more
+**What** are the types of test data used for the test cases — external/internal, inline/*[special](https://docs.gauge.org/latest/writing-specifications.html#special-parameters)* and more
 
-**How** are the tests executed — In Sequence or in [*parallel](https://docs.getgauge.io/using.html#parallel-execution)*.
+**How** are the tests executed — In Sequence or in *[parallel](https://docs.gauge.org/latest/execution.html#parallel-execution)*.
 
-Gauge’s *execution *and [*reporting](https://docs.getgauge.io/reports.html) *handles all this and more.
-> ***Reason 3: Get faster feedback***
+Gauge’s *execution* and *[reporting](https://docs.getgauge.io/reports.html)* handles all this and more.
+
+> **Reason 3: Get faster feedback**
 
 Gauge is fast. Here are the performance numbers on a micro bench mark of a sample Gauge project.
 
 ![](https://cdn-images-1.medium.com/max/5000/1*djfDOu5ZE3PJeeBowd5bSQ.png)
 
-***With [multithread](https://docs.getgauge.io/using.html#parallel-execution-using-threads) parallel run, the performance gains are huge**.*
+**With [multithread](https://docs.getgauge.io/using.html#parallel-execution-using-threads) parallel run, the performance gains are huge.**
 
-All other functionalities like reporting etc. just works on either mode. It is easy to switch between sequential of [*parallel](https://docs.getgauge.io/using.html#parallel-execution) *runs for your test suite. This makes configuring Gauge test suites, to run on CI/CD servers, simple.
-> ***Reason 4: Better abstraction***
+All other functionalities like reporting etc. just works on either mode. It is easy to switch between sequential of *[parallel](https://docs.gauge.org/latest/execution.html#parallel-execution)* runs for your test suite. This makes configuring Gauge test suites, to run on CI/CD servers, simple.
 
-[*Specifications in Markdown](https://blog.getgauge.io/why-write-tests-in-plain-text-d9a54ccdc41b)* provides an effective way to break communication barriers and express better. It cleanly abstracts code behind the [*steps](https://docs.getgauge.io/longstart.html#steps)*.
+> **Reason 4: Better abstraction**
 
-*A [Concept](https://docs.getgauge.io/longstart.html#concepts) *is a re-usable logical group of *steps*. It allows better abstraction of a business intent by combining *steps*.
+*[Specifications in Markdown](https://blog.getgauge.io/why-write-tests-in-plain-text-d9a54ccdc41b)* provides an effective way to break communication barriers and express better. It cleanly abstracts code behind the *[steps](https://docs.gauge.org/latest/writing-specifications.html#longstart-steps)*.
 
-*Flexible folder structure* gives the ability to locate and [*execute](https://docs.getgauge.io/using.html#specify-directories) *the specifications that interest us.
+*A [Concept](https://docs.gauge.org/latest/writing-specifications.html#concept)* is a re-usable logical group of *steps*. It allows better abstraction of a business intent by combining *steps*.
 
-[*Tagging](https://docs.getgauge.io/using.html#tagged-execution) *allows to define functional and logical groups across scenarios and specifications. [*Filter](https://docs.getgauge.io/reports.html#export-to-html)*, [*execute](https://docs.getgauge.io/using.html#tagged-execution) *and [*search](https://docs.getgauge.io/reports.html#spectacle)* related scenarios and specifications easily using these tags.
-> ***Reason 5: IDE Support makes maintaining suites easy***
+*Flexible folder structure* gives the ability to locate and *[execute](https://docs.gauge.org/latest/execution.html#specify-directory)* the specifications that interest us.
 
-With a growing test suite, there is a need to make managing it simpler. Gauge’s [IDE support](https://docs.getgauge.io/using.html#id7) helps to
+*[Tagging](https://docs.gauge.org/latest/execution.html#specify-tags)* allows to define functional and logical groups across scenarios and specifications. *[Filter](https://github.com/getgauge/spectacle/blob/master/README.md)*, *[execute](https://docs.getgauge.io/using.html#tagged-execution)* and *[search](https://github.com/getgauge/spectacle/blob/master/README.md)* related scenarios and specifications easily using these tags.
 
-* Navigate between *steps*, *concepts* and [*code blocks](https://docs.getgauge.io/language.html#step-implementations)*. This helps to keep the flow & get better understanding.
+> **Reason 5: IDE Support makes maintaining suites easy**
+
+With a growing test suite, there is a need to make managing it simpler. Gauge’s [IDE support](https://docs.gauge.org/latest/writing-specifications.html#ide-plugins) helps to
+
+* Navigate between *steps*, *concepts* and *[code blocks](https://docs.gauge.org/latest/writing-specifications.html#language-steps)*. This helps to keep the flow & get better understanding.
 
 * Autocomplete encourages **D**on’t want to **R**epeat **Y**ourself (DRY)
 
-* Generate [*step](https://docs.getgauge.io/longstart.html#steps) *implementations
+* Generate *[step](https://docs.gauge.org/latest/writing-specifications.html#longstart-steps)* implementations
 
 * Refactor with ease
 
@@ -82,9 +87,9 @@ With a growing test suite, there is a need to make managing it simpler. Gauge’
 
 * Debug your tests from the IDE
 
-* [And more!](https://docs.getgauge.io/using.html#id7)
+* [And more!](https://docs.gauge.org/latest/writing-specifications.html#ide-plugins)
 
-At [*Gauge](http://getgauge.io/)*, we understand that it is good to keep things simple. We aim to make test automation, simple and easy to maintain*.*
+At *[Gauge](https://gauge.org/)*, we understand that it is good to keep things simple. We aim to make test automation, simple and easy to maintain.
 
 If you have any suggestions for Gauge (enhancements, feature requests or more) do reach out to the community
 
