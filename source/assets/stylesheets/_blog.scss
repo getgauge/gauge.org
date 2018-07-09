@@ -142,6 +142,7 @@ $blog-description-color: #474747;
 .blog-post {
     p,
     li,
+    img,
     h2,
     h3,
     h4,
@@ -158,11 +159,10 @@ $blog-description-color: #474747;
             line-height: 46px;
         }
     }
-  
     h2 {
         font-weight: 600;
         margin: 30px 0;
-        line-height: 30px;
+        line-height: 1.5;
     }
     figure {
         position: relative;
@@ -174,7 +174,9 @@ $blog-description-color: #474747;
     pre {
         overflow-x: scroll;
         padding: 20px;
-        border: solid 0.5px gray
+        border: solid 0.5px gray;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     blockquote {
         font-style: italic;
@@ -186,9 +188,13 @@ $blog-description-color: #474747;
         overflow: hidden;
     }
     p {
-        line-height: 30px;
+        line-height: 1.5;
         text-align: justify;
         text-justify: inter-word;
+    }
+    img {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .attribution {
         position: absolute;
@@ -208,6 +214,8 @@ $blog-description-color: #474747;
         color: white;
         padding: 3px;
     }
+
+
 }
 
 .blog-post-header {
