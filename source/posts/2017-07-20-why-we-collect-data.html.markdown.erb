@@ -22,8 +22,6 @@ overridden_canonical_url: "https://blog.getgauge.io/why-we-collect-data-b19df366
 
 # Why we collect data
 
-### or You are not the product
-
 ## TL;DR
 
 To be a better testing tool, from version 0.9.0, Gauge collects anonymous usage statistics (telemetry). The data is public and there’s an easy way to opt out.
@@ -42,15 +40,16 @@ Every gauge installation (since 0.8.5) has a unique identifier. To view it execu
     Gauge Install ID: 890b876c-f2fa-41b4-93af-e122a477f5bc
     Gauge version: 0.9.0
 
-The [generated id](https://github.com/getgauge/gauge/pull/665/commits/9a3bda8dbc0aa458719f46ef6b2776db55b4f4fa) is stored at $HOME/.gauge/config/id
+The [generated id](https://github.com/getgauge/gauge/pull/665/commits/9a3bda8dbc0aa458719f46ef6b2776db55b4f4fa) 
+is stored at `$HOME/.gauge/config/id`
 
-**Note:** The unique id cannot be used to identify demographics as the source is anonymous.
+The unique id cannot be used to identify demographics as the source is anonymous.
 
 Telemetry data is stored using [Google analytics](https://www.google.com/analytics) with the analytics Tracking id
 
     UA-54838477-1
 
-The [settings](https://support.google.com/analytics/answer/1011397?hl=en&utm_id=ad&authuser=1#change-your-data-sharing-settings) are modified to **not** share any data with Google.
+The [settings](https://support.google.com/analytics/answer/1011397?hl=en&utm_id=ad&authuser=1#change-your-data-sharing-settings) are modified to not share any data with Google.
 
 [Events](https://support.google.com/analytics/answer/1033068?hl=en) for [console usage](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe287a6486/track/track.go#L107), G[auge API usage](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe287a6486/track/track.go#L118) and a [boolean for CI/CD runs](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe287a6486/track/track.go#L128) is sent via https using a [go wrapper](https://github.com/jpillora/go-ogle-analytics) for [Google Analytics Measurement Protocol](http://Google Analytics - Measurement Protocol).
 
@@ -58,9 +57,8 @@ Here’s an example of the command line usage data
 
 ![](https://cdn-images-1.medium.com/max/2380/1*1Vt8vYmumHeDvd598UQjcg.png)
 
-We **do not **record IP addresses for these events. However please note IP addresses are recorded while visiting our [website](https://getgauge.io).
-
-All data is governed by a [privacy policy](https://www.thoughtworks.com/privacy-policy).
+We do not record IP addresses for these events. However please note IP addresses are recorded while visiting our
+[website](https://getgauge.io). All data is governed by a [privacy policy](https://www.thoughtworks.com/privacy-policy).
 
 ## Access
 
