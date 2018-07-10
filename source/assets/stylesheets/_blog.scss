@@ -99,6 +99,12 @@ $blog-description-color: #474747;
             font-size: 14px;
         }
     }
+    ul, ol {
+        padding-left: 25px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+ 
     .container {
         @media (max-width: $screen-md-min) {
             padding:0;
