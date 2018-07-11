@@ -22,9 +22,9 @@ overridden_canonical_url: "https://blog.getgauge.io/are-page-objects-anti-patter
 
 # The Page Objects anti pattern
 
-Writing automated tests that are easy to maintain require skill, practice, discipline and **good design**. There are several design patterns that structure tests for re-use and maintainability. [Page Objects](https://martinfowler.com/bliki/PageObject.html) is a popular pattern that comes built-in with [Selenium](https://github.com/SeleniumHQ/selenium/wiki/PageFactory).
+Writing automated tests that are easy to maintain require skill, practice, discipline and good design. There are several design patterns that structure tests for re-use and maintainability. [Page Objects](https://martinfowler.com/bliki/PageObject.html) is a popular pattern that comes built-in with [Selenium](https://github.com/SeleniumHQ/selenium/wiki/PageFactory).
 
-Yet**, as a tester who has been a developer before, I find Page Object Model (POM) counterproductive.**
+Yet, as a tester who has been a developer before, I find Page Object Model (POM) counterproductive.
 
 POM makes change hard to manage as it violates good design principles. This article talks about the violations with examples and shows a better solution.
 
@@ -79,8 +79,9 @@ Here, we use Selenium’s [page factory](https://github.com/SeleniumHQ/selenium/
 
 Also, elements on a webpage are usually linked to one action. e.g. Entering text in a Textbox or clicking a Button.
 
-**This pattern, prematurely designs UI elements for reuse violating the [YAGNI principle](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it).**
-> **“You aren’t gonna need it**” (acronym: **YAGNI**) states that a programmer should not add functionality until deemed necessary.
+###This pattern, prematurely designs UI elements for reuse violating the [YAGNI principle](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it).
+
+> **“You aren’t gonna need it”** (acronym: **YAGNI**) states that a programmer should not add functionality until deemed necessary.
 
 Let’s fix this by removing all that upfront design by using locators from webDriver. Here’s the same example modified to do that.
 
@@ -120,7 +121,7 @@ Looks much better, but there’s more work.
 Page Objects get huge and difficult to maintain. One reason is because it has actions, locators and groups of unrelated functionality. For e.g. a product search on a page is unrelated to login or logout action. Thus breaking [Single Responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) (SRP).
 > The **SRP** states that every [module](https://en.wikipedia.org/wiki/Modular_programming) or [class](https://en.wikipedia.org/wiki/Class_(computer_programming)) should have responsibility over a single part of the [functionality](https://en.wikipedia.org/wiki/Software_feature) provided by the [software](https://en.wikipedia.org/wiki/Software), and that responsibility should be entirely [encapsulated](https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)) by the class.
 
-**Breaking Page objects to smaller page objects still violates [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle).**
+### Breaking Page objects to smaller page objects still violates [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
 Consider tasks spanning pages/components. For e.g the login functionality.
 
@@ -131,7 +132,7 @@ The login task has 2 steps navigateToLoginPage in HomePage and loginCustomerWith
 
 As the actions belong to 2 different pages, this code will repeat in all test cases that use login. The responsibility is not entirely encapsulated. This is true even after extracting Header as a component.
 
-### Use the right abstractions!
+## Use the right abstractions!
 
 Group by intent **not** page(s).
 
@@ -156,7 +157,7 @@ The modified LogIn code snippet below has only one reason to change. A change in
         }
     }
 
-**And this is why we built [Gauge](https://getgauge.io/), to reuse intent.**
+### And this is why we built [Gauge](https://getgauge.io/), to reuse intent.
 
 We can reuse [steps](https://docs.getgauge.io/longstart.html?#steps) and [concepts](https://docs.getgauge.io/longstart.html?#concepts) with parameters. These can span pages.
 
@@ -182,7 +183,7 @@ We can reuse [steps](https://docs.getgauge.io/longstart.html?#steps) and [concep
 
 ## Responding to change
 
-**User flows != order of Pages.**
+### User flows != order of Pages.
 
 ![**Flow 1:** Continue shopping with simple search. Created using [websequencediagrams.com](https://www.websequencediagrams.com/)](https://cdn-images-1.medium.com/max/2000/1*8sbO2zHOqH-0ub3faF-K2A.png)***Flow 1:** Continue shopping with simple search. Created using [websequencediagrams.com](https://www.websequencediagrams.com/)*
 
@@ -253,7 +254,7 @@ And there’s more code and complex logic to automate a new user flow and modifi
     * continue shopping
     * Place Order for "The Ruby Programming Language" by publication "O'reilly". The cart should now contain "2" items
 
-**Loosely coupled steps makes creating a flow just a matter of choosing the right order of steps.**
+### Loosely coupled steps makes creating a flow just a matter of choosing the right order of steps.
 
 Steps See items available for purchase,Filter items by publication <publication> and **continue shopping** in the specification do not know about the previous step(s) nor the next step(s).
 
@@ -314,11 +315,11 @@ Here the step Log in with customer name <name> and password <password> is not aw
 
 We have different test cases for positive and negative scenarios.
 
-**Test cases are the place to define order of steps and the required data.**
+### Test cases are the place to define order of steps and the required data.
 
 Each step implementation, has code only to handle its task. Thus keeping the implementation loosely coupled.
 
-**Loosely coupled steps give users more flexibility and lesser code to maintain.**
+### Loosely coupled steps give users more flexibility and lesser code to maintain.
 
 ## Less is better
 
