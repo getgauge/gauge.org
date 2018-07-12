@@ -22,8 +22,6 @@ overridden_canonical_url: "https://blog.getgauge.io/headless-acceptance-tests-fc
 
 # Headless Acceptance Tests
 
-Headless Acceptance Tests
-
 ### Using Gauge, Puppeteer and Chrome to run headless tests
 
 In an earlier [article](https://blog.getgauge.io/testing-with-headless-chrome-9698cf56fdf9) we used Selenium to run a simple test using [headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome).
@@ -32,7 +30,7 @@ Under the hood, Selenium talks to [ChromeDriver](https://github.com/SeleniumHQ/s
 
 Shortly after announcing headless Chrome, Google released [Puppeteer,](https://github.com/GoogleChrome/puppeteer) a node library providing a high-level API to control headless Chrome over DevTools Protocol.
 
-We’ve updated Gauge’s [JavaScript runner](https://github.com/getgauge-contrib/gauge-js/releases/tag/v2.0.1) to work well with Puppeteer making it easy to write acceptance tests that run headless **without** Selenium or Chromedriver.
+We’ve updated Gauge’s [JavaScript runner](https://github.com/getgauge-contrib/gauge-js/releases/tag/v2.0.1) to work well with Puppeteer making it easy to write acceptance tests that run headless without Selenium or Chromedriver.
 
 ## Installing
 
@@ -56,7 +54,7 @@ If all is good, the tests pass and run headless without opening a browser window
 
 ## Specification
 
-The file specs/example.spec has the following specification.
+The file `specs/example.spec` has the following specification.
 
     Getting Started with Gauge
     ==========================
@@ -100,7 +98,7 @@ Use the page instance is [steps](https://docs.getgauge.io/longstart.html#steps).
         await page.click(".link-get-started");
     });
 
-Puppeteer’s API calls return promises. Gauge’s JavaScript runner handles [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) making tests **look** synchronous.
+Puppeteer’s API calls return promises. Gauge’s JavaScript runner handles [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) making tests look synchronous.
 
 Assertions are done after waiting for elements on the page to load.
 
@@ -122,7 +120,7 @@ See the browser window and control the speed of tests execution by passing headl
 
 Although Puppeteer’s API is a high level implementation, a tester has to know the DOM of the web application and how the page loads to author tests. This makes it cumbersome and flaky. To solve these issues, the Gauge team is experimenting on a new API over Puppeteer.
 
-[*Gauge](//gauge.org) is a tool for testers to author and maintain automated acceptance test suites. [Download](//gauge.org/get_started) it or read [documentation](http://docs.gauge.org) to get started!*
+*[Gauge](//gauge.org) is a free and open source test automation framework that takes the pain out of acceptance testing. [Download](//gauge.org/get_started) it or read [documentation](http://docs.gauge.org) to get started!*
 
 --
 
