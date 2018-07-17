@@ -126,7 +126,6 @@
 }
 
 .marketo-form {
-    display: none;
     margin-top: 40px;
     p {
         font-size: 13px;
@@ -264,9 +263,11 @@
     transform: translate(-50%, -50%);
     width: 350px;
     padding: 30px;
+
     h4 {
         margin: 0 0 20px;
     }
+    
     .close {
         position: absolute;
         top: 5px;
