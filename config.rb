@@ -17,7 +17,7 @@ page '/*.txt', layout: false
 set :base_url, ENV['BASE_URL'] || 'http://localhost:4567'
 set :docs_version, ENV['DOCS_VERSION'] || 'latest'
 set :preview?, ENV['DOCS_VERSION'] == 'master'
-
+set :base_url_for_blog_posts, "http://www.gauge.org/"
 set :js_dir, "assets/javascripts"
 set :css_dir, "assets/stylesheets"
 set :images_dir, "assets/images"
