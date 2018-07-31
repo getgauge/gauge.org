@@ -53,6 +53,7 @@
           var disqus_config = function () {
           this.page.url = "<%= config.base_url_for_blog_posts %>/<%= current_article.destination_path.sub('/index.html', '.html') %>";
           this.page.identifier = this.page.url; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          this.shortname = 'gaugeblog';
           };
           (function() { // DON'T EDIT BELOW THIS LINE
           var d = document, s = d.createElement('script');
@@ -63,7 +64,7 @@
         </script>
         <noscript>
           Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by   Disqus.</a>
-        </noscript>                        
+        </noscript>
       </article>
       </main>
     </div>
