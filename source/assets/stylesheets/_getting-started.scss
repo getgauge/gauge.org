@@ -157,6 +157,11 @@
     background: url(/assets/images/get_started-icons/windows.svg)
 }
 
+.icon_freebsd {
+    @extend %icon;
+    background: url(/assets/images/get_started-icons/freebsd.svg)
+}
+
 .icon_debian {
     @extend %icon;
     background: url(/assets/images/get_started-icons/debian.svg)
