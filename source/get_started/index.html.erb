@@ -60,13 +60,13 @@ meta_keywords: "Gauge, test automation, free and open source, download, get star
           
           <div class="tab-component tab-install">
             <ul class="tab">
-              <li class="tab_item active-tab" data-attr="w-zip">ZIP</li>
+              <li class="tab_item  active-tab" data-attr="w-zip">ZIP</li>
               <li class="tab_item" data-attr="chocolatey">Chocolatey</li>
 
             </ul>
-       
-              
-              <div class="tab-content" id="w-zip">
+ 
+            <div class="tab-content-container">
+              <div class="tab-content active" id="w-zip">
                 <h4 class="mobile-title">ZIP</h4>
                 <p class="instruction"> Download the
                   <a href="https://github.com/getgauge/gauge/releases/download/v<%= data.version.gauge %>/gauge-<%= data.version.gauge %>-windows.x86_64.zip">zip</a>
@@ -75,16 +75,15 @@ meta_keywords: "Gauge, test automation, free and open source, download, get star
                   <code>PS&gt; Expand-Archive -Path gauge-<%= data.version.gauge %>-windows.x86_64.zip -DestinationPath custom_path</code>
                 </div>
               </div>
-            
-            <div class="tab-content-container">
-              <div class="tab-content active" id="chocolatey">
+              
+              <div class="tab-content" id="chocolatey">
                 <h4 class="mobile-title">Chocolatey</h4>
                 <p class="instruction"> Install Gauge using <a href="https://chocolatey.org">Chocolatey</a></p>
                 <div class="code-box">
                   <code>&gt; choco install gauge</code>
                 </div>
               </div>
-
+              
               <p class="instruction">
                 For alternate methods of installation and our nightly releases, check out our
                 <a href="https://docs.gauge.org/latest/installation.html#installation">documentation</a>.
