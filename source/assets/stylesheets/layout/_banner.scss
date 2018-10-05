@@ -23,7 +23,7 @@ Style for Banner
 */
 
 $banner-bg:$secondary-color;
-$banner-heading:$primary-color;
+$banner-heading:#fff;
 
 .banner-container {
   background: $banner-bg;
@@ -33,12 +33,12 @@ $banner-heading:$primary-color;
   position: relative;
   width: auto;
   overflow: hidden;
+  
   @media(min-width: $screen-md) {
-      height: 50vh;
       min-height: 500px
   }
+
   @media(min-width: $screen-lg) {
-      height: 100vh;
       min-height: 700px;
   }
 }
@@ -62,8 +62,18 @@ $banner-heading:$primary-color;
   transform: translate(-50%, -40%);
   width: 90%;
   z-index: 6;
+
   @media(min-width: $screen-xl) {
       transform: translate(-50%, -40%);
+  }
+
+  @media (min-width: $screen-md) {
+    top: 40%;
+    width: 60%;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 65%;
   }
 }
 
@@ -71,19 +81,33 @@ $banner-heading:$primary-color;
   color: $banner-heading;
   text-align: center;
   font-size: 30px;
-  font-family: 'URWGeometric-SemiBold';
+  font-family: 'URWGeometric-Bold';
   font-weight: 400;
   margin: 0 20px 10px;
   line-height: 36px;
+
   @media(min-width: $screen-md) {
       font-size: 36px;
+      text-align: left;
+      line-height: 50px;
   }
+
   @media(min-width: $screen-lg) {
-      font-size: 44px;
+      display: block;
+      line-height: 65px;
+      font-size: 48px;
+      margin: 20px 20px;
+      width: 100%;
   }
   @media(min-width: $screen-xl) {
       font-size: 60px;
       margin: 0 20px 20px;
+  }
+
+  .block-text {
+      display: block;
+      width: 100%;
+      font-weight: bold;
   }
 }
 
@@ -95,43 +119,76 @@ $banner-heading:$primary-color;
   color: $white;
   width: 85%;
   margin: 0 auto 30px;
+
   @media(min-width: $screen-md) {
+      text-align: left;
       width: 65%;
       font-size: 17px;
       line-height: 25px;
+      margin: 0 20px 30px;
   }
   @media(min-width: $screen-lg) {
       line-height: 27px;
       font-size: 19px;
       font-weight: 300;
+      margin: 20px 20px;
   }
   @media(min-width: $screen-xl) {
-      width: 40%;
+      width: 100%;
   }
 }
 
-$cta-primary-bg:$white;
+$taiko-poster-bg: rgba(255, 204, 0, 0.2);
+.taiko-launch {
+    border: 1px solid $primary-color;
+    background: $taiko-poster-bg;
+    border-radius: 5px;
+    color: $white;
+    font-size: 18px;
+    padding: 20px;
+    text-align: left;
+    margin: 20px 20px;
+
+    a {
+        color: $white;
+    }
+}
+
+$cta-color: $secondary-color;
+$cta-primary-bg:$primary-color;
 $cta-secondary-border:$primary-color;
-$cta-secondary-color:$primary-color;
+$cta-secondary-color:$white;
+
 .banner-action {
-  margin-top: 25px;
-  text-align: center;
-  width: 300px;
-  margin: 0 auto;
+  margin: 25px 20px;
+	text-align: left;
+	width: auto;
+	padding-bottom: 40px;
+
   .cta-primary {
       @extend %button;
       background: $cta-primary-bg;
-      color: $banner-bg;
+      color: $cta-color;
       text-decoration: none;
       transition: $transition;
+      font-weight: bold;
       &:hover {
           background-color: $primary-color;
           transition: $transition;
       }
   }
+
   .cta-secondary {
-      color: $cta-secondary-color;
-      text-decoration: underline;
-      display: inline-block;
-  }
+    @extend %button;
+    border: 1px solid $cta-secondary-color;
+    color: $cta-secondary-color;
+    font-weight: bold;
+    display: inline-block;
+		text-decoration: none;
+
+		@media screen and (min-width: $screen-md) {
+			margin-left: 20px !important;
+		}
+	}
+	
 }
