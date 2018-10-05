@@ -11,22 +11,27 @@
     src: url('/assets/vendor/fonts/urw-geometric/354267_1_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.ttf') format('truetype');
 }
 
-// @font-face {
-//     font-family: 'URWGeometric-ExtraBold';
-//     src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot');
-//     src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.ttf') format('truetype');
-// }
+@font-face {
+    font-family: 'URWGeometric-ExtraBold';
+    src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot');
+    src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.ttf') format('truetype');
+}
 
-// @font-face {
-//     font-family: 'URWGeometric-Heavy';
-//     src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot');
-//     src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.ttf') format('truetype');
-// }
+@font-face {
+    font-family: 'URWGeometric-Heavy';
+    src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot');
+    src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.ttf') format('truetype');
+}
 
-// @font-face {
-//     font-family: 'URWGeometric-Regular';
-//     src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.otf') format('opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.ttf') format('truetype'), url('/assets/vendor/fonts/urw-geometric/RWGeometric-Regular.svg#URWGeometric-Regular') format('svg');
-// }
+@font-face {
+    font-family: 'URWGeometric-Bold';
+    src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'URWGeometric-Bold';
+    src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.otf') format('opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.ttf') format('truetype'), url('/assets/vendor/fonts/urw-geometric/RWGeometric-Regular.svg#URWGeometric-Regular') format('svg');
+}
 
 // @font-face {
 //     font-family: 'URWGeometric-Medium';
