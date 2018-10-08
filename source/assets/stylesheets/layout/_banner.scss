@@ -68,7 +68,7 @@ $banner-heading:#fff;
   }
 
   @media (min-width: $screen-md) {
-    width: 60%;
+    width: 75%;
   }
 
   @media (min-width: $screen-lg) {
@@ -121,14 +121,14 @@ $banner-heading:#fff;
 
   @media(min-width: $screen-md) {
       text-align: left;
-      width: 65%;
-      font-size: 17px;
+      width: 100%;
+      font-size: 20px;
       line-height: 25px;
       margin: 0 20px 30px;
   }
   @media(min-width: $screen-lg) {
       line-height: 27px;
-      font-size: 19px;
+      font-size: 24px;
       font-weight: 300;
       margin: 20px 20px;
   }
