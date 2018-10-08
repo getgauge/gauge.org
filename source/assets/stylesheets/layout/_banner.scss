@@ -139,15 +139,13 @@ $banner-heading:#fff;
 
 $taiko-poster-bg: rgba(255, 204, 0, 0.2);
 .taiko-launch {
-    border: 1px solid $primary-color;
-    background: $taiko-poster-bg;
-    border-radius: 5px;
-    color: $white;
-    font-size: 11px;
-    padding: 20px;
-    text-align: left;
-    margin: 20px 20px;
-		line-height: 30px;
+			border-radius: 5px;
+			color: #ffffff;
+			font-size: 15px;
+			padding: 20px;
+			text-align: left;
+			position: relative;
+			margin: 20px 20px;
     a {
         color: $white;
 		}
@@ -159,6 +157,32 @@ $taiko-poster-bg: rgba(255, 204, 0, 0.2);
 
 		@media screen and(min-width: $screen-lg) {
 			font-size: 18px;
+		}
+
+		&:before {
+			content: '';
+   		display: block;
+			border: 2px solid #ffcc01;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 30px;
+			border-right: 0;
+			border-radius: 5px 0 0 5px;
+		}
+
+		&:after {
+			content:'';
+			display: block;
+			border: 2px solid #ffcc01;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 30px;
+			border-left: 0;
+			border-radius: 0 5px 5px 0;
 		}
 
 }
