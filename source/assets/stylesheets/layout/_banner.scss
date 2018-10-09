@@ -97,11 +97,12 @@ $banner-heading:#fff;
       font-size: 48px;
       margin: 0px 20px 10px;
       width: 100%;
-      line-height: 36px;
+      line-height: 65px;
   }
+
   @media(min-width: $screen-xl) {
       font-size: 60px;
-      margin: 0 20px 20px;
+      margin: 0 20px 20px;;
   }
 
   .block-text {

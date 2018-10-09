@@ -94,6 +94,9 @@ $blog-description-color: #474747;
         color: #000;
     }
     pre {
+        background: #222222;
+        color: #fff;
+        border-radius: 5px;
         code {
             font-family: "Source Code Pro", monospace;
             font-size: 14px;
@@ -200,6 +203,7 @@ $blog-description-color: #474747;
     img {
         margin-top: 30px;
         margin-bottom: 30px;
+        border-radius: 5px;
     }
     .attribution {
         position: absolute;
