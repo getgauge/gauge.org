@@ -77,13 +77,13 @@ $banner-heading:#fff;
 }
 
 .banner-heading {
-  color: $banner-heading;
-  text-align: center;
-  font-size: 24px;
-  font-family: 'URWGeometric-Bold';
-  font-weight: 400;
-  margin: 0 20px 10px;
-  line-height: 36px;
+    color: $banner-heading;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'URWGeometric-Bold';
+    font-weight: 400;
+    margin: 0 20px 20px;
+    line-height: 28px;
 
   @media(min-width: $screen-md) {
       font-size: 36px;
@@ -97,6 +97,7 @@ $banner-heading:#fff;
       font-size: 48px;
       margin: 0px 20px 10px;
       width: 100%;
+      line-height: 36px;
   }
   @media(min-width: $screen-xl) {
       font-size: 60px;
@@ -113,8 +114,8 @@ $banner-heading:#fff;
 .banner-description {
   text-align: center;
   font-size: 14px;
-  line-height: 30px;
   font-weight: 400;
+  line-height: 20px;
   color: $white;
   width: 85%;
   margin: 0 auto 30px;
@@ -131,9 +132,10 @@ $banner-heading:#fff;
       font-size: 24px;
       font-weight: 300;
       margin: 20px 20px;
+      line-height: 30px;
   }
   @media(min-width: $screen-xl) {
-      width: 100%;
+      width: 80%;
   }
 }
 
@@ -142,18 +144,19 @@ $taiko-poster-bg: rgba(255, 204, 0, 0.2);
 			border-radius: 5px;
 			color: #ffffff;
 			font-size: 11px;
-			padding: 20px;
+			padding: 15px;
 			text-align: left;
 			position: relative;
 			margin: 20px 20px;
-
+            line-height: 20px;
 			a {
 					color: $white;
 				}
 
 		@media screen and(min-width: $screen-md) {
 			font-size: 16px;
-			margin: 40px 20px;
+            margin: 40px 20px;
+            padding: 20px;
 		}
 
 		@media screen and(min-width: $screen-lg) {
@@ -214,7 +217,9 @@ $cta-secondary-color:$white;
       transition: $transition;
       font-weight: bold;
       &:hover {
-          background-color: $primary-color;
+          background-color: transparent;
+          color: $primary-color;
+          border: 1px solid $primary-color;
           transition: $transition;
       }
   }
@@ -225,11 +230,16 @@ $cta-secondary-color:$white;
     color: $cta-secondary-color;
     font-weight: bold;
     display: inline-block;
-		text-decoration: none;
-
-		@media screen and (min-width: $screen-md) {
-			margin-left: 20px !important;
-		}
-	}
+    text-decoration: none;
+    transition: $transition;
+    @media screen and (min-width: $screen-md) {
+        margin-left: 20px !important;
+    }
+    
+    &:hover {
+        background: $white;
+        color: #000;
+    }
+    }
 	
 }
