@@ -1,0 +1,92 @@
+---
+layout: post
+post_title: Introducing Taiko - the last mile to reliable test automation
+date: 2018-10-23
+summary_image: "/assets/images/blog/gauge_blog_image_introducing_taiko.jpg"
+excerpt: "Gauge releases Taiko (beta) - a free and open source browser automation tool."
+author_name: "Zabil Maliackal"
+author_image: "https://cdn-images-1.medium.com/fit/c/100/100/1*tpbiaLHohL5UbeRbfw3hFw.jpeg"
+
+title: "Introducing Taiko | Gauge Blog"
+title_tag_of_header: "Introducing Taiko | Gauge Blog"
+
+meta_description: "Gauge releases Taiko (beta) - a free and open source browser automation tool."
+meta_keywords: "taiko, gauge, beta, test automation, browser automation, web driver, reliable browser automation"
+draft: true
+---
+
+#### Oct 23, 2018 | Zabil Maliackal
+
+<%= image_tag "blog/gauge_blog_image_introducing_taiko.jpg", {:title => "Gauge launches Taiko beta", :alt => "Gauge launches Taiko beta"} %>
+
+# Introducing Taiko - the last mile to reliable test automation
+
+Our primary goal at Gauge is to take the pain out of maintaining acceptance tests. 
+
+## The curious case of the ‘flaky test’
+
+When it comes to test maintenance, the biggest complaint that teams have are ‘flaky tests’. 
+
+> Current set of open source tools for automating the browser are unreliable as they are not built for testing modern web applications.
+
+Tests often fail because they are 
+
+- unable to handle changes in the page structure (e.g. changing HTML for rendering an element) and/or 
+- waiting for elements on the page to appear (e.g. Single page applications where elements change without reloading the page )
+
+So teams end up with “flaky test suites” and ignore failing tests in order to overcome this issue. 
+
+Surely, there is a better way to make testing more reliable. 
+
+## Introducing Taiko
+
+> We built Taiko to make browser automation reliable. 
+
+[Taiko](https://github.com/getgauge/taiko) is a free and open source browser automation tool built by the team behind Gauge by ThoughtWorks. It is a Node.js library to automate the chrome browser. Taiko uses the Chrome DevTools API and is built ground up to test modern web applications. 
+
+Taiko’s interactive recorder creates highly readable and maintainable JavaScript tests. It’s simple API, smart selectors and implicit waits all work together towards a single goal - **No more flaky tests**.   
+
+## Fighting ‘flakiness’ with Smart Selectors, Taiko’s API and Gauge
+
+Taiko **[Smart Selectors](https://taiko.gauge.org/#smart-selectors)** help test web applications without depending on the internal page structure. Taiko tests web applications like a user, not a developer. 
+
+> Testers don’t have to know the underlying code reducing the likelihood of test failures when code is refactored without changing functionality. 
+
+**Taiko’s API** understands actions that trigger XHR request or fetch dynamic content. 
+
+> It implicitly waits for them to complete before moving on to the next action. This means that you don't have to add ‘flaky’ wait times in your tests.
+
+Using **Taiko with Gauge** (which promotes reusable markdown-based specifications) minimizes code between the Gauge specification and the Taiko test script. 
+
+> This reduces the chances of tests failing suddenly due to “flakiness” rather than real errors.  
+
+[Taiko is in beta](https://github.com/getgauge/taiko) and we are looking to (forgive the pun!) gauge your experience and features that make test automation delightful. 
+
+We’d love your feedback on Taiko and here’s how you can get started. 
+
+## Get Started with Gauge and Taiko
+
+Taiko works on Windows, MacOS and linux. 
+
+You need to have [Node.js](https://nodejs.org) installed in your system to start writing Taiko scripts in JavaScript. After you’ve installed Node.js, open a terminal application (or powershell in the case of Windows). 
+
+Install Gauge and Taiko using `npm` and then initialize a sample project using
+
+    npm install @getgauge/cli
+    gauge init js
+
+After creating your project, you can run the sample specification.
+
+    gauge run specs
+
+### Install as a standalone library
+
+You can also choose to install Taiko as a standalone library using
+
+    npm install -g taiko
+
+You’re now all set to start using Taiko! You can learn more about using Taiko from the [documentation](https://taiko.gauge.org). 
+
+<div class="container">
+    <a href="https://taiko.gauge.org" class="get-started-cta">Learn more</a>  
+</div>
