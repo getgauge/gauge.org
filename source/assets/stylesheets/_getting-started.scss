@@ -124,8 +124,15 @@
     }
 }
 
-.marketo-form {
-    margin-top: 40px;
+.marketo-form-container {
+    display: block;
+    margin: 40px auto;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+        width: 593px;
+    }
+
     p {
         font-size: 13px;
     }
@@ -140,6 +147,7 @@
         width: 80%;
     }
 } // icons
+
 %icon {
     display: inline-block;
     width: 30px;
@@ -279,5 +287,57 @@
         font-size: 16px;
         color: #000;
         cursor: pointer;
+    }
+}
+$marekto-section-bg: #333;
+$color_light : #fff;
+
+.marketo-section {
+    background: $marekto-section-bg;
+    padding: 40px;
+}
+
+.color_light {
+    color: #fff;
+}
+
+.form_heading {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form_desc{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.mktoLabel {
+    color: $color_light;
+
+    a {
+        color: $color_light;
+
+        &:hover {
+            color: $color_light;
+        }
+    }
+}
+
+
+#mktoForm_8802 {
+    .mktoFormRow:nth-child(4) {
+
+        .mktoFieldWrap {
+
+            .mktoLabel {
+                width: 557px;
+                margin: 0px 35px;
+            }
+
+            .mktoLogicalField {
+                position: absolute;
+                left: -5px;
+            }
+        }
     }
 }
