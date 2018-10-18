@@ -1,0 +1,50 @@
+<div class="sidebar-content" id="create-project">
+        <h2 class="sidebar-content_header">Create a Gauge project </h2>
+        <p class="sidebar-content_description"> 
+          Before you can start writing tests for your application, you’ll need to create or initialize a Gauge project. 
+        </p>
+        <p class="sidebar-content_description"> 
+          Make sure you’re in the directory or folder that you want to create your tests in. 
+        </p>
+        <div class="code-box">
+            <pre>
+              mkdir gaugetest
+              cd gaugetest
+            </pre>
+          </div>
+          <p class="sidebar-content_description"> 
+            Depending on the language you’ll use for your tests, you’ll choose the appropriate Gauge project to initialize. 
+          </p>
+          <div class="code-box">
+            <pre>
+              gauge init js # or csharp, dotnet, java, python, ruby
+            </pre>
+          </div>
+          <div class="note-box">
+            <p class="note-box_desc">
+              If you face any errors here, make sure that you have the prerequisites for your language. 
+            </p>
+          </div>
+          <p class="sidebar-content_description">
+            After you’ve successfully created a gauge project, you’ll be able to see a sample project created in gaugetest . 
+          </p>
+          
+          <img class="img-resposive" src= <%= image_path('get_started-screens/create-gauge.png') %> />
+          
+          <div class="note-box">
+            <p class="note-box_desc">
+              The file structure may vary depending on the language of your project. For this example, we have created a JavaScript project. 
+            </p>
+          </div>
+          <p class="sidebar-content_description"> 
+            Your Gauge project will come with a sample specification at 
+            <span class="highlight">/specs/example.spec</span>
+          </p>
+
+          <div class="note-box">
+            <p class="note-box_desc">
+              A test specification (spec) is detailed statement of what will be tested. In Gauge, these are written in a .spec file. 
+            </p>
+          </div>
+        <%= partial 'partials/_page_controls.html.erb', :locals => { :text_left => 'Go Next', :link_text_lt => '#', :text_right => 'Go Back', :link_text_rt => '#' } %>
+      </div>

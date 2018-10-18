@@ -1,0 +1,32 @@
+<div class="sidebar-content" id="quick-install">
+        <h2 class="sidebar-content_header"> Quick Install </h2>
+
+         <div class="note-box">
+          <p class="note-box_desc">
+            This quick start uses npm. For instructions about how to install Gauge on the OS of your choice using windows installer, 
+            package managers, ZIP files or CURL, see our detailed 
+            <a href="https://docs.gauge.org/latest/installation.html#installation">documentation</a>.
+          </p>
+         </div> 
+
+          <p class="sidebar-content_description">
+            We recommend using npm to do a global install of Gauge. Before you begin, make sure that you have Node.js (version 8 upwards) installed. 
+          </p>
+
+          <div class="code-box">
+            <pre>
+              npm install -g @getgauge/cli
+            </pre>
+          </div>
+          <p class="sidebar-content_description">
+            Once you’ve installed Gauge, you’re ready to start creating your first Gauge test.  
+          </p>
+          <div class="note-box">
+            <p class="note-box_desc">
+              Note: Gauge is a test runner and is inbuilt with Taiko - a node.js library to automate the chrome browser. We recommend using Taiko with Gauge. 
+              Gauge also supports other web drivers like Selenium or Sahi. 
+              Refer to <a href="http://docs.gauge.org">our documentation </a> for how to create templates for these drivers. 
+            </p>
+          </div>
+        <%= partial 'partials/_page_controls.html.erb', :locals => { :text_left => 'Before we Start', :link_text_lt => '#', :text_right => 'Create Gauge Project', :link_text_rt => '#' } %>
+      </div>

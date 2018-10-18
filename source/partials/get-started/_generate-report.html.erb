@@ -1,0 +1,24 @@
+<div class="sidebar-content active-content" id="generate-report">
+        <h2 class="sidebar-content_header"> Run your specification and generate a report </h2>
+        <p class="sidebar-content_description"> 
+          Run your specification on the command line/terminal using
+        </p>
+          <div class="code-box">
+            <pre>
+            gauge run specs
+            </pre>
+          </div>
+          <p class="sidebar-content_description">
+            You’ll get immediate feedback on the command line about what got executed. 
+          </p>
+
+          <img class="img-resposive" src= <%= image_path('get_started-screens/specification-1.png') %> />
+          
+          <p class="sidebar-content_description">
+            Once you’ve run the sample spec, you can view the HTML report of the tests run by navigating to <span class="highlight"> /gaugetest/reports/html-report/index.html</span>. Here’s what a Gauge report looks like. 
+          </p>
+
+          <img class="img-resposive" src= <%= image_path('get_started-screens/specification-2.png') %> />
+
+        <%= partial 'partials/_page_controls.html.erb', :locals => { :text_left => 'Create your Gauge project', :link_text_lt => '#', :text_right => 'Create your own test specification',  :link_text_rt => '#' } %>
+      </div>
