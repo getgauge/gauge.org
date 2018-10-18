@@ -106,4 +106,15 @@ $(document).ready(function(){
       scrollTop : $(sectionId).offset().top - 100  
   }, 500);
   });
+
+  $('.sidebar_item').click(function() {
+    
+    let id = $(this).attr('data-attr');
+
+    $('.sidebar-content').removeClass('active-content');
+    $(id).addClass('active-content');
+    $('.sidebar_item').removeClass('active-item');
+    $(this).addClass('active-item');
+  });
 });
+

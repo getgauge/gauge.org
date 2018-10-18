@@ -49,6 +49,12 @@ $control-heading-color: #999999;
   font-size: 14px;
   font-weight: normal;
   margin: 20px 0;
+  cursor: pointer;
+  transition: all $transition;
+
+  &:hover {
+    border-bottom: 1px solid $primary-color;  
+  }
 }
 
 .active_item {
