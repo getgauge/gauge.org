@@ -88,24 +88,6 @@ $(document).ready(function(){
     $(".gdpr-cookie-banner").hide();
   }
 
-  function determinePackageNameBasedOnOS() {
-    var userDefinedPackageName = window.location.hash.substr(1);
-    var validPackageNames = ['windows', 'mac', 'debian', 'yum', 'curl'];
-    if (userDefinedPackageName !== "" && validPackageNames.includes(userDefinedPackageName)) {
-      return userDefinedPackageName;
-    }
-    var userAgent = navigator.userAgent;
-    var packageName = 'windows';
-    if (userAgent.indexOf("Win") !== -1) packageName = "windows";
-    if (userAgent.indexOf("Mac") !== -1) packageName = "mac";
-    if (userAgent.indexOf("Debian") !== -1) packageName = "debian";
-    if (userAgent.indexOf("Ubuntu") !== -1) packageName = "debian";
-    if (userAgent.indexOf("RedHat") !== -1) packageName = "yum";
-    if (userAgent.indexOf("CentOS") !== -1) packageName = "yum";
-
-    return packageName
-  };
-
   if($(".tab-nav-get_started").length) {
     var packageName = determinePackageNameBasedOnOS();
     $(".tab-nav-get_started li.tab-nav_item[data-attr='" + packageName + "']").click();

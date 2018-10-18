@@ -128,3 +128,17 @@ body {
 .mktoButtonRow{
     margin: 20px 0 !important;
 }
+
+.img-resposive {
+    width: 100%;
+    height: auto;
+    margin: 35px auto;
+}
+
+.highlight {
+    background-color: $highlight-color;
+    border-radius: 3px;
+    padding: 0px 5px;
+    font-family: 'SourceCodePro-Regular';
+    font-size: 16px;
+}

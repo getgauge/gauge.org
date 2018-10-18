@@ -1,0 +1,16 @@
+<div class="controls">
+  <% if text_left != '' %>
+    <div class="left-btn">
+      <p class="control_heading"> Previous </p>
+        <img src=<%= image_path('previous-angle.svg')%>  class="icon-sm"/> <%= link_to text_left, link_text_lt , class: 'cntl-txt' %>
+      
+    </div>
+  <% end %>
+
+  <% if text_right != '' %>
+    <div class="right-btn">
+      <p class="control_heading"> Next</p>
+      <%= link_to text_right, link_text_rt , class: 'cntl-txt' %> <img src=<%= image_path('next-angle.svg')%>  class="icon-sm" />
+    </div>
+  <% end %>
+</div>
