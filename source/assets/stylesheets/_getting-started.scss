@@ -26,14 +26,14 @@ $border-color: #CCCCCC;
         color: white;
         display: block;
         font-family: monospace, monospace;
-        font-size: 11px;
+        font-size: 12px;
         @media (min-width: $screen-md) {
             font-size: 14px;
         }
     }
     pre {
         color: #fff;
-        font-size: 11px;
+        font-size: 12px;
         white-space: normal;
         padding: 0px 10px;
         @media (min-width: $screen-md) {
@@ -50,6 +50,7 @@ $border-color: #CCCCCC;
 
 .sidebar-content {
     display: none;
+    padding: 20px;
 }
 
 .active-content {
@@ -57,13 +58,20 @@ $border-color: #CCCCCC;
 }
 
 .sidebar-content_header {
-    font-size: 28px;
+    font-size:18px;
     font-family: 'URWGeometric-Bold';
+
+    @media (min-width: $screen-md) {
+        font-size: 28px;
+    }
 }
 
 .sidebar-content_description {
-    font-size: 16px;
     font-family: 'Open Sans';
+    font-size: 14px;
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+    }
 }
 
 .note-box {
@@ -75,24 +83,35 @@ $border-color: #CCCCCC;
 }
 
 .note-box_list {
-    font-size: 16px;
     font-family: 'Open Sans';
+    font-size: 14px;
+
+    @media (min-width: $screen-md) { 
+        font-size: 16px;
+    }
 }
 
 .note-heading {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Open Sans';
     font-weight: 600;
     margin: 0;
     padding: 0px 20px;
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+    }
 }
 
 .note-box_desc {
-    font-size: 16px;
     font-family: 'Open Sans';
     font-weight: 400;
     margin: 0;
     padding: 0px 20px;
+    font-size: 14px;
+
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+    }
 }
 
 .sub-section {
@@ -102,15 +121,28 @@ $border-color: #CCCCCC;
 }
 
 .sub-section_header {
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'URWGeometric-Bold'; 
+    @media (min-width: $screen-md) {
+        font-size: 20px;
+    }
+}
+.sub-section_desc {
+    font-size: 14px;
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+    }
 }
 
 .desc-list {
-    font-size: 16px;
     font-family: 'Open Sans';
     margin: 10px;
-    padding: 0 13px;;
+    padding: 0 13px;
+    font-size: 14px;
+
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+    }
 }
 
 .marketo-form-container {
@@ -129,6 +161,7 @@ $border-color: #CCCCCC;
 
 .content-container-gett_started {
     order: -1;
+    border: 1px solid transparent;
     @media (min-width: $screen-lg) {
         order:1;
     }
