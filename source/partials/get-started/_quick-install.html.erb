@@ -3,14 +3,26 @@
 
          <div class="note-box">
           <p class="note-box_desc">
-            This quick start uses npm. For instructions about how to install Gauge on the OS of your choice using windows installer, 
+            This quick start uses <a href="https://www.npmjs.com/">npm</a>. For instructions about how to install Gauge on the OS of your choice using windows installer, 
             package managers, ZIP files or CURL, see our detailed 
             <a href="https://docs.gauge.org/latest/installation.html#installation">documentation</a>.
           </p>
          </div> 
 
           <p class="sidebar-content_description">
-            We recommend using npm to do a global install of Gauge. Before you begin, make sure that you have Node.js (version 8 upwards) installed. 
+            We recommend using npm to do a global install of Gauge. Before you begin, make sure that you have the <a href="https://nodejs.org/en/">latest version of Node.js</a>
+            (covered by Long Term Support) installed. </p>
+
+            <p class="sidebar-content_description"> A good way to do this is to install the latest node version by using </p>
+
+          <div class="code-box">
+            <pre>
+              npm install -g npm@latest
+            </pre>
+          </div>
+
+          <p class="sidebar-content_description"> 
+            Now, install Gauge using
           </p>
 
           <div class="code-box">
@@ -23,7 +35,7 @@
           </p>
           <div class="note-box">
             <p class="note-box_desc">
-              Note: Gauge is a test runner and is inbuilt with Taiko - a node.js library to automate the chrome browser. We recommend using Taiko with Gauge. 
+              Gauge is a test automation framework that uses Taiko - a node.js library, to automate the chrome browser. 
               Gauge also supports other web drivers like Selenium or Sahi. 
               Refer to <a href="http://docs.gauge.org">our documentation </a> for how to create templates for these drivers. 
             </p>

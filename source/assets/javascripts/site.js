@@ -1,6 +1,8 @@
 $(document).ready(function(){
   setGithubStar();
-  
+  copyCode($('.code-box'));
+  getLocationhash();
+
   $('.tab_item').click(function (e) {
     e.preventDefault();
     var id = $(this).attr('data-attr');
@@ -113,6 +115,7 @@ $(document).ready(function(){
     $(id).addClass('active-content');
     $('.sidebar_item').removeClass('active_item');
     $(this).addClass('active_item');
+    history.pushState({urlPath:window.location.pathname},"",id)
   });
 
   $('.cntl-txt').click(function() {
@@ -120,11 +123,41 @@ $(document).ready(function(){
     $('.sidebar-content').removeClass('active-content');
     $(id).addClass('active-content');
     $('.sidebar_item').removeClass('active_item');
-    var item = $('.sidebar_get-started').find(`[data-attr="${id}"]`);
-    $(item).addClass('active_item');
+    $('.sidebar_get-started').find(`[data-attr="${id}"]`).addClass('active_item');
+
     $('body, html').animate({
       scrollTop: 0
     }, 500);
   });
 });
 
+function copyCode(element) {
+  $(element).each(function() { 
+    $(this).append("<button class='copyBtn'>Copy</button>");
+    $(this).append("<input class='codeBox' value='none'> </input>");
+    $(this).append('<span class="copied-text">copied</span>');
+  });
+
+  $('.copyBtn').click(function() {
+    var value = $(this).prev().text();
+    var $copied_text = $(this).nextAll('.copied-text');
+    codeBox = $(this).next();
+    codeBox.val(value);
+    codeBox.select();
+    document.execCommand('copy');
+    $($copied_text).fadeIn();
+    setTimeout(function() {
+      $($copied_text).fadeOut();
+    }, 3000);
+  });
+}
+
+function getLocationhash(){
+  var hash = window.location.hash;
+  if(hash != "") {
+    $('.sidebar-content').removeClass('active-content');
+    $(hash).addClass('active-content');
+    $('.sidebar_item').removeClass('active_item');
+    $('.sidebar_get-started').find(`[data-attr="${hash}"]`).addClass('active_item');
+  }
+}

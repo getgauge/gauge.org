@@ -13,6 +13,7 @@ $border-color: #CCCCCC;
 }
 
 .code-box {
+    position: relative;
     background: $secondary-color;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     font-size: 16px;
@@ -58,8 +59,9 @@ $border-color: #CCCCCC;
 }
 
 .sidebar-content_header {
-    font-size:18px;
+    font-size:20px;
     font-family: 'URWGeometric-Bold';
+    margin: 0;
 
     @media (min-width: $screen-md) {
         font-size: 28px;
@@ -144,6 +146,25 @@ $border-color: #CCCCCC;
         font-size: 16px;
     }
 }
+.numbered-points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        margin: 10px;
+    }
+
+    .number {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        line-height: 1.5;
+        background: $primary-color;
+        text-align: center;
+        display: inline-block;
+    }
+}
 
 .marketo-form-container {
     display: block;
@@ -170,6 +191,49 @@ $border-color: #CCCCCC;
     }
 } 
 
+
+.copyBtn {
+    position: absolute;
+    width: 44px;
+    height: 20px;
+    background: #D8D8D8;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    font-family: 'SourceCodePro-Medium';
+    color: #1E1E1E;
+    right: 15px;
+    top: 15px;
+    border-radius: 3px;
+    transition: all 0.25s;
+    display:none;
+  }
+  
+  @media (min-width: 768px) {
+    .copyBtn {
+      display: block;
+    }
+  }
+  
+  .copyBtn:hover {
+    opacity: 0.8;
+  }
+
+  .codeBox {
+    opacity: 0;
+  }
+
+  .copied-text {
+    position: absolute;
+    font-size: 13px;
+    font-family: 'SourceCodePro-Medium';
+    color: grey;
+    right: 63px;
+    top: 16px;
+    display: none;
+  }
+
+  
 
 .marketo-success {
     display: none;
@@ -246,6 +310,7 @@ $color_light : #fff;
             .mktoLogicalField {
                 position: absolute;
                 left: -5px;
+                width: 25px;
             }
         }
     }
