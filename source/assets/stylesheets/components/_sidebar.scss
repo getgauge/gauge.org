@@ -26,6 +26,7 @@ $sidebar-item-color: #333333;
 $controls-border: #CCCCCC;
 $control-txt-color: #333333;
 $control-heading-color: #999999;
+$sidebar-footer-bg: #F2F2F2;
 
 .sidebar-menu-get-started {
   display: none;
@@ -121,4 +122,23 @@ $control-heading-color: #999999;
   height: 22px;
   width: 22px;
   vertical-align: bottom;
+}
+
+.sidebar-footer {
+  background: $sidebar-footer-bg;
+  padding: 10px 15px;;
+  border-radius: 5px;
+
+  .sidebar-header {
+    color: #333;
+  }
+}
+
+.sidebar-footer_link {
+  font-size: 14px;
+
+  &:hover {
+    background-color: transparent !important;
+    cursor: pointer;
+  }
 }
