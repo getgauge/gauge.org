@@ -1,7 +1,7 @@
 ---
 layout: post
 post_title: Introducing Taiko - the last mile to reliable test automation
-date: 2018-10-24
+date: 2018-10-23
 summary_image: "/assets/images/blog/gauge_blog_image_introducing_taiko.jpg"
 excerpt: "Gauge releases Taiko (beta) - a free and open source browser automation tool."
 author_name: "Zabil Maliackal"
@@ -15,7 +15,7 @@ meta_keywords: "taiko, gauge, beta, test automation, browser automation, web dri
 draft: true
 ---
 
-#### Oct 24, 2018 | Zabil Maliackal
+#### Oct 23, 2018 | Zabil Maliackal
 
 <%= image_tag "blog/gauge_blog_image_introducing_taiko.jpg", {:title => "Gauge launches Taiko beta", :alt => "Gauge launches Taiko beta"} %>
 
@@ -27,7 +27,7 @@ Our primary goal at Gauge is to take the pain out of maintaining acceptance test
 
 When it comes to test maintenance, the biggest complaint that teams have are ‘flaky tests’. 
 
-> Current set of open source tools for automating the browser are unreliable as they are not built for testing modern web applications.
+> The current  set of open source tools for automating the browser are unreliable as they are not built for testing modern web applications.
 
 Tests often fail because they are 
 
@@ -42,29 +42,82 @@ Surely, there is a better way to make testing more reliable.
 
 > We built Taiko to make browser automation reliable. 
 
-[Taiko](https://github.com/getgauge/taiko) is a free and open source browser automation tool built by the team behind Gauge by ThoughtWorks. It is a Node.js library to automate the chrome browser. Taiko uses the Chrome DevTools API and is built ground up to test modern web applications. 
+[Taiko](https://github.com/getgauge/taiko) is a free and open source browser automation tool built by the team behind Gauge by ThoughtWorks. It is a Node.js library to automate the chrome browser. Taiko is built ground up to test modern web applications. 
 
 Taiko’s interactive recorder creates highly readable and maintainable JavaScript tests. It’s simple API, smart selectors and implicit waits all work together towards a single goal - **No more flaky tests**.   
 
-## Fighting ‘flakiness’ with Smart Selectors, Taiko’s API and Gauge
+## Fighting ‘flakiness’ with Smart Selectors & Taiko’s API
 
 Taiko **[Smart Selectors](https://taiko.gauge.org/#smart-selectors)** help test web applications without depending on the internal page structure. Taiko tests web applications like a user, not a developer. 
 
+For example, here is a code snippet to google for ‘gauge test automation’ using the Selenium WebDriver
+
+    var browser = new webdriver.
+                     Builder().
+                     usingServer().
+                     withCapabilities({'browserName': 'chrome' }).
+                     build();
+
+    browser.get('http://www.google.com');
+
+    // Uses HTML locators, elements, form submissions etc.
+    browser.findElement(webdriver.By.name('q')).sendKeys('gauge test automation');
+    browser.findElement(webdriver.By.name('btnG')).click();
+
 > Testers don’t have to know the underlying code reducing the likelihood of test failures when code is refactored without changing functionality. 
+
+vs the same test script in Taiko.
+
+        openBrowser()
+        goto(“https://www.google.com”)
+        // API for testing like a user
+        write(‘gauge test automation’)
+        press(‘Enter’)
+
+As you can see, in Taiko, testers don’t have to know the underlying code reducing the likelihood of test failures when code is refactored without changing functionality. 
 
 **Taiko’s API** understands actions that trigger XHR request or fetch dynamic content. 
 
 > It implicitly waits for them to complete before moving on to the next action. This means that you don't have to add ‘flaky’ wait times in your tests.
 
-Using **Taiko with Gauge** (which promotes reusable markdown-based specifications) minimizes code between the Gauge specification and the Taiko test script. 
+For example, using the same test case as above, we want to wait for the page to load before performing an action. To do this with Selenium WebDriver, we have to ‘wait’ on an element before ‘clicking it’.
 
-> This reduces the chances of tests failing suddenly due to “flakiness” rather than real errors.  
+        var browser = new webdriver.
+                            Builder().
+                            usingServer().
+                            withCapabilities({'browserName': 'chrome' }).
+                            build();
+
+        browser.get('http://www.google.com');
+        
+        function findGaugeLink() {
+            return browser.findElements(webdriver.By.css('[href="https://gauge.org"]')).then((result) => result[0]);
+        } 
+        
+        browser.get('https://www.google.com');
+        browser.findElement(webdriver.By.name('q')).sendKeys('gauge test automation');
+        browser.findElement(webdriver.By.name('btnG')).click();
+        browser.wait(findGaugeLink, 2000).then((link) => link.click())
+
+When we have the same test case in Taiko, we don’t need to manually add a ‘wait’ time since Taiko detects a page load and automatically waits. 
+
+        openBrowser()
+        goto(“https://www.google.com”)
+        // API for testing like a user
+        write(‘gauge test automation’)
+        press(‘Enter’)
+        click(‘Open Source Test Automation Framework | Gauge’)
+
 
 [Taiko is in beta](https://github.com/getgauge/taiko) and we are looking to (forgive the pun!) gauge your experience and features that make test automation delightful. 
 
 We’d love your feedback on Taiko and here’s how you can get started. 
 
 ## Get Started with Gauge and Taiko
+
+Using **Taiko with Gauge** (which promotes reusable markdown-based specifications) minimizes code between the Gauge specification and the Taiko test script. 
+
+> Reducing the amount of code reduces bugs and makes maintenance easier.   
 
 Taiko works on Windows, MacOS and linux. 
 
