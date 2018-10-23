@@ -142,3 +142,11 @@ body {
     font-family: 'SourceCodePro-Regular';
     font-size: 16px;
 }
+
+.img-resposive_sm {
+    width: 100%;
+
+    @media (min-width: $screen-md ){
+        width: 50%;
+    }
+}

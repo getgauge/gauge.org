@@ -91,6 +91,15 @@ $border-color: #CCCCCC;
     @media (min-width: $screen-md) { 
         font-size: 16px;
     }
+
+    li {
+        line-height: 30px;
+        margin: 10px 0;
+        a {
+            font-size: 16px;
+            font-weight: normal;
+        }
+    }
 }
 
 .note-heading {
