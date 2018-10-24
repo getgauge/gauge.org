@@ -66,11 +66,12 @@ For example, here is a code snippet to google for ‘gauge test automation’ us
 
 vs the same test script in Taiko.
 
-        openBrowser()
-        goto(“https://www.google.com”)
-        // API for testing like a user
-        write(‘gauge test automation’)
-        press(‘Enter’)
+    openBrowser()
+    goto(“https://www.google.com”)
+
+    // API for testing like a user
+    write(‘gauge test automation’)
+    press(‘Enter’)
 
 As you can see, in Taiko, testers don’t have to know the underlying code reducing the likelihood of test failures when code is refactored without changing functionality. 
 
@@ -80,31 +81,32 @@ As you can see, in Taiko, testers don’t have to know the underlying code reduc
 
 For example, using the same test case as above, we want to wait for the page to load before performing an action. To do this with Selenium WebDriver, we have to ‘wait’ on an element before ‘clicking it’.
 
-        var browser = new webdriver.
-                            Builder().
-                            usingServer().
-                            withCapabilities({'browserName': 'chrome' }).
-                            build();
+    var browser = new webdriver.
+                        Builder().
+                        usingServer().
+                        withCapabilities({'browserName': 'chrome' }).
+                        build
+    browser.get('http://www.google.com')
 
-        browser.get('http://www.google.com');
-        
-        function findGaugeLink() {
-            return browser.findElements(webdriver.By.css('[href="https://gauge.org"]')).then((result) => result[0]);
-        } 
-        
-        browser.get('https://www.google.com');
-        browser.findElement(webdriver.By.name('q')).sendKeys('gauge test automation');
-        browser.findElement(webdriver.By.name('btnG')).click();
-        browser.wait(findGaugeLink, 2000).then((link) => link.click())
+    function findGaugeLink() {
+        return browser.findElements(webdriver.
+                                    By.css('[href="https://gauge.org"]')).
+                                    then((result) => result[0]);
+    }
+
+    browser.get('https://www.google.com');
+    browser.findElement(webdriver.By.name('q')).sendKeys('gauge test automation');
+    browser.findElement(webdriver.By.name('btnG')).click();
+    browser.wait(findGaugeLink, 2000).then((link) => link.click())
 
 When we have the same test case in Taiko, we don’t need to manually add a ‘wait’ time since Taiko detects a page load and automatically waits. 
 
-        openBrowser()
-        goto(“https://www.google.com”)
-        // API for testing like a user
-        write(‘gauge test automation’)
-        press(‘Enter’)
-        click(‘Open Source Test Automation Framework | Gauge’)
+    openBrowser()
+    goto(“https://www.google.com”)
+
+    write(‘gauge test automation’)
+    press(‘Enter’)
+    click(‘Open Source Test Automation Framework | Gauge’)
 
 
 [Taiko is in beta](https://github.com/getgauge/taiko) and we are looking to (forgive the pun!) gauge your experience and features that make test automation delightful. 
