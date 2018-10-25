@@ -8,7 +8,7 @@
         <div class="note-box">
           <p class="note-box_desc">
             In this example, we’ll be using screenshots and examples from the VS Code interface. You can use the Gauge 
-            <a href="https://docs.gauge.org/latest/writing-specifications.html#ide-plugins">plugins for Intellij and Visual Studio</a> or use any other editor to edit specifications. 
+            <a href="https://docs.gauge.org/latest/writing-specifications.html#ide-plugins" target ="_blank">plugins for Intellij and Visual Studio</a> or use any other editor to edit specifications. 
           </p>
         </div>
 
@@ -25,13 +25,19 @@
           <img class="img-resposive" src= <%= image_path('get_started-screens/create-spec-1.jpg') %> />
           
           <p class="sidebar-content_description">  
-            You can also install the VS Code plugin in the command line by following the <a href="https://github.com/getgauge/gauge-vscode#install"> instructions</a>.   
+            You can also install the VS Code plugin in the command line by following the <a href="https://github.com/getgauge/gauge-vscode#install" target="_blank">instructions</a>.   
           </p>
         </section>
 
         <section class="sub-content">
           <h3 class="sub-content_heading_sm"> Understand the Gauge test specification </h3>
           
+            <div class="note-box">
+            <p class="note-box_desc">
+                    A test <strong>specification (spec)</strong> is a detailed statement of what will be tested. In Gauge, these are written in a .spec file. 
+            </p>
+          </div>
+                
           <p class="sidebar-content_description"> 
             The Gauge specification file is present under <span class="highlight">/specs/example.spec</span>. Here’s what a typical specification looks like. 
           </p>
@@ -97,7 +103,7 @@
           </div>
 
           <p class="sidebar-content_description">  
-            This is an example of the code implementation behind the step. We have used Taiko to create the scripts for this Gauge project. You can use Taiko or a web driver of your choice (Selenium, Sahi) to create your automation tests. 
+            This is an example of the code implementation behind the step. We have used Taiko to create the scripts for this Gauge project. You can use Taiko or a web driver of your choice (Selenium, Sahi) to create your automation tests. To learn how to create scripts with Taiko, you can check out Taiko's <a href="https://taiko.gauge.org/#get-started" target="_blank">getting started guide</a>. 
           </p>
           <img src= <%= image_path('get_started-screens/create-spec-4.jpg') %> />
 
