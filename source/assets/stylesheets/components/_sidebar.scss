@@ -63,6 +63,14 @@ $sidebar-footer-bg: #F2F2F2;
   &:hover {
     border-bottom: 1px solid $primary-color;  
   }
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
 }
 
 .active_item {
