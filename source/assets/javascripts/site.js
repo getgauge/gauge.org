@@ -109,15 +109,6 @@ $(document).ready(function(){
   }, 500);
   });
 
-  $('.sidebar_item').click(function() {
-    let id = $(this).attr('data-attr');
-    $('.sidebar-content').removeClass('active-content');
-    $(id).addClass('active-content');
-    $('.sidebar_item').removeClass('active_item');
-    $(this).addClass('active_item');
-    history.pushState({urlPath:window.location.pathname},"",id)
-  });
-
   $('.cntl-txt').click(function() {
     var id = $(this).attr('href');
     $('.sidebar-content').removeClass('active-content');
