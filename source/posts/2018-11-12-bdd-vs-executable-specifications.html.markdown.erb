@@ -1,0 +1,140 @@
+---
+layout: post
+post_title: Minding the Gap between BDD and Executable Specifications
+date: 2018-11-12
+summary_image: "/assets/images/blog/gauge_blog_image_minding-gap-bdd-executable-specs_large.jpg"
+excerpt: "Here's why tools that have human readable executable specifications are not BDD tools."
+author_name: "Soumya Swaroop"
+author_image: "https://cdn-images-1.medium.com/fit/c/100/100/1*P0xkevj9Mngmm7NVAp5KIQ.jpeg"
+
+title: "Minding the Gap between BDD and Executable Specifications | Gauge Blog"
+title_tag_of_header: "Minding the Gap between BDD and Executable Specifications | Gauge Blog"
+meta_description: "Here's why tools that have human readable executable specifications are not BDD tools."
+meta_keywords: "gauge, test automation, bdd, executable specifications, why gauge is not a bdd tool, bdd vs executable specifications"
+---
+
+#### Nov 12, 2018 | Soumya Swaroop
+
+<%= image_tag "blog/gauge_blog_image_minding-gap-bdd-executable-specs_large.jpg", {:title => "BDD vs Executable Specifications", :alt => "BDD vs Executable Specifications"} %>
+
+# Minding the Gap between BDD and Executable Specifications
+
+Are all tools that have the ability to work with executable specifications meant for BDD? The short answer is No. For the long answer, read ahead.
+
+Specification by Example is a collaborative requirements discovery approach where examples and automatable tests are used for specifying requirements.
+
+> The concrete examples that are created can be used as **executable software specifications** to automatically verify that the software behaves as intended. - [Source](https://docs.cucumber.io/guides/bdd-tutorial/)
+
+## Collaboration is the keyword in BDD
+
+From the definition of BDD or Behaviour Driven Development, we know that,
+
+> … BDD is as much about the interactions between the various people in the project as it is about the output of the development process. - [Dan North](https://dannorth.net/whats-in-a-story/)
+
+This makes it clear that BDD,
+
+* is [not about testing](https://cucumber.io/blog/2014/03/03/the-worlds-most-misunderstood-collaboration-tool) (Even though tools like Cucumber may promote BDD with collaboration)
+* may be useful for documentation
+* may form the basis for automated tests
+* provides a “ubiquitous language” for analysis
+
+## Are executable specifications meant for BDD
+
+To answer this question, let’s look at a some of the pros and cons of having BDD in executable specifications. 
+
+### Collaboration using executable specifications
+
+Domain terminology used in executable specifications helps in creating a common understanding. But, stories, discussions and interactions also need *context.*
+
+Let’s say a functionality is changed or removed from the application (as it happens on most real world projects). The corresponding executable specifications are also changed or removed. Executable specifications (tests) don’t capture the past and they don’t talk about the evolution to the current state.
+
+> Tests are always going to be incomplete, so they always have to be backed up with other mechanisms. Since it's clear that Specification By Example isn't enough, it's clear that you need to do more to ensure that everything is properly communicated. - [Martin Fowler](https://martinfowler.com/bliki/SpecificationByExample.html)
+
+Older functionality, architectural, business, functional and other key decisions are not part of the up to date executable specifications. Comments like any other non-executable portions of a test can go out of sync and hence are not accurate.
+
+> Well written tests reflect the application’s current state and not historical discussions.
+
+### Are tests a single source of information
+
+BDD aims to gather [the specification of an outcome valuable to a user in a single place](https://cucumber.io/blog/2015/03/24/single-source-of-truth).
+
+Specification by example may be helpful to gather and discuss requirements, however all executable specifications are not always in a single test suite.
+
+For example, I work on an open source test automation tool - Gauge, which supports IDE features on VSCode. We want to build product features on IDEs depending on the user’s choice. So, the product’s core APIs have a logic to allow for this independence. This brought in the need for tests *independent* of the IDE — the [Subcutaneous](https://www.martinfowler.com/bliki/SubcutaneousTest.html) tests. But, there are behaviors that are specific to VSCode. Tests for these are IDE dependent and are written using VSCode test framework.
+
+We know that acceptance tests can come in [different levels of granularity](https://martinfowler.com/articles/practical-test-pyramid.html). There are tools that claim to work at any layer of the test pyramid and to help collaboration. 
+
+> In practice, tools should be chosen based on the testing needs of the application rather than retrofitting a collaboration tool.
+
+If tests from different test suites were to be used for information, it would take a lot of time and effort to consolidate (read: Overhead!).
+
+### BDD provides a “ubiquitous language” for analysis
+
+A story’s behavior is its acceptance criteria.  If the system fulfills all the acceptance criteria, it’s behaving as expected; if it doesn’t, it isn’t.
+
+**As a [X]... 
+I want [Y]... 
+so that [Z]** 
+
+is a loose enough format that it wouldn’t feel artificial or constraining to analysts. Defining behaviors in this format may seem appealing. 
+
+However, test cases become more complicated with granular details. For example, here is a case expressed in the format above for resetting password. 
+
+        Scenario: Reset my password
+        Given a user named "Georges Abitbol" with email "forgetful@users.net"
+        When I fill out forgot password form with "forgetful@users.net"
+        And I submit forgot password form
+        Then I should see "You will receive an email with instructions"
+        When I follow the "Change my password" link from the last sent email
+        When I fill out the password reset form with "supersecret" and "supersecret"
+        And I submit the password reset form
+        And I sign out manually
+        And I sign in manually as "georges_abitbol" with password "supersecret"
+        Then login should be successful
+
+It’s clear that long sentences are also problematic. Even if they are punctuated properly, they can be hard to read. In contrast, the same scenario expressed without the syntax overhead is easier to read. 
+
+        # Reset my password
+        User "Georges Abitbol" with email "forgetful@users.net" submits forgot password form
+        Message "You will receive an email with instructions" is displayed
+        Follow the "Change my password" link from the last sent email
+        Submit password reset form with "newPassword" and confirm "newPassword"
+        Sign out manually
+        Ensure login for user "georges_abitbol" with password "newPassword" is successful
+
+### BDD as the basis for test specifications and documentation
+
+> A simple sentence template keeps test methods focused. - Dan North
+
+An expressive test name is helpful when a test fails. The language used in tests is from the perspective of the stakeholders. Since business language is used, multiple stakeholders are acknowledged. This increases confidence of the stakeholders through evidence.
+
+But, is this enough for documentation?
+
+Let’s explore who the audiences can be for the Living Document generator.
+
+* Stakeholders/BAs — Can features be understood by running tests? Data is more complicated than a single value. Tests with limited stub data and new input may not reflect real application behavior.
+* Support team — Is this documentation a single source of truth? Tests do not have information like FAQ, Troubleshooting, Getting started and more details needed by the team.
+* Devs/QAs — Does one need a static snapshot of tests? In practice acceptance tests themselves are used to get an understanding of the current state of the application. 
+* End user — Is a document created with only examples and comments enough? Comments can go out of sync easily. Even tools that claim to generate living documentation have separate test suites and user documentation. For e.g. Pickles the living document generator has [documentation](http://docs.picklesdoc.com/en/latest/) and a [test harness](https://github.com/picklesdoc/pickles/tree/develop/test-harness). Surely, the documentation of living document generator tool itself is neither generated nor an executable living document.
+
+> Tests do not have the all information to lend themselves to creating documentation.
+
+Let’s look at what we know so far. 
+
+## Pros and Cons of using executable specifications for BDD
+
+| PROS                                                                                                        | CONS                                                                                                                                                                                      |
+|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Specs reflect the current state of the application well.                                                    | It does not capture historical context.                                                                                                                                                   |
+| Aims to be a single source of truth                                                                         | Specification By Example can't be the only requirements technique you use. Furthermore, executable specifications can come in different test suites and different levels of granularity.  |
+| Aims to provide a “ubiquitous language” for analysis                                                        | Test cases become more complicated with granular details.                                                                                                                                 |
+| Domain terminology creates a common understanding and describes behaviour with examples.                    | Specifications do not have the all information to lend themselves to creating documentation.                                                                                              |
+| Aims to use the BDD syntax to create specifications and allow adding automation to the ubiquitous language. | Acceptance tests can come in different levels of granularity. If tests from different test suites were to be used for information, it would take a lot of time and effort to consolidate. |
+
+### Why we don’t call Gauge a ‘BDD tool’
+
+There are advantages to using domain terminology and tests reflecting current behavior. However, non-executable portions of the specifications can be inaccurate. Using executable specifications for collaboration can end up being insufficient and creating overheads while not serving the initial purpose it set out to. At Gauge, we believe that we have to be mindful of the gap between what executable specifications offer and the aims of BDD. Although there are instances where our users use Gauge as a BDD Tool, our focus hasn't been BDD but on building features that give teams the confidence to release. 
+
+We support authoring of acceptance tests in markdown / plain text. Simple human readable acceptance tests and integrated reports give confidence to stakeholders about business crucial flows. 
+
+> And that, we believe, is the main purpose of test automation - to give teams the confidence to release. 
