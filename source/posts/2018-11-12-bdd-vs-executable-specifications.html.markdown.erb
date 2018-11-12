@@ -123,17 +123,13 @@ Let’s look at what we know so far.
 
 ## Pros and Cons of using executable specifications for BDD
 
-| PROS                                                                                                        | CONS                                                                                                                                                                                      |
-|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Specs reflect the current state of the application well.                                                    | It does not capture historical context.                                                                                                                                                   |
-| Aims to be a single source of truth                                                                         | Specification By Example can't be the only requirements technique you use. Furthermore, executable specifications can come in different test suites and different levels of granularity.  |
-| Aims to provide a “ubiquitous language” for analysis                                                        | Test cases become more complicated with granular details.                                                                                                                                 |
-| Domain terminology creates a common understanding and describes behaviour with examples.                    | Specifications do not have the all information to lend themselves to creating documentation.                                                                                              |
-| Aims to use the BDD syntax to create specifications and allow adding automation to the ubiquitous language. | Acceptance tests can come in different levels of granularity. If tests from different test suites were to be used for information, it would take a lot of time and effort to consolidate. |
+<%= image_tag "blog/Pros_And_cons.png", {:title => "Pros and Cons of using executable specifications for BDD", :alt => "Pros and Cons of using executable specifications for BDD"} %>
 
 ### Why we don’t call Gauge a ‘BDD tool’
 
-There are advantages to using domain terminology and tests reflecting current behavior. However, non-executable portions of the specifications can be inaccurate. Using executable specifications for collaboration can end up being insufficient and creating overheads while not serving the initial purpose it set out to. At Gauge, we believe that we have to be mindful of the gap between what executable specifications offer and the aims of BDD. Although there are instances where our users use Gauge as a BDD Tool, our focus hasn't been BDD but on building features that give teams the confidence to release. 
+There are advantages to using domain terminology and tests reflecting current behavior. However, non-executable portions of the specifications can be inaccurate. Using executable specifications for collaboration can end up being insufficient and creating overheads while not serving the initial purpose it set out to. 
+
+At Gauge, we believe that we have to be mindful of the gap between what executable specifications offer and the aims of BDD. Although there are instances where our users use Gauge as a BDD Tool, our focus hasn't been BDD but on building features that give teams the confidence to release. 
 
 We support authoring of acceptance tests in markdown / plain text. Simple human readable acceptance tests and integrated reports give confidence to stakeholders about business crucial flows. 
 
