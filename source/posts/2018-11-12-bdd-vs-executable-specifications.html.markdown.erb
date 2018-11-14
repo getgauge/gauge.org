@@ -80,27 +80,29 @@ is a loose enough format that it wouldn’t feel artificial or constraining to a
 
 However, test cases become more complicated with granular details. For example, here is a case expressed in the format above for resetting password. 
 
-        Scenario: Reset my password
-        Given a user named "Georges Abitbol" with email "forgetful@users.net"
-        When I fill out forgot password form with "forgetful@users.net"
-        And I submit forgot password form
-        Then I should see "You will receive an email with instructions"
-        When I follow the "Change my password" link from the last sent email
-        When I fill out the password reset form with "supersecret" and "supersecret"
-        And I submit the password reset form
-        And I sign out manually
-        And I sign in manually as "georges_abitbol" with password "supersecret"
-        Then login should be successful
+    Scenario: Reset my password
+    Given a user named "Georges Abitbol" with email "forgetful@users.net"
+    When I fill out forgot password form with "forgetful@users.net"
+    And I submit forgot password form
+    Then I should see "You will receive an email with instructions"
+    When I follow the "Change my password" link from the last sent email
+    When I fill out the password reset form with "supersecret" and "supersecret"
+    And I submit the password reset form
+    And I sign out manually
+    And I sign in manually as "georges_abitbol" with password "supersecret"
+    Then login should be successful
 
 It’s clear that long sentences are also problematic. Even if they are punctuated properly, they can be hard to read. In contrast, the same scenario expressed without the syntax overhead is easier to read. 
 
-        # Reset my password
-        User "Georges Abitbol" with email "forgetful@users.net" submits forgot password form
-        Message "You will receive an email with instructions" is displayed
-        Follow the "Change my password" link from the last sent email
-        Submit password reset form with "newPassword" and confirm "newPassword"
-        Sign out manually
-        Ensure login for user "georges_abitbol" with password "newPassword" is successful
+    # Reset my password
+    User "Georges Abitbol" with email "forgetful@users.net" submits forgot password 
+    form
+    Message "You will receive an email with instructions" is displayed
+    Follow the "Change my password" link from the last sent email
+    Submit password reset form with "newPassword" and confirm "newPassword"
+    Sign out manually
+    Ensure login for user "georges_abitbol" with password "newPassword" is 
+    successful
 
 ### BDD as the basis for test specifications and documentation
 
