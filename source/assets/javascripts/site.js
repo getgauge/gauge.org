@@ -172,8 +172,11 @@ function videoEndchange() {
     let parent = $(this).parent().parent().parent();
     let nextItem = parent.next();
     let videoId = parent.attr('id');
-    let li = $(".card-nav_item").find(`[data-attr='${videoId}']`)
+    console.log(videoId);
+    let li = $(".card-nav").find(`[data-attr='${videoId}']`);
+    console.log(li);
     let nextLi = li.next();
+    console.log(nextLi);
 
     parent.removeClass('active-card');
     li.removeClass('active');
