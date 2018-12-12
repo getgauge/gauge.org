@@ -2,6 +2,8 @@ $(document).ready(function(){
   setGithubStar();
   copyCode($('.code-box'));
   getLocationhash();
+  videoContentChange();
+  videoEndchange();
 
   $('.tab_item').click(function (e) {
     e.preventDefault();
@@ -151,4 +153,31 @@ function getLocationhash(){
     $('.sidebar_item').removeClass('active_item');
     $('.sidebar_get-started').find(`[data-attr="${hash}"]`).addClass('active_item');
   }
+}
+
+function videoContentChange(){
+  $('.card-nav_item').click(function() {
+    var videoId = '#' + $(this).attr('data-attr');
+    $('.card').removeClass('active-card');
+    $(videoId).addClass('active-card');
+    $('.card-nav_item').removeClass('active');
+    $(this).addClass('active');
+  });
+}
+
+function videoEndchange() {
+  var video  = $('.video_item');
+
+  video.on('ended', function(){
+    let parent = $(this).parent().parent().parent();
+    let nextItem = parent.next();
+    let videoId = parent.attr('id');
+    let li = $(".card-nav_item").find(`[data-attr='${videoId}']`)
+    let nextLi = li.next();
+
+    parent.removeClass('active-card');
+    li.removeClass('active');
+    nextItem.addClass('active-card');
+    nextLi.addClass('active');
+  });
 }
