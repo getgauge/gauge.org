@@ -1,0 +1,215 @@
+.sm-banner-container {
+  background: $primary-color url('/assets/images/banner-gauge-taiko.png') no-repeat center bottom;
+  width: 100%;
+  display: block;
+  height: 310px;
+  margin: 65px auto 0px;
+}
+
+.bold-lg-header {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  padding: 100px 0 0;
+}
+
+.banner-desc {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+.gauge_taiko {
+  padding: 40px 0;
+}
+
+// Cards
+
+.row-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row-cards_item {
+  width: 40%;
+  padding: 35px 20px;
+  border-radius: 5px;
+  border: 1px solid #666666;
+  margin: 10px 30px;
+}
+
+.header_img {
+  width: 221px;
+  height: 57px;
+  margin: 0 auto;
+  display: block;
+}
+
+.taiko-logo {
+  width: 144px;
+  height: 35px;
+}
+
+.item-content {
+  font-size: 18px;
+  text-align: center;
+}
+
+.btn-lg {
+  width: 450px;
+  height: 50px;
+  border-radius: 25px;
+  background: $primary-color;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  margin: 50px auto;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+.desc_bold {
+  font-size: 36px;
+  font-family: 'URWGeometric-SemiBold';
+  text-align: center;
+  margin: 40px auto;
+  line-height: 36px;
+  width: 70%;
+}
+
+
+.bg-primary-color {
+  background-color: $primary-color;
+  padding: 40px 0;
+}
+
+// Video container
+
+.section-desc {
+  font-family: 'URWGeometric-SemiBold';
+  font-size: 28px;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.card-nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.card-nav_item {
+  position: relative;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: $secondary-color;
+  border-radius: 18px;
+  margin: 0 20px;
+  background: #FEE065;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 0px;
+    width: 38px;
+    border: 1px dashed #1e1e1e;
+    top: 50%;
+    right: -40px;
+  }
+
+  &:last-child{
+
+    &::after{
+      display: none;
+    }
+  }
+}
+
+.active {
+  background: $white;
+}
+
+.row-box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card {
+  display: none;
+}
+
+.active-card {
+  display: block; 
+}
+
+.video-container {
+  width: 55%;
+  height: auto;
+}
+
+.video_item {
+  background: $secondary-color;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.content-container {
+  width: 40%;
+  padding: 30px;
+}
+
+.content-desc {
+  font-size: 16px;
+  color: $secondary-color;
+}
+
+.code-box_sm {
+  background: $secondary-color;
+  font-size: 16px;
+  color: $white;
+  width: 359px;
+  height: 26px;
+  border-radius: 5px;
+}
+
+
+.info-banner {
+  padding: 60px 0 10px;
+  background: $secondary-color;
+}
+
+.info-text_light {
+  color: $white;
+  font-size: 20px;
+  text-align: center; 
+  line-height: 30px;
+}
+
+.btn_light {
+  background: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color !important;
+  transition: $transition;
+
+  &:hover {
+    color: $white !important;
+  }
+}
