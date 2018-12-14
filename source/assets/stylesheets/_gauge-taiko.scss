@@ -1,24 +1,56 @@
 .sm-banner-container {
-  background: $primary-color url('/assets/images/banner-gauge-taiko.png') no-repeat center bottom;
+  background: $primary-color url('/assets/images/banner-gauge-taiko-mobile.svg') no-repeat center bottom;
   width: 100%;
   display: block;
-  height: 310px;
+  height: 207px;
   margin: 65px auto 0px;
+
+  @media (min-width: $screen-md) {
+    background: $primary-color url('/assets/images/banner-gauge-taiko-tab.png') no-repeat center bottom;
+    height: 280px;
+  }
+
+  @media (min-width: $screen-lg) {
+    background: $primary-color url('/assets/images/banner-gauge-taiko.png') no-repeat center bottom;
+    height: 310px;
+  }
 }
 
 .bold-lg-header {
-  font-size: 60px;
+  font-size: 26px;
   font-weight: bold;
   text-align: center;
   display: block;
-  padding: 100px 0 0;
+  padding: 55px 0 0;
+  margin: 0;
+  line-height: 30px;
+  @media (min-width: $screen-md) { 
+    font-size: 42px;
+    padding: 60px 0 0;
+    line-height: 50px;
+  }
+
+  @media (min-width: $screen-lg) { 
+    line-height: 60px;
+    font-size: 60px;
+  }
 }
 
 .banner-desc {
-  font-size: 35px;
+  font-size: 16px;
   font-weight: 600;
   text-align: center;
   padding: 20px 0;
+  margin: 0;
+
+  @media (min-width: $screen-md) { 
+    font-size: 21px;
+  }
+
+  @media (min-width: $screen-lg) {  
+    font-size: 35px;
+    line-height: 30px;
+  }
 }
 
 
@@ -32,92 +64,181 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
 }
 
 .row-cards_item {
-  width: 40%;
-  padding: 35px 20px;
+  width: 100%;
+  padding: 15px 15px 10px;
   border-radius: 5px;
   border: 1px solid #666666;
-  margin: 10px 30px;
+  margin: 25px 10px;
+
+  @media (min-width: $screen-md) { 
+    width: 45%;
+    margin: 10px 15px;
+    padding: 35px 20px 10px;
+  }
+
+  @media (min-width: $screen-lg) { 
+    width: 40%;
+    margin: 10px 30px;
+    padding: 35px 20px;
+  }
 }
 
 .header_img {
-  width: 221px;
-  height: 57px;
+  width: 100px;
+  height: 26px;
   margin: 0 auto;
   display: block;
+
+  @media (min-width: $screen-md) { 
+    width: 171px;
+    height: 41px;
+  }
+
+  @media (min-width: $screen-lg) { 
+    width: 221px;
+    height: 57px;
+  }
+
 }
 
 .taiko-logo {
-  width: 144px;
-  height: 35px;
+  width: 74px;
+  height: 18px;
+
+  @media (min-width: $screen-md) { 
+    width: 123px;
+    height: 30px;
+  }
+
+  @media (min-width: $screen-lg) { 
+    width: 144px;
+    height: 35px;
+  }
 }
 
 .item-content {
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
+
+  @media (min-width: $screen-md) { 
+    font-size: 16px;
+  }
+
+  @media (min-width: $screen-lg) { 
+    font-size: 18px;
+  }
 }
 
 .btn-lg {
-  width: 450px;
-  height: 50px;
+  width: 254px;
+  height:35px;
   border-radius: 25px;
   background: $primary-color;
-  font-size: 24px;
+  font-size: 13px;
   font-weight: bold;
   text-align: center;
-  line-height: 50px;
+  line-height: 35px;
   margin: 50px auto;
   text-decoration: none !important;
   display: block !important;
+
+  @media (min-width: $screen-md) { 
+    width: 315px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  @media (min-width: $screen-lg) { 
+    width: 450px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+  }
 }
 
 .desc_bold {
-  font-size: 36px;
-  font-family: 'URWGeometric-SemiBold';
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
-  margin: 40px auto;
-  line-height: 36px;
-  width: 70%;
+  margin: 30px auto;
+  line-height: 30px;
+  width: 100%;
+
+  @media (min-width: $screen-md) { 
+    font-family: 'URWGeometric-SemiBold';
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $screen-lg) { 
+    margin: 40px auto;
+    font-size: 36px;
+    width: 70%;
+  }
 }
 
 
 .bg-primary-color {
   background-color: $primary-color;
-  padding: 40px 0;
+}
+
+.video-slides {
+  padding: 50px 0;
 }
 
 // Video container
 
 .section-desc {
-  font-family: 'URWGeometric-SemiBold';
-  font-size: 28px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 14px;
   text-align: center;
-  padding: 50px 0;
+  padding: 20px 0;
+
+  @media (min-width: $screen-md) { 
+    font-family: 'URWGeometric-SemiBold';
+    font-size: 20px;
+    padding: 30px 0;
+    font-weight: 600;
+  }
+
+  @media (min-width: $screen-lg) { 
+    font-size: 28px;
+    padding: 50px 0;
+  }
+
 }
 
 .card-nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
-  margin: 40px auto;
+  margin: 35px auto;
   width: 100%;
+
+  @media (min-width: $screen-md) { 
+    margin: 40px auto;
+  }
 }
 
 .card-nav_item {
   position: relative;
-  width: 180px;
-  height: 40px;
-  line-height: 40px;
+  width: 35px;
+  height:25px;
+  line-height: 25px;
   font-size: 14px;
   font-weight: bold;
   text-align: center;
   color: $secondary-color;
   border-radius: 18px;
-  margin: 0 20px;
+  margin: 0 10px;
   background: #FEE065;
   cursor: pointer;
 
@@ -137,8 +258,37 @@
       display: none;
     }
   }
+
+  @media (min-width: $screen-md) { 
+    width: 79px;
+    height: 25px; 
+    line-height: 25px;
+    margin: 0 15px;
+  }
+
+  @media (min-width: $screen-lg) { 
+    width: 174px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 8px;
+  }
+
+  @media (min-width: $screen-xl) { 
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 20px;
+  }
+
 }
 
+.desc {
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: inline;
+  }
+}
 .active {
   background: $white;
 }
@@ -159,9 +309,48 @@
   display: block; 
 }
 
+.title-mobile {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0 20px;
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}
+
+.title-tablet {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  display: none;
+
+  @media (min-width: $screen-md){
+    display: block;
+  } 
+
+  @media (min-width: $screen-lg){
+    display: none;;
+  } 
+}
+
 .video-container {
-  width: 55%;
+  width: 100%;
   height: auto;
+  @media (min-width: $screen-md){
+    width: 50%;
+  }
+
+  @media (min-width: $screen-lg){
+    width: 55%;
+  }
 }
 
 .video_item {
@@ -171,30 +360,79 @@
   height: auto;
 }
 
-.content-container {
-  width: 40%;
-  padding: 30px;
+.card_content-container {
+  width: 100%;
+  padding: 5px;
+
+  @media (min-width: $screen-md){
+    width: 50%;
+    padding: 0px 20px;
+  }
+
+  @media (min-width: $screen-lg){
+    width: 40%;
+    padding: 30px;
+  }
 }
 
 .content-desc {
-  font-size: 16px;
+  font-size: 14px;
   color: $secondary-color;
+  text-align: center;
+  
+  @media (min-width: $screen-md){ 
+    font-size: 16px;
+    text-align: left;
+    margin: 5px auto;
+  }
 }
 
 .code-box_sm {
   background: $secondary-color;
-  font-size: 16px;
+  font-size: 14px;
   color: $white;
-  width: 359px;
+  width: 244px;
   height: 26px;
   border-radius: 5px;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  @media (min-width: $screen-lg){ 
+    width: 359px;
+    font-size: 16px;
+    
+  }
 }
 
 
 .info-banner {
   padding: 60px 0 10px;
   background: $secondary-color;
+  position: relative;
 }
+
+.arrow-down-dark {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 15px solid $primary-color;
+  transform: translate(-50%, 0%);
+  visibility: hidden;
+  
+  @media (min-width: $screen-lg) {
+    visibility: visible;
+  }
+}  
 
 .info-text_light {
   color: $white;
