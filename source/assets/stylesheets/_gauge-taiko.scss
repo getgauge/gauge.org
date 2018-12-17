@@ -18,7 +18,9 @@
 
 .bold-lg-header {
   font-size: 26px;
+  font-family: 'URWGeometric-ExtraBold';
   font-weight: bold;
+  color: $secondary-color;
   text-align: center;
   display: block;
   padding: 55px 0 0;
@@ -40,7 +42,7 @@
   font-size: 16px;
   font-weight: 600;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   margin: 0;
 
   @media (min-width: $screen-md) { 
@@ -138,6 +140,7 @@
   height:35px;
   border-radius: 25px;
   background: $primary-color;
+  color: $secondary-color;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
@@ -187,7 +190,7 @@
 }
 
 .video-slides {
-  padding: 50px 0;
+  padding: 0px 0 50px;
 }
 
 // Video container
@@ -358,6 +361,7 @@
   border-radius: 5px;
   width: 100%;
   height: auto;
+  margin: 20px auto;
 }
 
 .card_content-container {
