@@ -110,15 +110,18 @@
 .taiko-logo {
   width: 74px;
   height: 18px;
+  margin: 0 auto 10px;
 
   @media (min-width: $screen-md) { 
     width: 123px;
     height: 30px;
+    margin: 0 auto 44px;
   }
 
   @media (min-width: $screen-lg) { 
     width: 144px;
     height: 35px;
+    margin: 0 auto 44px;
   }
 }
 
