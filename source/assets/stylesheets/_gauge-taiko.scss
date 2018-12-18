@@ -384,7 +384,7 @@
 
   @media (min-width: $screen-lg){
     width: 40%;
-    padding: 30px;
+    padding: 20px 30px;
   }
 }
 
@@ -396,7 +396,7 @@
   @media (min-width: $screen-md){ 
     font-size: 16px;
     text-align: left;
-    margin: 5px auto;
+    margin: 0px auto 30px;
   }
 }
 
@@ -413,7 +413,7 @@
 
   @media (min-width: $screen-md) {
     text-align: left;
-    margin: 10px 0;
+    margin: 20px 0;
   }
 
   @media (min-width: $screen-lg){ 
@@ -449,9 +449,13 @@
 
 .info-text_light {
   color: $white;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center; 
   line-height: 30px;
+  
+  @media (min-width: $screen-lg) {
+    font-size: 20px; 
+  }
 }
 
 .btn_light {
