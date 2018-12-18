@@ -18,7 +18,7 @@
 
 .bold-lg-header {
   font-size: 26px;
-  font-family: 'URWGeometric-ExtraBold';
+  font-family: 'URWGeometric-Bold';
   font-weight: bold;
   color: $secondary-color;
   text-align: center;
@@ -28,7 +28,7 @@
   line-height: 30px;
   @media (min-width: $screen-md) { 
     font-size: 42px;
-    padding: 60px 0 0;
+    padding: 100px 0 0;
     line-height: 50px;
   }
 
@@ -50,8 +50,8 @@
   }
 
   @media (min-width: $screen-lg) {  
-    font-size: 35px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 20px;
   }
 }
 
@@ -110,15 +110,18 @@
 .taiko-logo {
   width: 74px;
   height: 18px;
+  margin: 0 auto 10px;
 
   @media (min-width: $screen-md) { 
     width: 123px;
     height: 30px;
+    margin: 0 auto 25px;
   }
 
   @media (min-width: $screen-lg) { 
     width: 144px;
     height: 35px;
+    margin: 0 auto 44px;
   }
 }
 
@@ -141,18 +144,24 @@
   border-radius: 25px;
   background: $primary-color;
   color: $secondary-color;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
   line-height: 35px;
-  margin: 50px auto;
+  margin: 50px auto 0px;
   text-decoration: none !important;
   display: block !important;
+  transition: $transition;
+
+  &:hover, &:active{
+    background:#FEE065 !important;
+  }
 
   @media (min-width: $screen-md) { 
     width: 315px;
     height: 40px;
     line-height: 40px;
+    font-size: 18px;
   }
 
   @media (min-width: $screen-lg) { 
@@ -172,7 +181,7 @@
   width: 100%;
 
   @media (min-width: $screen-md) { 
-    font-family: 'URWGeometric-SemiBold';
+    font-family: 'URWGeometric-Bold';
     font-size: 28px;
     line-height: 36px;
   }
@@ -200,18 +209,18 @@
   font-weight: bold;
   font-size: 14px;
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0 0;
 
   @media (min-width: $screen-md) { 
-    font-family: 'URWGeometric-SemiBold';
+    font-family: 'URWGeometric-Bold';
     font-size: 20px;
-    padding: 30px 0;
+    padding: 50px 0 0;
     font-weight: 600;
   }
 
   @media (min-width: $screen-lg) { 
     font-size: 28px;
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
 
 }
@@ -263,7 +272,7 @@
   }
 
   @media (min-width: $screen-md) { 
-    width: 79px;
+    width: 90px;
     height: 25px; 
     line-height: 25px;
     margin: 0 15px;
@@ -319,7 +328,7 @@
   font-family: 'Open Sans';
   font-weight: bold;
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0px;
   @media (min-width: $screen-md) {
     display: none;
   }
@@ -331,7 +340,7 @@
   font-size: 16px;
   font-family: 'Open Sans';
   font-weight: bold;
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
   display: none;
 
@@ -375,7 +384,7 @@
 
   @media (min-width: $screen-lg){
     width: 40%;
-    padding: 30px;
+    padding: 20px 30px;
   }
 }
 
@@ -387,7 +396,7 @@
   @media (min-width: $screen-md){ 
     font-size: 16px;
     text-align: left;
-    margin: 5px auto;
+    margin: 0px auto 30px;
   }
 }
 
@@ -404,7 +413,7 @@
 
   @media (min-width: $screen-md) {
     text-align: left;
-    margin: 10px 0;
+    margin: 20px 0;
   }
 
   @media (min-width: $screen-lg){ 
@@ -440,9 +449,13 @@
 
 .info-text_light {
   color: $white;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center; 
   line-height: 30px;
+  
+  @media (min-width: $screen-lg) {
+    font-size: 20px; 
+  }
 }
 
 .btn_light {
@@ -450,8 +463,9 @@
   border: 1px solid $primary-color;
   color: $primary-color !important;
   transition: $transition;
-
+  margin: 30px auto 60px;
   &:hover {
-    color: $white !important;
+    background: $primary-color !important;
+    color: #000 !important;
   }
 }
