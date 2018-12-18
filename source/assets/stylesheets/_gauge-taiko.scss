@@ -18,7 +18,7 @@
 
 .bold-lg-header {
   font-size: 26px;
-  font-family: 'URWGeometric-ExtraBold';
+  font-family: 'URWGeometric-Bold';
   font-weight: bold;
   color: $secondary-color;
   text-align: center;
@@ -28,7 +28,7 @@
   line-height: 30px;
   @media (min-width: $screen-md) { 
     font-size: 42px;
-    padding: 60px 0 0;
+    padding: 100px 0 0;
     line-height: 50px;
   }
 
@@ -50,8 +50,8 @@
   }
 
   @media (min-width: $screen-lg) {  
-    font-size: 35px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 20px;
   }
 }
 
@@ -151,6 +151,11 @@
   margin: 50px auto;
   text-decoration: none !important;
   display: block !important;
+  transition: $transition;
+
+  &:hover, &:active{
+    background:#FEE065 !important;
+  }
 
   @media (min-width: $screen-md) { 
     width: 315px;
@@ -175,7 +180,7 @@
   width: 100%;
 
   @media (min-width: $screen-md) { 
-    font-family: 'URWGeometric-SemiBold';
+    font-family: 'URWGeometric-Bold';
     font-size: 28px;
     line-height: 36px;
   }
@@ -206,7 +211,7 @@
   padding: 20px 0;
 
   @media (min-width: $screen-md) { 
-    font-family: 'URWGeometric-SemiBold';
+    font-family: 'URWGeometric-Bold';
     font-size: 20px;
     padding: 30px 0;
     font-weight: 600;
@@ -453,8 +458,9 @@
   border: 1px solid $primary-color;
   color: $primary-color !important;
   transition: $transition;
-
+  margin: 30px auto 60px;
   &:hover {
-    color: $white !important;
+    background: $primary-color !important;
+    color: #000 !important;
   }
 }
