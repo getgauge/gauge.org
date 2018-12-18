@@ -115,7 +115,7 @@
   @media (min-width: $screen-md) { 
     width: 123px;
     height: 30px;
-    margin: 0 auto 44px;
+    margin: 0 auto 25px;
   }
 
   @media (min-width: $screen-lg) { 
@@ -144,11 +144,11 @@
   border-radius: 25px;
   background: $primary-color;
   color: $secondary-color;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
   line-height: 35px;
-  margin: 50px auto;
+  margin: 50px auto 0px;
   text-decoration: none !important;
   display: block !important;
   transition: $transition;
@@ -161,6 +161,7 @@
     width: 315px;
     height: 40px;
     line-height: 40px;
+    font-size: 18px;
   }
 
   @media (min-width: $screen-lg) { 
@@ -208,18 +209,18 @@
   font-weight: bold;
   font-size: 14px;
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0 0;
 
   @media (min-width: $screen-md) { 
     font-family: 'URWGeometric-Bold';
     font-size: 20px;
-    padding: 30px 0;
+    padding: 50px 0 0;
     font-weight: 600;
   }
 
   @media (min-width: $screen-lg) { 
     font-size: 28px;
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
 
 }
@@ -271,7 +272,7 @@
   }
 
   @media (min-width: $screen-md) { 
-    width: 79px;
+    width: 90px;
     height: 25px; 
     line-height: 25px;
     margin: 0 15px;
@@ -327,7 +328,7 @@
   font-family: 'Open Sans';
   font-weight: bold;
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0px;
   @media (min-width: $screen-md) {
     display: none;
   }
@@ -339,7 +340,7 @@
   font-size: 16px;
   font-family: 'Open Sans';
   font-weight: bold;
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
   display: none;
 
