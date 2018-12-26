@@ -162,6 +162,7 @@ function videoContentChange(){
     $(videoId).addClass('active-card');
     $('.card-nav_item').removeClass('active');
     $(this).addClass('active');
+    $(videoId).find('iframe').addClass('iframe-visible');
   });
 }
 

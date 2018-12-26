@@ -1,20 +1,34 @@
 .sm-banner-container {
-  background: $primary-color url('/assets/images/banner-gauge-taiko-mobile.svg') no-repeat center bottom;
+  position: relative;
+  background: $primary-color;
   width: 100%;
   display: block;
   height: 207px;
   margin: 65px auto 0px;
-
+  overflow: hidden;
   @media (min-width: $screen-md) {
-    background: $primary-color url('/assets/images/banner-gauge-taiko-tab.png') no-repeat center bottom;
     height: 280px;
   }
 
   @media (min-width: $screen-lg) {
-    background: $primary-color url('/assets/images/banner-gauge-taiko.png') no-repeat center bottom;
     height: 310px;
   }
+
+  .container {
+    position: relative;
+    z-index: 5;
+  }
 }
+
+.img_centered {
+  position: absolute;
+  height: auto;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 3;
+} 
 
 .bold-lg-header {
   font-size: 26px;
@@ -44,7 +58,6 @@
   text-align: center;
   padding: 10px 0;
   margin: 0;
-
   @media (min-width: $screen-md) { 
     font-size: 21px;
   }
@@ -468,4 +481,15 @@
     background: $primary-color !important;
     color: #000 !important;
   }
+}
+
+.iframe-visible {
+  overflow: hidden !important;
+  margin: 0px !important;
+  border: 0px !important;
+  display: inline-block !important;
+  width: 589px !important;
+  float: none !important;
+  visibility: visible !important;
+  height: 435px !important;
 }
