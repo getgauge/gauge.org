@@ -493,3 +493,7 @@
   visibility: visible !important;
   height: 435px !important;
 }
+
+iframe body.iframe .powered {
+  display: none !important;
+}

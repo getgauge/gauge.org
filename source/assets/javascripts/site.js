@@ -184,4 +184,17 @@ function videoEndchange() {
     nextItem.addClass('active-card');
     nextLi.addClass('active');
   });
+
+var addCssToIframe = function() {
+  if ($("iframe").contents().find("head") != undefined) {
+      $('iframe')
+              .contents()
+              .find("head")
+              .append(
+                      '<link rel="stylesheet" href="/assets/stylesheets/site.css" type="text/css" />');
+  }
+};
+
+setTimeout(addCssToIframe, 500);
+
 }
