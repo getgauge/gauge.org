@@ -25,7 +25,10 @@
 
 @font-face {
     font-family: 'URWGeometric-Bold';
-    src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Bold.otf') format('opentype');
+    src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Bold.otf') format('opentype'),
+    url('/assets/vendor/fonts/urw-geometric/URWGeometric-Bold.ttf') format('truetype'),
+    url('/assets/vendor/fonts/urw-geometric/URWGeometric-Bold.woff') format('woff'), 
+    ;
 }
 
 @font-face {
