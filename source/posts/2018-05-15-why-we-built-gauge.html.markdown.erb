@@ -70,7 +70,7 @@ For example, [Selenium](https://www.seleniumhq.org/docs/06_test_design_considera
 
         void searchFor(String query) {
             WebElement element = driver.findElement(By.name("q"));
-            element.sendKeys("testing frameworks");
+            element.sendKeys(query);
             element.submit();
         }
     }
