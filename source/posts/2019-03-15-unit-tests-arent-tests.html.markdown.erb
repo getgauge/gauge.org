@@ -1,0 +1,122 @@
+---
+layout: post
+post_title: Unit Tests aren’t ‘tests’
+date: 2019-03-15
+summary_image: "/assets/images/blog/unittests.jpg"
+excerpt: "At ThoughtWorks, we often debate the value of our existing practices to constantly 
+challenge ourselves and remind ourselves why we do what we do."
+author_name: "Chad Wathington"
+author_image: "https://miro.medium.com/fit/c/240/240/1*JdHXl9ECYxRXR3ZEyJmdMA.jpeg"
+title: "Unit Tests aren’t ‘tests’ | Gauge Blog"
+title_tag_of_header: "Unit Tests aren’t ‘tests’ | Gauge Blog"
+meta_description: "Unit tests aren't tests"
+meta_keywords: "Acceptance tests, unit tests, importance of acceptance tests"
+---
+
+#### Mar 15, 2019 | Chad Wathington
+
+<%= image_tag "blog/unittests.jpg", {:title => "Unit tests are not tests", :alt => "Unit tests are not tests"} %>
+
+# Unit Tests aren’t ‘tests’
+
+At ThoughtWorks, we often debate the value of our existing practices to constantly 
+challenge ourselves and remind ourselves why we do what we do. 
+Recently this question came up: 
+
+> Acceptance tests (in cucumber) have become this abandoned wasteland of 
+unmaintained good intentions. Are they even useful anymore? 
+
+Computer scientist Glenford J Myers wrote about software testing in his 
+seminal book *The Art of Software Testing (1979)*. 
+
+> Software testing is a process, or a series of processes, designed to make 
+sure computer code does what it was designed to do and that it does not do 
+anything unintended. 
+
+His book became both a manual and the inspiration for an entire field - it literally 
+defined software testing for a generation. When Myers wrote The Art of Software testing 
+technologists often confused testing with debugging - one only needed to write a 
+program and fix any errors you encountered by running it. 
+
+Myers' broad point was that developers needed to test code to ensure it worked as 
+designed, which requires a specification. And beyond design, tests should also seek 
+to uncover unintended behavior. 
+
+> Human beings tend to be highly goal-oriented, and establishing the proper goal 
+has an important psychological effect. If our goal is to demonstrate that a program 
+has no errors, then we will subconsciously be steered toward this goal; that is, we 
+tend to select test data that have a low probability of causing the program to fail. 
+On the other hand, if our goal is to demonstrate that a program has errors, our test 
+data will have a higher probability of finding errors. The latter approach will add 
+more value to the program than the former. [citation from book]
+
+In Myers' view, developers are psychologically predisposed towards thinking that what 
+they’ve made works. Myers therefore believed that testing should be independent, 
+even going so far as to suggest a separate company or department should perform any 
+necessary testing. Even though Myers wrote his own definition of testing, I like 
+to summarize it as “the independent verification of correctness.” It feels like he left the independent part out, despite making a substantial 
+argument for it in the book. 
+
+Fast forward to today and not only has testing changed in style and substance since the 
+first edition in 1979, but we also have a different type of tests, called unit tests 
+(module tests in Myer’s world). I would argue that modern day unit tests aren't ‘tests’ 
+by Myers' original definition. In many ways, they've started to kill what Myers was 
+trying to accomplish.
+
+Before I explain why, let’s establish a baseline.  If we put Test Driven Development
+ aside as a separate practice, unit tests help accomplish two things: 
+
+* First, they're good at stopping known predictable types of mistakes like boundary conditions, divide by zero, null checks, etc. 
+* Second, and more importantly, they are good for preventing one person from stepping 
+over another person's intent, e.g. this method was supposed to check whether a value 
+exists so someone else shouldn't make the method do something else.
+
+
+It turns out, and this is the really interesting part, that unit tests improve software 
+quality a lot - a whole lot! The Art of Software testing details rigor around test cases, 
+thought patterns, and test data. But the effect of unit testing on software quality 
+suggests that many bugs we encounter stem from the two sources above. Unit tests, however, 
+only get half of the correctness equation right - they typically don’t check that software 
+does what it was designed to do, particularly vs. a specification.  And they certainly aren’t
+a form of independent verification. They are an automated check for a type of unintended errors.
+This isn’t a knock on unit tests. It’s a knock on the mental model that suggests they 
+are the most important form of testing.  
+
+As devops continues to go mainstream, and more teams can deploy software rapidly, 
+the original idea that Myers was trying to refute has returned, but in a more subtle way. 
+I’m seeing a lot of teams think that if they have a solid suite of unit tests, they can 
+just deploy and monitor. No other testing is required, except maybe a desk check or two. 
+Ironically, isn’t that awfully similar to the run and debug method of old? 
+In effect, we’ve semantically substituted a subset of testing for the whole thing, 
+and started dropping the rest because that subset is very effective. 
+
+The software development world needs to decide two things.  First, is independent 
+verification still important?  Second, should we verify that software works as it was 
+designed to, given some commonly agreed references from within a team? 
+
+I’ll take a shot at answering both questions. With collaborative approaches to 
+software development, I think the world has moved on from independent verification 
+as an end goal. My guess is that collective ownership mitigates the psychological 
+tendencies of confirmation bias. I also think great testers help a whole team learn 
+how to break things, finding errors no one was originally looking for. The prevalence 
+of test automation as a practice has played an important role too, essentially creating 
+a different standard, that of an objective [check](http://www.satisfice.com/blog/archives/856). 
+I believe that independent verification isn’t necessary for most things, save regulated or safety 
+systems.
+
+I think the industry is still finding its way on the “does it do what it was designed to” 
+front, because the definition of software design has changed so much.  Old school design 
+practices, including pre-story requirements management, are an inefficient, soul crushing 
+and non-collaborative way of creating specifications. In my opinion, BDD and specification 
+based testing tools (like Gauge) are a much simpler way of documenting a commonly held idea 
+of correctness on a team. They are a concise way of continually and incrementally 
+articulating how software should be designed.  We do this as well when we write 
+[acceptance criteria](https://www.mountaingoatsoftware.com/blog/the-two-ways-to-add-detail-to-user-stories) 
+for a user story.  The benefit of a tool like [Gauge](https://gauge.org) is that after a specification is 
+written it is both the shared idea of design and an objective check against it. 
+
+All of this isn’t to bash unit tests. They have massively changed software quality. 
+But, there is so much more to testing than the bottom of the test automation pyramid. 
+To succinctly answer the question posed in the original debate, yes we still need them, 
+as acceptance and specification based tests have a different purpose, one that I think 
+is still very valuable.
