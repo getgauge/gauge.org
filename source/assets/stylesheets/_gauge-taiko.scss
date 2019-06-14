@@ -1,506 +1,466 @@
-
 #gauge-taiko {
-  .link_getstarted {
+    .link_getstarted {
+        display: none;
+    }
+}
+
+.video-cards {
     display: none;
-  }
-} 
+}
 
 .sm-banner-container {
-  position: relative;
-  background: $primary-color;
-  width: 100%;
-  display: block;
-  height: 207px;
-  margin: 65px auto 0px;
-  overflow: hidden;
-  @media (min-width: $screen-md) {
-    height: 280px;
-  }
-
-  @media (min-width: $screen-lg) {
-    height: 310px;
-  }
-
-  .container {
     position: relative;
-    z-index: 5;
-  }
+    background: $primary-color;
+    width: 100%;
+    display: block;
+    height: 207px;
+    margin: 65px auto 0px;
+    overflow: hidden;
+    @media (min-width: $screen-md) {
+        height: 280px;
+    }
+    @media (min-width: $screen-lg) {
+        height: 310px;
+    }
+    .container {
+        position: relative;
+        z-index: 5;
+    }
 }
 
 .img_centered {
-  position: absolute;
-  height: auto;
-  width: 80%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1.2);
-  z-index: 3;
-} 
+    position: absolute;
+    height: auto;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 3;
+}
 
 .bold-lg-header {
-  font-size: 26px;
-  font-family: 'URWGeometric-Bold';
-  font-weight: bold;
-  color: $secondary-color;
-  text-align: center;
-  display: block;
-  padding: 55px 0 0;
-  margin: 0;
-  line-height: 30px;
-  @media (min-width: $screen-md) { 
-    font-size: 42px;
-    padding: 100px 0 0;
-    line-height: 50px;
-  }
-
-  @media (min-width: $screen-lg) { 
-    line-height: 60px;
-    font-size: 60px;
-  }
+    font-size: 26px;
+    font-family: 'URWGeometric-Bold';
+    font-weight: bold;
+    color: $secondary-color;
+    text-align: center;
+    display: block;
+    padding: 55px 0 0;
+    margin: 0;
+    line-height: 30px;
+    @media (min-width: $screen-md) {
+        font-size: 42px;
+        padding: 100px 0 0;
+        line-height: 50px;
+    }
+    @media (min-width: $screen-lg) {
+        line-height: 60px;
+        font-size: 60px;
+    }
 }
 
 .banner-desc {
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  padding: 10px 0;
-  margin: 0;
-  @media (min-width: $screen-md) { 
-    font-size: 21px;
-  }
-
-  @media (min-width: $screen-lg) {  
-    font-size: 30px;
-    line-height: 20px;
-  }
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    @media (min-width: $screen-md) {
+        font-size: 21px;
+    }
+    @media (min-width: $screen-lg) {
+        font-size: 30px;
+        line-height: 20px;
+    }
 }
 
-
 .gauge_taiko {
-  padding: 40px 0;
+    padding: 40px 0;
 }
 
 // Cards
-
 .row-cards {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 
 .row-cards_item {
-  width: 100%;
-  padding: 15px 15px 10px;
-  border-radius: 5px;
-  border: 1px solid #666666;
-  margin: 25px 10px;
-
-  @media (min-width: $screen-md) { 
-    width: 45%;
-    margin: 10px 15px;
-    padding: 35px 20px 10px;
-  }
-
-  @media (min-width: $screen-lg) { 
-    width: 40%;
-    margin: 10px 30px;
-    padding: 35px 20px;
-  }
+    width: 100%;
+    padding: 15px 15px 10px;
+    border-radius: 5px;
+    border: 1px solid #666666;
+    margin: 25px 10px;
+    @media (min-width: $screen-md) {
+        width: 45%;
+        margin: 10px 15px;
+        padding: 35px 20px 10px;
+    }
+    @media (min-width: $screen-lg) {
+        width: 40%;
+        margin: 10px 30px;
+        padding: 35px 20px;
+    }
 }
 
 .header_img {
-  width: 100px;
-  height: 26px;
-  margin: 0 auto;
-  display: block;
-
-  @media (min-width: $screen-md) { 
-    width: 171px;
-    height: 41px;
-  }
-
-  @media (min-width: $screen-lg) { 
-    width: 221px;
-    height: 57px;
-  }
-
+    width: 100px;
+    height: 26px;
+    margin: 0 auto;
+    display: block;
+    @media (min-width: $screen-md) {
+        width: 171px;
+        height: 41px;
+    }
+    @media (min-width: $screen-lg) {
+        width: 221px;
+        height: 57px;
+    }
 }
 
 .taiko-logo {
-  width: 74px;
-  height: 18px;
-  margin: 0 auto 10px;
-
-  @media (min-width: $screen-md) { 
-    width: 123px;
-    height: 30px;
-    margin: 0 auto 25px;
-  }
-
-  @media (min-width: $screen-lg) { 
-    width: 144px;
-    height: 35px;
-    margin: 0 auto 44px;
-  }
+    width: 74px;
+    height: 18px;
+    margin: 0 auto 10px;
+    @media (min-width: $screen-md) {
+        width: 123px;
+        height: 30px;
+        margin: 0 auto 25px;
+    }
+    @media (min-width: $screen-lg) {
+        width: 144px;
+        height: 35px;
+        margin: 0 auto 44px;
+    }
 }
 
 .item-content {
-  font-size: 14px;
-  text-align: center;
-
-  @media (min-width: $screen-md) { 
-    font-size: 16px;
-  }
-
-  @media (min-width: $screen-lg) { 
-    font-size: 18px;
-  }
+    font-size: 14px;
+    text-align: center;
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+    }
+    @media (min-width: $screen-lg) {
+        font-size: 18px;
+    }
 }
 
 .btn-lg {
-  width: 254px;
-  height:35px;
-  border-radius: 25px;
-  background: $primary-color;
-  color: $secondary-color;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 35px;
-  margin: 50px auto 0px;
-  text-decoration: none !important;
-  display: block !important;
-  transition: $transition;
-
-  &:hover, &:active{
-    background:#FEE065 !important;
-  }
-
-  @media (min-width: $screen-md) { 
-    width: 315px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-  }
-
-  @media (min-width: $screen-lg) { 
-    width: 450px;
-    height: 50px;
-    font-size: 24px;
-    line-height: 50px;
-  }
+    width: 300px;
+    height: 35px;
+    border-radius: 25px;
+    background: $primary-color;
+    color: $secondary-color;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    margin: 50px auto 0px;
+    text-decoration: none !important;
+    display: block !important;
+    transition: $transition;
+    &:hover,
+    &:active {
+        background: #FEE065 !important;
+    }
+    @media (min-width: $screen-md) {
+        width: 380px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    @media (min-width: $screen-lg) {
+        width: 520px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 50px;
+    }
 }
 
 .desc_bold {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  margin: 30px auto;
-  line-height: 30px;
-  width: 100%;
-
-  @media (min-width: $screen-md) { 
-    font-family: 'URWGeometric-Bold';
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  @media (min-width: $screen-lg) { 
-    margin: 40px auto;
-    font-size: 36px;
-    width: 70%;
-  }
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px auto;
+    line-height: 30px;
+    width: 100%;
+    @media (min-width: $screen-md) {
+        font-family: 'URWGeometric-Bold';
+        font-size: 28px;
+        line-height: 36px;
+    }
+    @media (min-width: $screen-lg) {
+        margin: 40px auto;
+        font-size: 36px;
+        width: 70%;
+    }
 }
 
-
 .bg-primary-color {
-  background-color: $primary-color;
+    background-color: $primary-color;
 }
 
 .video-slides {
-  padding: 0px 0 50px;
+    padding: 0px 0 50px;
 }
 
 // Video container
-
 .section-desc {
-  font-family: 'Open Sans';
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  padding: 40px 0 0;
-
-  @media (min-width: $screen-md) { 
-    font-family: 'URWGeometric-Bold';
-    font-size: 20px;
-    padding: 50px 0 0;
-    font-weight: 600;
-  }
-
-  @media (min-width: $screen-lg) { 
-    font-size: 28px;
-    padding: 50px 0 0;
-  }
-
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding: 40px 0 0;
+    @media (min-width: $screen-md) {
+        font-family: 'URWGeometric-Bold';
+        font-size: 20px;
+        padding: 50px 0 0;
+        font-weight: 600;
+    }
+    @media (min-width: $screen-lg) {
+        font-size: 28px;
+        padding: 50px 0 0;
+    }
 }
 
 .card-nav {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 35px auto;
-  width: 100%;
-
-  @media (min-width: $screen-md) { 
-    margin: 40px auto;
-  }
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 35px auto;
+    width: 100%;
+    @media (min-width: $screen-md) {
+        margin: 40px auto;
+    }
 }
 
 .card-nav_item {
-  position: relative;
-  width: 35px;
-  height:25px;
-  line-height: 25px;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  color: $secondary-color;
-  border-radius: 18px;
-  margin: 0 10px;
-  background: #FEE065;
-  cursor: pointer;
-
-  &::after {
-    content: '';
-    position: absolute;
-    height: 0px;
-    width: 38px;
-    border: 1px dashed #1e1e1e;
-    top: 50%;
-    right: -40px;
-  }
-
-  &:last-child{
-
-    &::after{
-      display: none;
-    }
-  }
-
-  @media (min-width: $screen-md) { 
-    width: 90px;
-    height: 25px; 
+    position: relative;
+    width: 35px;
+    height: 25px;
     line-height: 25px;
-    margin: 0 15px;
-  }
-
-  @media (min-width: $screen-lg) { 
-    width: 174px;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 8px;
-  }
-
-  @media (min-width: $screen-xl) { 
-    width: 180px;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 20px;
-  }
-
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: $secondary-color;
+    border-radius: 18px;
+    margin: 0 10px;
+    background: #FEE065;
+    cursor: pointer;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 0px;
+        width: 38px;
+        border: 1px dashed #1e1e1e;
+        top: 50%;
+        right: -40px;
+    }
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+    @media (min-width: $screen-md) {
+        width: 90px;
+        height: 25px;
+        line-height: 25px;
+        margin: 0 15px;
+    }
+    @media (min-width: $screen-lg) {
+        width: 174px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 8px;
+    }
+    @media (min-width: $screen-xl) {
+        width: 180px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 20px;
+    }
 }
 
 .desc {
-  display: none;
-
-  @media (min-width: $screen-lg) {
-    display: inline;
-  }
+    display: none;
+    @media (min-width: $screen-lg) {
+        display: inline;
+    }
 }
+
 .active {
-  background: $white;
+    background: $white;
 }
 
 .row-box {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
 }
 
 .card {
-  display: none;
+    display: none;
 }
 
 .active-card {
-  display: block; 
+    display: block;
 }
 
 .title-mobile {
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
-  font-family: 'Open Sans';
-  font-weight: bold;
-  margin: 0;
-  padding: 0px;
-  @media (min-width: $screen-md) {
-    display: none;
-  }
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    margin: 0;
+    padding: 0px;
+    @media (min-width: $screen-md) {
+        display: none;
+    }
 }
 
 .title-tablet {
-  width: 100%;
-  text-align: left;
-  font-size: 16px;
-  font-family: 'Open Sans';
-  font-weight: bold;
-  margin: 10px 0;
-  padding: 0;
-  display: none;
-
-  @media (min-width: $screen-md){
-    display: block;
-  } 
-
-  @media (min-width: $screen-lg){
-    display: none;;
-  } 
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 0;
+    display: none;
+    @media (min-width: $screen-md) {
+        display: block;
+    }
+    @media (min-width: $screen-lg) {
+        display: none;
+        ;
+    }
 }
 
 .video-container {
-  width: 100%;
-  height: auto;
-  @media (min-width: $screen-md){
-    width: 50%;
-  }
-
-  @media (min-width: $screen-lg){
-    width: 55%;
-  }
+    width: 100%;
+    height: auto;
+    @media (min-width: $screen-md) {
+        width: 50%;
+    }
+    @media (min-width: $screen-lg) {
+        width: 55%;
+    }
 }
 
 .video_item {
-  background: $secondary-color;
-  border-radius: 5px;
-  width: 100%;
-  height: auto;
-  margin: 20px auto;
+    background: $secondary-color;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
 }
 
 .card_content-container {
-  width: 100%;
-  padding: 5px;
-
-  @media (min-width: $screen-md){
-    width: 50%;
-    padding: 0px 20px;
-  }
-
-  @media (min-width: $screen-lg){
-    width: 40%;
-    padding: 20px 30px;
-  }
+    width: 100%;
+    padding: 5px;
+    @media (min-width: $screen-md) {
+        width: 50%;
+        padding: 0px 20px;
+    }
+    @media (min-width: $screen-lg) {
+        width: 40%;
+        padding: 20px 30px;
+    }
 }
 
 .content-desc {
-  font-size: 14px;
-  color: $secondary-color;
-  text-align: center;
-  
-  @media (min-width: $screen-md){ 
-    font-size: 16px;
-    text-align: left;
-    margin: 0px auto 30px;
-  }
+    font-size: 14px;
+    color: $secondary-color;
+    text-align: center;
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+        text-align: left;
+        margin: 0px auto 30px;
+    }
 }
 
 .code-box_sm {
-  background: $secondary-color;
-  font-size: 14px;
-  color: $white;
-  width: 244px;
-  height: 26px;
-  border-radius: 5px;
-  margin: 20px auto;
-  display: block;
-  text-align: center;
-
-  @media (min-width: $screen-md) {
-    text-align: left;
-    margin: 20px 0;
-  }
-
-  @media (min-width: $screen-lg){ 
-    width: 359px;
-    font-size: 16px;
-    
-  }
+    background: $secondary-color;
+    font-size: 14px;
+    color: $white;
+    width: 244px;
+    height: 26px;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    @media (min-width: $screen-md) {
+        text-align: left;
+        margin: 20px 0;
+    }
+    @media (min-width: $screen-lg) {
+        width: 359px;
+        font-size: 16px;
+    }
 }
 
-
 .info-banner {
-  padding: 60px 0 10px;
-  background: $secondary-color;
-  position: relative;
+    padding: 60px 0 10px;
+    background: $secondary-color;
+    position: relative;
 }
 
 .arrow-down-dark {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 0; 
-  height: 0; 
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 15px solid $primary-color;
-  transform: translate(-50%, 0%);
-  visibility: hidden;
-  
-  @media (min-width: $screen-lg) {
-    visibility: visible;
-  }
-}  
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 15px solid $primary-color;
+    transform: translate(-50%, 0%);
+    visibility: hidden;
+    @media (min-width: $screen-lg) {
+        visibility: visible;
+    }
+}
 
 .info-text_light {
-  color: $white;
-  font-size: 14px;
-  text-align: center; 
-  line-height: 30px;
-  
-  @media (min-width: $screen-lg) {
-    font-size: 20px; 
-  }
+    color: $white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    @media (min-width: $screen-lg) {
+        font-size: 20px;
+    }
 }
 
 .btn_light {
-  background: transparent;
-  border: 1px solid $primary-color;
-  color: $primary-color !important;
-  transition: $transition;
-  margin: 30px auto 60px;
-  &:hover {
-    background: $primary-color !important;
-    color: #000 !important;
-  }
+    background: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color !important;
+    transition: $transition;
+    margin: 30px auto 60px;
+    &:hover {
+        background: $primary-color !important;
+        color: #000 !important;
+    }
 }
 
 .iframe-visible {
-  overflow: hidden !important;
-  margin: 0px !important;
-  border: 0px !important;
-  display: inline-block !important;
-  width: 589px !important;
-  float: none !important;
-  visibility: visible !important;
-  height: 435px !important;
+    overflow: hidden !important;
+    margin: 0px !important;
+    border: 0px !important;
+    display: inline-block !important;
+    width: 589px !important;
+    float: none !important;
+    visibility: visible !important;
+    height: 435px !important;
 }
 
 iframe body.iframe .powered {
-  display: none !important;
+    display: none !important;
 }
