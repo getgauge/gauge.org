@@ -147,7 +147,7 @@
 }
 
 .btn-lg {
-    width: 300px;
+    width: 254px;
     height: 35px;
     border-radius: 25px;
     background: $primary-color;
@@ -165,13 +165,13 @@
         background: #FEE065 !important;
     }
     @media (min-width: $screen-md) {
-        width: 380px;
+        width: 315px;
         height: 40px;
         line-height: 40px;
         font-size: 18px;
     }
     @media (min-width: $screen-lg) {
-        width: 520px;
+        width: 450px;
         height: 50px;
         font-size: 24px;
         line-height: 50px;
