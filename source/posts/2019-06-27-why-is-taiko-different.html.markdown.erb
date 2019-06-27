@@ -1,0 +1,161 @@
+---
+layout: post
+post_title: Taiko; Browser Automation That Is Different 
+date: 2019-06-27
+summary_image: "/assets/images/blog/unittests.jpg"
+excerpt: 
+author_name: "Soumya Gupta and Nivedha Senthil"
+author_image: "https://miro.medium.com/fit/c/240/240/1*JdHXl9ECYxRXR3ZEyJmdMA.jpeg"
+title: "Taiko; Browser Automation That Is Different | Gauge Blog"
+title_tag_of_header: "Taiko; Browser Automation That Is Different | Gauge Blog"
+meta_description: "Taiko; Browser Automation That Is Different"
+meta_keywords: "Acceptance tests, end to end tests, browser automation"
+---
+
+#### June 27, 2019 | Soumya Gupta, Nivedha Senthil
+
+# Taiko; Browser Automation That Is Different
+
+There are a lot of free and open source tools to automate the browser and write end to end tests. 
+Last year the Gauge team released yet another browser automation tool, Taiko. 
+You may think it is yet another tool in the market.  
+But, in this blog, we will discuss what’s different about it.
+
+To do that we his article compares Taiko to Selenium, WebdriverIO, TestCafe, Cypress and Puppeteer. 
+It compares price of using the tool, tThe cost of writing and maintaining tests, performance, reliability (not flakyiness), 
+browser support, ease of test failure analysis and integration with other runners will be the points of comparison. 
+We hope it explains why Taiko is a great choice for writing reliable end to end tests. 
+We hope this also explains how taking a different approach to write tests can be better.
+
+An infographic that summarises the comparison of Taiko with the other popular browser automation tools. 
+Check [CompareBrowserAutomationTools](https://github.com/getgauge-contrib/compareBrowserAutomationTools), a GitHub repository to validate our claims made in this blog.
+
+## Maintenance
+
+> “Maintaining locators must be calculated as part of test maintenance cost.” - FireFox Test Engineering blog
+
+### Claim 
+Using XPath, ID, CSS Query selectors or other white box testing techniques increase test maintenance costs. 
+Minor changes in code or page structure breaks tests even when there’s no change in functionality. Taiko’s API treats the browser like a black box. Tests written in Taiko are resilient to page structure changes.
+
+### Validation 
+
+A github example of todomvc automated using all these tools. 
+All the tests currently pass for react flavour of the TODO app.  
+However only Taiko passes when the tests run against angular flavor of it.
+
+### Findings 
+
+* For elements with no text, Taiko has proximity selectors which is independent of the HTML structure. However other tools depend on the HTML structure to perform actions on elements with no text.
+
+## Reliable Wait Mechanisms 
+
+> “1 in 7 of the tests written by our world-class engineers occasionally fail in a way not caused by changes to the code or tests.” - Google Testing blogs.
+
+### Claim
+Taiko implicitly waits for elements on the page before performing actions. This drastically reduces flakiness. 
+
+While other tools provide  granular and low level controls to explicitly wait for elements or time. 
+These have a higher learning curve. If the user has to define waits explicitly, it makes the test code unpredictable. 
+Improper configuration, inappropriate use of APIs along with ineffective handling of waits by the tool makes tests flaky. 
+
+### Validation
+
+A github example automated using all these 6 tools. In this example, all tools except Taiko and TestCafe need at least one/more explicit waits waits in test code. 
+To validate it, comment all the explicit wait conditions. Run it; Please note the tests have to be run consecutively a couple of times to observe the flakiness. 
+The details are available in the readme of the project link.
+
+### Findings 
+
+* Wait Mechanisms: Implicit waits are taken care of by the tool. Explicit waits are the ones the user handles in test code!
+* Ease of use: Lesser waits in user code the easier it is!
+* Reliable waiting mechanisms: Having lesser waits in test code and simple APIs reduce the probability of mistakes. Hence more reliable while writing tests.
+
+Insert table
+
+## Performance 
+
+Faster feedback on test failures plays a critical role in software lifecycle. Teams find it hard to work with and maintain tests that are slow. 
+In other words, automated tests are only as effective as their feedback cycle. 
+
+### Claim 
+Many browser automation tools do not optimize performance.
+
+### Validation
+
+A github example automated using all these 6 tools. To validate it, we ran all the tests sequentially multiple times. 
+More details of the run are given in the readme of the project link.
+
+### Findings 
+
+Here are some results of benchmark tests. Lesser time and lesser CPU denotes better performance. 
+
+Insert table
+
+* Testcafe’s execution time would have been 16seconds if there is no reload done between each test, that adds up an overhead of 4seconds to the test suite.
+* Selenium: Performance measurement of this greatly affected by the arbitrary waits added to reduce flakiness. Optimizations may be possible by awaiting relevant condition(s).
+* Since Selenium, Puppeteer and Taiko can integrate with any test runner they can use runner's parallel execution feature to boost performance. 
+* WebdriverIO and TestCafe has inbuilt parallelisation support.
+* However, running parallel tests in cypress is a paid dashboard service.
+
+## Ease of test failure analysis
+
+The first step whenever a failed test occurs in test automation is to figure out why a test failed. Different tools have their own  ways for analysing test failures
+
+### Claim
+Tools must make it easy to analyse test failures. Contextual  data allows easier analysis.
+
+### Findings
+
+insert table
+
+* Since Selenium, Taiko and Puppeteer can integrate with any test runner they can take advantage of the runner’s debugging support. Ex:- HTML reports in Gauge (open source test runner)
+
+* The paid dashboard services of cypress has more options for test failure analysis on CI/CD environments.
+
+## Cross browser support
+
+### Claim
+
+Not all tools supports cross browser testing
+
+### Findings insert table
+
+## Language support
+
+* Selenium - Wide Choice of Language
+* WebdriverIO - Javascript or Typescript
+* Cypress - Javascript or Typescript
+* Testcafe -Javascript or Typescript
+* Taiko - Javascript
+* Puppeteer - Javascript or Typescript
+
+## Test Runner integration
+
+insert table
+
+## Here are a few miscellaneous aspects
+
+### Cypress
+
+The commercial component Cypress Dashboard is a service that gives you access to recorded tests - 
+when running Cypress tests from your CI provider. The Dashboard provides you insights about tests runs.
+
+### WebDriverIO
+
+Has support for integration with cloud platforms to aid cross browser testing under its cloud services.
+
+### Puppeteer
+
+This is very fast. Puppeteer is designed to cover wider accepts of browser automation. 
+Test automation is not the focus of Puppeteer. Maybe that’s why the learning curve associated to automate browser tests is high.
+
+### Taiko
+
+Unlike a UI recorder, Taiko’s REPL takes instructions given in the terminal and performs the action on the browser. 
+The user can continue to give instructions to complete a workflow. Only successful actions are recorded as a script. This generates human readable code and keeps the learning curve low.
+
+As always, there will be pro's and con's for each of these tools. For instance, if you are looking for something with cross browser support, Selenium or WebDriverIO is a good fit. 
+But, if you are looking for a cost effective and reliable web browser automation tool, it’s worth considering Taiko.
+
+If you have come across a tool that’s worked well for you and is not on the list, please leave a comment below!
