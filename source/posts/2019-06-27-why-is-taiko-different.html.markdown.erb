@@ -6,7 +6,7 @@ summary_image: "/assets/images/blog/unittests.jpg"
 excerpt: 
 author_name: "Soumya Gupta and Nivedha Senthil"
 author_image: "https://miro.medium.com/fit/c/240/240/1*JdHXl9ECYxRXR3ZEyJmdMA.jpeg"
-title: "Taiko; Browser Automation That Is Different | Gauge Blog"
+title: "Taiko; Browser Automation that is different | Gauge Blog"
 title_tag_of_header: "Taiko; Browser Automation That Is Different | Gauge Blog"
 meta_description: "Taiko; Browser Automation That Is Different"
 meta_keywords: "Acceptance tests, end to end tests, browser automation"
@@ -32,7 +32,7 @@ Check [CompareBrowserAutomationTools](https://github.com/getgauge-contrib/compar
 
 ## Maintenance
 
-> “Maintaining locators must be calculated as part of test maintenance cost.” - FireFox Test Engineering blog
+> “Maintaining locators must be calculated as part of test maintenance cost.” - [Firefox Test Engineering](https://blog.mozilla.org/fxtesteng/2013/09/26/writing-reliable-locators-for-selenium-and-webdriver-tests/) blog
 
 ### Claim 
 Using XPath, ID, CSS Query selectors or other white box testing techniques increase test maintenance costs. 
@@ -40,9 +40,9 @@ Minor changes in code or page structure breaks tests even when there’s no chan
 
 ### Validation 
 
-A github example of todomvc automated using all these tools. 
-All the tests currently pass for react flavour of the TODO app.  
-However only Taiko passes when the tests run against angular flavor of it.
+A github [example](https://github.com/getgauge-contrib/compareBrowserAutomationTools/tree/master/compareCostOfSelectorMaintenance) of todomvc automated using all these tools. 
+All the tests currently pass for [react flavour of the TODO app](http://todomvc.com/examples/react/#/).  
+However only Taiko passes when the tests run against [angular flavor of it](http://todomvc.com/examples/angularjs/#/!).
 
 ### Findings 
 
@@ -50,7 +50,7 @@ However only Taiko passes when the tests run against angular flavor of it.
 
 ## Reliable Wait Mechanisms 
 
-> “1 in 7 of the tests written by our world-class engineers occasionally fail in a way not caused by changes to the code or tests.” - Google Testing blogs.
+> “1 in 7 of the tests written by our world-class engineers occasionally fail in a way not caused by changes to the code or tests.” - [Google Testing](https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html?m=1) blogs.
 
 ### Claim
 Taiko implicitly waits for elements on the page before performing actions. This drastically reduces flakiness. 
@@ -61,9 +61,9 @@ Improper configuration, inappropriate use of APIs along with ineffective handlin
 
 ### Validation
 
-A github example automated using all these 6 tools. In this example, all tools except Taiko and TestCafe need at least one/more explicit waits waits in test code. 
+A github [example](https://github.com/getgauge-contrib/compareBrowserAutomationTools/tree/master/comparePerformanceAndReliableWaitsOfTools/benchmarks) automated using all these 6 tools. In this example, all tools except Taiko and TestCafe need at least one/more explicit waits waits in test code. 
 To validate it, comment all the explicit wait conditions. Run it; Please note the tests have to be run consecutively a couple of times to observe the flakiness. 
-The details are available in the readme of the project link.
+The details are available in the [readme](https://github.com/getgauge-contrib/compareBrowserAutomationTools/blob/master/comparePerformanceAndReliableWaitsOfTools/CompareReliableWaitMechanism.md) of the project link.
 
 ### Findings 
 
@@ -83,8 +83,8 @@ Many browser automation tools do not optimize performance.
 
 ### Validation
 
-A github example automated using all these 6 tools. To validate it, we ran all the tests sequentially multiple times. 
-More details of the run are given in the readme of the project link.
+[A github example automated using all these 6 tools](https://github.com/getgauge-contrib/forToolComparison/tree/master/comparePerformanceAndFlakinessOfTools). To validate it, we ran all the tests sequentially multiple times. 
+More details of the run are given in the [readme](https://github.com/getgauge-contrib/compareBrowserAutomationTools/blob/master/comparePerformanceAndReliableWaitsOfTools/ComparePerfomance.md) of the project link.
 
 ### Findings 
 
@@ -95,8 +95,8 @@ Insert table
 * Testcafe’s execution time would have been 16seconds if there is no reload done between each test, that adds up an overhead of 4seconds to the test suite.
 * Selenium: Performance measurement of this greatly affected by the arbitrary waits added to reduce flakiness. Optimizations may be possible by awaiting relevant condition(s).
 * Since Selenium, Puppeteer and Taiko can integrate with any test runner they can use runner's parallel execution feature to boost performance. 
-* WebdriverIO and TestCafe has inbuilt parallelisation support.
-* However, running parallel tests in cypress is a paid dashboard service.
+* [WebdriverIO](https://webdriver.io/docs/organizingsuites.html) and [TestCafe](https://devexpress.github.io/testcafe/documentation/using-testcafe/common-concepts/concurrent-test-execution.html) has inbuilt parallelisation support.
+* However, running parallel tests in cypress is a [paid dashboard service](https://www.cypress.io/pricing/).
 
 ## Ease of test failure analysis
 
@@ -109,9 +109,9 @@ Tools must make it easy to analyse test failures. Contextual  data allows easier
 
 insert table
 
-* Since Selenium, Taiko and Puppeteer can integrate with any test runner they can take advantage of the runner’s debugging support. Ex:- HTML reports in Gauge (open source test runner)
+* Since Selenium, Taiko and Puppeteer can integrate with any test runner they can take advantage of the runner’s debugging support. Ex:- [HTML reports](https://github.com/getgauge/html-report) in [Gauge](https://gauge.org/?utm_campaign=tw_gauge_taiko&utm_medium=email&utm_source=blogpost&utm_content=taiko_blog&utm_term=) (open source test runner)
 
-* The paid dashboard services of cypress has more options for test failure analysis on CI/CD environments.
+* The [paid dashboard services](https://www.cypress.io/pricing/) of cypress has more options for test failure analysis on CI/CD environments.
 
 ## Cross browser support
 
@@ -138,12 +138,12 @@ insert table
 
 ### Cypress
 
-The commercial component Cypress Dashboard is a service that gives you access to recorded tests - 
-when running Cypress tests from your CI provider. The Dashboard provides you insights about tests runs.
+The [commercial component](https://www.cypress.io/pricing/) [Cypress Dashboard](https://on.cypress.io/dashboard) is a service that gives you access to recorded tests - 
+when running Cypress tests from your [CI provider](https://docs.cypress.io/guides/guides/continuous-integration.html). The Dashboard provides you insights about tests runs.
 
 ### WebDriverIO
 
-Has support for integration with cloud platforms to aid cross browser testing under its cloud services.
+Has support for integration with cloud platforms to aid cross browser testing under its [cloud services](https://webdriver.io/docs/cloudservices.html).
 
 ### Puppeteer
 
@@ -156,6 +156,6 @@ Unlike a UI recorder, Taiko’s REPL takes instructions given in the terminal an
 The user can continue to give instructions to complete a workflow. Only successful actions are recorded as a script. This generates human readable code and keeps the learning curve low.
 
 As always, there will be pro's and con's for each of these tools. For instance, if you are looking for something with cross browser support, Selenium or WebDriverIO is a good fit. 
-But, if you are looking for a cost effective and reliable web browser automation tool, it’s worth considering Taiko.
+But, if you are looking for a cost effective and reliable web browser automation tool, it’s worth considering [Taiko](https://taiko.gauge.org?utm_campaign=tw_gauge_taiko&utm_medium=email&utm_source=blogpost&utm_content=taiko_blog&utm_term=).
 
 If you have come across a tool that’s worked well for you and is not on the list, please leave a comment below!
