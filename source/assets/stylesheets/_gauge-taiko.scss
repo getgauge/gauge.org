@@ -471,7 +471,7 @@ $testimonials-layout-grid-sm: ( columns: 6, media: "screen and (max-width: $scre
 .testimonials {
     background: #1A1D19;
     color: #fff;
-    padding: 40px 0px;
+    padding: 50px 0px;
     margin: 0px 0px -28px;
 }
 
@@ -491,15 +491,18 @@ $testimonials-layout-grid-sm: ( columns: 6, media: "screen and (max-width: $scre
     flex: 1;
 }
 
-.testimonial--list-item-image {
+.testimonial--list-item-image-item {
     width: 200px;
     height: 200px;
-    border-radius: 110px;
-    background: #000000;
-    padding: 15px;
-    border: 1px solid #1a1e19;
     margin: auto;
     margin-top: 20px;
+}
+
+.testimonial--list-item-image {
+    border-radius: 90px;
+    width: 200px;
+    height: 200px;
+    padding: 0px;
 }
 
 .testimonial--details {
