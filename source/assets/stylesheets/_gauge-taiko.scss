@@ -147,7 +147,7 @@
 }
 
 .btn-lg {
-    width: 300px;
+    width: 254px;
     height: 35px;
     border-radius: 25px;
     background: $primary-color;
@@ -165,13 +165,13 @@
         background: #FEE065 !important;
     }
     @media (min-width: $screen-md) {
-        width: 380px;
+        width: 315px;
         height: 40px;
         line-height: 40px;
         font-size: 18px;
     }
     @media (min-width: $screen-lg) {
-        width: 520px;
+        width: 450px;
         height: 50px;
         font-size: 24px;
         line-height: 50px;
@@ -208,8 +208,9 @@
 // Video container
 .section-desc {
     font-family: 'Open Sans';
-    font-weight: bold;
-    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
     text-align: center;
     padding: 40px 0 0;
     @media (min-width: $screen-md) {
@@ -463,4 +464,67 @@
 
 iframe body.iframe .powered {
     display: none !important;
+}
+
+$testimonials-layout-grid: ( columns: 12, gutter:0px, );
+$testimonials-layout-grid-sm: ( columns: 6, media: "screen and (max-width: $screen-sm)", );
+.testimonials {
+    background: #1A1D19;
+    color: #fff;
+    padding: 50px 0px;
+    margin: 0px 0px -28px;
+}
+
+.testimonial--list {
+    margin: 0px;
+    padding: 0px;
+}
+
+.testimonial--list-item {
+    list-style-type: none;
+    @media (min-width: $screen-sm) {
+        display: flex;
+    }
+}
+
+.testimonial--list-item-image-block {
+    flex: 1;
+}
+
+.testimonial--list-item-image-item {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.testimonial--list-item-image {
+    border-radius: 90px;
+    width: 200px;
+    height: 200px;
+    padding: 0px;
+}
+
+.testimonial--details {
+    flex: 2;
+    @media (max-width: $screen-lg) {
+        flex: 1
+    }
+}
+
+.testimonial--details-content {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: left;
+    line-height: 27px;
+}
+
+.testimonial--details-title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
 }
