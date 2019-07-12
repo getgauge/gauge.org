@@ -197,7 +197,7 @@ $blog-description-color: #474747;
     }
     p {
         line-height: 1.5;
-        text-align: justify;
+        text-align: left;
         text-justify: inter-word;
     }
     img {
@@ -266,7 +266,7 @@ $blog-description-color: #474747;
         border-radius: 5px;
         img {
             width: 100%;
-            height: auto;
+            height: 154px;
             vertical-align: middle;
             transform: scale(1);
             transition: all 0.3s ease-in-out;
@@ -472,4 +472,7 @@ img {
     width: 76px;
     height: 38px;
     border-radius: 5px;
+}
+.latest-blog figure img {
+    height: 100%!important;
 }
