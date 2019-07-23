@@ -13,7 +13,6 @@ published: false
 #### July 22, 2019 | Robin Ninan
 
 # The Gauge Move
-*This article is copied verbatim from the author's [original post](https://medium.com/koodoo/the-gauge-move-ffa13f30472c)* on medium.
 
 Is it worth taking the plunge from cucumber to gauge? I’ll narrate our story at [Koodoo](https://koodoo.io) and let you decide.
 
