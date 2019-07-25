@@ -128,13 +128,18 @@ Not all tools support cross browser testing
 <script src="https://gist.github.com/sguptatw/cbbb63b46b8d68438d98640d50088a3b.js"></script>
 
 ## Language support (for writing tests)
- 
-* **Selenium** - Wide Choice of Language 
-* **WebdriverIO** - Javascript or Typescript
-* **Cypress** - Javascript or Typescript
-* **Testcafe** - Javascript or Typescript
-* **Taiko** - Javascript
-* **Puppeteer** - Javascript or Typescript
+
+All tools compared support either one or more than one programming language to write tests. By first class support for commonly used programming languages, these tools can leverage the team’s capabilities as well as IDE support. 
+
+Findings
+
+<script src="https://gist.github.com/sguptatw/c76b55661ed48aaca529636a783c1f84.js"></script>
+
+Taiko only supports Javascript because it’s built on top of CDP (Chrome DevTools protocol) and the best library for working with CDP is in JavaScript. However using JavaScript also has the following benefits 
+
+* It works well with the node js ecosystem and frameworks like React, Angular and Vue js
+* The team doesn’t have to learn a new language if they are building web applications.
+* Taiko can automate any part of the browser
 
 ## Test Runner integration
 
@@ -151,10 +156,8 @@ The dashboard provides insights about tests runs.
 and not just testing. It has a higher learning curve.
 * **Taiko** - Unlike a UI recorder, Taiko’s REPL takes instructions given in the terminal and performs the action on 
 the browser. 
-The user can continue to give instructions to complete a workflow. Only successful actions are recorded as a script. This generates human readable code and keeps the learning curve low.
+If you use a tool that works well for you and is not on the list, please leave a comment below! 
 
-As always, there will be pro's and con's for each of these tools. For instance, If you are looking for something with cross browser support today, 
-Selenium or WebDriverIO is a good fit. But, if you are looking for a cost effective and reliable web browser automation tool, it’s worth considering Taiko.
+As always, there will be pro's and con's for each of these tools. For instance, If you are looking for something with cross browser support today, Selenium or WebDriverIO is a good fit. 
 
-If you use a tool that works well for you and is not on the list, please leave a comment below!
-
+But, if you are looking for a cost effective and reliable web browser automation tool, it’s worth considering Taiko! `npm install -g taiko` is how you can get started!
