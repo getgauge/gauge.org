@@ -46,16 +46,16 @@ On the other hand, Taiko’s API treats the browser like a black box. Tests writ
 structure changes as they don't use complicated locators.
 
 This [example](https://github.com/getgauge-contrib/compareBrowserAutomationTools/tree/master/compareCostOfSelectorMaintenance) compares scripts automating 
-the [TODO MVC](http://todomvc.com) application. The tests currently pass for [react](http://todomvc.com/examples/react/#/) 
-flavor of the TODO MVC. However, only tests written in Taiko pass when they run against [angular](http://todomvc.com/examples/angularjs/#/!)
+the [TODO MVC](http://todomvc.com) application. The tests currently pass for [React](http://todomvc.com/examples/react/#/) 
+flavor of the TODO MVC. However, only tests written in Taiko pass when they run against [Angular](http://todomvc.com/examples/angularjs/#/!)
 flavor of TODO MVC because Taiko's API tests functionality, not the underlying page or framework.
 
 ### Findings
 
 <script src="https://gist.github.com/sguptatw/4d500702d4f70a618e173c6633353662.js"></script>
 
-For elements with no text, Taiko has proximity selectors which is independent of the HTML structure. 
-However other tools depend on the HTML structure to perform actions on elements with no text.
+For elements with no text, Taiko has proximity selectors which is not dependent on HTML structure. 
+Other tools depend on the HTML structure to perform actions on elements with no text.
 
 ## Reliable Wait Mechanisms 
 > “1 in 7 of the tests written by our world-class engineers occasionally fail in a way not caused by 
@@ -74,8 +74,8 @@ file inside the example.
 
 ### Findings
 * Implicit waits are taken care of by the tool. Explicit waits are the ones the user have to handle in test code.
-* Lesser waits in test code the easier it is.
-* Lesser waits in test code reduce the probability of mistakes making tests more reliable.
+* Tests run quicker when there are lesser waits in test code.
+* Probability of mistakes reduce with lesser waits in test code.
 
 <script src="https://gist.github.com/sguptatw/ec467e3cd2bcff2359d273b64ba95f4c.js"></script>
 
@@ -108,7 +108,7 @@ execution feature to improve performance.
 The first step whenever a test fails is to find out why it fails. Different tools have their own ways for 
 analysing test failures
 
-Tools must make it easy to analyse test failures. Contextual data allows easier test failure analysis.
+Tools must make it easy to analyse test failures using contextual data and error messages.
 
 ### Findings:
 
@@ -135,7 +135,8 @@ Findings
 
 <script src="https://gist.github.com/sguptatw/c76b55661ed48aaca529636a783c1f84.js"></script>
 
-Taiko only supports Javascript because it’s built on top of CDP (Chrome DevTools protocol) and the best library for working with CDP is in JavaScript. However using JavaScript also has the following benefits 
+Taiko only supports Javascript because it’s built on top of CDP (Chrome DevTools protocol) and the best library for working with CDP is in JavaScript. 
+Using JavaScript also has the following benefits 
 
 * It works well with the node js ecosystem and frameworks like React, Angular and Vue js
 * The team doesn’t have to learn a new language if they are building web applications.
