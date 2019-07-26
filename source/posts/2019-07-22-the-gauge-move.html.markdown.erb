@@ -2,8 +2,10 @@
 layout: post
 post_title: The Gauge Move
 date: 2019-07-22
+summary_image: "/assets/images/blog/gauge_move_blog-post-image_small.jpg"
 excerpt: Robin Ninan from Kodoo explains how they've migrated their tests from Cucumber to Gauge
 author_name: "Robin Ninan"
+author_image:
 title: "The Gauge Move| Gauge Blog"
 title_tag_of_header: "The Gauge Move | Gauge Blog"
 meta_description: "The Gauge Move"
@@ -12,7 +14,10 @@ published: false
 ---
 #### July 22, 2019 | Robin Ninan
 
-# The Gauge Move
+<%= image_tag "blog/gauge_move_blog_post_image_large.jpg", {:title => "The Gauge Move", :alt => "The Gauge Move"} %>
+
+# The Gauge Move 
+*This blog is cross-posted from the authors original [article](https://medium.com/koodoo/the-gauge-move-ffa13f30472c)* 
 
 Is it worth taking the plunge from cucumber to gauge? I’ll narrate our story at [Koodoo](https://koodoo.io) and let you decide.
 
@@ -36,6 +41,8 @@ I can go on and on till the cows come home. It was the very essence of this prob
 
 ## The Rise of The Chosen One
 
+![](https://media.giphy.com/media/dXy0o1dfj4ueQ/giphy.gif)
+
 In the test world we saw the rise of new BDD frameworks: **Cucumber** and **Specflow** were the popular ones. I for one am no stranger to the fame of Specflow / Cucumber or the 
 test automation benefits of BDD.
 
@@ -57,37 +64,37 @@ Let me just pick on two of the many ongoing issues.
 
 * State: A feature file in Specflow or Cucumber contains scenarios and scenarios contain steps.
 
-Feature: Login
-    Requirement summary...
 
-    Background: 
-        Given a login page
-
-    Scenario: Login as Bob
-        When user enters username "Bob"
-        And user enters password "********"
-        And user submits 
-        Then user sees welcome page with title "Hi, Bob"촀
+      Feature : Login
+       Requirement summary...
+      
+      Background: 
+       Given a login page
+      
+      Scenario: Login as Bob
+       When user enters username "Bob"
+       And user enters password "********"
+       And user submits 
+       Then user sees welcome page with title "Hi, Bob"
 
 
 From the above example it is easy to see that under the scenario, we have a series of steps that results in actions on the screen. 
 Each step is independent. This is fine for most test automation cases.
 
-Let’s spice things up. Say the login process was complicated and Bob had to go through a 2 step authentication process. 
-The rough and ready test would now look like this
+Let’s spice things up. Say the login process was complicated and Bob had to go through a 2 step authentication process.The rough and ready test would now look like this
+     
+     Feature: Login
+     Requirement summary...
 
-Feature: Login
-    Requirement summary...
+     Background: 
+      Given a login page
 
-    Background: 
-        Given a login page
-
-    Scenario: Login as Bob
-        When user enters username "Bob"
-        And user enters password "********"
-        And user submits and reads token
-        And user uses the login token on login page two
-        Then user sees welcome page with title "Hi, Bob"촀
+     Scenario: Login as Bob
+      When user enters username "Bob"
+      And user enters password "********"
+      And user submits and reads token
+      And user uses the login token on login page two
+      Then user sees welcome page with title "Hi, Bob"
 
 ### Why is this a problem:
 
@@ -113,6 +120,8 @@ Let’s face it: there is a need for BDD frameworks to evolve with the times and
 After some research, reading and many youtube videos later, we hit gold. Drum roll ……
 
 We found [**Gauge**](https://https://gauge.org/?utm_campaign=Gauge_blogpost&utm_medium=website&utm_source=blogpost&utm_content=the_gauge_move&utm_term=)
+
+![](https://media.giphy.com/media/3o7abKGM3Xa70I7jCU/giphy.gif)
 
 # Why Gauge?
 
@@ -178,3 +187,5 @@ The whole process took a few days. Finally we had a working test framework in Ga
 ## Was it worth it for us?
 
 Absolutely worth it.
+
+ ![](https://media.giphy.com/media/eVh9uXk3aC6m4/giphy.gif)
