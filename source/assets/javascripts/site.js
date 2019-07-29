@@ -140,7 +140,7 @@ function copyCode(element) {
     $('.copyBtn').click(function() {
         var value = $(this).prev().text();
         var $copied_text = $(this).nextAll('.copied-text');
-        codeBox = $(this).next();
+        var codeBox = $(this).next();
         codeBox.val(value);
         codeBox.select();
         document.execCommand('copy');
