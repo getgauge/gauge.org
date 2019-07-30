@@ -5,7 +5,16 @@
       <img src= "<%= article.data["summary_image"] %>" alt="<%= article.title %>" />
     </figure>
     <h3><img src="<%= article.data['author_image'] %>" alt="<%= article.data['author_name'] %>" class="profile-image">
-     <%= article.data['author_name'] %> </h3>
+        <%= !article.data['second_author_image'].blank? ?
+        "<img src="+article.data['second_author_image']+" alt="+article.data['author_name']+" class='profile-image second_author_image' />"
+        : '' 
+        %>
+        <%= !article.data['second_author_name'].blank? ?
+          article.data['author_name'] + " & " + article.data['second_author_name']
+          :
+          article.data['author_name']
+        %>
+    </h3>
   </div>
   <% end %>
   <div class="blog-details">
