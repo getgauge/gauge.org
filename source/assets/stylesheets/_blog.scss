@@ -269,7 +269,7 @@ $blog-description-color: #474747;
         border-radius: 5px;
         img {
             width: 100%;
-            height: 154px;
+            height: 100%;
             vertical-align: middle;
             transform: scale(1);
             transition: all 0.3s ease-in-out;
@@ -430,7 +430,7 @@ img {
 .blog-user-details {
     position: relative;
     h3 {
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
         position: absolute;
         bottom: -14px;
@@ -471,11 +471,6 @@ img {
 .gist-meta {
     display: none;
 }
-.blog-list-item.latest-blog h3 img, .author__image-custom {
-    width: 76px;
-    height: 38px;
-    border-radius: 5px;
-}
-.latest-blog figure img {
-    height: 100%!important;
+.second_author_image {
+    margin: 0 10px 0 -10px!important;
 }
