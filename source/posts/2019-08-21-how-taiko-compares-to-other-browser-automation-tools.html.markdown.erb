@@ -26,7 +26,7 @@ Over time, as users, we have opted for workarounds to deal with some of these is
 
 This year, the Gauge (by ThoughtWorks) team released [Taiko 1.0](https://taiko.gauge.org/?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=), a simple NodeJS library to address some of the problems of browser-based automated tests. 
 
-In this post, we’ll compare Taiko with five popular open source browser automation tools
+In this post, we’ll compare **Taiko** with five popular open source browser automation tools
 
 * Selenium
 * Webdriver IO
@@ -48,11 +48,11 @@ While analysing, we considered these parameters for a holistic comparison
 
 # 1. Test Maintenance
 
-***The goal***: Tests should change only when there is a change in functionality. A change in the structure of a web page should not impact a test validating functional correctness. 
+**The goal**: Tests should change only when there is a change in functionality. A change in the structure of a web page should not impact a test validating functional correctness. 
 
 However, most browser automation tools create tests that are hard to maintain. That’s because they use locators like XPath, ID's, CSS selectors to identify and perform actions on web page elements. 
 
-*“Maintaining locators must be calculated as part of test maintenance cost.” - [FireFox Test Engineering](https://blog.mozilla.org/fxtesteng/2013/09/26/writing-reliable-locators-for-selenium-and-webdriver-tests/) blog*
+> *“Maintaining locators must be calculated as part of test maintenance cost.” - [FireFox Test Engineering](https://blog.mozilla.org/fxtesteng/2013/09/26/writing-reliable-locators-for-selenium-and-webdriver-tests/) blog*
 
 These locators depend on the structure of a web page. The underlying structure can (and does) change frequently throughout the development process. Even minor changes in page structure break such tests. So, it increases the test maintenance costs.
 
@@ -78,13 +78,13 @@ This means, to click that "Purchase" button you can use `click( "Purchase")`. It
 
 # 2. Reliability (reduced flakiness)
 
-***The goal*** : Eliminate the root cause of flakiness in browser based tests.
+**The goal** : Eliminate the root cause of flakiness in browser based tests.
 
 In modern web applications, elements on the page can dynamically appear and disappear based on user actions. For example, imagine clicking on a user's icon to display their photos. 
 
 However, many libraries expect the test code to handle the wait time to perform an action. Other tools provide some granular and low level controls to explicitly wait for elements or time however, it's hard to learn and use these controls. 
 
-*“1 in 7 of the tests written by our world-class engineers occasionally fail in a way not caused by changes to the code or tests.” - [Google Testing blogs](https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html?m=1)*
+> *“1 in 7 of the tests written by our world-class engineers occasionally fail in a way not caused by changes to the code or tests.” - [Google Testing blogs](https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html?m=1)*
 
 Explicit waits make test code unpredictable. Improper configuration, inappropriate use of APIs along with ineffective handling of waits by the tool makes tests flaky.
 
@@ -108,7 +108,7 @@ In this [example](https://github.com/getgauge-contrib/compareBrowserAutomationTo
 
 # 3. Performance
 
-***The goal***: Get fast and reliable feedback on test failures
+**The goal**: Get fast and reliable feedback on test failures
 
 *“Usually the concern is application performance, which can have a direct impact on the bottom line. Testing performance, on the other hand, has a direct impact on developer productivity.” - [Why your choice of software testing suites matters](https://techbeacon.com/app-dev-testing/why-your-choice-software-testing-suites-matters)*
 
@@ -147,7 +147,7 @@ A shorter time and lower CPU indicate better performance. Here are some results 
 
 # 4. Test framework integration
 
-***The goal***: A testing library like Taiko must be able to take advantage of the rich testing oriented feature set provided by modern test frameworks like [Gauge](https://gauge.org//?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=), [Mocha](https://mochajs.org/), and [Jest](https://jestjs.io/).  
+**The goal**: A testing library like Taiko must be able to take advantage of the rich testing oriented feature set provided by modern test frameworks like [Gauge](https://gauge.org//?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=), [Mocha](https://mochajs.org/), and [Jest](https://jestjs.io/).  
 
 **Taiko's approach**
 
@@ -164,9 +164,9 @@ Taiko is a simple NodeJS library that can easily integrate with any Javascript t
 
 # 5. Ease of test failure analysis
 
-***The goal***: Tools must make it easy to collect contextual data to analyse test failures.
+**The goal**: Tools must make it easy to collect contextual data to analyse test failures.
 
-*“The analysis part is normally done manually and if the analysis is not done correctly, there could be genuine failures that are overlooked or masked by other issues.” - [5 reasons why automated tests fail to find regression bugs](https://www.testingexcellence.com/reasons-automated-tests-fail-to-find-regression-bugs/)*
+> *“The analysis part is normally done manually and if the analysis is not done correctly, there could be genuine failures that are overlooked or masked by other issues.” - [5 reasons why automated tests fail to find regression bugs](https://www.testingexcellence.com/reasons-automated-tests-fail-to-find-regression-bugs/)*
 
 Failure analysis feature allows testers and developers to quickly find issues and fix test failures. Contextual data allows easier test failure analysis. 
 
@@ -188,7 +188,7 @@ Users can use/[build a plugin](https://github.com/getgauge/taiko/wiki/Taiko-Plug
 
 # 6. Cross browser support
 
-***The goal***: Ensure that tests run consistently across modern browsers.
+**The goal**: Ensure that tests run consistently across modern browsers.
 
 Running tests across browsers adds significant overhead to both resources and test run times. We can avoid this overhead by choosing what to test. Modern Javascript applications, frameworks, shims and transpilers like babel do a good job of ensuring cross browser compatibility.
 
@@ -209,7 +209,7 @@ Taiko scripts are standards compliant and portable once browsers adopt these sta
 
 # 7. Number of languages supported to author test code
 
-***The goal***: The language available for authoring tests should allow users to write tests expressively. 
+**The goal**: The language available for authoring tests should allow users to write tests expressively. 
 
 All the tools we’ve chosen for comparison, support either one or more programming languages to write tests. With first class support for commonly used programming languages, these tools can leverage the team’s capabilities as well as IDE support. 
 
@@ -219,7 +219,7 @@ Taiko only supports Javascript because it’s built on top of CDP (Chrome DevToo
 
 **Benefits**
 
-* It works well with the Node.js ecosystem and frameworks like React, Angular and Vue.js
+* It works well with the [Node.js](https://nodejs.org/en/) ecosystem and frameworks like [React](https://reactjs.org/), [Angular](https://angularjs.org/) and [Vue.js](https://vuejs.org/)
 * The team doesn’t have to learn a new language if they are building web applications
 * Taiko can automate any part of the browser
 
