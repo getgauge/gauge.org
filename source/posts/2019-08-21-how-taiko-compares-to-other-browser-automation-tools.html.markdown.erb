@@ -16,7 +16,7 @@ meta_keywords: "Acceptance tests, end to end tests, browser automation"
 ---
 #### August 21, 2019 | Soumya Gupta, Nivedha Senthil
 
-<%= image_tag "/assets/images/blog/taiko_comparison_blogpost_image_large.jpg", {:title => "Taiko Comparison", :alt => "Taiko Comparison"} %>
+<%= image_tag "blog/taiko_comparison_blogpost_image_large.jpg", {:title => "Taiko Comparison", :alt => "Taiko Comparison"} %>
 
 # How Taiko compares to other browser automation tools
 
@@ -61,6 +61,7 @@ These locators depend on the structure of a web page. The underlying structure c
 Unlike other tools being compared, Taiko allows you to select elements on the page based on what you see. It's not based on the specific underlying structure that only a developer sees. 
 
 This means, to click that "Purchase" button you can use `click( "Purchase")`. It's based on the text on the screen and not based on the specific style, location or hidden identifier. 
+
 <sub>Multiple matches can be resolved with [proximity selectors](https://taiko.gauge.org/#toleftof/?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=) or a combination of them. Yet, if this is unsuitable, Taiko has fall back options. You can choose to select an element on the web page via XPath or CSS selector.</sub>
 
 **Benefits**
@@ -234,7 +235,7 @@ Taiko only supports Javascript because it’s built on top of CDP (Chrome DevToo
 # Summary
 Here is the report of the tools comparison
 
-<%= image_tag "/assets/images/blog/taiko_comparison_infographic_blog_post.png", {:title => "Taiko Infographic", :alt => "Taiko Infographic" , :class => "infographic--img"}  %>
+<%= image_tag "blog/taiko_comparison_infographic_blog_post.jpg", {:title => "Taiko Infographic", :alt => "Taiko Infographic" , :class => "infographic--img"}  %>
 
 <span class="infographic--summary">Check <a href="https://github.com/getgauge-contrib/compareBrowserAutomationTools" target="_blank">CompareBrowserAutomationTools</a>, a GitHub repository to validate our claims made in this blog.</span>
 
