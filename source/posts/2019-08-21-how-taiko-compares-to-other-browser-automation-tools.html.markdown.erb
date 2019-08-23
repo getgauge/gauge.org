@@ -58,7 +58,7 @@ These locators depend on the structure of a web page. The underlying structure c
 
 **Taiko’s approach** 
 
-Unlike other tools being compared, Taiko allows you to select elements on the page based on what you see. It's not based on the specific underlying structure that only a developer sees. 
+```Taiko allows you to select elements on the page based on what you see. It's not based on the specific underlying structure that only a developer sees. ```
 
 This means, to click that "Purchase" button you can use `click( "Purchase")`. It's based on the text on the screen and not based on the specific style, location or hidden identifier. 
 
@@ -96,7 +96,7 @@ As shown below, both Taiko and TestCafe have very good implicit wait mechanism b
 
 **Benefits**
 
-Modern test libraries "await" the element to appear instead. This makes your tests run more resilient to things like slow network connections. Implicit waits increase predictability. 
+```Modern test libraries "await" the element to appear instead. This makes your tests run more resilient to things like slow network connections. Implicit waits increase predictability. ```
 
 **Compare with examples**
 
@@ -110,13 +110,13 @@ In this [example](https://github.com/getgauge-contrib/compareBrowserAutomationTo
 
 **The goal**: Get fast and reliable feedback on test failures
 
-*“Usually the concern is application performance, which can have a direct impact on the bottom line. Testing performance, on the other hand, has a direct impact on developer productivity.” - [Why your choice of software testing suites matters](https://techbeacon.com/app-dev-testing/why-your-choice-software-testing-suites-matters)*
+> *“Usually the concern is application performance, which can have a direct impact on the bottom line. Testing performance, on the other hand, has a direct impact on developer productivity.” - [Why your choice of software testing suites matters](https://techbeacon.com/app-dev-testing/why-your-choice-software-testing-suites-matters)*
 
 Slow test suites increase feedback time and time to fix, when something breaks. Teams generally tend to ignore slow test suites.
 
 **Taiko’s approach**
 
-Taiko explicitly chooses reliability over extreme performance. If this tradeoff is unsuitable, you can choose to override it to improve performance. Explicit waits can be defined for a given action. 
+```Taiko explicitly chooses reliability over extreme performance. If this tradeoff is unsuitable, you can choose to override it to improve performance. Explicit waits can be defined for a given action. ```
 
 **Benefits**
 
@@ -151,7 +151,7 @@ A shorter time and lower CPU indicate better performance. Here are some results 
 
 **Taiko's approach**
 
-Taiko is a simple NodeJS library that can easily integrate with any Javascript test frameworks.
+```Taiko is a simple NodeJS library that can easily integrate with any Javascript test frameworks.```
 
 **Benefits**
 
@@ -172,7 +172,7 @@ Failure analysis feature allows testers and developers to quickly find issues an
 
 **Taiko’s approach**
 
-Apart from the default data available on failure, more contextual data can be collected with custom plugins. Taiko’s plugin architecture allows you to extend it in ways that suit the requirements
+```Apart from the default data available on failure, more contextual data can be collected with custom plugins. Taiko’s plugin architecture allows you to extend it in ways that suit the requirements```
 
 **Benefits**
 
@@ -192,16 +192,19 @@ Users can use/[build a plugin](https://github.com/getgauge/taiko/wiki/Taiko-Plug
 
 Running tests across browsers adds significant overhead to both resources and test run times. We can avoid this overhead by choosing what to test. Modern Javascript applications, frameworks, shims and transpilers like babel do a good job of ensuring cross browser compatibility.
 
-Browsers are now starting to adopt standards for better web compatibility and less fragmentation of underlying web platforms
+> Browsers are now starting to adopt standards for better web compatibility and less fragmentation of underlying web platforms
  
 **Taiko’s approach**
 
-Like Puppeteer, Taiko also uses the excellent Chrome DevTools Protocol(CDP) to automate browsers. Both work seamlessly with Chromium based browsers. 
+Like Puppeteer, Taiko also uses the excellent [Chrome DevTools Protocol(CDP)](https://chromedevtools.github.io/devtools-protocol/) to automate browsers. Both work seamlessly with Chromium based browsers. 
 
 **Benefits**
 
-[The next version of Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium) will be adopting the Chromium open source project. The Firefox team is working on adding support for CDP. 
-Taiko scripts are standards compliant and portable once browsers adopt these standards. Below are the details of our key findings of the browsers supported with various tools.
+[The next version of Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium) is adopting the Chromium open source project. The Firefox team is working on adding support for CDP. 
+
+```Taiko scripts are standards compliant and portable once browsers adopt these standards. ```
+
+Below are the details of our key findings of the browsers supported with various tools.
 
 **Key Findings**
 
@@ -215,7 +218,7 @@ All the tools we’ve chosen for comparison, support either one or more programm
 
 **Taiko’s approach**
 
-Taiko only supports Javascript because it’s built on top of CDP (Chrome DevTools protocol) and the best library for working with CDP is in JavaScript. 
+```Taiko only supports Javascript because it’s built on top of CDP (Chrome DevTools protocol) and the best library for working with CDP is in JavaScript. ```
 
 **Benefits**
 
