@@ -27,19 +27,20 @@ header.top {
     margin: 0 auto;
     width: 100%;
     position: relative;
+    padding: 0 2% 0 2%;
     @include grid-container;
-    @media (min-width: $screen-sm) {
-        max-width: 540px;
-    }
-    @media (min-width: $screen-md) {
-        max-width: 720px;
-    }
-    @media (min-width: $screen-lg) {
-        max-width: 960px;
-    }
-    @media (min-width: $screen-xl) {
-        max-width: 1140px;
-    }
+    // @media (min-width: $screen-sm) {
+    //     max-width: 540px;
+    // }
+    // @media (min-width: $screen-md) {
+    //     max-width: 720px;
+    // }
+    // @media (min-width: $screen-lg) {
+    //     max-width: 960px;
+    // }
+    // @media (min-width: $screen-xl) {
+    //     max-width: 1140px;
+    // }
 }
 
 .logo {
@@ -147,6 +148,8 @@ header.top {
         color: $header-nav-color_mobile;
         display: block;
         transition: $transition;
+        font-family: 'Open Sans',sans-serif!important;
+        font-weight: 500;
         @media (max-width: $screen-md-min) {
             font-size:18px;
             padding: 20px 0 20px 0px;
@@ -158,7 +161,7 @@ header.top {
         }
         @media (min-width: $screen-xl) {
             font-size: 18px;
-            font-weight: 300;
+            font-weight: 500;
         }
         &:hover {
             color: $primary-color;
