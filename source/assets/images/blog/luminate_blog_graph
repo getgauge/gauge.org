@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="819px" height="394px" viewBox="0 0 819 394" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M105.5,95.5 L105.5,277.5" id="Line" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M105.5,277.5 L746.5,277.5" id="Line-2" stroke="#979797" stroke-linecap="square"></path>
+        <text id="2-1.5-1-0.5-0" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" line-spacing="40" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="96" y="66"></tspan>
+            <tspan x="89.1802624" y="106">2</tspan>
+            <tspan x="79.0915685" y="146">1.5</tspan>
+            <tspan x="89.1802624" y="186">1</tspan>
+            <tspan x="79.0915685" y="226">0.5</tspan>
+            <tspan x="89.1802624" y="266">0</tspan>
+        </text>
+        <text id="2019-06-19" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="146.779187" y="307">2019-06-19</tspan>
+        </text>
+        <text id="2019-06-21" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="239.779187" y="307">2019-06-21</tspan>
+        </text>
+        <text id="2019-06-23" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="327.779187" y="307">2019-06-23</tspan>
+        </text>
+        <text id="2019-06-25" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="419.779187" y="307">2019-06-25</tspan>
+        </text>
+        <text id="2019-06-27" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="509.779187" y="307">2019-06-27</tspan>
+        </text>
+        <text id="2019-06-29" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="601.779187" y="307">2019-06-29</tspan>
+        </text>
+        <text id="2019-07-01" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="690.779187" y="307">2019-07-01</tspan>
+        </text>
+        <text id="Failed-acceptance-te" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="66.6224879" y="49">Failed acceptance tests over time </tspan>
+        </text>
+        <text id="Count" transform="translate(62.500000, 179.500000) rotate(-90.000000) translate(-62.500000, -179.500000) " font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="45.2626402" y="184">Count</tspan>
+        </text>
+        <text id="Timestamp-per-day" font-family="OpenSans-Semibold, Open Sans" font-size="12" font-weight="500" letter-spacing="-0.0298717938" fill="#6D7278">
+            <tspan x="353.845711" y="348">Timestamp per day</tspan>
+        </text>
+        <path d="M102.5,234 L105.5,234" id="Line-3-Copy-5" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M102.5,194 L105.5,194" id="Line-3-Copy-6" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M102.5,155 L105.5,155" id="Line-3-Copy-8" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M102.5,115 L105.5,115" id="Line-3-Copy-9" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M178,278 L178,281" id="Line-3" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M268,278 L268,281" id="Line-3-Copy" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M358,278 L358,281" id="Line-3-Copy-2" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M448,278 L448,281" id="Line-3-Copy-3" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M538,278 L538,281" id="Line-3-Copy-4" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M628,278 L628,281" id="Line-3-Copy-11" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M718,278 L718,281" id="Line-3-Copy-12" stroke="#979797" stroke-linecap="square"></path>
+        <g id="Group-3" transform="translate(258.000000, 92.000000)" fill="#FFCC02">
+            <rect id="Rectangle-Copy" x="312" y="93" width="39" height="92"></rect>
+            <rect id="Rectangle-Copy-5" x="444" y="0" width="39" height="185"></rect>
+            <rect id="Rectangle-Copy-2" x="267" y="0" width="39" height="185"></rect>
+            <rect id="Rectangle-Copy-3" x="222" y="93" width="39" height="92"></rect>
+            <rect id="Rectangle-Copy-4" x="0" y="93" width="39" height="92"></rect>
+        </g>
+    </g>
+</svg>
