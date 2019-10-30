@@ -1,23 +1,21 @@
 ---
 layout: post
-post_title: Luminate Security adopting Gauge 
+post_title: Gauge made test automation easy at Luminate
 date: 2019-10-16
 summary_image: "/assets/images/blog/taiko_comparison_blogpost_image_small.jpg"
-excerpt: "Luminate has been using Gauge for over 2 years now. They started using Gauge when it was still in beta and have now extended its use beyond browser automation.This blopost explains how Gauge made test automation easy for teams at Luminate Security."
-
-title: "Luminate Security adopting Gauge | Gauge Blog"
-title_tag_of_header: "Luminate Security adopting Gauge| Gauge Blog"
-meta_description: "Luminate Security adopting Gauge"
+excerpt: "Luminate has been using Gauge for over 2 years now. They started using Gauge when it was still in beta and have now extended its use beyond browser automation. This blopost explains how Gauge made test automation easy for teams at Luminate Security."
+title: "Gauge made test automation easy at Luminate | Gauge Blog"
+title_tag_of_header: "Gauge made test automation easy at Luminate| Gauge Blog"
+meta_description: "Gauge made test automation easy at Luminate"
 meta_keywords: "Acceptance tests, end to end tests, browser automation"
 ---
-#### October 16, 2019 | Leonid Belkind, Jonathan Giber
+#### October 16, 2019
 
-<%= image_tag "blog/taiko_comparison_blogpost_image_large.jpg", {:title => "Taiko Comparison", :alt => "Taiko Comparison"} %>
+<%= image_tag "blog/luminate_blogpost_image_large.jpeg", {:title => "Gauge and Luminate", :alt => "Gauge and Luminate"} %>
 
-# Luminate Security adopting Gauge
-Gauge made test automation easy at Luminate
+# Gauge made test automation easy at Luminate
 
-About Luminate Security
+## About Luminate Security
 
 Luminate Security a [Symantec company](https://www.symantec.com/about/newsroom/press-releases/2019/symantec_0212_01), enables security and IT teams to create a [Zero Trust Application Access architecture](https://doubleoctopus.com/security-wiki/network-architecture/zero-trust/) without traditional VPN appliances. Luminate’s products are used to securely connect any user from any device, anywhere in the world to corporate applications, on-premises and in the cloud, while all other corporate resources are cloaked without granting access to the entire network.
 
@@ -28,36 +26,45 @@ Luminate uses modern software development practices to build and deliver product
 Until about two years ago, Luminate used [SaltStack](https://www.saltstack.com/) for test automations. However, they found writing and maintaining tests difficult because
 
 * Developers found it difficult to understand and re-use existing test workflow 
-* Developers were reluctant to write acceptance tests. 
+* Developers were reluctant to write acceptance tests
 
-They started evaluating other tools for test automation to overcome these challenges. They tried Gauge since it is from ThoughtWorks, the creators of Selenium. 
+They started evaluating other tools for test automation to overcome these challenges. They tried Gauge since it is from ThoughtWorks, where Selenium was created. 
 
 ## How test automation became easy with Gauge
 
-* Gauge has a low learning curve, and this helped the team at Luminate adopt and use it extensively.
+Gauge has a low learning curve, and this helped the team at Luminate adopt and use it extensively.
 
-  *“Today acceptance tests are being written for all the features that are being developed” - Jonathan Giber, Automation Leader, Luminate Security*
+> Today acceptance tests are being written for all the features that are being developed 
 
-* Developers now find it easy to understand tests
+<sup>- Jonathan Giber, Automation Leader, Luminate Security</sup>
+
+- **Developers now find it easy to understand tests**
+
   With [test cases written in plain text](https://blog.getgauge.io/why-write-tests-in-plain-text-d9a54ccdc41b), even new people on the team can get started easily, understand the workflow and add tests.
 
-* Developers can easily identify reusable test code
-In gauge, [steps](https://docs.gauge.org/writing-specifications.html#longstart-steps) are plain text abstractions of test code. With this, the developers can easily understand the intent of the underlying code. This is very useful to identify reusable elements and reduce redundant test code. 
+- **Developers can easily identify reusable test code** 
 
-* Running tests in parallel is now easy
-  Luminate found switching between sequential and parallel runs surprisingly simple. Other functionalities like reporting work seamlessly on either mode. This made running tests in parallel locally or on CI servers, easy.
+    In gauge, [steps](https://docs.gauge.org/writing-specifications.html#longstart-steps) are plain text abstractions of test code. With this, the developers can easily understand the intent of the underlying code. This is very useful to identify reusable elements and reduce redundant test code. 
 
-* Extending Gauge to build custom features
-  Using Gauge’s extensible architecture, Luminate built an analytics dashboard capable of visualizing Gauge’s test execution results over a period of time. 
+- **Running tests in parallel is now easy** 
+    
+    Luminate found switching between sequential and parallel runs surprisingly simple. Other functionalities like reporting work seamlessly on either mode. This made running tests in parallel locally or on CI servers, easy.
+
+- **Extending Gauge to build custom features** 
+    
+    Using Gauge’s extensible architecture, Luminate built an analytics dashboard capable of visualizing Gauge’s test execution results over a period of time. 
 
 <%= image_tag "blog/Luminate_blog_graph.jpg", {:title => "Dashboard showing the number of failures over a given period" , :alt => " Dashboard showing the number of failures over a given period "} %>
+When there is a variance in data, a custom plugin sends a notification via email or slack. 
 
 <%= image_tag "blog/Slack_luminate.jpg", {:title => " Alert sent when there was a dramatic degradation in the success rate" , :alt => "  Alert sent when there was a dramatic degradation in the success rate"} %>
 
-When there is a variance in data, a custom plugin sends a notification via email or slack. 
+> Luminate’s choice of Gauge as a main testing automation platform proved to be successful. Gauge isn’t just a software product, it is also a caring and attentive team, who always strives to understand customer needs and is capable of delivering functionality in an agile way to support these needs.
 
-*“Luminate’s choice of Gauge as a main testing automation platform proved to be successful. Gauge isn’t just a software product, it is also a caring and attentive team, who always strives to understand customer needs and is capable of delivering functionality in an agile way to support these needs.” 
-- Jonathan Giber, Automation Leader and Leonid Belkind, Co-Founder and CTO, Luminate Security*
+<sup>- Jonathan Giber, Automation Leader and Leonid Belkind, Co-Founder and CTO, Luminate Security</sup>
 
 Luminate has been using Gauge for over 2 years now. They started using Gauge when it was still in beta and have now extended its use beyond browser automation. Today, the team uses Gauge for automating browser based as well as mobile [user journeys](https://martinfowler.com/bliki/UserJourneyTest.html), API tests, and performance tests.
-Your teams too can enjoy the benefits of Gauge and it’s extensible architecture. Try Gauge (it’s free and open source) and start writing tests in under 5 minutes. 
+
+Your teams too can enjoy the benefits of Gauge and it’s extensible architecture. Try Gauge (it’s free and open source) and [start writing tests in under 5 minutes](https://docs.gauge.org/getting_started/installing-gauge.html). 
+
+*Symantec has acquired Luminate Security. To know more about Luminate Security and the services they offer, visit the Symatec [website](https://www.symantec.com/).*
