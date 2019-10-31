@@ -570,3 +570,19 @@ span.custom-dual-testimonial {
     padding-top: 20px;
     display: block;
 }
+
+@media only screen and (max-width: 560px) {
+    .testimonial_author_image {
+       margin: -86px 10px 50px 0px !important;
+    }
+    span.dual_testimonial_block {
+        width: 50%;
+    }
+    span.custom-dual-testimonial {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .testimonial_author_image_dual_right {
+        left: -38px;
+    }
+}
