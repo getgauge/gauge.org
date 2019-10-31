@@ -573,7 +573,7 @@ span.custom-dual-testimonial {
 
 @media only screen and (max-width: 560px) {
     .testimonial_author_image {
-       margin: -86px 10px 50px 0px !important;
+       margin: -66px 10px 50px 0px !important;
     }
     span.dual_testimonial_block {
         width: 50%;
@@ -581,6 +581,7 @@ span.custom-dual-testimonial {
     span.custom-dual-testimonial {
         width: 100%;
         margin-top: 20px;
+        padding-left: 0px;
     }
     .testimonial_author_image_dual_right {
         left: -38px;
