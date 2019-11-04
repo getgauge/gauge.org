@@ -584,6 +584,12 @@ span.custom-dual-testimonial {
         padding-left: 0px;
     }
     .testimonial_author_image_dual_right {
-        left: -38px;
+        left: 0px;
+        float:none;
+        display: block;
     }
-}
+    span.dual_testimonial_block span.title {
+        float: left;
+        display: block;
+    }
+ }
