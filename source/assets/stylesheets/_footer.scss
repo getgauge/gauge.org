@@ -116,17 +116,18 @@ img {
 %footer-icons {
     padding: 5px 0 5px 25px;
     display: block;
+    background-size: auto 18px;
+    transition: $transition;
 }
 
 .foolinks {
-    .icon_gitter {
+    .icon_spectrum {
         @extend %footer-icons;
-        background: url('/assets/images/footer-icons/icon_gitter.svg') no-repeat 0 7px;
-        background-size: auto 20px;
-        transition: $transition;
+        background: url('/assets/images/footer-icons/icon_spectrum.svg') no-repeat 0 7px;
+        background-size: auto 18px;
         &:hover {
             transition: $transition;
-            background: url('/assets/images/footer-icons/icon_gitter_hover.svg') no-repeat 0 7px;
+            background: url('/assets/images/footer-icons/icon_spectrum_hover.svg') no-repeat 0 7px;
             background-size: auto 20px;
         }
     }
@@ -136,19 +137,7 @@ img {
         background-size: auto 18px;
         transition: $transition;
         &:hover {
-            transition: $transition;
             background: url('/assets/images/footer-icons/icon_google-group_hover.svg') no-repeat 0 8px;
-            background-size: auto 18px;
-        }
-    }
-    .icon_stack {
-        @extend %footer-icons;
-        background: url('/assets/images/footer-icons/icon_stack_overflow.svg') no-repeat 0 7px;
-        transition: $transition;
-        background-size: auto 18px;
-        &:hover {
-            transition: $transition;
-            background: url('/assets/images/footer-icons/icon_stack_overflow_hover.svg') no-repeat 0 7px;
             background-size: auto 18px;
         }
     }
