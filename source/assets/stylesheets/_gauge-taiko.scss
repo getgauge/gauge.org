@@ -40,8 +40,7 @@
 
 .bold-lg-header {
     font-size: 26px;
-    font-family: 'URWGeometric-Bold';
-    font-weight: bold;
+    font-family: 'PoppinsLatin-SemiBold';
     color: $secondary-color;
     text-align: center;
     display: block;
@@ -186,7 +185,7 @@
     line-height: 30px;
     width: 100%;
     @media (min-width: $screen-md) {
-        font-family: 'URWGeometric-Bold';
+        font-family: 'PoppinsLatin-SemiBold';
         font-size: 28px;
         line-height: 36px;
     }
@@ -214,7 +213,7 @@
     text-align: center;
     padding: 40px 0 0;
     @media (min-width: $screen-md) {
-        font-family: 'URWGeometric-Bold';
+        font-family: 'PoppinsLatin-SemiBold';
         font-size: 20px;
         padding: 50px 0 0;
         font-weight: 600;

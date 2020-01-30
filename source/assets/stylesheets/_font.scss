@@ -1,49 +1,19 @@
-// // URWGeometric font import
-// @font-face {
-//     font-family: 'URWGeometric-Medium';
-//     src: url('/assets/vendor/fonts/urw-geometric/354267_0_0.eot');
-//     src: url('/assets/vendor/fonts/urw-geometric/354267_0_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_0_0.ttf') format('truetype');
-// }
+//PoppinsLatin Font Import
+
+
 @font-face {
-    font-family: 'URWGeometric-SemiBold';
-    src: url('/assets/vendor/fonts/urw-geometric/354267_1_0.eot');
-    src: url('/assets/vendor/fonts/urw-geometric/354267_1_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_1_0.ttf') format('truetype');
+  font-family: 'PoppinsLatin-Medium';
+  src: url('/assets/vendor/fonts/poppins-latin/Poppins-Medium.ttf') format('truetype'),
+       url('/assets/vendor/fonts/poppins-latin/Poppins-Medium.otf') format("opentype");
 }
 
 @font-face {
-    font-family: 'URWGeometric-ExtraBold';
-    src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot');
-    src: url('/assets/vendor/fonts/urw-geometric/354267_2_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_2_0.ttf') format('truetype');
+  font-family: 'PoppinsLatin-SemiBold';
+  src: url('/assets/vendor/fonts/poppins-latin/PoppinsLatin-SemiBold.ttf') format('truetype'),
+       url('/assets/vendor/fonts/poppins-latin/PoppinsLatin-SemiBold.otf') format("opentype");
 }
 
-@font-face {
-    font-family: 'URWGeometric-Heavy';
-    src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot');
-    src: url('/assets/vendor/fonts/urw-geometric/354267_3_0.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff2') format('woff2'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/354267_3_0.ttf') format('truetype');
-}
 
-@font-face {
-    font-family: 'URWGeometric-Bold';
-    src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Bold.otf') format('opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Bold.ttf') format('truetype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Bold.woff') format('woff'), ;
-}
-
-@font-face {
-    font-family: 'URWGeometric-Regular';
-    src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.otf') format('opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Regular.ttf') format('truetype'), url('/assets/vendor/fonts/urw-geometric/RWGeometric-Regular.svg#URWGeometric-Regular') format('svg');
-}
-
-// @font-face {
-//     font-family: 'URWGeometric-Medium';
-//     src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Medium.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Medium.otf') format('opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Medium.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Medium.ttf') format('truetype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Medium.svg#URWGeometric-Medium') format('svg');
-// }
-// @font-face {
-//     font-family: 'URWGeometric-Light';
-//     src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-Light.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Light.otf') format('opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Light.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Light.ttf') format('truetype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-Light.svg#URWGeometric-Light') format('svg');
-// }
-// @font-face {
-//     font-family: 'URWGeometric-ExtraLight';
-//     src: url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.otf') format('opentype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.woff') format('woff'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.ttf') format('truetype'), url('/assets/vendor/fonts/urw-geometric/URWGeometric-ExtraLight.svg#URWGeometric-ExtraLight') format('svg');
-// }
 // Open sans font import
 @font-face {
     font-family: 'Open Sans';
@@ -87,55 +57,6 @@
 @font-face {
     font-family: 'SourceCodePro-Medium';
     src: url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.eot?#iefix') format('embedded-opentype'), url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.otf') format('opentype'), url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.woff') format('woff'), url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.ttf') format('truetype'), url('/assets/vendor/fonts/source-code/SourceCodePro-Medium.svg#SourceCodePro-Medium') format('svg');
-}
-
-// lato Font
-
-/* Webfont: Lato-Bold */
-
-@font-face {
-    font-family: 'Lato';
-    src: url('/assets/vendor/fonts/lato/Lato-Bold.eot');
-    /* IE9 Compat Modes */
-    src: url('/assets/vendor/fonts/lato/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/assets/vendor/fonts/lato/Lato-Bold.woff2') format('woff2'), /* Modern Browsers */
-    url('/assets/vendor/fonts/lato/Lato-Bold.woff') format('woff'), /* Modern Browsers */
-    url('/assets/vendor/fonts/lato/Lato-Bold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 600;
-    text-rendering: optimizeLegibility;
-}
-
-
-/* Webfont: Lato-Regular */
-
-@font-face {
-    font-family: 'Lato';
-    src: url('/assets/vendor/fonts/lato/Lato-Regular.eot');
-    /* IE9 Compat Modes */
-    src: url('/assets/vendor/fonts/lato/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/assets/vendor/fonts/lato/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
-    url('/assets/vendor/fonts/lato/Lato-Regular.woff') format('woff'), /* Modern Browsers */
-    url('/assets/vendor/fonts/lato/Lato-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
-}
-
-
-/* Webfont: Lato-Thin */
-
-@font-face {
-    font-family: 'Lato';
-    src: url('/assets/vendor/fonts/lato/Lato-Thin.eot');
-    /* IE9 Compat Modes */
-    src: url('/assets/vendor/fonts/lato/Lato-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/assets/vendor/fonts/lato/Lato-Thin.woff2') format('woff2'), /* Modern Browsers */
-    url('/assets/vendor/fonts/lato/Lato-Thin.woff') format('woff'), /* Modern Browsers */
-    url('/assets/vendor/fonts/lato/Lato-Thin.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 300;
-    text-rendering: optimizeLegibility;
 }
 
 
