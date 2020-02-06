@@ -57,7 +57,7 @@ For example, here is a code snippet to google for ‘gauge test automation’ us
                      withCapabilities({'browserName': 'chrome' }).
                      build();
 
-    browser.get('http://www.google.com');
+    browser.get('https://www.google.com');
 
     // Uses HTML locators, elements, form submissions etc.
     browser.findElement(webdriver.By.name('q')).sendKeys('gauge test automation');
@@ -85,7 +85,7 @@ For example, using the same test case as above, we want to wait for the page to 
                         usingServer().
                         withCapabilities({'browserName': 'chrome' }).
                         build
-    browser.get('http://www.google.com')
+    browser.get('https://www.google.com')
 
     function findGaugeLink() {
         return browser.findElements(webdriver.

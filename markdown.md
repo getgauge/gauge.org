@@ -13,7 +13,7 @@ Be it Mac, Windows, Linux OS or any of the supported Gauge’s language runners,
 
 With Gauge, stop worrying about
 
-***Which* **language is used to implement a *step *— Java, C#, Ruby or community contributed [*runners](http://getgauge.io/plugins.html)*
+***Which* **language is used to implement a *step *— Java, C#, Ruby or community contributed [*runners](https://getgauge.io/plugins.html)*
 
 ***When ***to execute — Trigger the tests manually or Configure to Auto trigger
 
@@ -62,7 +62,7 @@ With a growing test suite, there is a need to make managing it simpler. Gauge’
 
 * [And more!](https://docs.getgauge.io/using.html#id7)
 
-At [*Gauge](http://getgauge.io/)*, we understand that it is good to keep things simple. We aim to make test automation, simple and easy to maintain*.*
+At [*Gauge](https://getgauge.io/)*, we understand that it is good to keep things simple. We aim to make test automation, simple and easy to maintain*.*
 
 If you have any suggestions for Gauge (enhancements, feature requests or more) do reach out to the community
 
