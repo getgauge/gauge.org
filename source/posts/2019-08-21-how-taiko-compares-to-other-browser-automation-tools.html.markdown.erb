@@ -24,7 +24,7 @@ ThoughtWorks has been writing free and open source automated browser testing too
 
 Over time, as users, we have opted for workarounds to deal with some of these issues. But sometimes all it needs is a different approach.
 
-This year, the Gauge (by ThoughtWorks) team released [Taiko 1.0](https://taiko.gauge.org/?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=), a simple NodeJS library to address some of the problems of browser-based automated tests. 
+This year, the Gauge (by ThoughtWorks) team released [Taiko 1.0](https://taiko.dev), a simple NodeJS library to address some of the problems of browser-based automated tests. 
 
 In this post, we’ll compare **Taiko** with five popular open source browser automation tools
 
@@ -63,11 +63,11 @@ Taiko allows you to select elements on the page based on what you see. It's not 
 
 This means, to click that "Purchase" button you can use `click( "Purchase")`. It's based on the text on the screen and not based on the specific style, location or hidden identifier. 
 
-<sub>Multiple matches can be resolved with [proximity selectors](https://taiko.gauge.org/?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=#toleftof) or a combination of them. Yet, if this is unsuitable, Taiko has fall back options. You can choose to select an element on the web page via XPath or CSS selector.</sub>
+<sub>Multiple matches can be resolved with [proximity selectors](https://docs.taiko.dev/#toleftof) or a combination of them. Yet, if this is unsuitable, Taiko has fall back options. You can choose to select an element on the web page via XPath or CSS selector.</sub>
 
 **Benefits**
 
-[Taiko’s API](https://taiko.gauge.org/?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=#smart-selectors) treats the browser like a black box. Tests written in Taiko are resilient to page structure changes as they minimise the need of using complicated locators.
+[Taiko’s API](https://docs.taiko.dev/#smart-selectors) treats the browser like a black box. Tests written in Taiko are resilient to page structure changes as they minimise the need of using complicated locators.
 
 **Compare with examples**
 
@@ -93,7 +93,7 @@ Explicit waits make test code unpredictable. Improper configuration, inappropria
 
 As shown below, both Taiko and TestCafe have very good implicit wait mechanism before performing actions. This reduces flakiness in tests. However, unlike TestCafe, Taiko also ensures that the [performance of the test run remains good](https://github.com/getgauge-contrib/compareBrowserAutomationTools/blob/master/comparePerformanceAndReliableWaitsOfTools/ComparePerfomance.md)! 
 
-<sub> In case you want finer control, Taiko also has good fallback options to override the default behavior. You can define explicit [wait for conditions](https://taiko.gauge.org/?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=#waitfor) for a given action in the test code to suit your needs.</sub> 
+<sub> In case you want finer control, Taiko also has good fallback options to override the default behavior. You can define explicit [wait for conditions](https://docs.taiko.dev/#waitfor) for a given action in the test code to suit your needs.</sub> 
 
 **Benefits**
 
@@ -255,4 +255,4 @@ Here is the report of the tools comparison
 
 We hope you find this comparison summary useful! Through various examples listed above we can deduce that Taiko is a reliable, cost effective browser automation tool with a good performance. There will be pros and cons of using any tool. If you’ve come across a tool that isn’t in the comparison but solves a problem better, leave us a comment. 
 
-As always, the team welcomes any [feedback](https://github.com/getgauge/taiko/issues) that helps improve Taiko. You can [install Taiko](https://taiko.gauge.org/?utm_source=how_taiko_blog&utm=medium=blog&utm_campaign=taiko_blogpost&utm_term=&utm_content=#quick-install) and explore more! 
+As always, the team welcomes any [feedback](https://github.com/getgauge/taiko/issues) that helps improve Taiko. You can [install Taiko](https://docs.taiko.dev/#quick-install) and explore more! 
