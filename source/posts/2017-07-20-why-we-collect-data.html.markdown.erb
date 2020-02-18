@@ -3,7 +3,9 @@ layout: post
 post_title: Why we collect data
 date: 2017-07-20
 tags: 
-excerpt: "To be a better testing tool, from version 0.9.0, Gauge collects anonymous usage statistics (telemetry). The data is public and there’s an easy way to opt out."
+excerpt: "To be a better testing tool, from version 0.9.0, Gauge collects 
+anonymous usage statistics (telemetry). The data is public and there’s an easy 
+way to opt out."
 summary_image: "/assets/images/blog/gauge_blog_why-we-collect-data_small.jpg"
 author_name: "Zabil Maliackal"
 author_image: "https://cdn-images-1.medium.com/fit/c/100/100/1*tpbiaLHohL5UbeRbfw3hFw.jpeg"
@@ -11,70 +13,104 @@ author_image: "https://cdn-images-1.medium.com/fit/c/100/100/1*tpbiaLHohL5UbeRbf
 title: "Why we collect Data | Gauge Blog"
 title_tag_of_header: "Why we collect Data | Gauge Blog"
 
-meta_description: "This post explains how Gauge collects data, what’s collected and how it’s used."
+meta_description: "This post explains how Gauge collects data, what’s collected 
+and how it’s used."
 meta_keywords: "gauge telemetry, why we collect data, data and privacy gauge"
 overridden_canonical_url: "https://blog.getgauge.io/why-we-collect-data-b19df366b677"
 ---
 
 #### Jul 20, 2017 | Zabil Maliackal
 
-<%= image_tag "blog/gauge_blog_why-we-collect-data_large.jpg", {:title => "Why we collect data", :alt => "Why we collect data"} %>
+<%= image_tag "blog/gauge_blog_why-we-collect-data_large.jpg", {:title => "Why 
+we collect data", :alt => "Why we collect data"} %>
 
 # Why we collect data
 
+**Gauge no longer collects telemetry from v1.0.6+**
+
 ## TL;DR
 
-To be a better testing tool, from version 0.9.0, Gauge collects anonymous usage statistics (telemetry). The data is public and there’s an easy way to opt out.
+To be a better testing tool, from version 0.9.0, Gauge collects anonymous usage 
+statistics (telemetry). The data is public and there’s an easy way to opt out.
 
 ## Intro
 
-Collecting user data is a touchy topic. Heated debates when popular open source projects ([Brew](https://github.com/Homebrew/brew/issues/142), [Firefox](https://github.com/mozilla/addons-frontend/issues/2785)) enabled telemetry lists arguments for and against it citing privacy as a concern. On the other hand, analyzing data makes a product better.
+Collecting user data is a touchy topic. Heated debates when popular open source 
+projects ([Brew](https://github.com/Homebrew/brew/issues/142), 
+[Firefox](https://github.com/mozilla/addons-frontend/issues/2785)) enabled 
+telemetry lists arguments for and against it citing privacy as a concern. On 
+the other hand, analyzing data makes a product better.
 
 This post explains how Gauge collects data, what’s collected and how it’s used.
 
 ## Data
 
-Every gauge installation (since 0.8.5) has a unique identifier. To view it execute the following command for e.g.
+Every gauge installation (since 0.8.5) has a unique identifier. To view it 
+execute the following command for e.g.
 
     $ gauge version -l debug
     Gauge Install ID: 890b876c-f2fa-41b4-93af-e122a477f5bc
     Gauge version: 0.9.0
 
-The [generated id](https://github.com/getgauge/gauge/pull/665/commits/9a3bda8dbc0aa458719f46ef6b2776db55b4f4fa) 
+The [generated 
+id](https://github.com/getgauge/gauge/pull/665/commits/9a3bda8dbc0aa458719f46ef6
+b2776db55b4f4fa) 
 is stored at `$HOME/.gauge/config/id`
 
-The unique id cannot be used to identify demographics as the source is anonymous.
+The unique id cannot be used to identify demographics as the source is 
+anonymous.
 
-Telemetry data is stored using [Google analytics](https://www.google.com/analytics) with the analytics Tracking id
+Telemetry data is stored using [Google 
+analytics](https://www.google.com/analytics) with the analytics Tracking id
 
     UA-54838477-1
 
-The [settings](https://support.google.com/analytics/answer/1011397?hl=en&utm_id=ad&authuser=1#change-your-data-sharing-settings) are modified to not share any data with Google.
+The 
+[settings](https://support.google.com/analytics/answer/1011397?hl=en&utm_id=ad&a
+uthuser=1#change-your-data-sharing-settings) are modified to not share any data 
+with Google.
 
-[Events](https://support.google.com/analytics/answer/1033068?hl=en) for [console usage](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe287a6486/track/track.go#L107), G[auge API usage](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe287a6486/track/track.go#L118) and a [boolean for CI/CD runs](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe287a6486/track/track.go#L128) is sent via https using a [go wrapper](https://github.com/jpillora/go-ogle-analytics) for [Google Analytics Measurement Protocol](https://Google Analytics - Measurement Protocol).
+[Events](https://support.google.com/analytics/answer/1033068?hl=en) for 
+[console 
+usage](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe28
+7a6486/track/track.go#L107), G[auge API 
+usage](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe28
+7a6486/track/track.go#L118) and a [boolean for CI/CD 
+runs](https://github.com/getgauge/gauge/blob/ffc9df1659aa2d0d3ba8f48d2af966fe287
+a6486/track/track.go#L128) is sent via https using a [go 
+wrapper](https://github.com/jpillora/go-ogle-analytics) for [Google Analytics 
+Measurement Protocol](https://Google Analytics - Measurement Protocol).
 
 Here’s an example of the command line usage data
 
 ![](https://cdn-images-1.medium.com/max/2380/1*1Vt8vYmumHeDvd598UQjcg.png)
 
-We do not record IP addresses for these events. However please note IP addresses are recorded while visiting our
-[website](https://getgauge.io). All data is governed by a [privacy policy](https://www.thoughtworks.com/privacy-policy).
+We do not record IP addresses for these events. However please note IP 
+addresses are recorded while visiting our
+[website](https://getgauge.io). All data is governed by a [privacy 
+policy](https://www.thoughtworks.com/privacy-policy).
 
 ## Access
 
-Only Gauge [maintainers](https://github.com/orgs/getgauge/people) will have access to this data.
+Only Gauge [maintainers](https://github.com/orgs/getgauge/people) will have 
+access to this data.
 
 ## Use
 
-Gauge is built by a small team with limited time for reaching out to groups, conducting targeted studies or surveys. Here’s how telemetry helps.
+Gauge is built by a small team with limited time for reaching out to groups, 
+conducting targeted studies or surveys. Here’s how telemetry helps.
 
 **Measuring adoption**
 
-Know how many users use Gauge and rate of adoption. The success of this project is measured by impact created in the testing space.
+Know how many users use Gauge and rate of adoption. The success of this project 
+is measured by impact created in the testing space.
 
 **Feature usage**
 
-Gauge wants to add excellent tooling support from the IDE as well as command line. It’s important to understand how features are used. This data will be used to prioritize feature development, ensure backwards compatibility between releases, and improving User experience.
+Gauge wants to add excellent tooling support from the IDE as well as command 
+line. It’s important to understand how features are used. This data will be 
+used to prioritize feature development, ensure backwards compatibility between 
+releases, and improving User experience.
 
 ## Can I see what data is sent?
 
@@ -103,6 +139,9 @@ Or set the following environment variable
 
 ## Discuss
 
-Ideas and concerns can be discussed on [Github](https://github.com/getgauge/gauge/issues/658)
+Ideas and concerns can be discussed on 
+[Github](https://github.com/getgauge/gauge/issues/658)
 
-*[Gauge](//gauge.org) is a free and open source test automation framework that takes the pain out of acceptance testing. [Download](//gauge.org/get_started) it or read [documentation](https://docs.gauge.org) to get started!*
+*[Gauge](//gauge.org) is a free and open source test automation framework that 
+takes the pain out of acceptance testing. [Download](//gauge.org/get_started) 
+it or read [documentation](https://docs.gauge.org) to get started!*
