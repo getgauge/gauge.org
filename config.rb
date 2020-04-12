@@ -54,10 +54,17 @@ end
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+require "uglifier"
+
+configure :build do
+  activate :minify_css
+  activate :minify_javascript,
+    compressor: proc {
+    ::Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true}, harmony: true)
+    }
+end
+
+
 activate :blog do |blog|
   blog.sources           = "posts/{year}-{month}-{day}-{title}.html"
   blog.layout            = "post"
