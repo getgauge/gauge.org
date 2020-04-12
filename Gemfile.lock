@@ -49,6 +49,7 @@ GEM
     hologram (1.4.0)
       redcarpet (>= 2.2, < 4.0)
       rouge (>= 1.5)
+    htmlcompressor (0.2.0)
     http_parser.rb (0.6.0)
     http_parser.rb (0.6.0-java)
     i18n (0.7.0)
@@ -101,6 +102,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-minify-html (3.4.1)
+      htmlcompressor (~> 0.2.0)
+      middleman-core (>= 3.2)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     neat (2.1.0)
@@ -159,6 +163,7 @@ DEPENDENCIES
   middleman-autoprefixer (~> 2.7)
   middleman-blog
   middleman-livereload
+  middleman-minify-html
   neat
   nokogiri
   redcarpet (~> 3.3, >= 3.3.3)
@@ -166,4 +171,4 @@ DEPENDENCIES
   wdm (~> 0.1)
 
 BUNDLED WITH
-   1.16.2
+   1.17.2

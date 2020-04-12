@@ -13,3 +13,4 @@ gem 'bourbon'
 gem 'neat'
 gem 'hologram'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem "middleman-minify-html"

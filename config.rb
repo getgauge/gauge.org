@@ -64,6 +64,7 @@ configure :build do
     }
 end
 
+activate :minify_html
 
 activate :blog do |blog|
   blog.sources           = "posts/{year}-{month}-{day}-{title}.html"
