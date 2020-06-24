@@ -14,13 +14,12 @@ meta_keywords: "Acceptance tests, end to end tests, browser automation"
 <%= image_tag "blog/luminate_blogpost_image_large.jpg", {:title => "Gauge and Luminate", :alt => "Gauge and Luminate"} %>
 
 # Software Development with the Right Testing Framework
-**A developer’s and quality analyst’s perspective**
 
 A leading Australian financial services company set out to create a simple and elegant home loan solution.  Within a few months of initiating the project, the company onboarded four ThoughtWorkers to streamline the software development process. 
 
 The result—a new inclusive experience that allowed a banker to complete an application for a customer in just 60 minutes. It was a significant improvement from the earlier average of several hours, shifting between multiple systems and re-entering data. 
 
-> Investing in test automation and using Gauge helped a lot to improve the overall quality of the application and the user experience.
+> Investing in test automation and using Gauge helped improve the overall quality of the application and the user experience.
 
 ## The challenge: Automation for better testing
 
@@ -32,7 +31,7 @@ About six months ago, when Raymond joined the project, he noticed the gap—the 
 
 Raymond proposed Gauge for test automation. Since no one else in the team had used Gauge before, he ran a proof of concept comparing it to Jest tests for the same functionality. The proof of concept showed the team how Gauge specifications, written in markdown, were much easier to write and read than plain Jest tests . That, along with Gauge’s excellent VS Code integration, a feature that enhanced the test scripting experience, convinced the team to choose Gauge as their test automation framework. 
 
-Gauge, a free and open source test automation framework, draws from ThoughtWorks’ robust software testing culture that helped create tools such as Selenium, Sahi, Watir, Hamcrest, and Mockito. 
+Gauge, a free and open source test automation framework, draws from [ThoughtWorks’ robust software testing culture](https://www.thoughtworks.com/software-testing) that helped create tools such as Selenium, Sahi, Watir, Hamcrest, and Mockito. 
 
 During our conversation, Maggie explained that Gauge is used by both developers and testers in the team. 
 
@@ -46,7 +45,7 @@ Both Raymond and Maggie shared how several Gauge features helped minimize defect
 
 Gauge is free and open source, and that was a crucial factor in helping them zero in on the tool.
 
-### Data driven testing
+### 1. Data driven testing
 
 Maggie pointed out that Gauge’s data tables feature enabled the team to reuse tests and write tests quickly. She explained, 
 
@@ -54,28 +53,28 @@ Maggie pointed out that Gauge’s data tables feature enabled the team to reuse 
 
 Raymond added that writing test data as markdown tables offered a standard format that was easy to understand, enhancing its readability. 
 
-### Tags and hooks
+### 2. Tags and hooks
 
 Tags within Gauge are used to group specifications or scenarios. Raymond also highlighted that tags are great for slicing the test pyramid horizontally. He explained, 
 
 > We use the [Backend for Front End design pattern](https://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a combination of Gauge tags and execution hooks, we mixed front-end only tests with front-end and back-end integration tests within the same spec file. We have a tag in Gauge for UI tests and we can run page-level UI tests by simply using these tags. Similarly, we have a service tag introducing real services into these tests. Tags help in slicing our test strategy.
 
 
-### Running tests in parallel
+### 3. Running tests in parallel
 
 The team used Gauge’s ability to run tests in parallel and this reduced testing time drastically. Gauge comes inbuilt with an option to turn on parallel runs without the need for any extra setup. 
 
-### Seamless integration
+### 4. Seamless integration
 
 The team uses multiple technologies to test the new loan solution. Currently, the UI and UI BFF tests use React Testing Library, and the end-to-end web tests use TestCafe to drive browser automation. Raymond and Maggie shared that Gauge integrates seamlessly with these tools.      
 
-### Reusability and modularity
+### 5. Reusability and modularity
 
 Gauge reduced the effort and time required for creating new tests. Maggie explained - 
 
 > We wrote just one test, which had reusable steps. When creating more tests, we used the table feature and tweaked the formula to reuse the test for another scenario quickly. It helped us meet the strict client requirements faster.
 
-### Documentation
+### 6. Documentation
 
 In contrast with Jest, Cypress and TestCafe, Gauge offers a readable and executable document that illustrates how an app works. It played a key role in helping the team pick pace, onboard new hands, and comply with strict auditing requirements. 
 
@@ -85,6 +84,6 @@ The team successfully released the first version of the simple home loan applica
 
 The second round took only three days to complete, pleasantly surprising the client, who had expected each round to take three to four weeks.       
 
-> **Selecting a testing tool like Gauge, encourages reusability, makes software development faster, better, and predictable.** 
+> Selecting a testing tool like Gauge, encourages reusability, makes software development faster, better, and predictable.
 
 As development teams look to shift-left with testing, choosing a test automation framework that is easy to write and maintain is crucial. 
