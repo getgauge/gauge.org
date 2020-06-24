@@ -57,9 +57,61 @@ Raymond added that writing test data as markdown tables offered a standard forma
 
 Tags within Gauge are used to group specifications or scenarios. Raymond also highlighted that tags are great for slicing the test pyramid horizontally. He explained, 
 
-> We use the [Backend for Front End design pattern](https://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a combination of Gauge tags and execution hooks, we mixed front-end only tests with front-end and back-end integration tests within the same spec file. We have a tag in Gauge for UI tests and we can run page-level UI tests by simply using these tags. Similarly, we have a service tag introducing real services into these tests. Tags help in slicing our test strategy.
+Using a combination of Gauge tags and execution hooks, the team were able to mix front-end only tests with front-end and back-end integration tests, within the same spec file.
 
-https://gist.githubusercontent.com/pocketcowboy/899f9f9ad40dd0be50dbbc862b51fd7a/raw/661edc8e704bbcdd443578cac4cfd95184922b47/gauge-tips.md
+```js
+// render app with mock client for scenarios tagged with 'ui'
+beforeScenario(
+    function() {
+        const mockClient = createMockClient();
+        gauge.dataStore.scenarioStore.put(
+            "context",
+            render(<App client={mockClient} />)
+        );
+    },
+    { tags: ["ui"] }
+);
+
+// render app with real client for scenarios tagged with 'ui-bff'
+beforeScenario(
+    function() {
+        const client = createClient();
+        gauge.dataStore.scenarioStore.put(
+            "context",
+            render(<App client={client} />)
+        );
+    },
+    { tags: ["ui-bff"] }
+);
+```
+
+Steps can be written without knowing if the scenario is a front-end only, or front-end and back-end integration test.
+
+```js
+step("Then I should see <text> on the page", function(text) {
+    const { getByText } = gauge.dataStore.scenarioStore.get("context");
+    expect(getByText(text)).toBeInTheDocument();
+});
+```
+
+```
+# Home page specs
+
+## Home page should display title
+
+tags: ui
+
+* Given I am on the home page
+* Then I should see "Blog Posts" on the page
+
+## Home page should display posts
+
+tags: ui-bff
+
+* Given I am on the home page
+* Then I should see "My first blog post" on the page
+```
+> We use the [Backend for Front End design pattern](https://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a combination of Gauge tags and execution hooks, we mixed front-end only tests with front-end and back-end integration tests within the same spec file. We have a tag in Gauge for UI tests and we can run page-level UI tests by simply using these tags. Similarly, we have a service tag introducing real services into these tests. Tags help in slicing our test strategy.
 
 ### 3. Running tests in parallel
 
