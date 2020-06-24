@@ -14,15 +14,20 @@ meta_keywords: "Acceptance tests, end to end tests, browser automation"
 <%= image_tag "blog/luminate_blogpost_image_large.jpg", {:title => "Gauge and Luminate", :alt => "Gauge and Luminate"} %>
 
 # Software Development with the Right Testing Framework
-<sub>A developer’s and quality analyst’s perspective</sub>
+**A developer’s and quality analyst’s perspective**
 
-A leading Australian financial services company set out to create a simple and elegant home loan solution.  Within a few months of initiating the project, the company onboarded four ThoughtWorkers to streamline the software development process. The result—a new inclusive experience that allowed a banker to complete an application for a customer in just 60 minutes. It was a significant improvement from the earlier average of several hours, shifting between multiple systems and re-entering data. Investing in test automation and using Gauge helped a lot to improve the overall quality of the application and the user experience.
+A leading Australian financial services company set out to create a simple and elegant home loan solution.  Within a few months of initiating the project, the company onboarded four ThoughtWorkers to streamline the software development process. 
+
+The result—a new inclusive experience that allowed a banker to complete an application for a customer in just 60 minutes. It was a significant improvement from the earlier average of several hours, shifting between multiple systems and re-entering data. 
+
+> Investing in test automation and using Gauge helped a lot to improve the overall quality of the application and the user experience.
 
 ## The challenge: Automation for better testing
 
 We spoke with two team members—developer Raymond Biggs and quality analyst Maggie Zong—to get more details. As a client requirement, the team uses TestCafe to automate end-to-end testing. But, on it’s own TestCafe test scripts were hard to read and maintain. The TestCafe test steps weren’t re-usable either. 
 
-About six months ago, when Raymond joined the project, he noticed the gap—the team did not use a testing tool that matched their development style. He recalled using Jest and Cypress in previous projects. However, both had similar issues with reusability and maintainability and did not help new team members understand the behavior of the functionality they were testing. Also, all the developers in the team used VS Code, which meant that any new testing tool had to integrate well with the team’s choice of IDE.      
+About six months ago, when Raymond joined the project, he noticed the gap—the team did not use a testing tool that matched their development style. He recalled using Jest and Cypress in previous projects. However, both had similar issues with reusability and maintainability and did not help new team members understand the behavior of the functionality they were testing. Also, all the developers in the team used VS Code, which meant that any new testing tool had to integrate well with the team’s choice of IDE.
+
 ## Slicing the test pyramid with Gauge     
 
 Raymond proposed Gauge for test automation. Since no one else in the team had used Gauge before, he ran a proof of concept comparing it to Jest tests for the same functionality. The proof of concept showed the team how Gauge specifications, written in markdown, were much easier to write and read than plain Jest tests . That, along with Gauge’s excellent VS Code integration, a feature that enhanced the test scripting experience, convinced the team to choose Gauge as their test automation framework. 
@@ -30,18 +35,16 @@ Raymond proposed Gauge for test automation. Since no one else in the team had us
 Gauge, a free and open source test automation framework, draws from ThoughtWorks’ robust software testing culture that helped create tools such as Selenium, Sahi, Watir, Hamcrest, and Mockito. 
 
 During our conversation, Maggie explained that Gauge is used by both developers and testers in the team. 
-> <span class="custom-testimonial">We use Gauge tests across all levels of the test pyramid. While TestCafe drives the browser automation, it, in turn, runs within Gauge. Developers and testers write integration and user interface (UI) end-to-end Gauge tests. We also have tests that integrate with downstream services. Gauge specifications help document the business logic clearly within the tests.</span>  
-<%= image_tag "/assets/images/blog/jonathan-giber.png", {:title => "Maggie Wong", :alt => "Maggie Wong", :class => "testimonial_author_image"} %>
-<sup class="sup-with-image">- Maggie Wong, <br/> Quality Analyst, ThoughtWorks</sup>
+
+> We use Gauge tests across all levels of the test pyramid. While TestCafe drives the browser automation, it, in turn, runs within Gauge. Developers and testers write integration and user interface (UI) end-to-end Gauge tests. We also have tests that integrate with downstream services. Gauge specifications help document the business logic clearly within the tests.
 
 <%= image_tag "blog/slicing-the-test-pyramid-gauge-graphic_white.png", {:title => "How Gauge tests fit into our test pyramid" , :alt => "How Gauge tests fit into our test pyramid"} %>
-How Gauge tests fit into the test pyramid
 
 Both Raymond and Maggie shared how several Gauge features helped minimize defects and improve the testing and software development process.
 
 ## Why Gauge worked     
 
-Gauge is free and open source, and that was a crucial factor in helping Raymond zero in on the tool.
+Gauge is free and open source, and that was a crucial factor in helping them zero in on the tool.
 
 ### Data driven testing
 
@@ -55,7 +58,7 @@ Raymond added that writing test data as markdown tables offered a standard forma
 
 Tags within Gauge are used to group specifications or scenarios. Raymond also highlighted that tags are great for slicing the test pyramid horizontally. He explained, 
 
-> **We use the [Backend for Front End design pattern](https://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a combination of Gauge tags and execution hooks, we mixed front-end only tests with front-end and back-end integration tests within the same spec file. We have a tag in Gauge for UI tests and we can run page-level UI tests by simply using these tags. Similarly, we have a service tag introducing real services into these tests. Tags help in slicing our test strategy.**
+> We use the [Backend for Front End design pattern](https://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a combination of Gauge tags and execution hooks, we mixed front-end only tests with front-end and back-end integration tests within the same spec file. We have a tag in Gauge for UI tests and we can run page-level UI tests by simply using these tags. Similarly, we have a service tag introducing real services into these tests. Tags help in slicing our test strategy.
 
 
 ### Running tests in parallel
@@ -70,7 +73,7 @@ The team uses multiple technologies to test the new loan solution. Currently, th
 
 Gauge reduced the effort and time required for creating new tests. Maggie explained - 
 
-> **We wrote just one test, which had reusable steps. When creating more tests, we used the table feature and tweaked the formula to reuse the test for another scenario quickly. It helped us meet the strict client requirements faster.** 
+> We wrote just one test, which had reusable steps. When creating more tests, we used the table feature and tweaked the formula to reuse the test for another scenario quickly. It helped us meet the strict client requirements faster.
 
 ### Documentation
 
