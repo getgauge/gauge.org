@@ -3,61 +3,109 @@ layout: post
 post_title: Software Development with the Right Testing Framework
 date: 2020-06-24
 summary_image: "/assets/images/blog/luminate_blogpost_image_small.jpg"
-excerpt: "A leading Australian financial services company set out to create a simple and elegant home loan solution. Investing in test automation and using Gauge helped a lot to improve the overall quality of the application and the user experience."
+excerpt: "A leading Australian financial services company set out to create a 
+simple and elegant home loan solution. Investing in test automation and using 
+Gauge helped a lot to improve the overall quality of the application and the 
+user experience."
 title: "Software Development with the Right Testing Framework | Gauge Blog"
-title_tag_of_header: "Software Development with the Right Testing Framework | Gauge Blog"
-meta_description: "A leading Australian financial services company set out to create a simple and elegant home loan solution. Read about how investing in test automation helped improve the product quality and end user experience."
+title_tag_of_header: "Software Development with the Right Testing Framework 
+| Gauge Blog"
+meta_description: "A leading Australian financial services company set out to 
+create a simple and elegant home loan solution. Read about how investing in 
+test automation helped improve the product quality and end user experience."
 meta_keywords: "Acceptance tests, end to end tests, browser automation"
 ---
 #### June 24, 2020
 
-<%= image_tag "blog/luminate_blogpost_image_large.jpg", {:title => "Gauge and Luminate", :alt => "Gauge and Luminate"} %>
+<%= image_tag "blog/luminate_blogpost_image_large.jpg", {:title => "Gauge and 
+Luminate", :alt => "Gauge and Luminate"} %>
 
 # Software Development with the Right Testing Framework
 
-A leading Australian financial services company set out to create a simple and elegant home loan solution.  Within a few months of initiating the project, the company onboarded four ThoughtWorkers to streamline the software development process. 
+A leading Australian financial services company set out to create a simple and 
+elegant home loan solution.  Within a few months of initiating the project, 
+the company onboarded four ThoughtWorkers to streamline the software 
+development process. 
 
-The result—a new inclusive experience that allowed a banker to complete an application for a customer in just 60 minutes. It was a significant improvement from the earlier average of several hours, shifting between multiple systems and re-entering data. 
+The result—a new inclusive experience that allowed a banker to complete an 
+application for a customer in just 60 minutes. It was a significant improvement
+ from the earlier average of several hours, shifting between multiple systems 
+ and re-entering data. 
 
-> Investing in test automation and using Gauge helped improve the overall quality of the application and the user experience.
+> Investing in test automation and using Gauge helped improve the overall 
+quality of the application and the user experience.
 
 ## The challenge: Automation for better testing
 
-We spoke with two team members—developer Raymond Biggs and quality analyst Maggie Zong—to get more details. As a client requirement, the team uses TestCafe to automate end-to-end testing. But, on it’s own TestCafe test scripts were hard to read and maintain. The TestCafe test steps weren’t re-usable either. 
+We spoke with two team members—developer Raymond Biggs and quality analyst 
+Maggie Zong—to get more details. As a client requirement, the team uses TestCafe
+ to automate end-to-end testing. But, on it’s own TestCafe test scripts were 
+ hard to read and maintain. The TestCafe test steps weren’t re-usable either. 
 
-About six months ago, when Raymond joined the project, he noticed the gap—the team did not use a testing tool that matched their development style. He recalled using Jest and Cypress in previous projects. However, both had similar issues with reusability and maintainability and did not help new team members understand the behavior of the functionality they were testing. Also, all the developers in the team used VS Code, which meant that any new testing tool had to integrate well with the team’s choice of IDE.
+About six months ago, when Raymond joined the project, he noticed the gap—the 
+team did not use a testing tool that matched their development style. He recalled
+ using Jest and Cypress in previous projects. However, both had similar issues 
+ with reusability and maintainability and did not help new team members 
+ understand the behavior of the functionality they were testing. Also, all the 
+ developers in the team used VS Code, which meant that any new testing tool had
+  to integrate well with the team’s choice of IDE.
 
 ## Slicing the test pyramid with Gauge     
 
-Raymond proposed Gauge for test automation. Since no one else in the team had used Gauge before, he ran a proof of concept comparing it to Jest tests for the same functionality. The proof of concept showed the team how Gauge specifications, written in markdown, were much easier to write and read than plain Jest tests . That, along with Gauge’s excellent VS Code integration, a feature that enhanced the test scripting experience, convinced the team to choose Gauge as their test automation framework. 
+Raymond proposed Gauge for test automation. Since no one else in the team had 
+used Gauge before, he ran a proof of concept comparing it to Jest tests for the
+ same functionality. The proof of concept showed the team how Gauge 
+ specifications, written in markdown, were much easier to write and read than 
+ plain Jest tests . That, along with Gauge’s excellent VS Code integration, a 
+ feature that enhanced the test scripting experience, convinced the team to 
+ choose Gauge as their test automation framework. 
 
-Gauge, a free and open source test automation framework, draws from [ThoughtWorks’ robust software testing culture](https://www.thoughtworks.com/software-testing) that helped create tools such as Selenium, Sahi, Watir, Hamcrest, and Mockito. 
+Gauge, a free and open source test automation framework, draws from 
+[ThoughtWorks’ robust software testing culture](https://www.thoughtworks.com/
+software-testing) that helped create tools such as Selenium, Sahi, Watir, 
+Hamcrest, and Mockito. 
 
-During our conversation, Maggie explained that Gauge is used by both developers and testers in the team. 
+During our conversation, Maggie explained that Gauge is used by both developers
+ and testers in the team. 
 
-> We use Gauge tests across all levels of the test pyramid. While TestCafe drives the browser automation, it, in turn, runs within Gauge. Developers and testers write integration and user interface (UI) end-to-end Gauge tests. We also have tests that integrate with downstream services. Gauge specifications help document the business logic clearly within the tests.
+> We use Gauge tests across all levels of the test pyramid. While TestCafe 
+drives the browser automation, it, in turn, runs within Gauge. Developers and 
+testers write integration and user interface (UI) end-to-end Gauge tests. We 
+also have tests that integrate with downstream services. Gauge specifications 
+help document the business logic clearly within the tests.
 
-<%= image_tag "blog/slicing-the-test-pyramid-gauge-graphic_white.png", {:title => "How Gauge tests fit into our test pyramid" , :alt => "How Gauge tests fit into our test pyramid"} %>
+<%= image_tag "blog/slicing-the-test-pyramid-gauge-graphic_white.png", {:title 
+=> "How Gauge tests fit into our test pyramid" , :alt => "How Gauge tests fit 
+into our test pyramid"} %>
 
-Both Raymond and Maggie shared how several Gauge features helped minimize defects and improve the testing and software development process.
+Both Raymond and Maggie shared how several Gauge features helped minimize 
+defects and improve the testing and software development process.
 
 ## Why Gauge worked     
 
-Gauge is free and open source, and that was a crucial factor in helping them zero in on the tool.
+Gauge is free and open source, and that was a crucial factor in helping them 
+zero in on the tool.
 
 ### 1. Data driven testing
 
-Maggie pointed out that Gauge’s data tables feature enabled the team to reuse tests and write tests quickly. She explained, 
+Maggie pointed out that Gauge’s data tables feature enabled the team to reuse 
+tests and write tests quickly. She explained, 
 
 “Our application has many forms, so the table feature has been handy for us.” 
 
-Raymond added that writing test data as markdown tables offered a standard format that was easy to understand, enhancing its readability. 
+Raymond added that writing test data as markdown tables offered a standard 
+format that was easy to understand, enhancing its readability. 
 
 ### 2. Tags and hooks
 
-Tags within Gauge are used to group specifications or scenarios. Raymond also highlighted that tags are great for slicing the test pyramid horizontally. He explained, 
+Tags within Gauge are used to group specifications or scenarios. Raymond also 
+highlighted that tags are great for slicing the test pyramid horizontally. He 
+explained, 
 
-Using a combination of Gauge tags and execution hooks, the team were able to mix front-end only tests with front-end and back-end integration tests, within the same spec file.
+Using a combination of Gauge tags and execution hooks, the team were able to 
+mix front-end only tests with front-end and back-end integration tests, within 
+the same spec file.
+
 
 ```js
 // render app with mock client for scenarios tagged with 'ui'
@@ -85,7 +133,8 @@ beforeScenario(
 );
 ```
 
-Steps can be written without knowing if the scenario is a front-end only, or front-end and back-end integration test.
+Steps can be written without knowing if the scenario is a front-end only, or 
+front-end and back-end integration test.
 
 ```js
 step("Then I should see <text> on the page", function(text) {
@@ -111,32 +160,58 @@ tags: ui-bff
 * Given I am on the home page
 * Then I should see "My first blog post" on the page
 ```
-> We use the [Backend for Front End design pattern](https://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a combination of Gauge tags and execution hooks, we mixed front-end only tests with front-end and back-end integration tests within the same spec file. We have a tag in Gauge for UI tests and we can run page-level UI tests by simply using these tags. Similarly, we have a service tag introducing real services into these tests. Tags help in slicing our test strategy.
+
+> We use the [Backend for Front End design pattern](https://philcalcado
+.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a 
+combination of Gauge tags and execution hooks, we mixed front-end only tests 
+with front-end and back-end integration tests within the same spec file. We 
+have a tag in Gauge for UI tests and we can run page-level UI tests by simply 
+using these tags. Similarly, we have a service tag introducing real services 
+into these tests. Tags help in slicing our test strategy.
 
 ### 3. Running tests in parallel
 
-The team used Gauge’s ability to run tests in parallel and this reduced testing time drastically. Gauge comes inbuilt with an option to turn on parallel runs without the need for any extra setup. 
+The team used Gauge’s ability to run tests in parallel and this reduced testing
+ time drastically. Gauge comes inbuilt with an option to turn on parallel runs 
+ without the need for any extra setup. 
 
 ### 4. Seamless integration
 
-The team uses multiple technologies to test the new loan solution. Currently, the UI and UI BFF tests use React Testing Library, and the end-to-end web tests use TestCafe to drive browser automation. Raymond and Maggie shared that Gauge integrates seamlessly with these tools.      
+The team uses multiple technologies to test the new loan solution. Currently, 
+the UI and UI BFF tests use React Testing Library, and the end-to-end web tests
+ use TestCafe to drive browser automation. Raymond and Maggie shared that Gauge
+  integrates seamlessly with these tools.      
 
 ### 5. Reusability and modularity
 
-Gauge reduced the effort and time required for creating new tests. Maggie explained - 
+Gauge reduced the effort and time required for creating new tests. Maggie 
+explained - 
 
-> We wrote just one test, which had reusable steps. When creating more tests, we used the table feature and tweaked the formula to reuse the test for another scenario quickly. It helped us meet the strict client requirements faster.
+> We wrote just one test, which had reusable steps. When creating more tests, 
+we used the table feature and tweaked the formula to reuse the test for 
+another scenario quickly. It helped us meet the strict client requirements 
+faster.
 
 ### 6. Documentation
 
-In contrast with Jest, Cypress and TestCafe, Gauge offers a readable and executable document that illustrates how an app works. It played a key role in helping the team pick pace, onboard new hands, and comply with strict auditing requirements. 
+In contrast with Jest, Cypress and TestCafe, Gauge offers a readable and 
+executable document that illustrates how an app works. It played a key role in 
+helping the team pick pace, onboard new hands, and comply with strict auditing 
+requirements. 
 
 ## Results
 
-The team successfully released the first version of the simple home loan application to a pilot group of seven Sydney bankers. The client appreciated the rapid pace of system integration testing. Gauge had played a crucial role in speeding test automation. The team completed writing and running 18 end-to-end tests in just two weeks in the first round. 
+The team successfully released the first version of the simple home loan 
+application to a pilot group of seven Sydney bankers. The client appreciated 
+the rapid pace of system integration testing. Gauge had played a crucial role 
+in speeding test automation. The team completed writing and running 18 
+end-to-end tests in just two weeks in the first round. 
 
-The second round took only three days to complete, pleasantly surprising the client, who had expected each round to take three to four weeks.       
+The second round took only three days to complete, pleasantly surprising the 
+client, who had expected each round to take three to four weeks.       
 
-> Selecting a testing tool like Gauge, encourages reusability, makes software development faster, better, and predictable.
+> Selecting a testing tool like Gauge, encourages reusability, makes software 
+development faster, better, and predictable.
 
-As development teams look to shift-left with testing, choosing a test automation framework that is easy to write and maintain is crucial. 
+As development teams look to shift-left with testing, choosing a test 
+automation framework that is easy to write and maintain is crucial. 
