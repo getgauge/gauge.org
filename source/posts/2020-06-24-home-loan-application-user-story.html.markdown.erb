@@ -1,16 +1,14 @@
 ---
 layout: post
-post_title: Case Study: Improving the experience of a Home Loan Application with Gauge
+post_title: Shifting left with Gauge - a case study
 date: 2020-06-24
 summary_image: "/assets/images/blog/luminate_blogpost_image_small.jpg"
 excerpt: "A leading Australian financial services company set out to create a 
 simple and elegant home loan solution. Investing in test automation and using 
 Gauge helped a lot to improve the overall quality of the application and the 
 user experience."
-title: "Case Study: Improving the experience of a Home Loan Application 
-with Gauge | Gauge Blog"
-title_tag_of_header: "Case Study: Improving the experience of a Home Loan 
-Application with Gauge | Gauge Blog"
+title: "Shifting left with Gauge - a case study | Gauge Blog"
+title_tag_of_header: "Shifting left with Gauge - a case study | Gauge Blog"
 meta_description: "A leading Australian financial services company set out to 
 create a simple and elegant home loan solution. Read about how investing in 
 test automation helped improve the product quality and end user experience."
@@ -18,10 +16,9 @@ meta_keywords: "home loan, Acceptance tests, end to end tests, browser automatio
 ---
 #### June 24, 2020
 
-<%= image_tag "blog/luminate_blogpost_image_large.jpg", {:title => "Gauge and 
-Luminate", :alt => "Gauge and Luminate"} %>
+<%= image_tag "blog/luminate_blogpost_image_large.jpg", {:title => "Gauge and Luminate", :alt => "Gauge and Luminate"} %>
 
-# Improving the user experience of a home loan application with the right testing tool
+# Shifting left with Gauge - a case study
 
 A leading Australian financial services company set out to create a simple and 
 elegant home loan solution.  Within a few months of initiating the project, 
@@ -108,7 +105,6 @@ mix front-end only tests with front-end and back-end integration tests, within
 the same spec file.
 
 
-    js
     // render app with mock client for scenarios tagged with ‘ui’
     beforeScenario(
     function() {
@@ -136,14 +132,13 @@ the same spec file.
 Steps can be written without knowing if the scenario is a front-end only, or 
 front-end and back-end integration test.
 
-    js
+    
     step(“Then I should see <text> on the page”, function(text) {
         const { getByText } = gauge.dataStore.scenarioStore.get(“context”);
         expect(getByText(text)).toBeInTheDocument();
     });
 
 The tags at work in the specification file.
-
 
     # Home page specs
 
@@ -214,5 +209,5 @@ client, who had expected each round to take three to four weeks.
 > Selecting a testing tool like Gauge, encourages reusability, makes software 
 development faster, better, and predictable.
 
-As development teams look to shift-left with testing, choosing a test 
+As development teams look to shift left with testing, choosing a test 
 automation framework that is easy to write and maintain is crucial. 
