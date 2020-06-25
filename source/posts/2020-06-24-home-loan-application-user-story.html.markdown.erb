@@ -109,6 +109,59 @@ Using a combination of Gauge tags and execution hooks, the team were able to
 mix front-end only tests with front-end and back-end integration tests, within 
 the same spec file.
 
+
+    js
+    // render app with mock client for scenarios tagged with ‘ui’
+    beforeScenario(
+    function() {
+        const mockClient = createMockClient();
+        gauge.dataStore.scenarioStore.put(
+            “context”,
+            render(<App client={mockClient} />)
+        );
+    },
+    { tags: [“ui”] }
+    );
+
+    // render app with real client for scenarios tagged with ‘ui-bff’
+    beforeScenario(
+        function() {
+            const client = createClient();
+            gauge.dataStore.scenarioStore.put(
+                “context”,
+                render(<App client={client} />)
+            );
+        },
+        { tags: [“ui-bff”] }
+    );
+
+Steps can be written without knowing if the scenario is a front-end only, or 
+front-end and back-end integration test.
+
+    js
+    step(“Then I should see <text> on the page”, function(text) {
+        const { getByText } = gauge.dataStore.scenarioStore.get(“context”);
+        expect(getByText(text)).toBeInTheDocument();
+    });
+
+    # Home page specs
+
+    ## Home page should display title
+
+    tags: ui
+
+    * Given I am on the home page
+    * Then I should see “Blog Posts” on the page
+
+    ## Home page should display posts
+
+    tags: ui-bff
+
+    * Given I am on the home page
+    * Then I should see “My first blog post” on the page
+
+
+
 > We use the [Backend for Front End design pattern](https://philcalcado
 .com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a 
 combination of Gauge tags and execution hooks, we mixed front-end only tests 
