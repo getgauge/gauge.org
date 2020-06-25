@@ -1,7 +1,6 @@
 ---
 layout: post
-post_title: Case Study: Improving the experience of a Home Loan Application 
-with Gauge
+post_title: Case Study: Improving the experience of a Home Loan Application with Gauge
 date: 2020-06-24
 summary_image: "/assets/images/blog/luminate_blogpost_image_small.jpg"
 excerpt: "A leading Australian financial services company set out to create a 
@@ -22,8 +21,7 @@ meta_keywords: "home loan, Acceptance tests, end to end tests, browser automatio
 <%= image_tag "blog/luminate_blogpost_image_large.jpg", {:title => "Gauge and 
 Luminate", :alt => "Gauge and Luminate"} %>
 
-# Case Study: Improving the experience of a Home Loan Application 
-with Gauge
+# Improving the user experience of a home loan application with the right testing tool
 
 A leading Australian financial services company set out to create a simple and 
 elegant home loan solution.  Within a few months of initiating the project, 
@@ -77,8 +75,8 @@ testers write integration and user interface (UI) end-to-end Gauge tests. We
 also have tests that integrate with downstream services. Gauge specifications 
 help document the business logic clearly within the tests.
 
-<%= image_tag "blog/slicing-the-test-pyramid-gauge-graphic_white.png", 
-{:title => "How Gauge tests fit into our test pyramid", :alt => "How Gauge tests fit 
+<%= image_tag "blog/slicing-the-test-pyramid-gauge-graphic_white.png", {:title 
+=> "How Gauge tests fit into our test pyramid" , :alt => "How Gauge tests fit 
 into our test pyramid"} %>
 
 Both Raymond and Maggie shared how several Gauge features helped minimize 
@@ -144,6 +142,9 @@ front-end and back-end integration test.
         expect(getByText(text)).toBeInTheDocument();
     });
 
+The tags at work in the specification file.
+ 
+
     # Home page specs
 
     ## Home page should display title
@@ -159,7 +160,6 @@ front-end and back-end integration test.
 
     * Given I am on the home page
     * Then I should see “My first blog post” on the page
-
 
 
 > We use the [Backend for Front End design pattern](https://philcalcado
