@@ -169,29 +169,46 @@ into these tests. Tags help in slicing our test strategy.
 
 The team used Gauge’s ability to run tests in parallel and this reduced testing
  time drastically. Gauge comes inbuilt with an option to turn on parallel runs 
- without the need for any extra setup. 
+ without the need for any extra setup.  
 
 ### 4. Seamless integration
 
+Gauge works on all platforms and popular programming languages. 
 The team uses multiple technologies to test the new loan solution. Currently, 
 the UI and UI BFF tests use React Testing Library, and the end-to-end web tests
- use TestCafe to drive browser automation. Raymond and Maggie shared that Gauge
-  integrates seamlessly with these tools.      
-
+ use [TestCafe](https://github.com/getgauge-examples/gauge-testcafe) to drive browser automation.
+ Raymond and Maggie shared that Gauge integrates seamlessly with these tools.    
+ 
 ### 5. Reusability and modularity
 
 Gauge reduced the effort and time required for creating new tests. Maggie 
 explained
 
 > We wrote just one test, which had reusable steps. When creating more tests, 
-we used the table feature and tweaked the formula to reuse the test for 
+we re-used the steps with data tables feature and tweaked the formula to test 
 another scenario quickly. It helped us meet the strict client requirements 
 faster.
 
+For example, the step below uses a data table to register users with an 
+underlying implementation of filling a form with the name, email and address. 
+
+    * Register user
+    | name | email   | address |
+    |------|---------|---------|
+    | John | John@doe| foo     |
+
+This step and be re-used in another scenario without modifying the underlying 
+implementation and only changing the data.
+
+    * Register user
+    | name | email   | address |
+    |------|---------|---------|
+    | Jane | Jane@doe| bar     |
+
 ### 6. Documentation
 
-In contrast with Jest, Cypress and TestCafe, Gauge offers a readable and 
-executable document that illustrates how an app works. It played a key role in 
+In contrast with Jest, Cypress and TestCafe, Gauge specifications are in readable and 
+executable document format which also illustrates how an app works. It played a key role in 
 helping the team pick pace, onboard new hands, and comply with strict auditing 
 requirements. 
 
