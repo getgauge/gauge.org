@@ -1,0 +1,334 @@
+---
+layout: post
+post_title: Adopting Gauge and Taiko at Workstream to simplify test automation
+date: 2020-06-24
+summary_image: "/assets/images/blog/blog-workstream.png"
+excerpt: "Workstream, a growing startup in the HR domain, was growing and so 
+were its testing needs. Windy Liu, the lead automation engineer introduced Gauge 
+and Taiko to test the application as well as help introduce new testers to the 
+test automation practice."
+title: "Adopting Gauge and Taiko at Workstream to simplify test automation | Gauge Blog"
+title_tag_of_header: "Adopting Gauge and Taiko at Workstream to simplify test automation | Gauge Blog"
+meta_description: "Workstream, a growing startup in the HR domain, was growing and so 
+were its testing needs. Windy Liu, the lead automation engineer introduced Gauge 
+and Taiko to test the application as well as help introduce new testers to the 
+test automation practice."
+meta_keywords: "workstream, Acceptance tests, end to end tests, browser automation, case study"
+---
+#### July 14, 2020
+
+<%= image_tag "blog/blog-workstream-large.png", {:title => "Shifting Left with Gauge", :alt => "Shifting Left with Gauge"} %>
+
+# Adopting Gauge and Taiko at Workstream to simplify test automation
+
+Every startup tries to disrupt the marketplace, and some do with limited resources. 
+It is where multi-taskers, go-getters, and continuous learners thrive. Some 
+navigate a resource crunch by investing in tools. However, not all organizations 
+can afford costly product licenses. That is why open source software is crucial 
+for the startup ecosystem.
+
+Often, the hustle and bustle of daily operations puts software testing in the 
+backseat for startups. When there is a need to test, startups expect every team 
+member—including the sales team, the CEO, marketers, and administrators—to morph into 
+testers. In such circumstances, leveraging a testing tool can make a difference. 
+
+A similar situation arose when Windy Liu, an ace tester, joined the U.S. startup [Workstream](https://www.workstream.us/). 
+Workstream offers a platform and mobile application for human resource (HR) professionals 
+to post job boards with one click, automate follow-ups with applicants, and streamline 
+onboarding. Like with any other startup, Workstream too needed structured processes to test 
+its hiring platform. When Windy joined the startup, he had only one other colleague on his 
+team—a former human resource professional turned tester.
+
+Windy wanted a robust testing framework that supported the entire hiring platform. 
+With over 12 years of testing experience across enterprises such as PwC and SAP, 
+Windy was keen to introduce test automation at Workstream. Windy recollects, 
+
+> We were searching for a tool that could be easily used and make test execution stable.
+
+## Challenge: Finding an easy to use and end to end test automation tool
+
+Workstream’s hiring platform has multiple stages that need testing. At the application 
+stage, candidates answer questions and upload resumes. In the next stage, candidates provide 
+additional information, and the application completion stage follows this. Finally, the 
+platform enables HR executives to schedule interviews, after which they select the best 
+candidates.
+
+As Workstream grew, so did its testing requirements. Windy realized that manual testing could 
+no longer match the speed and complexity of software development. It reinforced his 
+resolve to implement test automation so that software updates did not disrupt existing features.
+ 
+As his colleague was new to test automation, the tool must be easy to use. What’s more, 
+considering that Workstream was a startup, Windy needed a tool that was both open source 
+and integrated easily with the current tech stack.
+
+## Solution: Easy-to-write tests in Markdown  
+
+As a first step, Windy compared a handful of test automation tools. He analyzed tools such as 
+Katalon, RSpec, and Cucumber. At about the same time, his friend shared an article about 
+Gauge— a free and open-source test automation framework from ThoughtWorks. The team behind 
+Gauge also built [Taiko](https://taiko.dev) - an open source browser automation tool. The team built both these 
+tools with the goal of making tests reliable and easy to write. 
+
+The article convinced Windy to explore and pick Gauge and Taiko as the test automation solution 
+for Workstream. Windy explains, 
+    
+> What interested me very much is the natural language to write test cases. Even writing with a 
+Cucumber test case is not as easy as writing with Gauge.
+
+Gauge supports the writing of test specifications in Markdown. Without a prescriptive syntax 
+(like Given, When, Then) this makes it especially simple for anyone to start using the tool and 
+create tests that are easy to read. 
+
+Today, Windy runs end-to-end feature testing for Workstream’s frontend. He adds, 
+
+> We are currently developing more tests using Gauge and Taiko. Our tech stack 
+includes a Ruby backend and JavaScript frontend.
+
+## Result: Fast, easy, and comprehensible test cases
+
+Windy now finds it easy to write a test case, as he develops tests using Gauge and Taiko. 
+He elaborates, 
+
+> All you need to do is specify the [steps](https://docs.gauge.org/writing-specifications.html#step). 
+And test scenarios can be understood by people who 
+do not have coding experience like our sales and business development teams.
+
+In addition, it also takes less time to write automation test cases. For all these reasons, 
+Windy is keen to share the benefits of Gauge and Taiko with others as well. He tells us, 
+
+> The next step for us is to use Docker to run parallel tests. I want to share Gauge and 
+Taiko with other teams, and I am now reading the code of Gauge and Taiko framework in GitHub. 
+I hope someday I can contribute to the project.
+
+Windy’s experience shows how testing in a startup is drastically different from that in an 
+established enterprise. It illustrates how open source and easy-to-use test automation tools 
+can help startups reduce the effort needed to advance products and features to production 
+faster. Comprehensive documentation and support for test automation tools will play a vital 
+role as testers, such as Windy Liu, learn on-the-go and build the next game-changing product.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The result—a new inclusive experience that allowed a banker to complete an 
+application for a customer in just 60 minutes. It was a significant improvement
+ from the earlier average of several hours, shifting between multiple systems 
+ and re-entering data. 
+
+> Investing in test automation and using Gauge helped improve the overall 
+quality of the application and the user experience.
+
+## The challenge: Automation for better testing
+
+We spoke with two team members—developer Raymond Biggs and quality analyst 
+Maggie Zong—to get more details. As a client requirement, the team uses TestCafe
+ to automate end-to-end testing. But, on it’s own TestCafe test scripts were 
+ hard to read and maintain. The TestCafe test steps weren’t re-usable either. 
+
+About six months ago, when Raymond joined the project, he noticed the gap—the 
+team did not use a testing tool that matched their development style. He recalled
+ using Jest and Cypress in previous projects. However, both had similar issues 
+ with reusability and maintainability and did not help new team members 
+ understand the behavior of the functionality they were testing. Also, all the 
+ developers in the team used VS Code, which meant that any new testing tool had
+  to integrate well with the team’s choice of IDE.
+
+## Slicing the test pyramid with Gauge     
+
+Raymond proposed Gauge for test automation. Since no one else in the team had 
+used Gauge before, he ran a proof of concept comparing it to Jest tests for the
+ same functionality. The proof of concept showed the team how Gauge 
+ specifications, written in markdown, were much easier to write and read than 
+ plain Jest tests . That, along with Gauge’s excellent VS Code integration, a 
+ feature that enhanced the test scripting experience, convinced the team to 
+ choose Gauge as their test automation framework. 
+
+Gauge, a free and open source test automation framework, draws from 
+[ThoughtWorks’ robust software testing culture](https://www.thoughtworks.com/
+software-testing) that helped create tools such as Selenium, Sahi, Watir, 
+Hamcrest, and Mockito. 
+
+During our conversation, Maggie explained that Gauge is used by both developers
+ and testers in the team. 
+
+> We use Gauge tests across all levels of the test pyramid. While TestCafe 
+drives the browser automation, it, in turn, runs within Gauge. Developers and 
+testers write integration and user interface (UI) end-to-end Gauge tests. We 
+also have tests that integrate with downstream services. Gauge specifications 
+help document the business logic clearly within the tests.
+
+<%= image_tag "blog/slicing-the-test-pyramid-gauge-graphic_white.png", 
+{:title => "How Gauge tests fit into our test pyramid", :alt => 
+"How Gauge tests fit into our test pyramid"} %>
+
+Both Raymond and Maggie shared how several Gauge features helped minimize 
+defects and improve the testing and software development process.
+
+## Why Gauge worked     
+
+Gauge is free and open source, and that was a crucial factor in helping them 
+zero in on the tool.
+
+### 1. Data driven testing
+
+Maggie pointed out that Gauge’s data tables feature enabled the team to reuse 
+tests and write tests quickly. She explained, 
+
+> Our application has many forms, so the table feature has been handy for us.
+
+Raymond added that writing test data as markdown tables offered a standard 
+format that was easy to understand, enhancing its readability. 
+
+### 2. Tags and hooks
+
+Tags within Gauge are used to group specifications or scenarios. Raymond also 
+highlighted that tags are great for slicing the test pyramid horizontally. He 
+explained, 
+
+Using a combination of Gauge tags and execution hooks, the team were able to 
+mix front-end only tests with front-end and back-end integration tests, within 
+the same spec file.
+
+
+    // render app with mock client for scenarios tagged with ‘ui’
+    beforeScenario(
+    function() {
+        const mockClient = createMockClient();
+        gauge.dataStore.scenarioStore.put(
+            “context”,
+            render(<App client={mockClient} />)
+        );
+    },
+    { tags: [“ui”] }
+    );
+
+    // render app with real client for scenarios tagged with ‘ui-bff’
+    beforeScenario(
+        function() {
+            const client = createClient();
+            gauge.dataStore.scenarioStore.put(
+                “context”,
+                render(<App client={client} />)
+            );
+        },
+        { tags: [“ui-bff”] }
+    );
+
+Steps can be written without knowing if the scenario is a front-end only, or 
+front-end and back-end integration test.
+
+    
+    step(“Then I should see <text> on the page”, function(text) {
+        const { getByText } = gauge.dataStore.scenarioStore.get(“context”);
+        expect(getByText(text)).toBeInTheDocument();
+    });
+
+The tags at work in the specification file.
+
+    # Home page specs
+
+    ## Home page should display title
+
+    tags: ui
+
+    * Given I am on the home page
+    * Then I should see “Blog Posts” on the page
+
+    ## Home page should display posts
+
+    tags: ui-bff
+
+    * Given I am on the home page
+    * Then I should see “My first blog post” on the page
+
+
+> We use the [Backend for Front End design pattern](https://philcalcado
+.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html). By using a 
+combination of Gauge tags and execution hooks, we mixed front-end only tests 
+with front-end and back-end integration tests within the same spec file. We 
+have a tag in Gauge for UI tests and we can run page-level UI tests by simply 
+using these tags. Similarly, we have a service tag introducing real services 
+into these tests. Tags help in slicing our test strategy.
+
+### 3. Running tests in parallel
+
+The team used Gauge’s ability to run tests in parallel and this reduced testing
+ time drastically. Gauge comes inbuilt with an option to turn on parallel runs 
+ without the need for any extra setup.  
+
+### 4. Seamless integration
+
+Gauge works on all platforms and popular programming languages. 
+The team uses multiple technologies to test the new loan solution. Currently, 
+the UI and UI BFF tests use React Testing Library, and the end-to-end web tests
+ use [TestCafe](https://github.com/getgauge-examples/gauge-testcafe) to drive browser automation.
+ Raymond and Maggie shared that Gauge integrates seamlessly with these tools.    
+ 
+### 5. Reusability and modularity
+
+Gauge reduced the effort and time required for creating new tests. Maggie 
+explained
+
+> We wrote just one test, which had reusable steps. When creating more tests, 
+we re-used the steps with data tables feature and tweaked the formula to test 
+another scenario quickly. It helped us meet the strict client requirements 
+faster.
+
+For example, the step below uses a data table to register users with an 
+underlying implementation of filling a form with the name, email and address. 
+
+    * Register user
+    | name | email   | address |
+    |------|---------|---------|
+    | John | John@doe| foo     |
+
+This step and be re-used in another scenario without modifying the underlying 
+implementation and only changing the data.
+
+    * Register user
+    | name | email   | address |
+    |------|---------|---------|
+    | Jane | Jane@doe| bar     |
+
+### 6. Documentation
+
+In contrast with Jest, Cypress and TestCafe, Gauge specifications are in readable and 
+executable document format which also illustrates how an app works. It played a key role in 
+helping the team pick pace, onboard new hands, and comply with strict auditing 
+requirements. 
+
+## Results
+
+The team successfully released the first version of the simple home loan 
+application to a pilot group of seven Sydney bankers. The client appreciated 
+the rapid pace of system integration testing. Gauge had played a crucial role 
+in speeding test automation. The team completed writing and running 18 
+end-to-end tests in just two weeks in the first round. 
+
+The second round took only three days to complete, pleasantly surprising the 
+client, who had expected each round to take three to four weeks.       
+
+> Selecting a testing tool like Gauge, encourages reusability, makes software 
+development faster, better, and predictable.
+
+As development teams look to shift left with testing, choosing a test 
+automation framework that is easy to write and maintain is crucial. 
