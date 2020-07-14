@@ -1,0 +1,107 @@
+---
+layout: post
+post_title: Adopting Gauge and Taiko at Workstream to simplify test automation
+date: 2020-07-14
+summary_image: "/assets/images/blog/blog-workstream.png"
+excerpt: "Workstream, a startup in the HR domain, was growing and so 
+were its testing needs. Windy Liu, the lead automation engineer introduced Gauge 
+and Taiko to test the application as well as help introduce new testers to the 
+test automation practice."
+title: "Adopting Gauge and Taiko at Workstream to simplify test automation | Gauge Blog"
+title_tag_of_header: "Adopting Gauge and Taiko at Workstream to simplify test automation | Gauge Blog"
+meta_description: "Workstream, a startup in the HR domain, was growing and so 
+were its testing needs. Windy Liu, the lead automation engineer introduced Gauge 
+and Taiko to test the application as well as help introduce new testers to the 
+test automation practice."
+meta_keywords: "workstream, Acceptance tests, end to end tests, browser automation, case study"
+---
+#### July 14, 2020
+
+<%= image_tag "blog/blog-workstream-large.png", {:title => "Shifting Left with Gauge", :alt => "Shifting Left with Gauge"} %>
+
+# Adopting Gauge and Taiko at Workstream to simplify test automation
+
+Every startup tries to disrupt the marketplace, and some do with limited resources. 
+It is where multi-taskers, go-getters, and continuous learners thrive. Some 
+navigate a resource crunch by investing in tools. However, not all organizations 
+can afford costly product licenses. That is why open source software is crucial 
+for the startup ecosystem.
+
+Often, the hustle and bustle of daily operations puts software testing in the 
+backseat for startups. When there is a need to test, startups expect every team 
+member—including the sales team, the CEO, marketers, and administrators—to morph into 
+testers. In such circumstances, leveraging a testing tool can make a difference. 
+
+A similar situation arose when Windy Liu, an ace tester, joined the U.S. startup [Workstream](https://www.workstream.us/). 
+Workstream offers a platform and mobile application for human resource (HR) professionals 
+to post job boards with one click, automate follow-ups with applicants, and streamline 
+onboarding. Like with any other startup, Workstream too needed structured processes to test 
+its hiring platform. When Windy joined the startup, he had only one other colleague on his 
+team—a former human resource professional turned tester.
+
+Windy wanted a robust testing framework that supported the entire hiring platform. 
+With over 12 years of testing experience across enterprises such as PwC and SAP, 
+Windy was keen to introduce test automation at Workstream. Windy recollects, 
+
+> We were searching for a tool that could be easily used and make test execution stable.
+
+## Challenge: Finding an easy to use and end to end test automation tool
+
+Workstream’s hiring platform has multiple stages that need testing. At the application 
+stage, candidates answer questions and upload resumes. In the next stage, candidates provide 
+additional information, and the application completion stage follows this. Finally, the 
+platform enables HR executives to schedule interviews, after which they select the best 
+candidates.
+
+As Workstream grew, so did its testing requirements. Windy realized that manual testing could 
+no longer match the speed and complexity of software development. It reinforced his 
+resolve to implement test automation so that software updates did not disrupt existing features.
+ 
+As his colleague was new to test automation, the tool must be easy to use. What’s more, 
+considering that Workstream was a startup, Windy needed a tool that was both open source 
+and integrated easily with the current tech stack.
+
+## Solution: Easy-to-write tests in Markdown  
+
+As a first step, Windy compared a handful of test automation tools. He analyzed tools such as 
+Katalon, RSpec, and Cucumber. At about the same time, his friend shared an article about 
+Gauge— a free and open-source test automation framework from ThoughtWorks. The team behind 
+Gauge also built [Taiko](https://taiko.dev) - an open source browser automation tool. The team built both these 
+tools with the goal of making tests reliable and easy to write. 
+
+The article convinced Windy to explore and pick Gauge and Taiko as the test automation solution 
+for Workstream. Windy explains, 
+    
+> What interested me very much is the natural language to write test cases. Even writing with a 
+Cucumber test case is not as easy as writing with Gauge.
+
+Gauge supports the writing of test specifications in Markdown. Without a prescriptive syntax 
+(like Given, When, Then) this makes it especially simple for anyone to start using the tool and 
+create tests that are easy to read. 
+
+Today, Windy runs end-to-end feature testing for Workstream’s frontend. He adds, 
+
+> We are currently developing more tests using Gauge and Taiko. Our tech stack 
+includes a Ruby backend and JavaScript frontend.
+
+## Result: Fast, easy, and comprehensible test cases
+
+Windy now finds it easy to write a test case, as he develops tests using Gauge and Taiko. 
+He elaborates, 
+
+> All you need to do is specify the [steps](https://docs.gauge.org/writing-specifications.html#step). 
+And test scenarios can be understood by people who 
+do not have coding experience like our sales and business development teams.
+
+In addition, it also takes less time to write automation test cases. For all these reasons, 
+Windy is keen to share the benefits of Gauge and Taiko with others as well. He tells us, 
+
+> The next step for us is to use Docker to run parallel tests. I want to share Gauge and 
+Taiko with other teams, and I am now reading the code of Gauge and Taiko framework in GitHub. 
+I hope someday I can contribute to the project.
+
+Windy’s experience shows how testing in a startup is drastically different from that in an 
+established enterprise. It illustrates how open source and easy-to-use test automation tools 
+can help startups reduce the effort needed to advance products and features to production 
+faster. Comprehensive documentation and support for test automation tools will play a vital 
+role as testers, such as Windy Liu, learn on-the-go and build the next game-changing product.
