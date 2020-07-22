@@ -133,3 +133,10 @@ helpers do
     URI::join(config.base_url, asset_path(:images, path_to_image, :relative => false))
   end
 end
+
+after_build do |builder|
+  src = File.join(config[:source],"_headers")
+  dst = File.join(config[:build_dir],"_headers")
+  builder.thor.source_paths << File.dirname(__FILE__)
+  builder.thor.copy_file(src,dst)
+end
