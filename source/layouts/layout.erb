@@ -34,10 +34,6 @@
 </script> 
   <body class= <%= page_name == 'home' ? "homepage" : 'inner' %> id= <%= page_name %>>
     <%= partial 'partials/header' %>
-    <div class="gdpr-cookie-banner">
-      <span class="close">X</span>
-      <p>Our site uses <a href="https://www.thoughtworks.com/privacy-policy#cookie-section" target="_blank" rel="noopener noreferrer">cookies</a> for analytics. If you're unsure about it, take a look at our <a href="https://www.thoughtworks.com/privacy-policy" target="_blank" rel="noopener noreferrer">privacy policy</a>.</p>
-    </div>
     <%= yield %>
     <%= partial 'partials/footer' %>
   </body>

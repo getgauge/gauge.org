@@ -85,15 +85,6 @@ $(document).ready(function() {
     $('.github_star').text(star);
   }
 
-  $(".gdpr-cookie-banner .close").click(function() {
-    document.cookie = "cookie-consent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-    $(".gdpr-cookie-banner").hide();
-  });
-
-  if (document.cookie.indexOf("cookie-consent=true") >= 0) {
-    $(".gdpr-cookie-banner").hide();
-  }
-
   if ($(".tab-nav-get_started").length) {
     var packageName = determinePackageNameBasedOnOS();
     $(".tab-nav-get_started li.tab-nav_item[data-attr='" + packageName + "']").click();
