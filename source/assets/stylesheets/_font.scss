@@ -1,17 +1,6 @@
 //PoppinsLatin Font Import
 
-
-@font-face {
-  font-family: 'PoppinsLatin-Medium';
-  src: url('/assets/vendor/fonts/poppins-latin/Poppins-Medium.ttf') format('truetype'),
-       url('/assets/vendor/fonts/poppins-latin/Poppins-Medium.otf') format("opentype");
-}
-
-@font-face {
-  font-family: 'PoppinsLatin-SemiBold';
-  src: url('/assets/vendor/fonts/poppins-latin/PoppinsLatin-SemiBold.ttf') format('truetype'),
-       url('/assets/vendor/fonts/poppins-latin/PoppinsLatin-SemiBold.otf') format("opentype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 
 // Open sans font import
