@@ -27,7 +27,7 @@ $border-color: #CCCCCC;
         color: white;
         display: block;
         font-family: monospace, monospace;
-        font-size: 12px;
+        font-size: smaller;
         @media (min-width: $screen-md) {
             font-size: 14px;
         }
