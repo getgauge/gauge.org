@@ -1,0 +1,105 @@
+---
+layout: post
+post_title: Migration using regression testing - A case study
+date: 2020-08-24
+published: true
+summary_image: "/assets/images/blog/blog-upi-app.png"
+excerpt: "The team behind a UPI app were migrating from their application framework. Read about how the team ensured that new releases were deployed without affecting its millions of users. To ensure top-notch testing, the team embraced new techniques to deliver quality at speed."
+title: "Migration using regression testing - A case study | Gauge Blog"
+title_tag_of_header: "Migration using regression testing - A case study | Gauge Blog"
+meta_description: "The team behind a UPI app were migrating from their application framework. Read about how the team ensured that new releases were deployed without affecting its millions of users. To ensure top-notch testing, the team embraced new techniques to deliver quality at speed."
+meta_keywords: "upi, payments, regression tests, case study"
+---
+#### August 24, 2020
+
+<%= image_tag "blog/blog-upi-app-large.png", {:title => "Using Gauge for regression testing", :alt => "Using Gauge for regression testing"} %>
+
+# Migration using regression testing: A case study
+
+In 2019, a leading Unified Payments Interface (UPI) application needed futureproofing 
+to meet the growing demand for digital payments in India. Migrating the app’s technology 
+stack was critical to creating new opportunities and better engagement. That is when the 
+leadership team overseeing the payment application decided to partner with ThoughtWorks. 
+The fundamental tenets of the collaboration were to transform functionality, improve 
+customer satisfaction, and gain competitive advantage. The new co-sourced team in-charge 
+of driving this project included developers, testers, designers, and DevOps experts. 
+Recently, we spoke with Kala Singh and Biswajit Pattanayak of the team to gain insights 
+into how testing played a crucial role in successfully migrating the UPI application. 
+
+Project Manager Kala drove collaboration, managed stakeholders, and ensured that the 
+team achieved targeted outcomes. Quality Analyst Biswajit played a crucial role in 
+testing rapid code releases and bringing in best practices to the testing process.
+
+## Challenge: A migration without disruptions to usability and experience
+
+Amidst mushrooming UPI payment providers, the app had to enhance usability, performance, 
+and create market differentiation. This meant migrating from a custom application framework 
+to React Native and introducing new features, front-end enhancements, and seamless 
+integration with third-party plugins. But the team ensured that new releases did not impact 
+the app’s functioning. Several releases were pushed to production frequently, without 
+affecting its millions of users. To achieve this, testing had to be top-notch, and the 
+team embraced new techniques to deliver quality at speed. Additionally, software was 
+overhauled as the new coding environment used Java and Appium.  
+
+## Solution: Regression testing 
+
+With around 12 years of testing experience, and 10 years in automation testing, Biswajit 
+saw that the testing team needed a regression suite to ensure that code changes did not 
+affect existing features.
+
+At the start of the project, Kala and Biswajit realized that test automation could speed up 
+deployments. Biswajit recollects, 
+
+> As the project pushed a series of code releases to production rapidly, we had to ensure 
+that the software worked seamlessly.
+
+Biswajit evaluated Behavior Driven Development (BDD) tools like Cucumber and JBehave. 
+However, his experience with Gherkin’s prescriptive syntax made him look for less restrictive 
+options. At this time, he learned of Gauge from his colleagues. Gauge, an open source test 
+automation framework from ThoughtWorks, is built on test case reusability using plain markdown 
+syntax. Biswajit says, 
+
+> As a first step, we analyzed the pros and cons of using Gauge. Its easy-to-use features and 
+test writing and management capability made it the right tool for regression testing on this 
+project.
+
+Kala adds,
+
+> As Gauge was open source, it aligned with the culture at UPI application’s team. 
+
+Initially, Biswajit trained the testers on automation testing with Gauge, and they were quick to 
+learn. Gauge soon proved valuable in automating sanity testing. For instance, Gauge 
+automated testing scenarios that ensured every transaction on the app did not exceed a 
+set limit. Also, by automating sanity testing, the team validated that the ‘Bill Pay' 
+functionality worked seamlessly. Finally, automated test scripts helped them catch regressions 
+around integrations like the users selecting a bank account. 
+
+Biswajit highlights three Gauge features that transformed regression testing:
+
+### Concepts
+A concept, within Gauge, presents a business intent summary by combining logical groups of 
+actions. Concepts provide the ability to combine reusable, logical groups of steps into a 
+single unit. Biswajit adds, 
+
+> It was an important and useful feature that allowed the team to fast-track testing scenarios, 
+such as when users wanted to send money to their favorite contacts.
+
+### Data-driven test execution
+Gauge's data table feature enabled the team to reuse and create test cases quickly. 
+Data tables for a specification were also easily imported from an external CSV file.
+
+### Environments
+Environments variables are a set of dynamic-named values that affect how tests act in an 
+operating system. Biswajit elaborates, 
+
+> Gauge allowed us to set specific environment variables for iOS and Android mobile operating 
+systems, making it easy and quick to run specifications anytime.
+
+## Benefits: Transformation in testing 
+
+Today, the app has migrated successfully. The team has also released new features within weeks, 
+such as finding merchants for home deliveries, donating to the PM Care Fund, and displaying 
+COVID-related information on the app. Gauge played a crucial role in ensuring effective 
+regression testing for the UPI-driven payments app. Kala and Biswajit are confident that 
+Gauge helps the testing culture within the payment’s app team and will continue to drive 
+value across the software development process.  
