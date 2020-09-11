@@ -1,0 +1,110 @@
+---
+layout: post
+post_title: Crossbrowser testing with Non-functional tests
+date: 2020-09-25
+summary_image: "/assets/images/blog/crossbrowser_testing_with_non_functional_tests.jpg"
+excerpt: "Here's why functional tests are not meant for cross browser testing"
+author_name: "Soumya Swaroop"
+author_image: "https://cdn-images-1.medium.com/fit/c/100/100/1*P0xkevj9Mngmm7NVAp5KIQ.jpeg"
+
+title: "Crossbrowser testing with Non-functional tests | Gauge Blog"
+title_tag_of_header: "Crossbrowser testing with Non-functional tests | Gauge Blog"
+meta_description: "Here's why functional tests are not meant for cross browser testing"
+meta_keywords: "taiko, test automation, cross browser, static code analysis"
+---
+
+#### Sep 25, 2020 | Soumya Swaroop
+
+<%= image_tag "blog/crossbrowser_testing_with_non_functional_tests_large.jpg", {:title => "Crossbrowser testing with Non-functional tests", :alt => "Crossbrowser testing with Non-functional tests"} %>
+
+# Cross browser testing with non-functional tests
+
+Ensuring [cross browser compatibility](https://en.wikipedia.org/wiki/Cross-browser_compatibility) is a [non functional requirement](https://en.wikipedia.org/wiki/Non-functional_requirement) (NFR). Cross browser requirements do not define the system's behavior but define criteria where the system will be used.
+
+> A [functional requirement](https://en.wikipedia.org/wiki/Functional_requirement) defines what a system is supposed to do. A NFR specifies criteria that can be used to judge the operation of a system, rather than specific behaviors. - [wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement).
+
+In my roles as a developer and tester, I see teams only using automated UI tests, originally written to test the functionality, run across browsers to ensure compatibility. Here, functional tests are used as a blanket to cover the cross browser issues. 
+
+However, after working on [Gauge](https://gauge.org/) and [Taiko](https://docs.taiko.dev/), I feel there’s a better and faster way to check cross browser issues than relying only on functional tests. 
+
+In this post we look at ways to ensure cross browser compatibility without relying on functional tests. Not all cross browser compatibility issues are caught by functional tests. Here, I want to highlight how teams are using alternatives to address them.
+
+## Deal with Non Functional Requirements earlier
+
+From the definition of BDD or Behaviour Driven Development, we know that,
+
+> The plan for implementing non-functional requirements is detailed in the [system architecture](https://en.wikipedia.org/wiki/Systems_architecture), because they are usually [architecturally significant requirements](https://en.wikipedia.org/wiki/Architecturally_significant_requirements). - [wikipedia](https://en.wikipedia.org/wiki/Non-functional_requirement).
+
+Cross browser requirements have to be taken into account by developers before the development begins as it’s architecturally significant.
+
+Most probably everyone uses some kind of framework which already checks for compatibility. 
+Javascript frameworks like [ReactJS](https://reactjs.org/), [vue.js](https://vuejs.org/), [jquery](https://jquery.com/), and UI frameworks like [bootstrap](https://getbootstrap.com/), [tailwind](https://tailwindcss.com/) test for cross browser compatibility.
+
+Here are a few blogs that talk about the same
+
+* “React implements a totally different DOM system which is independent of the browser. The implementation is done to make the application cross-browser compatible.” - Cross-Browser Compatibility and React.js Web Apps
+* “Vue.js guide to ensure cross browser compatibility” - Browser Compatibility
+* “If you are using Twitter Bootstrap, and have been curious enough to inspect the core bootstrap.css stylesheet, you will find approximately 6,000 lines of pure CSS code.  If you delve in deeper and look at the style code in detail, you will find how they use multiple tricks and techniques to make sure Bootstrap is the most cross browser CSS framework” - cross browser compatibility tips
+
+It is better to invest in the right architecture for your application than waiting for issues to be reported.
+
+## Write non functional tests for Cross browser compatibility
+
+To understand what we expect from a cross browser test, let’s analyse how the browser is rendered. There are 3 main components to how browser rendering works. 
+
+* HTML - handles the static structure of the page
+* CSS - is the way we present the information with styles and visual layout 
+* Scripts - are used to give behaviour to the UI elements.
+
+The functionality of any software does not change with the browser in which it is executing. To ensure that the software functions as expected in the browser/s one has to ensure that the CSS,HTML and the features of the scripting language used works in the respective browsers. 
+This can be achieved using static analysis of front end code and does not need dynamic analysis.
+
+“Static program analysis is the analysis of computer software that is performed without actually executing programs, in contrast with dynamic analysis, which is analysis performed on programs while they are executing.” - [wikipedia](https://en.wikipedia.org/wiki/Static_program_analysis)
+
+> We can utilise some tools to cross-reference our code against the compatibility databases, targeting only the browsers and versions we are interested in. - [cross browser testing, without the browsers](https://medium.com/@you54f/reading-time-10-mins-8b6e7ef90062)
+
+Let’s look at visual regression analysis and scripting analysis to understand better!
+
+### Visual regression
+
+The visual regression’s intention is to ensure the app appears as its designers intended. Browser automation frameworks used for functional tests ignore layout issues or UI regression. 
+
+> Look at this UI. How did this happen in production? My guess is that they have test automation for this. But guess what...all of the expected text is there. So, the tests are passing because traditional assertions would never catch this. - [Tweet by Angie Jones](https://www.linkedin.com/feed/update/urn:li:activity:6516788025379426305/)
+
+<%= image_tag "https://media-exp1.licdn.com/dms/image/C5622AQG_mU6qyJEWYA/feedshare-shrink_800/0?e=1602720000&v=beta&t=l8pvuMSCb4UTbOwFyb6xLA_5zoqjq1xzHR0sDCXXyZM", {:title => "CSS plugin compat", :alt => "Crossbrowser testing with Non-functional tests - Tests pass with UI"} %>
+
+This example may seem exaggerated, but possible, because the functional tests pass by performing actions on the structure page (HTML selections using XPath) even if there are visual defects or if the app is visually unusable. Clearly functional tests do not ensure CSS and HTML browser compatibility. 
+
+Static code analysis helps reduce visual regression defects. [CanIUse](https://caniuse.com/) has gained popularity among the front end developers. The [incompatibilities are when front-end developers want to adopt new features](https://caniuse.com/#compare=edge+76,firefox+70,chrome+79,safari+TP&compare_cats=JS,JS%20API,Security). Especially, when you are not aware of the set of browsers to be supported, we have to use features that are tried and tested! 
+
+### CSS Checking with Stylelint, ESLint for CSS
+
+[Stylelint-no-unsupported-browser-features](https://github.com/ismay/stylelint-no-unsupported-browser-features) is a plugin that allows configuration of target browser/s and errors are reported with the list of browsers that do not support a feature. It uses [doiuse](https://github.com/anandthakker/doiuse) to detect browser support. [Stylelint](https://stylelint.io/) is a [peerdependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this plugin.
+
+<%= image_tag "https://camo.githubusercontent.com/5312dd6be01cb9cb71cdf845c7d7f9ad1be0ee66/68747470733a2f2f692e696d6775722e636f6d2f595672714736502e706e67", {:title => "CSS plugin compat", :alt => "Crossbrowser testing with Non-functional tests - CSS plugin"} %>
+
+### Scripting
+
+When functional tests are used to ensure cross browser compatibility, it increases the amount of time needed to triage and analyse the failures. 
+
+Functional testing tools act as mere aggregators of test results from various browsers and leave it up to the end user to get actionable insight. Functional tests might tell the test script could not perform an action, but it won't tell you the root cause of failure. For instance, it will not tell you that the failure is because some scripting feature used in the application code isn’t supported by a relevant browser!
+
+To get that kind of pointed feedback, plugins like [ESLint-plugin-CanIUse](https://github.com/amilajack/eslint-plugin-compat#readme) can help. 
+
+### JavaScript Checking with esLint against caniuse db
+
+They allow configuration of target browser/s, percentage of feature supported. Errors are reported with the list of browsers not supported and the percentage of the feature.
+
+<%= image_tag "https://github.com/amilajack/eslint-plugin-compat#readme", {:title => "ESLint plugin compat", :alt => "Crossbrowser testing with Non-functional tests - ESLint plugin compat"} %>
+
+## Impact of standards and consolidation of browsers
+
+Javascript wasn't a standard across browsers like IE and Firefox. We find various articles talking about the support for older browsers. There is a lot of information available to address these issues.
+
+Testing frameworks were created to specifically target this issue. However, in recent times browsers are being standardized. [Polyfills](https://polyfill.io/v3/), [shims](http://adripofjavascript.com/blog/drips/an-introduction-to-writing-your-own-javascript-compatibility-shims.html) and [Modernizr](https://modernizr.com/) are only used in projects where old browsers are supported. 
+
+But the practice goes on. The processes to handle cross browser compatibility are evolving as more browsers are adopting standards. Keep yourself updated and use modern approaches. Costs may be associated with moving towards using modern approaches. But you have to consider the amount of time, effort, and money taken to maintain a traditional scripting style. Choosing/upgrading to the right frameworks will eventually benefit the business.
+
+Selenium was designed for cross browser automation and was created to test our internal timesheet application across [IE](https://en.wikipedia.org/wiki/Internet_Explorer) and [firefox](https://www.mozilla.org/en-US/exp/firefox/) when [browsers lacked standards](https://en.wikipedia.org/wiki/Browser_wars). 
+
+By the time we started to build [Taiko](https://github.com/getgauge/taiko), [browser vendors agreed to standards](https://www.smashingmagazine.com/2019/01/web-standards-guide/). With browsers adhering to standards, using functional tests to check cross browser compatibility is not just costly, but also redundant!
