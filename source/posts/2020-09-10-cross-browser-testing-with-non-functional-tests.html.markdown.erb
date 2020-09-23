@@ -49,8 +49,8 @@ before the development begins as it’s architecturally significant.
 
 Most probably everyone uses some kind of framework which already checks 
 for compatibility. Javascript frameworks like [ReactJS](https://reactjs.org/), 
-[vue.js](https://vuejs.org/), [jquery](https://jquery.com/), and UI frameworks 
-like [bootstrap](https://getbootstrap.com/), [tailwind](https://tailwindcss.com/) 
+[Vue.js](https://vuejs.org/), [JQuery](https://jquery.com/), and UI frameworks 
+like [Bootstrap](https://getbootstrap.com/), [Tailwind](https://tailwindcss.com/) 
 test for cross browser compatibility.
 
 * "React implements a browser-independent DOM system for performance and 
@@ -60,7 +60,7 @@ in browser DOM implementations." - [React JS Docs](https://reactjs.org/docs/dom-
 supported)" - [Vue.js Browser Compatibility](https://github.com/vuejs/vue#browser-compatibility)
 * "Bootstrap supports the latest, stable releases of all major browsers and 
 platforms. On Windows, we support Internet Explorer 10-11 / Microsoft Edge." 
-- [bootstrap browser devices](https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/)
+- [Bootstrap browser devices](https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/)
 
 It is better to invest in the right architecture for your application than 
 waiting for issues to be reported.
@@ -71,7 +71,7 @@ There are three main components to how a browser renders a web page.
 
 * HTML - handles the static structure of the page
 * CSS - is the way we present the information with styles and visual layout 
-* Scripts - are used to give behaviour to the UI elements.
+* Scripts - add behaviour to UI elements.
 
 {:.specialParagraphTag}
 The functionality of the application is the same across browsers.
@@ -109,10 +109,9 @@ even if there are visual defects or if the app is visually unusable. Clearly
 functional tests do not ensure CSS and HTML browser compatibility. 
 
 Static code analysis reduces visual regression defects. [CanIUse](https://caniuse.com/) 
-has gained popularity among the front end developers. The [incompatibilities are 
+has gained popularity among front end developers. The [incompatibilities are 
 when front-end developers want to adopt new features](https://caniuse.com/#compare=edge+76,firefox+70,chrome+79,safari+TP&compare_cats=JS,JS%20API,Security). 
-Especially, when you are not aware of the set of browsers to be supported, we have 
-to use features that are tried and tested! 
+If you are not aware of the browsers to be supported, it's better to use features that are tried and tested. 
 
 ### CSS Checking with Stylelint, ESLint for CSS
 
@@ -132,7 +131,7 @@ increases the amount of time needed to triage and analyse the failures.
 
 Functional testing tools act as mere aggregators of test results from various 
 browsers and leave it up to the end user to get actionable insight. Functional 
-tests might tell the test script could not perform an action, but it won't tell 
+tests fail when a test script cannot not perform an action, but it won't tell 
 you the root cause of failure. For instance, it will not tell you that the 
 failure is because some scripting feature used in the application code isn’t 
 supported by a relevant browser.
@@ -149,10 +148,10 @@ of the feature.
 
 <%= image_tag "https://raw.githubusercontent.com/amilajack/eslint-plugin-compat/master/img/eslint-plugin-compat-demo.gif", {:title => "ESLint plugin compat", :alt => "Crossbrowser testing with Non-functional tests - ESLint plugin compat"} %>
 
-### Transpilers
-Another option is using transpilers like Babel. [Babel](https://babeljs.io) allows 
-you to write code in the latest version of JavaScript and transpile to a version 
-that’s backward compatible for browsers that don’t support newer features.
+## Transpilers
+Another option is using transpilers like Babel. [Babel](https://babeljs.io) 
+allows you write code in the latest version of JavaScript and transpile to a 
+version that’s backward compatible for browsers that don’t support newer features.
 
 ## Impact of standards and consolidation of browsers
 
@@ -169,4 +168,4 @@ browser versions need to be supported.
 By the time we started to build [Taiko](https://github.com/getgauge/taiko), 
 [browser vendors agreed to standards](https://www.smashingmagazine.com/2019/01/web-standards-guide/). 
 With browsers adhering to standards, using functional tests to check cross 
-browser compatibility is not just costly, but also redundant!
+browser compatibility is not just costly, but also redundant.
