@@ -19,53 +19,54 @@ meta_keywords: "taiko, test automation, selenium, cypress"
 
 # Adapting test automation to project architecture changes 
 
-I’ve used Selenium, Cypress and Taiko on a few client projects. While there are 
-challenges and obstacles, in using any tool, it’s important to choose a test 
+As a tester, I’ve used Selenium, Cypress and Taiko on a few client projects. 
+While there are challenges in using any tool, I prefer choosing a test 
 automation tool that meets the needs of the project. 
 
-In this I'd like to share my experience of switching test automation tools on 
-two projects I recently worked on. In both cases there were some changes in the 
-application architecture. I will discuss why this called for a change in our test 
-automation tools.
+In this article, I share my experience of switching test automation tools on 
+two projects I recently worked on. Both these projects changed it's initial architecture which
+required us to change our approach to testing.
 
 ## Case study 1
-Our first project was for a retail giant.  We started with Selenium. Selenium 
-is a popular open source browser automation tool. I love Selenium's community. 
-It is very active, especially the core contributors community. I find it easy 
-to connect to the core contributors and get timely responses.  
 
-However, we hit a testing roadblock when the client we developed the application 
-for decided to use a UI builder to make the interface. With the new UI builder, 
-the HTML structure of pages kept changing. 
+In our first project for a retail giant, we started with Selenium. Selenium 
+is widely used and open source. I love Selenium's community. 
+It's very active, especially the core contributors community. I can easily 
+connect to core contributors and get timely responses.  
 
-As this was before Selenium introduced [relative locators](https://www.selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/#relative-locators), 
+However, we hit a testing roadblock when the client decided to use a UI builder 
+to build the application interface. With this new UI builder, 
+the HTML structure of pages kept changing. As this was before Selenium 
+introduced [relative locators](https://www.selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/#relative-locators), 
 the changing page structure made tests flaky and hard to debug.
 
-For example, the application displayed a reason for cancellation at many 
+For example, the application displayed a reason for cancellation at multiple 
 locations on a page. This may seem visually redundant, but important to test, 
 because the application had strict accessibility guidelines. Although the 
-“reason text” was the same, sometimes we found that even though one of the 
-reasons was displayed correctly, the other one would have an issue with it. 
-The frequent change in structure caused our tests to fail intermittently.
+"reason text" was the same, sometimes we found that even though one of the 
+reasons was displayed correctly, the other one had a display issue. 
+The frequent structure changes caused our tests to fail intermittently.
 
-With Selenium, this meant using parent/child XPATH locators. These types of 
-locators are easily affected by HTML structural changes. Adding class attributes 
-or adding unique identifiers was tough because of the UI builder.
+With Selenium, this meant using parent/child XPath locators which are easily affected by HTML 
+structural changes. The UI builder made adding class attributes or unique identifiers tough to work
+around this problem.
 
-That is when we moved to Taiko. Unlike Selenium which supports a wider browser 
-choice, back then, Taiko supported only Chrome/Chromium. However we chose Taiko 
-since we did not have cross browser requirements. 
+That is when we switched our tests to Taiko. Taiko supported only Chrome/Chromium during 
+the initial versions. However, we did not have cross browser requirements as this was an 
+internal application. 
 
-Unlike Selenium, in Taiko we wrote tests by referring to elements visually. For 
-example, In the case discussed above, using Taiko’s  proximity selectors like 
+In Taiko we wrote tests by referring to elements visually. Like this 
+example for verifying reason for cancellation using Taiko’s proximity selectors 
 
-```textBox(below(text(“Reason for cancellation”)), toRightOf(“Cancellation type”))```
+```
+textBox(below(text(“Reason for cancellation”)), toRightOf(“Cancellation type”))
+```
 
-The labels “Cancellation type” or “Reason for cancellation” rarely changed 
-compared to the HTML structure. 
+Compared to HTML structure, the labels "Cancellation type" or 
+"Reason for cancellation" rarely changed.
 
-This also made the tests readable. Our team could easily understand the element 
-on which the operation was being performed on the screen.
+This also made the tests readable. Our team easily understood the element 
+on which the action was performed on the screen.
 
 > Please note. Selenium 4 recently added [relative locators](https://www.selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/#relative-locators) 
 which by definition is similar to Taiko’s [proximity selectors](https://docs.taiko.dev/api/reference/). 
@@ -74,8 +75,7 @@ which by definition is similar to Taiko’s [proximity selectors](https://docs.t
 
 {:.specialParagraphTag}
 Taiko’s proximity selectors are independent of the HTML structure of the page. 
-Because of this, moving to Taiko turned out to be more beneficial than we 
-initially anticipated. 
+Proximity selectors made moving to Taiko more beneficial than we initially anticipated. 
 
 We also used proximity selectors to test positional features of the application. 
 For example, testing the position of an icon on the screen. We had to ensure that 
@@ -84,10 +84,10 @@ selectors caught crucial bugs around this feature which would’ve otherwise cos
 the business.
 
 ## Case study 2
+
 On my next project, Cypress was the initial choice. The team found it’s features 
-like Stacktrace, Screenshot, Highlight element on action, Video recording  
-useful. Debugging test failures on our local machines were easy. Our developers 
-also used the hot-reload feature. 
+like stacktraces, screenshots, highlight element on action, video recording  
+useful. Debugging test failures on our local machines was easy too. 
 
 But, we ran into the [limitations](https://docs.cypress.io/guides/references/trade-offs.html#Permanent-trade-offs-1) 
 of Cypress when the application architecture changed to use microservices and 
@@ -113,13 +113,11 @@ cypress runs inside the browser which makes it hard to interact with external
 node libraries. 
 
 We had to use node libraries to communicate with the upstream 
-and downstream systems of the application. 
-
-All these systems communicated using Queues. For our end to end tests we read 
-from the queue to begin the workflow and wrote onto the queue after the test 
-run. As a workaround for getting node libraries to work with Cypress, we had to 
-deal with promises within promises. This made the test failures very hard to 
-debug.
+and downstream systems of the application. All these systems communicated using 
+Queues. For our end to end tests we read from the queue to begin the workflow and 
+wrote onto the queue after the test run. As a workaround for getting node libraries 
+to work with Cypress, we had to deal with promises within promises. This made the 
+test failures very hard to debug.
 
 These were significant blockers for using Cypress on that project. 
 
@@ -132,9 +130,10 @@ missing in Taiko that were available to the team with Cypress.](https://docs.tai
 capture video and screenshots of every action respectively.
 
 ### Why Taiko worked
-[Taiko](https://www.npmjs.com/package/taiko) works well with the node js ecosystem. 
-It works with any javascript test runner, assertion libraries or any other node 
-js libraries. Because of this we could easily use node libraries to communicate 
+
+[Taiko](https://www.npmjs.com/package/taiko) works well with the Node js ecosystem. 
+It works with any JavaScript test runner, assertion library or just any other node 
+js library. Because of this we could easily use node libraries to communicate 
 with the queues and address other project needs of node module interactions. 
 
 {:.specialParagraphTag}
@@ -160,8 +159,9 @@ are Chrome, Microsoft Edge and Firefox.
 * Taiko’s plugin architecture makes it easy to write plugins that suit your 
 project requirements - [examples of Taiko plugins](https://docs.taiko.dev/plugins/#:~:text=taiko%2Dscreencast%20A%20plugin%20to,capture%20screenshot%20on%20every%20action.).
 
-As there were many open source testing tools, when I first heard of Taiko, I was 
-skeptical. Why create a new tool when we can contribute to existing ones? 
+As there were many open source testing tools, I was 
+skeptical when I first heard of Taiko. Why create a new tool when we can contribute 
+to existing ones? 
 
 I’ve come to realise that each tool has its strengths and opinions, some work 
 for your project and some don’t.
