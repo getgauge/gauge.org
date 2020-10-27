@@ -1,0 +1,182 @@
+---
+layout: post
+post_title: Adapting test automation to project architecture changes
+date: 2020-10-16
+summary_image: "/assets/images/blog/adapting_test_automation_to_project_architecture_changes.jpg"
+excerpt: "Here's why we moved from Selenium and Cypress to Taiko in our client projects"
+author_name: "Sai Krishna Vijaya Kumar"
+author_image: "https://avatars3.githubusercontent.com/u/4045041?s=400&u=77d1516496eee8556cef2787e70596d3a77ddfca&v=4"
+published: true
+title: "Adapting test automation to project architecture changes | Gauge Blog"
+title_tag_of_header: "Adapting test automation to project architecture changes | Gauge Blog"
+meta_description: "Here's why we moved from Selenium and Cypress to Taiko in our client projects"
+meta_keywords: "taiko, test automation, selenium, cypress"
+---
+
+#### Oct 16, 2020 | Sai Krishna Vijaya Kumar
+
+<%= image_tag "blog/adapting_test_automation_to_project_architecture_changes.jpg", {:title => "Adapting test automation to project architecture changes", :alt => "Adapting test automation to project architecture changes"} %>
+
+# Adapting test automation to project architecture changes 
+
+I’ve used Selenium, Cypress and Taiko on a few client projects. While there are 
+challenges and obstacles, in using any tool, it’s important to choose a test 
+automation tool that meets the needs of the project. 
+
+In this I'd like to share my experience of switching test automation tools on 
+two projects I recently worked on. In both cases there were some changes in the 
+application architecture. I will discuss why this called for a change in our test 
+automation tools.
+
+## Case study 1
+Our first project was for a retail giant.  We started with Selenium. Selenium 
+is a popular open source browser automation tool. I love Selenium's community. 
+It is very active, especially the core contributors community. I find it easy 
+to connect to the core contributors and get timely responses.  
+
+However, we hit a testing roadblock when the client we developed the application 
+for decided to use a UI builder to make the interface. With the new UI builder, 
+the HTML structure of pages kept changing. 
+
+As this was before Selenium introduced [relative locators](https://www.selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/#relative-locators), 
+the changing page structure made tests flaky and hard to debug.
+
+For example, the application displayed a reason for cancellation at many 
+locations on a page. This may seem visually redundant, but important to test, 
+because the application had strict accessibility guidelines. Although the 
+“reason text” was the same, sometimes we found that even though one of the 
+reasons was displayed correctly, the other one would have an issue with it. 
+The frequent change in structure caused our tests to fail intermittently.
+
+With Selenium, this meant using parent/child XPATH locators. These types of 
+locators are easily affected by HTML structural changes. Adding class attributes 
+or adding unique identifiers was tough because of the UI builder.
+
+That is when we moved to Taiko. Unlike Selenium which supports a wider browser 
+choice, back then, Taiko supported only Chrome/Chromium. However we chose Taiko 
+since we did not have cross browser requirements. 
+
+Unlike Selenium, in Taiko we wrote tests by referring to elements visually. For 
+example, In the case discussed above, using Taiko’s  proximity selectors like 
+
+```textBox(below(text(“Reason for cancellation”)), toRightOf(“Cancellation type”))```
+
+The labels “Cancellation type” or “Reason for cancellation” rarely changed 
+compared to the HTML structure. 
+
+This also made the tests readable. Our team could easily understand the element 
+on which the operation was being performed on the screen.
+
+> Please note. Selenium 4 recently added [relative locators](https://www.selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/#relative-locators) 
+which by definition is similar to Taiko’s [proximity selectors](https://docs.taiko.dev/api/reference/). 
+
+### Why Taiko worked
+
+{:.specialParagraphTag}
+Taiko’s proximity selectors are independent of the HTML structure of the page. 
+Because of this, moving to Taiko turned out to be more beneficial than we 
+initially anticipated. 
+
+We also used proximity selectors to test positional features of the application. 
+For example, testing the position of an icon on the screen. We had to ensure that 
+the icon was near the pick up address closest to the car’s location. Proximity 
+selectors caught crucial bugs around this feature which would’ve otherwise cost 
+the business.
+
+## Case study 2
+On my next project, Cypress was the initial choice. The team found it’s features 
+like Stacktrace, Screenshot, Highlight element on action, Video recording  
+useful. Debugging test failures on our local machines were easy. Our developers 
+also used the hot-reload feature. 
+
+But, we ran into the [limitations](https://docs.cypress.io/guides/references/trade-offs.html#Permanent-trade-offs-1) 
+of Cypress when the application architecture changed to use microservices and 
+[micro front ends](https://martinfowler.com/articles/micro-frontends.html). 
+
+The Login module was hosted in a different domain. In Cypress [you cannot visit a 
+domain of different origin in the same test](https://docs.cypress.io/guides/references/trade-offs.html#Same-origin).
+
+As a workaround, we created a virtual DOM to fake and inject elements to the 
+browser session. This worked until there were changes to the login module. The 
+virtual DOM had to be constantly updated and this complicated debugging test 
+failures.
+
+Cypress does [not support opening multiple browser tabs or windows](https://docs.cypress.io/guides/references/trade-offs.html#Permanent-trade-offs). 
+
+The payment scenario in the application opened in a window or a tab. The payment 
+scenario also used external gateways to process payment. Once the payment was 
+complete, the window or tab was closed and the flow would continue in the original 
+window. 
+
+As mentioned in the [tradeoffs](https://docs.cypress.io/guides/references/trade-offs.html#Inside-the-browser), 
+cypress runs inside the browser which makes it hard to interact with external 
+node libraries. 
+
+We had to use node libraries to communicate with the upstream 
+and downstream systems of the application. 
+
+All these systems communicated using Queues. For our end to end tests we read 
+from the queue to begin the workflow and wrote onto the queue after the test 
+run. As a workaround for getting node libraries to work with Cypress, we had to 
+deal with promises within promises. This made the test failures very hard to 
+debug.
+
+These were significant blockers for using Cypress on that project. 
+
+So we moved to Taiko. Unlike Cypress, Taiko runs outside the browser as Node.js 
+module and uses [Chrome Devtools protocol](https://chromedevtools.github.io/devtools-protocol/) 
+to automate the browser. With the plugin architecture it was easy to [build features 
+missing in Taiko that were available to the team with Cypress.](https://docs.taiko.dev/plugins/#:~:text=taiko%2Dscreencast%20A%20plugin%20to,capture%20screenshot%20on%20every%20action.). 
+[Taiko-screencast](https://github.com/getgauge-contrib/taiko-screencast) and 
+[Taiko-screeny](https://github.com/saikrishna321/taiko-screeny) are examples to 
+capture video and screenshots of every action respectively.
+
+### Why Taiko worked
+[Taiko](https://www.npmjs.com/package/taiko) works well with the node js ecosystem. 
+It works with any javascript test runner, assertion libraries or any other node 
+js libraries. Because of this we could easily use node libraries to communicate 
+with the queues and address other project needs of node module interactions. 
+
+{:.specialParagraphTag}
+Taiko does not impose any cross-origin restrictions because it runs outside the 
+browser. Taiko also supports opening and managing [multiple tabs](https://docs.taiko.dev/api/opentab/), 
+windows or incognito windows.
+
+## Key insights
+
+### Aspects to consider before using Taiko in client projects
+
+* Taiko is a node library for automating the browser. Although Taiko’s command 
+line can run basic scripts you’ll need to use it with a Javascript test runner 
+like [Gauge](https://docs.gauge.org/?os=macos&language=javascript&ide=vscode), 
+[Mocha](https://mochajs.org/), or [Jest](https://jestjs.io/) for other features 
+like reporting, running multiple tests etc.
+* Taiko has a [REPL](https://docs.taiko.dev/record_and_run_tests/), where we use 
+Taiko’s API as commands to automate the browser. 
+* Taiko does not run on Browserstack or Saucelabs.
+* Taiko tests can only be written in Javascript and Typescript.
+* Taiko supports only the browsers that are CDP compliant, which at this point 
+are Chrome, Microsoft Edge and Firefox.
+* Taiko’s plugin architecture makes it easy to write plugins that suit your 
+project requirements - [examples of Taiko plugins](https://docs.taiko.dev/plugins/#:~:text=taiko%2Dscreencast%20A%20plugin%20to,capture%20screenshot%20on%20every%20action.).
+
+As there were many open source testing tools, when I first heard of Taiko, I was 
+skeptical. Why create a new tool when we can contribute to existing ones? 
+
+I’ve come to realise that each tool has its strengths and opinions, some work 
+for your project and some don’t.
+
+After using Taiko on my projects, I started contributing features and bug fixes. 
+I am a core committer now. I like Taiko's approach to test automation. 
+
+Please check out the plugins I’ve authored! 
+
+* [taiko-android](https://github.com/saikrishna321/taiko-android) - A plugin to 
+run web tests on android devices and emulators using Taiko.
+* [taiko-diagnostics](https://github.com/saikrishna321/taiko-diagnostics) A plugin 
+for taiko which provides some diagnostics features like measuring speedindex, 
+performance metrics of web pages.
+* [taiko-screeny](https://github.com/saikrishna321/taiko-screeny) A taiko plugin 
+to capture screenshot on every action. 
+
+You can write your own plugin and become a contributor to the Gauge community.
