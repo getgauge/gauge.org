@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/get-started"
   to = "https://docs.gauge.org/getting_started/installing-gauge.html"
-  status = 200
+  status = 301
