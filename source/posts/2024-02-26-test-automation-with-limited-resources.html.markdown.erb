@@ -1,0 +1,95 @@
+---
+layout: post
+post_title: Test Automation with Limited Resources
+date: 2024-02-26
+summary_image: "/assets/images/blog/test-automation-with-limited-resources.png"
+excerpt: "Automated testing can significantly reduce the time spent on regression testing, but the initial effort and maintenance is often a major burden. Using Gauge in combination with reusable libraries, we have been able to introduce automated testing in difficult projects where developers never seemed to have enough time to take care of this important level of testing."
+author_name: "Tobias Lehmann"
+author_image: "https://avatars.githubusercontent.com/u/139795943?s=48&v=4"
+published: true
+title: "Test Automation with Limited Resources | Gauge Blog"
+title_tag_of_header: "Test Automation with Limited Resources | Gauge Blog"
+meta_description: "Automated testing can significantly reduce the time spent on regression testing, but the initial effort and maintenance is often a major burden. Using Gauge in combination with reusable libraries, we have been able to introduce automated testing in difficult projects where developers never seemed to have enough time to take care of this important level of testing."
+meta_keywords: "limited resources, regression tests, team effort, initial effort, saucelabs, reusable"
+---
+#### February 26, 2024 | Tobias Lehmann
+
+<%= image_tag "blog/test-automation-with-limited-resources.png", {:title => "Test Automation with Limited Resources", :alt => "Test Automation with Limited Resources"} %>
+
+# Test Automation with Limited Resources
+
+I am a software engineer at IBMiX Berlin and have been involved in many interesting
+and challenging projects since I started here.  
+The teams I have worked with have helped drive the digital transformation of companies
+and departments in areas such as health insurance, mobility, and public services.
+A key factor in our success is consistent product quality throughout the entire life cycle.
+It impacts the customer experience, which is a major selling point for why companies choose
+us as a partner, and it makes software development faster and more predictable.
+
+Automated E2E API- and UI-Tests are on the top end of an array of elements in the testing strategy.
+And it can be a big task. Especially when time is of the essence and resources are limited.  
+Many companies probably face similar problems. There are never enough developers available,
+and QA engineers seem to drown in manual testing during every new release.
+
+Automated testing can significantly reduce the time spent on regression testing,
+but the initial effort and maintenance is often a major burden.
+We have many capable QAs, but few dedicated test automation engineers,
+and project managers are not too keen to have their developers spent much time on anything other
+than the main code base.  
+Therefore we had to find an effective solution that made the best of the situation.
+
+## Our Approach: Reusable Libraries and Gauge
+
+We needed to enable our QA engineers to write automated tests - even if they were not trained to write code!  
+Now, there are some solutions out there, including some smart record-and-replay tools.
+But in real-world scenarios, they were all ultimately too flimsy.
+We needed something, that was easy to understand, simple to write, maintain and extend,
+and could be integrated into the existing CI/CD infrastructure.
+
+We decided to use an existing BDD tool - Gauge - but somewhat differently.  
+And it was Gauge because it is the least restrictive of the BDD tools,
+it is feature-rich, and well supported by Visual Studio Code.
+Usually someone writes the test specifications and scenarios in a detailed step-by-step way,
+in somewhat natural language, and then someone (else) writes the code that executes what was written,
+and therefore evaluates the software behavior.  
+Instead, we realized that 95% of the testing of a web page or API is essentially a finite series
+of repetitive actions performed in a specific order:  
+Click on the link, enter your search terms, confirm that the search result has the correct headline, etc. etc.  
+So we implemented these actions in two Python libraries - 
+one that uses Selenium and Appium for websites,
+one that uses urllib for APIs.
+And then we use them in multiple projects and let them mature along the way.
+Anything more complex than that can still be implemented on a project or test case basis.
+
+## The Power of Gauge and Reusable Libraries
+
+This approach worked. We have successfully integrated Gauge into the workflow.
+Regression tests run in parallel, and they cover much more, much faster than you could ever do manually.
+They have also uncovered a number of unforeseen side effects after refactorings that would otherwise have gone unnoticed.
+
+Project-specific functionality that can be abstracted and reused flows back into the library.
+
+In addition, we have made it possible to connect the library to a device cloud provider - **SauceLabs**.
+That means that tests can run on a variety of platforms:  
+Windows, Mac, Android, iOS, FireFox, Chrome, Safari and all in different versions and combinations.
+
+Admittedly, there are a few pitfalls. Test authors need to learn how to use element locators effectively,
+and it takes some trial and error to find best practices and structure your tests optimally.
+But if things like knowledge sharing and workshops are part of your job, it is nothing too difficult.
+
+## Open Sourcing Our Libraries on GitHub
+
+* https://github.com/IBM/gauge-web-app-steps
+* https://github.com/IBM/gauge-api-steps
+
+The next logical step was to publish our libraries as **Open Source**.
+We hope that it will encourage collaboration and knowledge sharing with the developer community.
+We encourage others to contribute to the libraries and use them to improve their own test automation processes.
+
+## Conclusion
+
+Test automation can be done, even with limited time and resources.
+In the end, it will probably pay off.
+If you find yourself in a similar situation, where you want to actively involve your existing QA
+in the test automation process, we recommend that you consider IBMiX's approach to test automation.  
+Take a look at the libraries and consider getting involved.
