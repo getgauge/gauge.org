@@ -1,3 +1,7 @@
+[build]
+  command = "bundle exec middleman build"
+  publish = "build"
+
 [[redirects]]
   from = "/get-started"
   to = "https://docs.gauge.org/getting_started/installing-gauge.html"
